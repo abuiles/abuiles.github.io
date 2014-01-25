@@ -9,12 +9,12 @@
   <meta name="description" content="">
 
   
-    <title>Learning and making and sharing - Adolfo Builes</title>
+    <title>Blog Archive - Adolfo Builes</title>
   
 
 
   
-  <meta name="description" content="A blog about culture, technology, and interesting things.">
+  <meta name="description" content=" Blog archive jQuery.noConflict()('li.other').hover ( function () { jQuery.noConflict()(this).toggleClass("current-menu-item") }); ">
   
 
 
@@ -25,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://abuiles.github.io">
+  <link rel="canonical" href="http://abuiles.github.io/blog/archives">
   <link href="/favicon.ico" rel="icon">
   <script type="text/javascript" src="http://use.typekit.com/zcp2xbp.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>  
@@ -46,10 +46,10 @@
 
 <body   >
 
-	<div class="container">
+  <div class="container">
 
-		<div class="four columns">
-  			<nav role="navigation"><ul class="title">
+    <div class="four columns">
+        <nav role="navigation"><ul class="title">
   <li><a href="/">Adolfo Builes</a></li>
 </ul>
 
@@ -96,35 +96,39 @@
             <h2>Code</h2>
               <p><a target="_blank" href="https://github.com/abuiles" target="_blank">GitHub</a></p>
           </section>
-
           <section id="code">
             <h2>Twitter</h2>
-              <p><a target="_blank" href="https://twitter.com/abuiles" target="_blank">GitHub</a></p>
+            <p><a target="_blank" href="https://twitter.com/abuiles" target="_blank">GitHub</a></p>
           </section>
-
-
         </aside>
-  	</div>
+    </div>
 
-    
-
-    <header class="twelve columns" role="banner">
-    
-<hgroup>
-  <h1></h1>
-</hgroup>
-
-    </header>
-
-    
-
-  	<div id="main" class="twelve columns">
-	    <div id="content">
-	      <div id="blog-archives">
+    <div id="main" class="twelve columns">
+      <div id="content">
+        <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Blog archive</h1>
+  </header>
+  
+  <div id="blog-archives">
 
 </div>
-	    </div>
-  	</div>
+
+</article>
+
+</div>
+
+<script>
+  jQuery.noConflict()('li.other').hover (
+    function () {
+    jQuery.noConflict()(this).toggleClass("current-menu-item")
+  });
+</script>
+
+      </div>
+    </div>
 
   <footer role="contentinfo"  class="sixteen columns"><center>
 <p class="credit">
@@ -158,9 +162,9 @@
 
 
 <script>
-  jQuery.noConflict()('li.other').hover (
+  $('li.other').hover (
     function () {
-    jQuery.noConflict()(this).toggleClass("current-menu-item")
+    $(this).toggleClass("current-menu-item")
   });
 </script>
 
@@ -168,4 +172,4 @@
 </html>
 
 
-	</div> <!-- container -->
+  </div> <!-- container -->
