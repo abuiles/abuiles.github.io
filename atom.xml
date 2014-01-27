@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://abuiles.github.io/atom.xml" rel="self"/>
   <link href="http://abuiles.github.io/"/>
-  <updated>2014-01-27T12:00:24-02:00</updated>
+  <updated>2014-01-27T12:01:44-02:00</updated>
   <id>http://abuiles.github.io/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -26,7 +26,7 @@ calls MVC is very different to what other frameworks call MVC.</p>
 Yehuda Katz presentation:
 <a href="http://www.youtube.com/watch?v=s1dhXamEAKQ">A tale of two MVC&rsquo;s</a>.</p>
 
-<iframe  src="http://abuiles.github.io//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="853" height="480" src="http://abuiles.github.io//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen></iframe>
 
 
 <p>Instead of talking about MVC, Yehuda proposes an unified model for GUI programming which is composed by a series of setps and then explains how different frameworks handle each step.</p>
