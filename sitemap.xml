@@ -1,20 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>
+            http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/
+        </loc>
+        <lastmod>2014-01-27T02:19:12-02:00</lastmod>
+    </url>
+    <url>
         <loc>http://abuiles.github.io/about/</loc>
-        <lastmod>2014-01-25T21:43:06-02:00</lastmod>
+        <lastmod>2014-01-27T02:16:14-02:00</lastmod>
     </url>
     <url>
         <loc>http://abuiles.github.io/blog/archives/</loc>
-        <lastmod>2014-01-25T21:41:00-02:00</lastmod>
+        <lastmod>2014-01-27T02:19:12-02:00</lastmod>
     </url>
     <url>
         <loc>http://abuiles.github.io/</loc>
-        <lastmod>2014-01-25T22:01:01-02:00</lastmod>
+        <lastmod>2014-01-27T02:19:12-02:00</lastmod>
     </url>
     <url>
         <loc>http://abuiles.github.io/projects/</loc>
-        <lastmod>2014-01-25T21:41:00-02:00</lastmod>
+        <lastmod>2014-01-27T02:19:12-02:00</lastmod>
     </url>
     <url>
         <loc>http://abuiles.github.io/robots.txt</loc>

@@ -9,12 +9,14 @@
   <meta name="description" content="">
 
   
-    <title>Learning and making and sharing - Adolfo Builes</title>
+    <title>Ruby on Rails MVC is not the same as Ember.js MVC - Adolfo Builes</title>
   
 
 
   
-  <meta name="description" content="A blog about culture, technology, and interesting things.">
+  <meta name="description" content="One of the must confusing parts for people coming from Rails (or any
+other backend web application framework) it&rsquo;s that what Ember.js
+calls MVC &hellip;">
   
 
 
@@ -25,7 +27,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://abuiles.github.io">
+  <link rel="canonical" href="http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc">
   <link href="/favicon.ico" rel="icon">
   <script type="text/javascript" src="http://use.typekit.com/zcp2xbp.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>  
@@ -124,33 +126,145 @@
 
     
 
-    <header class="twelve columns" role="banner">
-    
-<hgroup>
-  <h1></h1>
-</hgroup>
-
-    </header>
-
-    
-
   	<div id="main" class="twelve columns">
 	    <div id="content">
-	      <div id="blog-archives">
-
-
-<article>
+	      <div>
+<article class="hentry" role="article">
   
+  <header>
+    
+      <h1 class="entry-title">Ruby on Rails MVC Is Not the Same as Ember.js MVC</h1>
+    
+    
+      <p class="meta">
+        
+      </p>
+    
+  </header>
 
 
-  <time datetime="2014-01-27T02:17:52-02:00" pubdate><span class='month'>Jan</span> <span class='day'>27</span> <span class='year'>2014</span></time>
-&nbsp;
-  <h1><a href="/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/">Ruby on Rails MVC is not the same as Ember.js MVC</a></h1>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/" data-via="" data-counturl="http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
 
 
+<div class="entry-content"><p>One of the must confusing parts for people coming from Rails (or any
+other backend web application framework) it&rsquo;s that what Ember.js
+calls MVC is very different to what other frameworks call MVC.</p>
+
+<p>To understand what MVC is in both frameworks I recommend watching
+Yehuda Katz presentation:
+<a href="http://www.youtube.com/watch?v=s1dhXamEAKQ">A tale of two MVC&rsquo;s</a>.</p>
+
+<p>Yehuda proposes an unified model for GUI programming and then based on
+that explains how different frameworks handle them.</p>
+
+<p>The following are the steps mention by Yehuda and the components in
+charge of each in both Ruby on Rails and Ember.js.</p>
+
+<h2>Step 1: Bootstrap Object</h2>
+
+<p>Setup the initial state, bootstrap objects that you will require in
+the future. e.g. Current User, Blog Posts.</p>
+
+<ul>
+<li>Ruby on Rails: Router and Controller</li>
+<li>Ember.js: Route.</li>
+</ul>
+
+
+<h2>2. Draw Initial UI</h2>
+
+<p>With the objects you setup on step 1 you will draw whatever the initial
+UI is for your system.</p>
+
+<ul>
+<li>Ruby on Rails: View</li>
+<li>Ember.js: Template</li>
+</ul>
+
+
+<p>** Views in Ember are not the same as Views in Rails, the
+   equivalent are the templates, you will learn later what views are for.</p>
+
+<h2>3. Translate Raw Input into User intent</h2>
+
+<p>Once the user start to use the app, we want to interpret their intend,
+for example clicking somewhere, pressing a key.</p>
+
+<ul>
+<li>Ruby on Rails: Template/Browser</li>
+<li>Ember.js: Template or View.</li>
+</ul>
+
+
+<h2>4. Update application state</h2>
+
+<p>As user starts to interact with the system, we need to update the
+state of the app, for example we have an option box which is always in
+the head, if the user click &ldquo;hide options&rdquo;, we need to
+update the state of the app to reflect that and remember during the
+rest of the user&rsquo;s session.</p>
+
+<ul>
+<li>Ruby on Rails: Controller (In the Session)</li>
+<li>Ember.js: Route</li>
+</ul>
+
+
+<h2>5. Update Domain Objects</h2>
+
+<p>If I remove a tweet for example, then I want to remove it from the system.</p>
+
+<ul>
+<li>Ruby on Rails: Controller</li>
+<li>Ember.js: Controller</li>
+</ul>
+
+
+<h2>6. Notify UI Changes</h2>
+
+<p>When there is something new, the UI needs to know somehow about it,
+for example, there are new comments or the value for a field changed.</p>
+
+<ul>
+<li>Ruby on Rails: HTTP.</li>
+<li>Ember.js: Data Binding.</li>
+</ul>
+
+
+<h2>7. Update the UI.</h2>
+
+<p>New changes or whatever needs to be drawn is drawn.</p>
+
+<ul>
+<li>Ruby on Rails: Browser</li>
+<li>Ember.js: Template</li>
+</ul>
+
+
+<p>The next time you are struggling to decide where to put something,
+just look at the steps above and see where it belongs.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
+
 	    </div>
   	</div>
 
