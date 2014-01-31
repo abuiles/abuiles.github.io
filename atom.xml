@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[]]></title>
-  <link href="http://abuiles.github.io/atom.xml" rel="self"/>
-  <link href="http://abuiles.github.io/"/>
-  <updated>2014-01-31T12:19:42-02:00</updated>
-  <id>http://abuiles.github.io/</id>
+  <link href="http://blog.abuiles.com/atom.xml" rel="self"/>
+  <link href="http://blog.abuiles.com/"/>
+  <updated>2014-01-31T12:24:01-02:00</updated>
+  <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
     <email><![CDATA[builes.adolfo@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Getting Started With Ember.js and Ruby on Rails: Ember Appkit Rails]]></title>
-    <link href="http://abuiles.github.io/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/"/>
+    <link href="http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/"/>
     <updated>2014-01-31T09:46:28-02:00</updated>
-    <id>http://abuiles.github.io/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails</id>
+    <id>http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails</id>
     <content type="html"><![CDATA[<p><strong>This is the second post of my series about <a href="http://blog.abuiles.com/ember-js-with-Ruby-on-rails/">learning Ember.js
 with Ruby on Rails</a>.</strong></p>
 
@@ -125,9 +125,9 @@ into some of Ember.js concepts as we start to come across them.</p>
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails MVC Is Not the Same as Ember.js MVC]]></title>
-    <link href="http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
+    <link href="http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
     <updated>2014-01-27T02:17:52-02:00</updated>
-    <id>http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
+    <id>http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
     <content type="html"><![CDATA[<p>One of the most confusing parts for people coming from Rails (or any
 other backend web application framework) it&rsquo;s that what Ember.js
 calls MVC is very different to what other frameworks call MVC.</p>
@@ -136,7 +136,7 @@ calls MVC is very different to what other frameworks call MVC.</p>
 Yehuda Katz presentation:
 <a href="http://www.youtube.com/watch?v=s1dhXamEAKQ">A tale of two MVC&rsquo;s</a>.</p>
 
-<iframe width="853" height="480" src="http://abuiles.github.io//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="853" height="480" src="http://blog.abuiles.com//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen></iframe>
 
 
 <p>Instead of talking about MVC, Yehuda proposes an unified model for GUI programming which is composed by a series of steps and then explains how different frameworks handle each step.</p>
