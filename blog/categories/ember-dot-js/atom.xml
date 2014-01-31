@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ember.js | ]]></title>
   <link href="http://abuiles.github.io/blog/categories/ember-dot-js/atom.xml" rel="self"/>
   <link href="http://abuiles.github.io/"/>
-  <updated>2014-01-28T18:42:09-02:00</updated>
+  <updated>2014-01-31T12:17:42-02:00</updated>
   <id>http://abuiles.github.io/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -29,7 +29,7 @@ Yehuda Katz presentation:
 <iframe width="853" height="480" src="http://abuiles.github.io//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen></iframe>
 
 
-<p>Instead of talking about MVC, Yehuda proposes an unified model for GUI programming which is composed by a series of setps and then explains how different frameworks handle each step.</p>
+<p>Instead of talking about MVC, Yehuda proposes an unified model for GUI programming which is composed by a series of steps and then explains how different frameworks handle each step.</p>
 
 <p>The following are the steps mention by Yehuda and the components in
 charge of each in both Ruby on Rails and Ember.js.</p>

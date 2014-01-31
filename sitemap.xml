@@ -4,15 +4,21 @@
         <loc>
             http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/
         </loc>
-        <lastmod>2014-01-27T12:01:30-02:00</lastmod>
+        <lastmod>2014-01-31T09:28:39-02:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://abuiles.github.io/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/
+        </loc>
+        <lastmod>2014-01-31T12:17:41-02:00</lastmod>
     </url>
     <url>
         <loc>http://abuiles.github.io/about/</loc>
-        <lastmod>2014-01-27T10:33:34-02:00</lastmod>
+        <lastmod>2014-01-29T21:18:17-02:00</lastmod>
     </url>
     <url>
         <loc>http://abuiles.github.io/blog/archives/</loc>
-        <lastmod>2014-01-27T12:01:30-02:00</lastmod>
+        <lastmod>2014-01-31T12:17:41-02:00</lastmod>
     </url>
     <url>
         <loc>http://abuiles.github.io/ember-js-with-ruby-on-rails/</loc>
@@ -20,11 +26,11 @@
     </url>
     <url>
         <loc>http://abuiles.github.io/</loc>
-        <lastmod>2014-01-27T12:01:30-02:00</lastmod>
+        <lastmod>2014-01-31T12:17:41-02:00</lastmod>
     </url>
     <url>
         <loc>http://abuiles.github.io/projects/</loc>
-        <lastmod>2014-01-27T12:01:30-02:00</lastmod>
+        <lastmod>2014-01-31T12:17:41-02:00</lastmod>
     </url>
     <url>
         <loc>http://abuiles.github.io/robots.txt</loc>
