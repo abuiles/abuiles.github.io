@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ember.js | ]]></title>
-  <link href="http://blog.abuiles.com/blog/categories/ember-dot-js/atom.xml" rel="self"/>
-  <link href="http://blog.abuiles.com/"/>
-  <updated>2014-01-31T12:24:01-02:00</updated>
-  <id>http://blog.abuiles.com/</id>
+  <link href="http://abuiles.github.io/blog/categories/ember-dot-js/atom.xml" rel="self"/>
+  <link href="http://abuiles.github.io/"/>
+  <updated>2014-01-31T12:27:06-02:00</updated>
+  <id>http://abuiles.github.io/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
     <email><![CDATA[builes.adolfo@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails MVC is not the same as Ember.js MVC]]></title>
-    <link href="http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
+    <link href="http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
     <updated>2014-01-27T02:17:52-02:00</updated>
-    <id>http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
+    <id>http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
     <content type="html"><![CDATA[<p>One of the most confusing parts for people coming from Rails (or any
 other backend web application framework) it&rsquo;s that what Ember.js
 calls MVC is very different to what other frameworks call MVC.</p>
@@ -26,7 +26,7 @@ calls MVC is very different to what other frameworks call MVC.</p>
 Yehuda Katz presentation:
 <a href="http://www.youtube.com/watch?v=s1dhXamEAKQ">A tale of two MVC&rsquo;s</a>.</p>
 
-<iframe width="853" height="480" src="http://blog.abuiles.com//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="853" height="480" src="http://abuiles.github.io//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen></iframe>
 
 
 <p>Instead of talking about MVC, Yehuda proposes an unified model for GUI programming which is composed by a series of steps and then explains how different frameworks handle each step.</p>

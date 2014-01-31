@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[]]></title>
-  <link href="http://blog.abuiles.com/atom.xml" rel="self"/>
-  <link href="http://blog.abuiles.com/"/>
-  <updated>2014-01-31T12:24:01-02:00</updated>
-  <id>http://blog.abuiles.com/</id>
+  <link href="http://abuiles.github.io/atom.xml" rel="self"/>
+  <link href="http://abuiles.github.io/"/>
+  <updated>2014-01-31T12:27:06-02:00</updated>
+  <id>http://abuiles.github.io/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
     <email><![CDATA[builes.adolfo@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Getting Started With Ember.js and Ruby on Rails: Ember Appkit Rails]]></title>
-    <link href="http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/"/>
+    <link href="http://abuiles.github.io/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/"/>
     <updated>2014-01-31T09:46:28-02:00</updated>
-    <id>http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails</id>
+    <id>http://abuiles.github.io/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails</id>
     <content type="html"><![CDATA[<p><strong>This is the second post of my series about <a href="http://blog.abuiles.com/ember-js-with-Ruby-on-rails/">learning Ember.js
 with Ruby on Rails</a>.</strong></p>
 
@@ -100,7 +100,7 @@ directory, if any. All this can be configurable and and could change for
 
 <ol>
 <li><p>Ember.js files are located under app, e.g. <code>app/models/user.es6</code></p></li>
-<li><p>Notice the extension for JavaScript files: <code>.es6</code>. It means that
+<li><p>Note the extension for JavaScript files: <code>.es6</code>. It means that
 they are written using ECMAScript 6 syntax which then is compiled to
 AMD (Hopefully GitHub will <a href="https://github.com/github/linguist/pull/910">start to highlight this file</a>)</p></li>
 <li><p>Your controller is namespaced under <code>api/vX</code>, you can change the version with <code>config.ember.api_version</code>, also your controller is optimized to be a <code>json</code> end-point.</p></li>
@@ -111,7 +111,7 @@ Ember app like Routes, Controller, and Integration.</p></li>
 </ol>
 
 
-<p>All this is still under heavy development and some things make change
+<p>All this is still under heavy development and some things might change
 (I&rsquo;ll keep this post updated).</p>
 
 <p>In the next post we will start to work on an application and also get
@@ -125,9 +125,9 @@ into some of Ember.js concepts as we start to come across them.</p>
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails MVC Is Not the Same as Ember.js MVC]]></title>
-    <link href="http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
+    <link href="http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
     <updated>2014-01-27T02:17:52-02:00</updated>
-    <id>http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
+    <id>http://abuiles.github.io/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
     <content type="html"><![CDATA[<p>One of the most confusing parts for people coming from Rails (or any
 other backend web application framework) it&rsquo;s that what Ember.js
 calls MVC is very different to what other frameworks call MVC.</p>
@@ -136,7 +136,7 @@ calls MVC is very different to what other frameworks call MVC.</p>
 Yehuda Katz presentation:
 <a href="http://www.youtube.com/watch?v=s1dhXamEAKQ">A tale of two MVC&rsquo;s</a>.</p>
 
-<iframe width="853" height="480" src="http://blog.abuiles.com//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="853" height="480" src="http://abuiles.github.io//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen></iframe>
 
 
 <p>Instead of talking about MVC, Yehuda proposes an unified model for GUI programming which is composed by a series of steps and then explains how different frameworks handle each step.</p>
