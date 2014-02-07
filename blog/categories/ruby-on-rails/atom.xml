@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | ]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-01-31T15:05:30-02:00</updated>
+  <updated>2014-02-07T11:07:34-02:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -12,6 +12,130 @@
   </author>
   <generator uri="http://blog.abuiles.com/">Adolfo Builes</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Building an App for my mom with Ember Appkit Rails App.]]></title>
+    <link href="http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails-app/"/>
+    <updated>2014-02-07T10:56:18-02:00</updated>
+    <id>http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails-app</id>
+    <content type="html"><![CDATA[<p><strong>This is post is part of my series <a href="http://blog.abuiles.com/ember-js-with-Ruby-on-rails/">learning Ember.js with Ruby on Rails</a>.</strong></p>
+
+<p>In previous post we explored what is
+<a href="http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/">Ember.js MVC</a>
+and then did a
+<a href="http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/">high level overview of Ember Appkit Rails</a>,
+in this post we&rsquo;ll start to work on a project which we will use as
+reference for upcoming posts.</p>
+
+<h2>The Problem</h2>
+
+<p>My mother lives in a small town in Colombia where she owns a store,
+access to credit cards in Colombia is really really hard, so stores
+and people in small towns tend to buy and sell on credit, trusting
+that people will come back and pay them (crazy, isn&rsquo;t?).</p>
+
+<p>During my last visit I was really shocked when I saw that she was
+keeping all her records on physical invoices in under an A-Z folder.</p>
+
+<p>If <code>Jon Smith</code> takes a t-shirt on credit, they would create an
+invoice with his name, add a description (e.g. t-shirt) with the price
+<code>$25</code> and then throw that into the A-Z in the section for surnames
+starting with <code>S</code>.</p>
+
+<p>Later Jon returns to the store and makes a partial payment (e.g.
+<code>$10</code>) or pays the whole thing.</p>
+
+<p>This approach is horrible, insecure, my mother doesn&rsquo;t know how much
+is people really owing her, she can&rsquo;t have insights, etc.</p>
+
+<p>Let&rsquo;s then  build an App for my mother where she can keep her records, the app name will be <code>facturas</code> which means <code>invoices</code> in Spanish.</p>
+
+<h2>Starting the project.</h2>
+
+<p>For this project we will use <code>Ruby on Rails 4.1.0.beta1</code> and <code>Ember.js 1.4.0-beta</code>.</p>
+
+<p>Install Ruby on Rails <code>gem install rails --pre</code>, once it&rsquo;s completed
+run <code>rails new facturas</code> and we should have the basic structure for
+our project.</p>
+
+<p>Let&rsquo;s keep everything under <code>git</code> so we can keep track of changes.</p>
+
+<pre><code>  $ git init
+  $ git add .
+  $ git commit -m 'Getting started!.'
+</code></pre>
+
+<p>I use <a href="https://github.com/github/hub">hub</a> so I will just push this to a new repo on GitHub.</p>
+
+<pre><code>  $ hub create ember-rails-week-1
+    Updating origin
+    created repository: abuiles/ember-rails-week-1
+  $ git push origin master
+</code></pre>
+
+<p>Now install <code>Ember Appkit Rails</code>, since I want to use a new feature we
+have been working on to include testing out of the box, we won&rsquo;t
+install from rubygems but directly from a branch on github.</p>
+
+<p>Add the following to you Gemfile:</p>
+
+<pre><code>gem 'ember-appkit-rails', git: 'https://github.com/dockyard/ember-appkit-rails.git', branch: 'teaspoon'
+</code></pre>
+
+<p>Run <code>bundle install</code>.</p>
+
+<p>Now we can bootstrap our Rails project with Ember Appkit Rails.</p>
+
+<pre><code>  $ rails g ember:bootstrap
+</code></pre>
+
+<p>For now just focus on this two files:</p>
+
+<pre><code>  create  config/router.es6
+  create  config/application.js
+</code></pre>
+
+<p><code>router.es6</code> would be the main entry point for our Ember App, it&rsquo;s
+something similar to <code>routes.rb</code>, it will help us defined how users
+interact with our application. We will talk more about it later but if
+you can&rsquo;t wait, check the awesome <a href="http://emberjs.com/guides/routing/">routing
+guide</a> on Ember.js.</p>
+
+<p><code>application.js</code> is the replacement for <code>app/assets/javascript/application.js</code>.</p>
+
+<p>Remove your <code>app/asseets/javascripts</code> since it will be ignore by EAKR <code>rm -rf app/asseets/javascripts</code>.</p>
+
+<p>Start your rails server <code>rails s</code> and go to <code>http://localhost:3000</code>, you will see <code>"Welcome to Ember!"</code>.</p>
+
+<p>We are ready to start! In the next post we will create our first
+model, talk a bit about testing and keep our journey of mastery of
+Ember.js with Ruby on Rails.</p>
+
+<h3>Can&rsquo;t wait?</h3>
+
+<ol>
+<li><p>Create an &lsquo;Ember&rsquo; application template</p>
+
+<pre><code>$ echo  &gt; app/templates/application.hbs
+</code></pre></li>
+<li><p>In <code>config/routes.rb</code> uncomment the last line <code>get '*foo', :to =&gt; 'landing#index'</code>. It should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64">https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64</a></p></li>
+<li>In route.es6 uncomment   <code>location: 'history'</code> it should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8">https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8</a></li>
+</ol>
+
+
+<p>EAKR also has a scaffold command try the following</p>
+
+<pre><code>   $ rails g scaffold clients first_name:string last_name:string --ember
+   $ rake db:migrate
+</code></pre>
+
+<p>Now navigate to <code>http://localhost:3000/clients</code> &ndash; Congrats! you have your first Ember app running.</p>
+
+<h4>Don&rsquo;t fall behind subscribe to the Ember.js with Ruby on Rails list and stay updated.</h4>
+
+<p><form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails MVC is not the same as Ember.js MVC]]></title>
