@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | ]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-02-07T11:10:14-02:00</updated>
+  <updated>2014-02-07T11:14:18-02:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Building an App for my mom with Ember Appkit Rails App.]]></title>
-    <link href="http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails-app/"/>
+    <title type="html"><![CDATA[Building an App for my mom with Ember Appkit Rails.]]></title>
+    <link href="http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/"/>
     <updated>2014-02-07T10:56:18-02:00</updated>
-    <id>http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails-app</id>
+    <id>http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails</id>
     <content type="html"><![CDATA[<p><strong>This is post is part of my series <a href="http://blog.abuiles.com/ember-js-with-Ruby-on-rails/">learning Ember.js with Ruby on Rails</a>.</strong></p>
 
 <p>In previous post we explored what is
