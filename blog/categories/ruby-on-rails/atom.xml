@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | ]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-02-07T11:14:18-02:00</updated>
+  <updated>2014-02-10T00:04:39-02:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -18,7 +18,7 @@
     <link href="http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/"/>
     <updated>2014-02-07T10:56:18-02:00</updated>
     <id>http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails</id>
-    <content type="html"><![CDATA[<p><strong>This is post is part of my series <a href="http://blog.abuiles.com/ember-js-with-Ruby-on-rails/">learning Ember.js with Ruby on Rails</a>.</strong></p>
+    <content type="html"><![CDATA[<p><strong>This post is part of my series about <a href="http://blog.abuiles.com/ember-js-with-Ruby-on-rails/">learning Ember.js with Ruby on Rails</a>.</strong></p>
 
 <p>In previous post we explored what is
 <a href="http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/">Ember.js MVC</a>
@@ -73,13 +73,13 @@ our project.</p>
   $ git push origin master
 </code></pre>
 
-<p>Now install <code>Ember Appkit Rails</code>, since I want to use a new feature we
+<p>Install <code>Ember Appkit Rails</code>, since I want to use a new feature we
 have been working on to include testing out of the box, we won&rsquo;t
-install from rubygems but directly from a branch on github.</p>
+install from rubygems but directly from GitHub.</p>
 
 <p>Add the following to you Gemfile:</p>
 
-<pre><code>gem 'ember-appkit-rails', git: 'https://github.com/dockyard/ember-appkit-rails.git', branch: 'teaspoon'
+<pre><code>gem 'ember-appkit-rails', git: 'https://github.com/dockyard/ember-appkit-rails.git'
 </code></pre>
 
 <p>Run <code>bundle install</code>.</p>
@@ -103,7 +103,7 @@ guide</a> on Ember.js.</p>
 
 <p><code>application.js</code> is the replacement for <code>app/assets/javascript/application.js</code>.</p>
 
-<p>Remove your <code>app/asseets/javascripts</code> since it will be ignore by EAKR <code>rm -rf app/asseets/javascripts</code>.</p>
+<p>Remove your <code>app/assets/javascripts</code> since it will be ignore by EAKR <code>rm -rf app/assets/javascripts</code>.</p>
 
 <p>Start your rails server <code>rails s</code> and go to <code>http://localhost:3000</code>, you will see <code>"Welcome to Ember!"</code>.</p>
 
