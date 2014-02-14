@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://blog.abuiles.com/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-02-10T00:04:39-02:00</updated>
+  <updated>2014-02-14T10:46:52-02:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -18,7 +18,7 @@
     <link href="http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/"/>
     <updated>2014-02-07T10:56:18-02:00</updated>
     <id>http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails</id>
-    <content type="html"><![CDATA[<p><strong>This post is part of my series about <a href="http://blog.abuiles.com/ember-js-with-Ruby-on-rails/">learning Ember.js with Ruby on Rails</a>.</strong></p>
+    <content type="html"><![CDATA[<p><strong>This post is part of my series about <a href="http://blog.abuiles.com/ember-js-with-ruby-on-rails">learning Ember.js with Ruby on Rails</a>.</strong></p>
 
 <p>In previous post we explored what is
 <a href="http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/">Ember.js MVC</a>
@@ -37,12 +37,12 @@ that people will come back and pay them (crazy, isn&rsquo;t?).</p>
 <p>During my last visit I was really shocked when I saw that she was
 keeping all her records on physical invoices in under an A-Z folder.</p>
 
-<p>If <code>Jon Smith</code> takes a t-shirt on credit, they would create an
+<p>If <code>John Smith</code> takes a t-shirt on credit, they would create an
 invoice with his name, add a description (e.g. t-shirt) with the price
 <code>$25</code> and then throw that into the A-Z in the section for surnames
 starting with <code>S</code>.</p>
 
-<p>Later Jon returns to the store and makes a partial payment (e.g.
+<p>Later John returns to the store and makes a partial payment (e.g.
 <code>$10</code>) or pays the whole thing.</p>
 
 <p>This approach is horrible, insecure, my mother doesn&rsquo;t know how much
