@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://blog.abuiles.com/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-02-21T10:15:45-03:00</updated>
+  <updated>2014-02-21T11:08:52-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -44,7 +44,7 @@ today we are going to talk about 3 important concepts in Ember.js: The
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;h1&gt;</span>Hi Ember.js<span class="nt">&lt;/h1&gt;</span>
-</span><span class='line'>
+</span><span class='line'>{{outlet}}
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -120,9 +120,11 @@ create one by default and then renders the template under <code>templates/index.
 <p>Replace the <code>index</code> template with</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;h1&gt;</span>I&#39;m the Index! <span class="nt">&lt;/h1&gt;</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;h1&gt;</span>I&#39;m the Index! {{date}}<span class="nt">&lt;/h1&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>html</p>
 
 <p>After refreshing you will see <code>I'm the Index</code> follow by a date, we
 just write our first route, bootstrapped the required stuff for our
@@ -319,9 +321,7 @@ goodies), and this has a huge impact on how we are used to look at Rails apps.</
 code under <code>app/</code> and configuration files under <code>config/</code>, it also
 removes <code>app/assets/javascripts</code> from the assets load path and ignores
 files put in that directory. All this can be configurable and
-and could change for 1.0. (see [issue</p>
-
-<h1>151](<a href="https://github.com/dockyard/ember-appkit-rails/issues/151">https://github.com/dockyard/ember-appkit-rails/issues/151</a>))</h1>
+and could change for 1.0.</p>
 
 <p>You also get some Rails generators and if you pass
 <code>--ember</code>, it will create the equivalent files for Ember.</p>

@@ -242,7 +242,7 @@ today we are going to talk about 3 important concepts in Ember.js: The
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;h1&gt;</span>Hi Ember.js<span class="nt">&lt;/h1&gt;</span>
-</span><span class='line'>
+</span><span class='line'>{{outlet}}
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -318,9 +318,11 @@ create one by default and then renders the template under <code>templates/index.
 <p>Replace the <code>index</code> template with</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;h1&gt;</span>I&#39;m the Index! <span class="nt">&lt;/h1&gt;</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;h1&gt;</span>I&#39;m the Index! {{date}}<span class="nt">&lt;/h1&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>html</p>
 
 <p>After refreshing you will see <code>I'm the Index</code> follow by a date, we
 just write our first route, bootstrapped the required stuff for our

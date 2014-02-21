@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ember.js | ]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-dot-js/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-02-21T10:49:08-03:00</updated>
+  <updated>2014-02-21T11:08:52-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -41,18 +41,26 @@ today we are going to talk about 3 important concepts in Ember.js: The
 
 <p>Create the file <code>app/templates/application.hbs</code> and put the following content there.</p>
 
-<p>{% gist 9134487 %}</p>
+<p>
+```html</p>
+
+<h1>Hi Ember.js</h1>
+
+
+<p>{{outlet}}
+```
+</p>
 
 <p>Refresh your browser and you will see <code>Hi Ember.js</code>.</p>
 
-<p>{{outlet}} is similar to <code>yield</code> on the application
+<p> is similar to <code>yield</code> on the application
 template in Ruby on Rails <strong>but is not the same, there is also the
 word <code>yield</code> on Ember.js we&rsquo;ll cover later</strong></p>
 
 <p>Let&rsquo;s add something into the outlet, create the file
 <code>app/templates/index.hbs</code> with the following</p>
 
-<p>```handlebars</p>
+<p>```html</p>
 
 <h1>I'm the Index!</h1>
 
@@ -113,7 +121,14 @@ export default Ember.Route.extend({
 
 <p>Replace the <code>index</code> template with</p>
 
-<p>{% gist 9134511 %}</p>
+<p>
+```html</p>
+
+<h1>I'm the Index! {{date}}</h1>
+
+
+<p>```html
+</p>
 
 <p>After refreshing you will see <code>I'm the Index</code> follow by a date, we
 just write our first route, bootstrapped the required stuff for our
@@ -243,7 +258,7 @@ Ember.js with Ruby on Rails.</p>
 <ol>
 <li><p>Create an &lsquo;Ember&rsquo; application template</p>
 
-<pre><code>$ echo {{outlet}} &gt; app/templates/application.hbs
+<pre><code>$ echo  &gt; app/templates/application.hbs
 </code></pre></li>
 <li><p>In <code>config/routes.rb</code> uncomment the last line <code>get '*foo', :to =&gt; 'landing#index'</code>. It should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64">https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64</a></p></li>
 <li>In route.es6 uncomment   <code>location: 'history'</code> it should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8">https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8</a></li>
