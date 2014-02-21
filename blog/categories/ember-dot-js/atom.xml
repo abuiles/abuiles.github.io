@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ember.js | ]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-dot-js/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-02-21T10:31:05-03:00</updated>
+  <updated>2014-02-21T10:38:00-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -41,13 +41,15 @@ today we are going to talk about 3 important concepts in Ember.js: The
 
 <p>Create the file <code>app/templates/application.hbs</code> and put the following content there.</p>
 
-<p>{% codeblock %}</p>
+<p>{% raw %}
+```handlebars</p>
 
 <h1>Hi Ember.js</h1>
 
 
-<p>&#123;&#123;outlet&#125;&#125;
-{% endcodeblock %}</p>
+<p>{{outlet}}
+```
+{% endraw %}</p>
 
 <p>Refresh your browser and you will see <code>Hi Ember.js</code>.</p>
 
@@ -119,12 +121,14 @@ export default Ember.Route.extend({
 
 <p>Replace the <code>index</code> template with</p>
 
-<p>```</p>
+<p>{% raw %}
+```handlebars</p>
 
-<h1>I'm the Index! &#123;&#123;date&#125;&#125;</h1>
+<h1>I'm the Index! {{date}}</h1>
 
 
-<p>{% endcodeblock %}</p>
+<p>```
+{% endraw %}</p>
 
 <p>After refreshing you will see <code>I'm the Index</code> follow by a date, we
 just write our first route, bootstrapped the required stuff for our
