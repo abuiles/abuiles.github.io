@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | ]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-02-21T10:44:04-03:00</updated>
+  <updated>2014-02-21T10:49:08-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -41,16 +41,7 @@ today we are going to talk about 3 important concepts in Ember.js: The
 
 <p>Create the file <code>app/templates/application.hbs</code> and put the following content there.</p>
 
-<p>{% codeblock %}
-{% raw %}
-```handlebars</p>
-
-<h1>Hi Ember.js</h1>
-
-
-<p>{{outlet}}
-```{% raw %}
-{% endcodeblock %}</p>
+<p>{% gist 9134487 %}</p>
 
 <p>Refresh your browser and you will see <code>Hi Ember.js</code>.</p>
 
@@ -122,16 +113,7 @@ export default Ember.Route.extend({
 
 <p>Replace the <code>index</code> template with</p>
 
-<p>{% codeblock %}
-{% raw %}
-```handlebars</p>
-
-<h1>I'm the Index! {{date}}</h1>
-
-
-<p>```
-{% end %}
-{% endcodeblock %}</p>
+<p>{% gist 9134511 %}</p>
 
 <p>After refreshing you will see <code>I'm the Index</code> follow by a date, we
 just write our first route, bootstrapped the required stuff for our
