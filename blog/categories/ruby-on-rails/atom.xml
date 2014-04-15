@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | ]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-04-14T23:59:14-03:00</updated>
+  <updated>2014-04-15T00:02:53-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -37,6 +37,8 @@
 </code></pre>
 
 <p>Notice that a record becomes <code>isInvalid</code> only if <code>DS.InvalidError</code> can be created, on the <code>ActiveModelAdapter</code> case that is if the status code is <code>422</code> and <code>errors</code> is the root of your payload, otherwise it becomes <code>isError</code>.</p>
+
+<p>If you want a validation library checkout <a href="https://github.com/dockyard/ember-validations">DockYard&rsquo;s ember-validations</a></p>
 
 <p>P.S I&rsquo;m <a href="http://blog.abuiles.com/ember-js-with-ruby-on-rails/">writing a series of post on working with Ember.js and Ruby on Rails</a>, subscribe to my list and I will let you know every time I publish an article on Ember.js and Ruby on Rails.</p>
 
