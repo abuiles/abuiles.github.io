@@ -72,7 +72,7 @@ today &hellip;">
   <li class="other"><a href="/">Blog</a></li>
   <li class="other"><a href="/ember-js-with-ruby-on-rails">Learn Ember.js with Ruby on Rails</a></li>
   <li class="other"><a href="/projects">Projects</a></li>
-
+  <li class="other"><a href="/consulting">Hire Me</a></li>
 
   <li class="other"><a target="_blank" href="/about">About</a></li>
 </ul>
@@ -119,6 +119,10 @@ today &hellip;">
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/">Handling Errors in Ember.js and Ruby on Rails</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/02/21/router-routes-and-templates/">Router, Routes and Templates</a>
@@ -293,10 +297,10 @@ can do that on the <code>route</code> file.</p>
 
 <p>With this in mind, the reason why putting <code>index.hbs</code> works without
 doing anything extra is that Ember.js creates by default an
-<code>IndexRoute</code> which matches to <code>/</code>.</p>
+<code>IndexRoute</code>, which matches to <code>/</code>.</p>
 
-<p>When we visit <code>/</code> it tries to find the <code>app/routes/index.es6</code> if is not there it
-create one by default and then renders the template under <code>templates/index.hbs</code>.</p>
+<p>When we visit <code>/</code>, it tries to find <code>app/routes/index.es6</code>, if it is not there it
+creates one by default and then renders the template under <code>templates/index.hbs</code>.</p>
 
 <h2>A first Route</h2>
 
@@ -321,8 +325,6 @@ create one by default and then renders the template under <code>templates/index.
 </pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;h1&gt;</span>I&#39;m the Index! {{date}}<span class="nt">&lt;/h1&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
-
-<p>html</p>
 
 <p>After refreshing you will see <code>I'm the Index</code> follow by a date, we
 just write our first route, bootstrapped the required stuff for our
@@ -354,6 +356,8 @@ template and then rendered it into the template!</p>
       
         <a class="basic-alignment left" href="/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/" title="Previous Post: Building an App for my mom with Ember Appkit Rails.">&laquo; Previous post</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/" title="next Post: Handling Errors in Ember.js and Ruby on Rails">Next post &raquo;</a>
       
     </p>
   </footer>

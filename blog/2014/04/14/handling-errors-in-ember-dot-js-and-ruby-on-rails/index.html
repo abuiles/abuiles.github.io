@@ -9,12 +9,12 @@
   <meta name="description" content="">
 
   
-    <title>Projects - Adolfo Builes</title>
+    <title>Handling Errors in Ember.js and Ruby on Rails - Adolfo Builes</title>
   
 
 
   
-  <meta name="description" content="Projects Zenlytics Zenlytics is a simple application to help people aggregate data from the SendGrid&#8217;s event api.(2013) Engager Engager was my &hellip;">
+  <meta name="description" content="Ember.js has built-in support to handle errors returned by the backend through the computed property errors, to get it working with the &hellip;">
   
 
 
@@ -25,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.abuiles.com/projects">
+  <link rel="canonical" href="http://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails">
   <link href="/favicon.ico" rel="icon">
   <script type="text/javascript" src="http://use.typekit.com/zcp2xbp.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>  
@@ -58,10 +58,10 @@
 
 <body   >
 
-  <div class="container">
+	<div class="container">
 
-    <div class="four columns">
-        <nav role="navigation"><ul class="title">
+		<div class="four columns">
+  			<nav role="navigation"><ul class="title">
   <li><a href="/">Adolfo Builes</a></li>
 </ul>
 
@@ -177,45 +177,87 @@
             <h2>Code</h2>
               <p><a target="_blank" href="https://github.com/abuiles" target="_blank">GitHub</a></p>
           </section>
+
           <section id="code">
             <h2>Twitter</h2>
-            <p><a target="_blank" href="https://twitter.com/abuiles" target="_blank">GitHub</a></p>
+              <p><a target="_blank" href="https://twitter.com/abuiles" target="_blank">GitHub</a></p>
           </section>
-        </aside>
-    </div>
 
-    <div id="main" class="twelve columns">
-      <div id="content">
-        <div>
-<article role="article">
+
+        </aside>
+  	</div>
+
+    
+
+  	<div id="main" class="twelve columns">
+	    <div id="content">
+	      <div>
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Projects</h1>
+    
+      <h1 class="entry-title">Handling Errors in Ember.js and Ruby on Rails</h1>
+    
+    
+      <p class="meta">
+        
+      </p>
+    
   </header>
+
+
+    
+      <div class="sharing">
   
-  <div class="project">
-  <h3>Zenlytics</h3>
-  <p><p><a href="http://beta.zenlytics.com" target="_blank">Zenlytics</a> is a simple application to help people aggregate data from the SendGrid&#8217;s event api.<span class="project-date">(2013)</span></p>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/" data-via="abuiles" data-counturl="http://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/" >Tweet</a>
+  
+  
+  
 </div>
 
-<div class="project">
-  <h3>Engager</h3>
-  <p><p><a href="http://engager.io" target="_blank">Engager</a> was my first startup, we tried to build a platform to help companies and developer to connect based on cultural fit. Unfortunately things didn&#8217;t go very well and we stopped working on it. <span class="project-date">(2012)</span></p>
+    
+
+
+<div class="entry-content"><p>Ember.js has built-in support to handle errors returned by the backend through the computed property <code>errors</code>, to get it working with the <code>ActiveModelAdapter</code> you payload&rsquo;s root key has to be called <code>errors</code> and your status code should be <code>422</code>.</p>
+
+<p>Suppose you want to create a post and you get an error like the following:</p>
+
+<pre><code>{ errors: { body: ['can't be blank'] } }
+</code></pre>
+
+<p>Once the requests has been completed you can check if you model is valid or not with <code>model.get('isValid')</code> and then the  <code>errors</code> with:</p>
+
+<pre><code> post.get('errors').get('body')
+ [
+   Object
+   attribute: "body"
+   message: "can't be blank"
+   __proto__: Object
+ ]
+</code></pre>
+
+<p>Notice that a record becomes <code>isInvalid</code> only if <code>DS.InvalidError</code> can be created, on the <code>ActiveModelAdapter</code> case that is if the status code is <code>422</code> and <code>errors</code> is the root of your payload, otherwise it becomes <code>isError</code>.</p>
+
+<p>P.S I&rsquo;m <a href="http://blog.abuiles.com/ember-js-with-ruby-on-rails/">writing a series of post on working with Ember.js and Ruby on Rails</a>, subscribe to my list and I will let you know every time I publish an article on Ember.js and Ruby on Rails.</p>
+
+<p><form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/21/router-routes-and-templates/" title="Previous Post: Router, Routes and Templates">&laquo; Previous post</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
 
-<script>
-  jQuery.noConflict()('li.other').hover (
-    function () {
-    jQuery.noConflict()(this).toggleClass("current-menu-item")
-  });
-</script>
-
-      </div>
-    </div>
+	    </div>
+  	</div>
 
   <footer role="contentinfo"  class="sixteen columns"><center>
 <p class="credit">
@@ -249,9 +291,9 @@
 
 
 <script>
-  $('li.other').hover (
+  jQuery.noConflict()('li.other').hover (
     function () {
-    $(this).toggleClass("current-menu-item")
+    jQuery.noConflict()(this).toggleClass("current-menu-item")
   });
 </script>
 
@@ -259,4 +301,4 @@
 </html>
 
 
-  </div> <!-- container -->
+	</div> <!-- container -->
