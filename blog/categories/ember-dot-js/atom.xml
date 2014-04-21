@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Ember.js | Random things, not everyday]]></title>
+  <title><![CDATA[Category: Ember.js | Tek, Tak]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-dot-js/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-04-21T09:22:48-03:00</updated>
+  <updated>2014-04-21T09:30:32-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
