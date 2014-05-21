@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ember-cli, | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-cli/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-05-21T11:26:11-03:00</updated>
+  <updated>2014-05-21T14:24:26-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -62,7 +62,7 @@ which you can install through bower for handling CSRF for you.</p>
 
 <h2>Building</h2>
 
-<p>I came through a script by Jason Madsen(@bjason_madsen) which would
+<p>I came through a script by Jason Madsen(@jason_madsen) which would
 take care of building the ember-cli app and putting it under public,
 it works great but the final output is under your <code>public/index.html</code>
 which I don&rsquo;t want.</p>
