@@ -33,12 +33,18 @@
         <lastmod>2014-05-12T21:14:07-03:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku/
+        </loc>
+        <lastmod>2014-05-21T11:15:34-03:00</lastmod>
+    </url>
+    <url>
         <loc>http://blog.abuiles.com/about/</loc>
         <lastmod>2014-05-20T12:31:31-03:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/blog/archives/</loc>
-        <lastmod>2014-05-12T21:14:07-03:00</lastmod>
+        <lastmod>2014-05-21T11:15:34-03:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/consulting/</loc>
@@ -50,11 +56,11 @@
     </url>
     <url>
         <loc>http://blog.abuiles.com/</loc>
-        <lastmod>2014-05-12T21:14:07-03:00</lastmod>
+        <lastmod>2014-05-21T11:15:34-03:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/projects/</loc>
-        <lastmod>2014-05-12T21:14:07-03:00</lastmod>
+        <lastmod>2014-05-21T11:15:34-03:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/robots.txt</loc>
