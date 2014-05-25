@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ember-cli, | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-cli/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-05-22T22:01:14-03:00</updated>
+  <updated>2014-05-25T12:26:02-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -122,7 +122,7 @@ end
 <ol>
 <li>Deploying to heroku just the Rails files, currently we include the ember-cli app as well.</li>
 <li>Using cloud front for serving your assets.</li>
-<li>Fingerprinting.</li>
+<li><del>Fingerprinting</del> is super simple with <a href="https://github.com/rickharrison/broccoli-asset-rev">broccoli-asset-rev</a> see it in use <a href="https://github.com/abuiles/facturas/commit/12b23d5fc36d0906a1e21cae7aed97bdbb8cba9e">here</a>.</li>
 <li>Doing lightning fast deployments (see <a href="http://www.confreaks.com/videos/3324-railsconf-lightning-fast-deployment-of-your-rails-backed-javascript-app">Luke&rsquo;s Melia talk on Rails Conf</a>).</li>
 </ol>
 
