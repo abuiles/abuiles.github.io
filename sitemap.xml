@@ -2,72 +2,76 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/
+            http://blog.abuiles.com/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/
         </loc>
-        <lastmod>2014-01-31T09:28:39-02:00</lastmod>
+        <lastmod>2014-01-31T03:28:39-08:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/
         </loc>
-        <lastmod>2014-02-21T10:18:28-03:00</lastmod>
+        <lastmod>2014-02-21T05:18:28-08:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/
         </loc>
-        <lastmod>2014-02-14T10:46:42-02:00</lastmod>
+        <lastmod>2014-02-14T04:46:42-08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/blog/2014/02/21/router-routes-and-templates/</loc>
-        <lastmod>2014-02-21T17:20:48-03:00</lastmod>
+        <lastmod>2014-02-21T12:20:48-08:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/
         </loc>
-        <lastmod>2014-04-15T00:02:52-03:00</lastmod>
+        <lastmod>2014-04-14T20:02:52-07:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/blog/2014/05/12/ember-cli-plus-rails/</loc>
-        <lastmod>2014-05-12T21:14:07-03:00</lastmod>
+        <lastmod>2014-05-12T17:14:07-07:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku/
         </loc>
-        <lastmod>2014-05-25T12:25:48-03:00</lastmod>
+        <lastmod>2014-05-25T08:25:48-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/</loc>
+        <lastmod>2014-07-08T14:41:16-07:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/about/</loc>
-        <lastmod>2014-05-20T12:31:31-03:00</lastmod>
+        <lastmod>2014-05-20T08:31:31-07:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/blog/archives/</loc>
-        <lastmod>2014-05-25T12:25:48-03:00</lastmod>
+        <lastmod>2014-07-08T14:41:16-07:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/consulting/</loc>
-        <lastmod>2014-05-25T15:53:49-03:00</lastmod>
+        <lastmod>2014-05-25T11:53:49-07:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/ember-js-with-ruby-on-rails/</loc>
-        <lastmod>2014-05-21T11:22:36-03:00</lastmod>
+        <lastmod>2014-05-21T07:22:36-07:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/</loc>
-        <lastmod>2014-05-25T12:25:48-03:00</lastmod>
+        <lastmod>2014-07-08T14:41:16-07:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/projects/</loc>
-        <lastmod>2014-05-25T12:25:48-03:00</lastmod>
+        <lastmod>2014-07-08T14:41:16-07:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/robots.txt</loc>
-        <lastmod>2014-01-27T10:32:51-02:00</lastmod>
+        <lastmod>2014-01-27T04:32:51-08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/zenlytics-custom/</loc>
-        <lastmod>2014-05-22T22:00:56-03:00</lastmod>
+        <lastmod>2014-05-22T18:00:56-07:00</lastmod>
     </url>
 </urlset>
