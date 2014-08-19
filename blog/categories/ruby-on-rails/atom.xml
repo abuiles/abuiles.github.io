@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-07-09T18:33:17-07:00</updated>
+  <updated>2014-08-19T14:17:29-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Handling Errors in Ember.js and Ruby on Rails]]></title>
     <link href="http://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/"/>
-    <updated>2014-04-14T19:39:22-07:00</updated>
+    <updated>2014-04-14T21:39:22-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails</id>
     <content type="html"><![CDATA[<p>Ember.js has built-in support to handle errors returned by the backend through the computed property <code>errors</code>, to get it working with the <code>ActiveModelAdapter</code> you payload&rsquo;s root key has to be called <code>errors</code> and your status code should be <code>422</code>.</p>
 
@@ -49,7 +49,7 @@
   <entry>
     <title type="html"><![CDATA[Router, Routes and Templates]]></title>
     <link href="http://blog.abuiles.com/blog/2014/02/21/router-routes-and-templates/"/>
-    <updated>2014-02-21T05:01:26-08:00</updated>
+    <updated>2014-02-21T08:01:26-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/02/21/router-routes-and-templates</id>
     <content type="html"><![CDATA[<p><strong>This post is part of my series about <a href="http://blog.abuiles.com/ember-js-with-ruby-on-rails">learning Ember.js with Ruby on Rails</a>.</strong></p>
 
@@ -191,7 +191,7 @@ template and then rendered it into the template!</p>
   <entry>
     <title type="html"><![CDATA[Building an App for my mom with Ember Appkit Rails.]]></title>
     <link href="http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/"/>
-    <updated>2014-02-07T04:56:18-08:00</updated>
+    <updated>2014-02-07T07:56:18-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails</id>
     <content type="html"><![CDATA[<p><strong>This post is part of my series about <a href="http://blog.abuiles.com/ember-js-with-ruby-on-rails">learning Ember.js with Ruby on Rails</a>.</strong></p>
 
@@ -315,7 +315,7 @@ Ember.js with Ruby on Rails.</p>
   <entry>
     <title type="html"><![CDATA[Ruby on Rails MVC is not the same as Ember.js MVC]]></title>
     <link href="http://blog.abuiles.com/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
-    <updated>2014-01-26T20:17:52-08:00</updated>
+    <updated>2014-01-26T23:17:52-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
     <content type="html"><![CDATA[<p>One of the most confusing parts for people coming from Rails (or any
 other backend web application framework) it&rsquo;s that what Ember.js
