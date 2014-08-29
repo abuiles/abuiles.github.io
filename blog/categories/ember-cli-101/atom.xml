@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ember.js | Random Stuff, Ember.js mostly.]]></title>
-  <link href="http://blog.abuiles.com/blog/categories/ember-dot-js/atom.xml" rel="self"/>
+  <title><![CDATA[Category: ember-cli-101 | Random Stuff, Ember.js mostly.]]></title>
+  <link href="http://blog.abuiles.com/blog/categories/ember-cli-101/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
   <updated>2014-08-29T13:42:56-05:00</updated>
   <id>http://blog.abuiles.com/</id>

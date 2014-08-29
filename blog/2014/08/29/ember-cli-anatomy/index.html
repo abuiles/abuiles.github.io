@@ -8,12 +8,13 @@
   <meta name="author" content="Adolfo Builes">
   <meta name="description" content="Adolfo Builes Blog - Talking about Ember.js.">
 
-  <title>Getting Started With Ember.js and Ruby on Rails: Ember Appkit Rails</title>
+  <title>Ember-cli Anatomy</title>
 
 
   
-  <meta name="description" content="This is the second post of my series about learning Ember.js
-with Ruby on Rails. Ember App Kit Ember App Kit is project started by Embereño Stefan &hellip;">
+  <meta name="description" content="Every new developer coming to Ember.js is probably using ember-cli,
+but I&rsquo;ve noticed that most of the time they are not fully aware of
+ember- &hellip;">
   
 
 
@@ -24,7 +25,7 @@ with Ruby on Rails. Ember App Kit Ember App Kit is project started by Embereño 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails">
+  <link rel="canonical" href="http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy">
   <link href="/favicon.ico" rel="icon">
   <script type="text/javascript" src="http://use.typekit.com/zcp2xbp.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -195,7 +196,7 @@ with Ruby on Rails. Ember App Kit Ember App Kit is project started by Embereño 
   
   <header>
     
-      <h1 class="entry-title">Getting Started With Ember.js and Ruby on Rails: Ember Appkit Rails</h1>
+      <h1 class="entry-title">Ember-cli Anatomy</h1>
     
     
       <p class="meta">
@@ -208,7 +209,7 @@ with Ruby on Rails. Ember App Kit Ember App Kit is project started by Embereño 
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/" data-via="abuiles" data-counturl="http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/" data-text="" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy/" data-via="abuiles" data-counturl="http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy/" data-text="" >Tweet</a>
   
   
   
@@ -217,118 +218,65 @@ with Ruby on Rails. Ember App Kit Ember App Kit is project started by Embereño 
     
 
 
-<div class="entry-content"><p><strong>This is the second post of my series about <a href="http://blog.abuiles.com/ember-js-with-Ruby-on-rails/">learning Ember.js
-with Ruby on Rails</a>.</strong></p>
+<div class="entry-content"><p>Every new developer coming to Ember.js is probably using ember-cli,
+but I&rsquo;ve noticed that most of the time they are not fully aware of
+ember-cli&rsquo;s main components and how they interact together so I took
+this from my <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a> book
+where I try to explain it.</p>
 
-<h3>Ember App Kit</h3>
+<p><code>ember-cli</code> is a <code>Node.js</code> command line application sitting on top of
+other libraries.</p>
 
-<p><a href="https://github.com/stefanpenner/ember-app-kit">Ember App Kit</a> is project started by Embereño <a href="http://twitter.com/stefanpenner">Stefan Penner</a>, from its page:</p>
+<p>Its main component is <a href="https://github.com/broccolijs/broccoli">Broccoli</a>, which allows us to have fast builds,
+<code>Broccoli</code> is a builder designed with the goal of keeping builds as
+fast as possible (currently there are some issues on Mac which slows down the build time but there is work in progress to fix it).</p>
 
-<blockquote><p>Ember App Kit (EAK) is a robust starter kit for developing
-applications in Ember.js. EAK makes it easy to develop, build, test,
-and deploy applications independent of any back-end build process.</p></blockquote>
+<p>When we run <code>ember server</code>, <code>Broccoli</code> compiles our project and put it
+in a directory where it can be served using
+<a href="http://expressjs.com/"><code>Express.js</code></a> which is a <code>Node.js</code> library.
+<code>Express</code> is not only used to served files but also to extend
+<code>ember-cli</code> functionality using its <code>middlewares</code>, an example of this
+is the <code>http-proxy</code> which supports the <code>--proxy</code> option, allowing us
+to develop against our development backend.</p>
 
-<p>Getting an Ember project started is really easy thanks to EAK, it
-already puts the basic structure of our apps so we can focus on
-what we like the most, developing.</p>
+<p>Testing is powered by <code>QUnit</code> and <code>Testem</code>, we can always navigate to
+<code>http:/localhost:4200/tests</code> and our test will be run automatically.
+We can also run Testem in <code>CI</code> or <code>--development</code> mode with the <code>ember
+test</code> command. Currently there is just support for <code>QUnit</code> through an
+<code>ember-cli add-on</code>, we will probably see support for other testing
+frameworks and runners as people get familiar with the add-on system.</p>
 
-<p>But what if I want to use Ruby on Rails and Ember? How can I get all
-this stuff to play nicely?.</p>
+<p><code>ember-cli</code> uses it&rsquo;s <a href="https://github.com/stefanpenner/ember-jj-abrams-resolver">own
+resolver</a>
+and has a different naming convention to <code>Ember.js's</code> defaults.</p>
 
-<p>There are three options:</p>
+<p><code>ember-cli</code> makes us write our application using <code>ES6 Modules</code>, then the code gets transpiled (compiled)[1] to <code>AMD</code>[2] and finally it is loaded with <code>loader.js</code> which is a minimalist <code>AMD</code> loader.</p>
 
-<ol>
-<li>Keep two separate projects, a Rails app (probably using rails-api) and an EAK app.</li>
-<li>Use the <code>ember-rails</code> which basically puts Ember&rsquo;s source files in your project and compiles your templates.</li>
-<li>Use Ember Appkit Rails :).</li>
-</ol>
+<p>If you want to use coffee script you can use it but it is encouraged
+to use plain JS and ES6 where possible.</p>
 
+<p>Finally we need to cover <code>Broccoli</code>&rsquo;s plugins because without them,
+<code>Broccoli</code> wouldn&rsquo;t be as helpful. Every transformation that your
+files are going through, are done with a <code>Broccoli</code> plugin, e.g.
+transpiling, minifying, finger-printing, uglifying. You can have your
+own <code>Broccoli</code> plugins and plug it wherever you want in the build
+process.</p>
 
-<h3>Introducing Ember Appkit Rails.</h3>
+<p><strong> <a href="https://leanpub.com/ember-cli-101">Learn how to write apps with Ember.js and ember-cli</a> with my <a href="https://leanpub.com/ember-cli-101">ember-cli-101 book</a>.</strong></p>
 
-<p><a href="https://github.com/dockyard/ember-appkit-rails">Ember Appkit Rails</a>
-is a <a href="http://dockyard.com">DockYard&rsquo;s</a> project which aims to port
-Ember App Kit to the Asset Pipeline.</p>
+<ul>
+<li>[1]: The transpiring process is done with <a href="https://github.com/esnext/es6-module-transpiler">es6-module-transpiler</a>.</li>
+<li>[2]: To know more about <code>AMD</code> checkout <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">their wiki</a></li>
+</ul>
 
-<p>Different to the <code>ember-rails</code>&rsquo;s gem, EAKR brings the same level of
-importance to your Ember.js files as your Rails files (plus some other
-goodies), and this has a huge impact on how we are used to look at Rails apps.</p>
-
-<p>EAKR (Ember Appkit Rails) puts by default all your ember application
-code under <code>app/</code> and configuration files under <code>config/</code>, it also
-removes <code>app/assets/javascripts</code> from the assets load path and ignores
-files put in that directory. All this can be configurable and
-and could change for 1.0.</p>
-
-<p>You also get some Rails generators and if you pass
-<code>--ember</code>, it will create the equivalent files for Ember.</p>
-
-<p>As an example let&rsquo;s look at the output of <code>rails g scaffold posts --ember</code></p>
-
-<pre><code>$rails g scaffold user first_name:string last_name:string --ember
-      invoke  active_record
-      create    db/migrate/20140131134237_create_users.rb
-      create    app/models/user.rb
-      invoke    rspec
-      create      spec/models/user_spec.rb
-      invoke      factory_girl
-      create        spec/factories/users.rb
-      create  config/serializers/user_serializer.rb
-      invoke  ember:resource
-      create    app/models/user.es6
-      create    test/models/user_test.es6
-      create    app/routes/users/edit.es6
-      create    app/routes/users/index.es6
-      create    app/routes/users/new.es6
-      create    app/routes/users/show.es6
-      insert    config/router.es6
-      create    app/templates/users/edit.hbs
-      create    app/templates/users/index.hbs
-      create    app/templates/users/new.hbs
-      create    app/templates/users/show.hbs
-      create    app/templates/users.hbs
-      create    app/templates/users/form.hbs
-      invoke  scaffold_controller
-      create    app/controllers/api/v1/users_controller.rb
-      invoke    rspec
-</code></pre>
-
-<p>It creates our Ruby on Rails models, controllers, Ember files and test.</p>
-
-<p>Some important things to notice here are</p>
-
-<ol>
-<li><p>Ember.js files are located under app, e.g. <code>app/models/user.es6</code></p></li>
-<li><p>Note the extension for JavaScript files: <code>.es6</code>. It means that
-they are written using ECMAScript 6 syntax which then is compiled to
-AMD (Hopefully GitHub will <a href="https://github.com/github/linguist/pull/910">start to highlight this file</a>)</p></li>
-<li><p>Your controller is namespaced under <code>api/vX</code>, you can change the version with <code>config.ember.api_version</code>, also your controller is optimized to be a <code>json</code> end-point.</p></li>
-<li><p><code>test/models/user_test.es6</code> this is actually not part of the
-official version but might be integrated any time soon (I&rsquo;m using a
-development branch), you will also get test for other parts of your
-Ember app like Routes, Controller, and Integration.</p></li>
-</ol>
-
-
-<p>All this is still under heavy development and some things might change
-(I&rsquo;ll keep this post updated).</p>
-
-<p>In the next post we will start to work on an application and also get
-into some of Ember.js concepts as we start to come across them.</p>
-
-<p><strong>Subscribe to the Ember.js with Ruby on Rails list to stay updated.</strong></p>
-
-<p><form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></p>
 </div>
 
 
   <footer>
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/" title="Previous Post: Ruby on Rails MVC is not the same as Ember.js MVC">&laquo; Previous post</a>
+        <a class="basic-alignment left" href="/blog/2014/07/08/lightning-fast-deployments-with-rails/" title="Previous Post: Lightning Fast Deployments with Rails (in the wild).">&laquo; Previous post</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/" title="next Post: Building an App for my mom with Ember Appkit Rails.">Next post &raquo;</a>
       
     </p>
   </footer>
