@@ -4,7 +4,7 @@
   <title><![CDATA[Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-09-14T07:54:55-05:00</updated>
+  <updated>2014-10-01T09:54:43-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ember.js Route Hooks]]></title>
+    <link href="http://blog.abuiles.com/blog/2014/10/01/ember-dot-js-route-hooks/"/>
+    <updated>2014-10-01T09:33:17-05:00</updated>
+    <id>http://blog.abuiles.com/blog/2014/10/01/ember-dot-js-route-hooks</id>
+    <content type="html"><![CDATA[<p>As part of my Ember.js Coaching business, I explain very often to
+people how the Ember Route hooks work and the kind of stuff they can
+do with them, a question that always pops up is: <strong>But in which order
+are they called?</strong>.</p>
+
+<p>To answer this I use an awesome JSBin created by <a href="https://twitter.com/rwjblue">Robert
+Jackson (@rwjblue)</a> which shows exactly the order in which the hooks are called, I find myself looking at this from time to time and always find it super useful so I hope you do too, enjoy!</p>
+
+<p><a class="jsbin-embed" href="http://jsbin.com/rolo/1/embed?html,css,js,output">Ember Route Hook Order</a><script src="http://static.jsbin.com/js/embed.js"></script></p>
+
+<p>Also, don&rsquo;t forget to thank Robert (@rwjblue) for this!</p>
+
+<p><strong> <a href="https://leanpub.com/ember-cli-101">Getting started with Ember.js? I&rsquo;m writing an Ember.js book, learn Ember.js and ember-cli</a> with <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a>.</strong></p>
+
+<p><strong>Looking for an Ember.js Coach? <a href="http://blog.abuiles.com/emberjs-consulting/">Hire me</a>  and I&rsquo;ll help your team stay in the flow with my unlimited support plan</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ember-cli Anatomy]]></title>
@@ -379,7 +402,7 @@ and the Rails part in <a href="https://github.com/abuiles/facturas/commit/391fcf
 <h4>Pair with me.</h4>
 
 <p>If you are looking for help with Ember.js/ember-cli/Rails, I do a free hour of
-pairing every week, shoot me an email to <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#98;&#117;&#105;&#x6c;&#x65;&#x73;&#x2e;&#x61;&#100;&#111;&#x6c;&#x66;&#111;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#x62;&#x75;&#x69;&#x6c;&#101;&#x73;&#x2e;&#97;&#x64;&#x6f;&#108;&#102;&#x6f;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a>.</p>
+pairing every week, shoot me an email to <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x62;&#117;&#105;&#x6c;&#101;&#115;&#x2e;&#97;&#100;&#x6f;&#108;&#102;&#111;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#98;&#117;&#105;&#x6c;&#101;&#115;&#x2e;&#x61;&#x64;&#x6f;&#x6c;&#102;&#x6f;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#109;</a>.</p>
 
 <p><strong><a href="https://leanpub.com/ember-cli-101">Get my Ember.js book and to learn how to write apps with Ember.js, Ruby on Rails and ember-cli</a></strong></p>
 
