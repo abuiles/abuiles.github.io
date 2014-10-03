@@ -4,7 +4,7 @@
   <title><![CDATA[Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-10-01T09:54:43-05:00</updated>
+  <updated>2014-10-03T12:53:24-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -12,6 +12,196 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli]]></title>
+    <link href="http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/"/>
+    <updated>2014-10-03T12:09:10-05:00</updated>
+    <id>http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli</id>
+    <content type="html"><![CDATA[<p>In this post we&rsquo;ll use momentjs to write an Ember helpers called
+<code>formatted-date</code> which we&rsquo;ll be using in our templates to render
+dates as <code>September 28, 2014</code> instead of <code>Sun Sep 28 2014 04:58:30
+GMT-0500</code></p>
+
+<p><strong> This post is extracted from my Ember.js book: <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a></strong></p>
+
+<h2>Installing moment</h2>
+
+<p>ember-cli uses Bower to manage frontend dependencies (we can also use
+addons but that&rsquo;s a different story), the simplest way to consume a
+library is to add it via bower and then use <code>app.import</code> in our
+<code>Brocfile.js</code>.</p>
+
+<p>Assuming you have ember-cli already install, create a project doing <code>ember new deps-demo</code>.</p>
+
+<p>Once npm is done, install <code>moment</code> with</p>
+
+<div>
+  <pre><code class='bash'>$ bower install moment --save</code></pre>
+</div>
+
+
+<p>The option <code>--save</code> adds the dependency to our <code>bower.json</code>, we
+should find something similar to <code>"moment": "~2.8.3"</code> (the version
+might be different).</p>
+
+<p>Next, let&rsquo;s import <code>moment</code>, to know which file to import we can go
+to <code>bower_components/moment/</code> and we&rsquo;ll see that it has a
+<code>moment.js</code> file which is the non-minified version of the library or
+we can point to any of the version under the directory <code>min/</code>, for
+now let&rsquo;s use the non-minified.</p>
+
+<p>Let&rsquo;s add the following to our <code>Brocfile.js</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>app.import('bower_components/moment/moment.js');</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next, if we start our application with <code>ember server</code>, and navigate to
+<a href="http://localhost:4200">http://localhost:4200</a>, open the console and
+type &ldquo;moment&rdquo;, we should have access to the <code>moment</code> object.</p>
+
+<p>With that we have successfully included our first JavaScript plugin,
+but there are some gotchas we need to be aware of.</p>
+
+<h2>It&rsquo;s a global!</h2>
+
+<p>ember-cli fosters the use of <code>ES6 Modules</code>, so it feels like giving a
+step backwards if we add a library and then use it through its global,
+right?.</p>
+
+<p>The sad news is that not all libraries are written in such way that
+they can be consumed easily via a modules loader, and even so if there is
+an <code>AMD</code> definition included in the library not all of them are
+compatible with the modules loader used by <code>ember-cli</code>.</p>
+
+<p>For example, <code>moment</code> includes an <code>AMD</code> version</p>
+
+<div>
+  <pre><code class='javascript'>...
+} else if (typeof define === &#39;function&#39; &amp;&amp; define.amd) {
+    define(&#39;moment&#39;, function (require, exports, module) {
+        if (module.config &amp;&amp; module.config() &amp;&amp; module.config().noGlobal === true) {
+            // release the global variable
+            globalScope.moment = oldGlobalMoment;
+        }
+
+        return moment;
+    });</code></pre>
+</div>
+
+
+<p>But unfortunately the stable version of loader.js doesn&rsquo;t support that
+yet.</p>
+
+<p>Other libraries do the following:</p>
+
+<div>
+  <pre><code class='JavaScript'>define( [], function() {
+    return lib;
+});</code></pre>
+</div>
+
+
+<p>That&rsquo;s is known as an anonymous module and even though it&rsquo;s syntax is
+valid, loader.js doesn&rsquo;t support that either since it expects
+named modules.</p>
+
+<p>This whole problem is not really ember-cli&rsquo;s fault but the fact
+everyone is building their libraries in different formats making hard
+for consumers to use.</p>
+
+<p>On the ember-cli side there is work in progress so in a near future
+people will be able to use <code>moment</code> or other JavaScript libraries via
+<code>import</code> but the integration is not ready yet. See
+<a href="https://github.com/stefanpenner/ember-cli/issues/2177">ember-cli#2177</a>
+for more info.</p>
+
+<p>So, what can we do about it?</p>
+
+<h2>Wrapping globals</h2>
+
+<p>Instead of consuming globals directly let&rsquo;s wrap then in a helper
+module which will help us foster the use of modules and also update or
+replace easily <code>moment</code> once we have a way to load it via the module
+loader.</p>
+
+<p>First, let&rsquo;s create an utils file called <code>date-helpers</code>:</p>
+
+<div>
+  <pre><code class='bash'>$ ember g util date-helpers
+installing
+  create app/utils/date-helpers.js
+installing
+  create tests/unit/utils/date-helpers-test.js</code></pre>
+</div>
+
+
+<p>Replace <code>app/utils/date-helpers.js</code> with the following:</p>
+
+<div>
+  <pre><code class='javascript'>function formatDate(date, format) {
+  return window.moment(date).format(format);
+}
+
+export default {
+  formatDate
+}</code></pre>
+</div>
+
+
+<p>Here we are wrapping the call to <code>moment#format</code> in the function
+<code>format</code> which we can consume doing <code>import { formatDate } from
+'utils/date-helpers';</code>, with that we are back to our idea of using
+modules, and also we&rsquo;ll have the facility to update easily <code>moment</code>
+when our loader is ready to load it.</p>
+
+<p>Also if we decide to stop using <code>moment</code> and replace it with any
+other library which does the same, we don&rsquo;t need to change our
+consuming code since it doesn&rsquo;t care how <code>format-date</code> is being
+implemented.</p>
+
+<h2>Writing an Ember helper: formatted-date.</h2>
+
+<p>Helpers are pieces of code that help us augment our templates, in this
+case we want to write a helper to have a a date as a formatted string.</p>
+
+<p><code>ember-cli</code> includes a generator for helpers too, so let&rsquo;s create
+<code>formatted-date</code> with the command <code>ember g helper formatted-date</code>, and
+then modify <code>app/helpers/formatted-date</code> so it consumes our format
+function.</p>
+
+<div>
+  <pre><code class='javascript'>import Ember from &#39;ember&#39;;
+
+// We are consuming the function defined in our utils/date-helpers.
+import { formatDate } from &#39;../utils/date-helpers&#39;;
+
+export default Ember.Handlebars.makeBoundHelper(function(date, format) {
+  return formatDate(date, format);
+});</code></pre>
+</div>
+
+
+<p>Once we have our helper defined, we can use it in our templates like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>{{formatted-date createdAt &#39;LL&#39;}}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Wrapping up</h1>
+
+<p>This is the first one of a 3 series articles on consuming JavaScript
+libraries, here we cover the first scenario about consuming libraries
+which distribution can&rsquo;t be consumed with loader.js. Next we&rsquo;ll
+explore and understand how to consume libraries distributed in AMD.</p>
+
+<p><strong><a href="https://leanpub.com/ember-cli-101">Getting started with Ember.js? I&rsquo;m writing an Ember.js book, learn Ember.js and ember-cli</a> with <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a>.</strong></p>
+
+<p><strong>Looking for an Ember.js Coach? <a href="http://blog.abuiles.com/emberjs-consulting/">Hire me</a>  and I&rsquo;ll help your team stay in the flow with my unlimited support plan</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ember.js Route Hooks]]></title>
@@ -28,7 +218,7 @@ Jackson (@rwjblue)</a> which shows exactly the order in which the hooks are call
 
 <p><a class="jsbin-embed" href="http://jsbin.com/rolo/1/embed?html,css,js,output">Ember Route Hook Order</a><script src="http://static.jsbin.com/js/embed.js"></script></p>
 
-<p>Also, don&rsquo;t forget to thank Robert (@rwjblue) for this!</p>
+<p>Don&rsquo;t forget to thank Robert (@rwjblue) for this!</p>
 
 <p><strong> <a href="https://leanpub.com/ember-cli-101">Getting started with Ember.js? I&rsquo;m writing an Ember.js book, learn Ember.js and ember-cli</a> with <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a>.</strong></p>
 
@@ -402,7 +592,7 @@ and the Rails part in <a href="https://github.com/abuiles/facturas/commit/391fcf
 <h4>Pair with me.</h4>
 
 <p>If you are looking for help with Ember.js/ember-cli/Rails, I do a free hour of
-pairing every week, shoot me an email to <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x62;&#117;&#105;&#x6c;&#101;&#115;&#x2e;&#97;&#100;&#x6f;&#108;&#102;&#111;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#98;&#117;&#105;&#x6c;&#101;&#115;&#x2e;&#x61;&#x64;&#x6f;&#x6c;&#102;&#x6f;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#109;</a>.</p>
+pairing every week, shoot me an email to <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#98;&#117;&#x69;&#108;&#101;&#115;&#x2e;&#97;&#100;&#111;&#x6c;&#102;&#111;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">&#x62;&#x75;&#105;&#108;&#x65;&#115;&#46;&#97;&#100;&#111;&#x6c;&#102;&#111;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a>.</p>
 
 <p><strong><a href="https://leanpub.com/ember-cli-101">Get my Ember.js book and to learn how to write apps with Ember.js, Ruby on Rails and ember-cli</a></strong></p>
 
