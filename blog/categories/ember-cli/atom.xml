@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ember-cli | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-cli/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-10-17T10:28:34-05:00</updated>
+  <updated>2014-10-17T15:46:00-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -211,7 +211,7 @@ $ npm i ember-cli-ic-ajax &amp;mdash;save</code></pre>
 <p><div>
   <pre><code class='javascript'>{
   &amp;ldquo;disableAnalytics&amp;rdquo;: false,
-  &amp;ldquo;proxy&amp;rdquo;: &amp;ldquo;&lt;a href=&quot;http:api.ember-cli-101.com&quot;&gt;http:api.ember-cli-101.com&lt;/a&gt;&amp;rdquo;
+  &amp;ldquo;proxy&amp;rdquo;: &amp;ldquo;&lt;a href=&quot;http://api.ember-cli-101.com&quot;&gt;http://api.ember-cli-101.com&lt;/a&gt;&amp;rdquo;
 }</code></pre>
 </div>
 </p>
