@@ -4,17 +4,17 @@
   <title><![CDATA[Category: Ruby | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-10-03T12:53:24-05:00</updated>
+  <updated>2014-10-17T01:53:18-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
     <email><![CDATA[builes.adolfo@gmail.com]]></email>
   </author>
-  <generator uri="http://blog.abuiles.com/">Adolfo Builes</generator>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[ember-cli + Rails]]></title>
+    <title type="html"><![CDATA[Ember-cli + Rails]]></title>
     <link href="http://blog.abuiles.com/blog/2014/05/12/ember-cli-plus-rails/"/>
     <updated>2014-05-12T18:42:36-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/05/12/ember-cli-plus-rails</id>

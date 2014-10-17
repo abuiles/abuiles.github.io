@@ -4,13 +4,13 @@
   <title><![CDATA[Category: Ruby on Rails | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-10-03T12:53:24-05:00</updated>
+  <updated>2014-10-17T01:53:18-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
     <email><![CDATA[builes.adolfo@gmail.com]]></email>
   </author>
-  <generator uri="http://blog.abuiles.com/">Adolfo Builes</generator>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
@@ -189,7 +189,7 @@ template and then rendered it into the template!</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Building an App for my mom with Ember Appkit Rails.]]></title>
+    <title type="html"><![CDATA[Building an App for My Mom With Ember Appkit Rails.]]></title>
     <link href="http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/"/>
     <updated>2014-02-07T07:56:18-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails</id>
@@ -313,7 +313,7 @@ Ember.js with Ruby on Rails.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Ruby on Rails MVC is not the same as Ember.js MVC]]></title>
+    <title type="html"><![CDATA[Ruby on Rails MVC Is Not the Same as Ember.js MVC]]></title>
     <link href="http://blog.abuiles.com/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
     <updated>2014-01-26T23:17:52-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
