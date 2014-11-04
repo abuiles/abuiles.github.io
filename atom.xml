@@ -4,7 +4,7 @@
   <title><![CDATA[Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-10-30T20:44:33-05:00</updated>
+  <updated>2014-11-04T09:06:07-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -12,6 +12,167 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Understading Ember-Data Store#find]]></title>
+    <link href="http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find/"/>
+    <updated>2014-11-04T08:55:22-05:00</updated>
+    <id>http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find</id>
+    <content type="html"><![CDATA[<p><code>Store#find</code> (inject as <code>this.store.find</code>) is one of those methods in Ember-Data which
+confuses people, especially since it behaves very different depending
+on the parameters passed-in.</p>
+
+<p>This article try to demystify <code>store.find</code> and explain how it will
+behave accordingly to the parameters.</p>
+
+<p>Let&rsquo;s have its definition on top and then use it as reference:</p>
+
+<div>
+  <pre><code class='javascript'>find: function(type, id, preload) {
+    Ember.assert(&quot;You need to pass a type to the store&#39;s find method&quot;, arguments.length &gt;= 1);
+    Ember.assert(&quot;You may not pass `&quot; + id + &quot;` as id to the store&#39;s find method&quot;, arguments.length === 1 || !Ember.isNone(id));
+
+    if (arguments.length === 1) {
+      return this.findAll(type);
+    }
+
+    // We are passed a query instead of an id.
+    if (Ember.typeOf(id) === &#39;object&#39;) {
+      return this.findQuery(type, id);
+    }
+
+    return this.findById(type, coerceId(id), preload);
+}</code></pre>
+</div>
+
+
+<p>We can use <code>find</code> to load a single record or a collection of records.</p>
+
+<p>If you want to run the commands in the article, you can download the
+following ember-cli application <a href="https://github.com/abuiles/borrowers">https://github.com/abuiles/borrowers</a> and then
+run <code>ember server</code> it will proxy all the API request to a public
+API.</p>
+
+<div>
+  <pre><code class='bash'>$ git clone https://github.com/abuiles/borrowers
+$ cd borrowers
+$ npm install &amp;&amp; bower install</code></pre>
+</div>
+
+
+<h4>Scenario #1: Loading a collection</h4>
+
+<p>If we call <code>find</code> only with a model&rsquo;s name then it will make a request
+to load a list of records of that type, the following is an example of
+such request:</p>
+
+<div>
+  <pre><code class='javascript'>friends =  $E.store.find(&#39;friend&#39;)
+
+XHR finished loading: GET &quot;http://localhost:4200/api/v2/friends&quot;.</code></pre>
+</div>
+
+
+<p>First, in case you are wondering what <code>$E</code> is, I&rsquo;m grabbing an
+instance of the application router using the <code>ember-inspector</code>.</p>
+
+<p>If we want to send query parameters with our request, we can pass an
+object as second argument and every key on the object will be included
+as parameter:</p>
+
+<div>
+  <pre><code class='javascript'>friends =  $E.store.find(&#39;friend&#39;, {hasArticles: true, sort_by: &#39;created_at&#39;})
+
+XHR finished loading: GET &quot;http://localhost:4200/api/v2/friends?hasArticles=true&amp;sort_by=created_at&quot;.</code></pre>
+</div>
+
+
+<p>In the previous request we asked <code>find</code> to load all the articles,
+sending as parameters the key <code>hasArticles</code> and <code>sort_by</code>.</p>
+
+<p>Like
+<a href="http://emberjs.com/api/data/classes/DS.Store.html#method_all">all</a>
+and
+<a href="http://emberjs.com/api/data/classes/DS.Store.html#method_filter">filter</a>
+the result from <code>find</code> is a <code>live array</code> too. When called it will make
+a request to the server and then the collection will be updated if
+more records are added or removed from the store.</p>
+
+<p>I&rsquo;ve seen people using the private methods <code>findQuery</code> and <code>findByIds</code>
+like:</p>
+
+<div>
+  <pre><code class='javascript'>// Using the private function store.findQuery
+   model: function (params) {
+      return this.store.findQuery(&#39;friend&#39;, {hasArticles: true, sort_by: &#39;created_at&#39;});
+   }
+
+   // Using the private funcion findByIds
+   model: function (params) {
+      return this.store.findByIds(&#39;friend&#39;, [1,2,3]);
+   }</code></pre>
+</div>
+
+
+<p>We should never rely on private functions, they are marked private for
+a reason. Although <a href="https://twitter.com/terzicigor">Igor Terzic</a>
+pointed that <code>findQuery</code> might be marked as private by mistake.</p>
+
+<p>We can achieve the same result using the method <code>find</code>:</p>
+
+<div>
+  <pre><code class='javascript'>model: function (params) {
+      // bad
+      // return this.store.findQuerygo(&#39;friend&#39;, {hasArticles: true, sort_by: &#39;created_at&#39;});
+
+      // Good
+      return this.store.find(&#39;friend&#39;, {hasArticles: true, sort_by: &#39;created_at&#39;})
+   }
+
+   model: function (params) {
+      // bad
+      // return this.store.findByIds(&#39;friend&#39;, [1,2,3]);
+
+      // good
+      return this.store.find(&#39;friend&#39;, {ids: [1,2,3]});
+   }</code></pre>
+</div>
+
+
+<h4>Scenario #2: Loading a single record</h4>
+
+<p>We can also use <code>find</code> to load an specific record, to do that we&rsquo;ll
+only need to pass the record <code>id</code> as second argument:</p>
+
+<div>
+  <pre><code class='javascript'>$E.store.find(&#39;friend&#39;, 15)
+XHR finished loading: GET &quot;http://localhost:4200/api/v2/friends/15&quot;.</code></pre>
+</div>
+
+
+<p>In the previous example we are loading the friend with id 15, the
+<code>store</code> will only make a request to the server if the friend is not
+available in the store, to understand this, let&rsquo;s go to
+<a href="http://localhost:4200/friends">http://localhost:4200/friends</a> and then on the console try the following:</p>
+
+<div>
+  <pre><code class='javascript'>id = $E.store.all(&#39;friend&#39;).get(&#39;firstObject&#39;).id
+$E.store.find(&#39;friend&#39;, id)</code></pre>
+</div>
+
+
+<p>If we open our network tab, we&rsquo;ll see that the store didn&rsquo;t make any request
+this time, the reason is that we asked for a friend which was already
+loaded into the store.</p>
+
+<p>Is important to mention that <strong>find</strong>, <strong>all</strong> and <strong>filter</strong> return
+promises, when testing on the browser&rsquo;s console we don&rsquo;t have to worry
+about it, but if we want to use the result in our application then we
+need to keep this in mind.</p>
+
+<p><strong><a href="https://leanpub.com/ember-cli-101?utm_source=ed-store">Want to learn Ember.js? Enroll in my upcoming Ember.js workshop by buying my book</a></strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ember.js Debugging Tip: Use the Ember Inspector]]></title>
@@ -811,7 +972,7 @@ and the Rails part in <a href="https://github.com/abuiles/facturas/commit/391fcf
 <h4>Pair with me.</h4>
 
 <p>If you are looking for help with Ember.js/ember-cli/Rails, I do a free hour of
-pairing every week, shoot me an email to <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x62;&#x75;&#105;&#108;&#101;&#115;&#46;&#x61;&#x64;&#x6f;&#108;&#102;&#x6f;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x62;&#117;&#x69;&#108;&#x65;&#x73;&#x2e;&#97;&#100;&#x6f;&#108;&#102;&#x6f;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a>.</p>
+pairing every week, shoot me an email to <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#98;&#117;&#105;&#108;&#x65;&#x73;&#46;&#97;&#x64;&#x6f;&#x6c;&#102;&#111;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">&#x62;&#x75;&#105;&#108;&#101;&#115;&#46;&#x61;&#100;&#111;&#x6c;&#x66;&#111;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a>.</p>
 
 <p><strong><a href="https://leanpub.com/ember-cli-101">Get my Ember.js book and to learn how to write apps with Ember.js, Ruby on Rails and ember-cli</a></strong></p>
 
