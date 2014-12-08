@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ember-cli-101 Changelog - Random Stuff, Ember.js mostly.</title>
+  <meta name="author" content="Adolfo Builes">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.abuiles.com/ember-cli-101-changelog">
+  <link href="/favicon.ico"  type="image/x-icon" rel="icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link href="/atom.xml" rel="alternate" title="Random Stuff, Ember.js mostly." type="application/atom+xml">
+
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://blog.abuiles.com/ember-cli-101-changelog">
+  <meta property="og:title" content="Ember-cli-101 Changelog - Random Stuff, Ember.js mostly.">
+  
+
+  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
+
+<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+
+
+  
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-32360357-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</head>
+
+<body   >
+  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-md-3">
+        <section class="sidebar">
+  <ul class="nav nav-pills nav-stacked">
+    <h1>Adolfo Builes</h1>
+    <li ><a href="/">Articles</a></li>
+    <li ><a href="/emberjs-consulting">Ember.js Consulting - Free Pairing</a></li>
+    <li ><a href="/ember-rails">Ember.js with Ruby on Rails Articles</a></li>
+    <li ><a href="https://leanpub.com/ember-cli-101?utm_source=enroll">Enroll in my online Ember.js workshop!</a></li>
+    <li>
+      <a href="https://leanpub.com/ember-cli-101?utm_source=image">
+        <p>Learn Ember.js today!</p>
+        <img alt="ember-cli 101: Ember.js book" itemprop="image" src="https://s3.amazonaws.com/titlepages.leanpub.com/ember-cli-101/medium">
+      </a>
+      <a href="https://leanpub.com/ember-cli-101?utm_source=buy" style="text-decoration: underline;">
+        Buy now!
+      </a>
+    </li>
+    <li>
+    </li>
+  </ul>
+</section>
+
+
+      </div>
+      <div class="col-md-9 content">
+        <div class="row">
+  <div class="page-content col-md-9">
+    <article role="article">
+      
+        <header class="page-header">
+          
+            <h1 class="entry-title">
+              Ember-cli-101 Changelog
+              
+            </h1>
+          
+        </header>
+      
+      <div class="entry-content">
+        <h1>Monday, Dec 7, 2015</h1>
+
+<ul>
+<li>Page 4: Add watchman to requirements: Install <a href="https://github.com/facebook/watchman">watchman</a> for fast file watching. We can start it with <code>watchman watch ~/replace-me-with-real-path</code>.</li>
+<li>Page 4: Fixed link to ember-inspector.</li>
+<li>Page 10: Fixed missing footnote on page 10.</li>
+<li>Page 25: Fixed typo on  <code>app/templates/friends.new.hbs</code> should be <code>app/templates/friends/new.hbs</code>.</li>
+<li>Fixed typo on footnote on anatomy section instead of &ldquo;traspiring&rdquo; it
+should be &ldquo;transpiling&rdquo;.</li>
+<li>Page 36: Use  in template.</li>
+<li>Page 93: Reference model when consuming fill-murray:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;div class="friend-profile" class="row"&gt;
+</span><span class='line'>  &lt;div class="friend-info full"&gt;
+</span><span class='line'>    
+</span><span class='line'>    &lt;div&gt;
+</span><span class='line'>      &lt;p&gt;&lt;/p&gt;
+</span><span class='line'>      &lt;p&gt;&lt;/p&gt;
+</span><span class='line'>      &lt;p&gt;&lt;/p&gt;
+</span><span class='line'>      &lt;ul class="friend-profile-links"&gt;
+</span><span class='line'>        &lt;li&gt;&lt;/li&gt;
+</span><span class='line'>        &lt;li&gt;&lt;/li&gt;
+</span><span class='line'>        &lt;li&gt;&lt;a href="#" &gt;Delete&lt;/a&gt;&lt;/li&gt;
+</span><span class='line'>      &lt;/ul&gt;
+</span><span class='line'>    &lt;/div&gt;
+</span><span class='line'>  &lt;/div&gt;
+</span><span class='line'>&lt;/div&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;div class="articles-container"&gt;
+</span><span class='line'>  
+</span><span class='line'>&lt;/div&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Page 95: Fixed typo &ldquo;DS.Store Pubic API&rdquo; should be &ldquo;DS.Store Public API&rdquo;.</li>
+<li>Page 120: Fix reference to friend unit test.</li>
+<li>Page 120: Fix output of ls tests/unit.</li>
+<li>Page 144: Add information note on  informing that the version of Ember and Ember-data can change between releases too.</li>
+<li>Applied suggestions per <a href="https://github.com/abuiles/ember-cli-101-errata/issues/84">https://github.com/abuiles/ember-cli-101-errata/issues/84</a></li>
+<li>Fixed typos pointed in <a href="https://github.com/abuiles/ember-cli-101-errata/issues/86">https://github.com/abuiles/ember-cli-101-errata/issues/86</a></li>
+</ul>
+
+
+      </div>
+      
+        <footer>
+          <p class="meta text-muted">
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-12-08T11:31:00-05:00"  data-updated="true" itemprop="datePublished dateCreated">ordinal</time>
+            
+          </p>
+          
+            <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/ember-cli-101-changelog/index.html" data-via="abuiles" data-counturl="http://blog.abuiles.com/ember-cli-101-changelog/index.html" >Tweet</a>
+  
+  
+  
+</div>
+
+          
+        </footer>
+      
+    </article>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
