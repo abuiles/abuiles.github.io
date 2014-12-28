@@ -77,12 +77,18 @@
         <lastmod>2014-11-16T12:02:58-05:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/
+        </loc>
+        <lastmod>2014-12-28T09:37:12-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://blog.abuiles.com/about/</loc>
         <lastmod>2014-10-17T01:53:11-05:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/blog/archives/</loc>
-        <lastmod>2014-11-16T12:02:58-05:00</lastmod>
+        <lastmod>2014-12-28T09:37:12-05:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/ember-cli-101/</loc>
@@ -90,7 +96,7 @@
     </url>
     <url>
         <loc>http://blog.abuiles.com/ember-cli-101-changelog/</loc>
-        <lastmod>2014-12-16T10:55:53-05:00</lastmod>
+        <lastmod>2014-12-28T09:34:55-05:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/ember-js-online-workshop/</loc>
@@ -106,11 +112,11 @@
     </url>
     <url>
         <loc>http://blog.abuiles.com/</loc>
-        <lastmod>2014-11-16T12:02:58-05:00</lastmod>
+        <lastmod>2014-12-28T09:37:12-05:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/projects/</loc>
-        <lastmod>2014-11-16T12:02:58-05:00</lastmod>
+        <lastmod>2014-12-28T09:37:12-05:00</lastmod>
     </url>
     <url>
         <loc>http://blog.abuiles.com/robots.txt</loc>

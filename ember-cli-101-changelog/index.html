@@ -95,7 +95,45 @@
         </header>
       
       <div class="entry-content">
-        <h1>Tuesday, Dec 16, 2014</h1>
+        <h1>Sunday, Dec 28th, 2014</h1>
+
+<ul>
+<li><p>Page 22: Remove the following paragraph: &ldquo;The Route generator
+doesn&rsquo;t know how to create nested routes in router.js, so we have to
+fix that.&rdquo;. <strong>The route generator has been fixed, and it understands
+now nested routes, see
+<a href="https://github.com/ember-cli/ember-cli/pull/2750">ember-cli#2750</a></strong></p></li>
+<li><p>Page 32: Edit route generator command so it adds the path explicitly
+for friends/show. Instead of <code>ember g route friends/show</code> we can now
+specify the path <code>ember g route friends/show --path=:friend_id</code>.</p></li>
+<li><p>Page 32: Add the following info box:</p></li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>I&gt; ##Route Generator
+</span><span class='line'>I&gt; When creating a new route or resource we can use the route
+</span><span class='line'>I&gt; generator which takes the options `--type` and `--path`.
+</span><span class='line'>I&gt; With `type` we can use `route` or `resource`, with route being the
+</span><span class='line'>I&gt; default. We can see the options for every generator with
+</span><span class='line'>I&gt; `ember generate route  --help`</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p>Page 35: update route generator to use <code>--path</code> option: <code>ember g route friends/edit --path=:friend_id/edit</code>.</p></li>
+<li><p>Page 35: Add info box to explain how to add relationship using the
+resource generator: <code>ember g articles friend:belongsTo</code></p></li>
+<li><p>Added section about using ember-browserify to the section &ldquo;Working
+with JavaScript plugins&rdquo;.</p></li>
+</ul>
+
+
+<h1>Tuesday, Dec 16, 2014</h1>
 
 <ul>
 <li>Page 8: Fix comment on the app/models/friend.js definition, the

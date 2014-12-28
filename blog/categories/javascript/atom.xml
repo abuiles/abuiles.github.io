@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-12-16T10:55:53-05:00</updated>
+  <updated>2014-12-28T09:37:13-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -12,6 +12,87 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 3]]></title>
+    <link href="http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/"/>
+    <updated>2014-12-28T09:17:46-05:00</updated>
+    <id>http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3</id>
+    <content type="html"><![CDATA[<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
+ember-cli</a>
+, we explore how to work with JavaScript plugins which are still
+distributed as globas and came up with a pattern for wrapping up
+globals while using the module system.</p>
+
+<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 2</a>
+we&rsquo;ll explored how to work with libraries including a a named AMD
+distribution via <code>app.import</code>.</p>
+
+<p>In this article, we&rsquo;ll explore how to work with libraries via npm and
+browserify.</p>
+
+<h2>ember-browserify</h2>
+
+<p><a href="http://browserify.org/">Browserify</a> is a Node library which allows us
+to consume other Node libraries in the Browser using CommonJS (which
+is Node&rsquo;s module system), what this means is that we can install
+libraries like MomentJS using npm and then consume them in the browser
+via browserify. But wait, to use Browserify we actually need to
+install the library and create a &ldquo;bundle&rdquo; with our
+dependencies, normally we&rsquo;ll run something like <code>browserify main.js -o
+bundle.js</code> and then use <code>bundle.js</code> via a script tag <code>&lt;script
+src="bundle.js"&gt;&lt;/script&gt;</code>.</p>
+
+<p>As we can imagine this can get tricky and hard to manage in our
+ember-cli application, but thanks to
+<a href="https://github.com/ef4">Edward Faulkner</a> there is addon which allow
+us to consume libraries from npm with browserify without needing us to
+worry about the bundling process, it is called <a href="https://github.com/ef4/ember-browserify">ember-browserify</a>.</p>
+
+<h3>Using ember-browserify</h3>
+
+<p>First we need to install the addon, which we can do running <code>ember
+install</code>:</p>
+
+<p><code>
+$ ember install:addon ember-browserify
+</code></p>
+
+<p>Once the addon has been installed, we are going to use it to consume
+MomentJS from npm in our <code>data-helpers</code> file.</p>
+
+<p>Before doing that, let&rsquo;s make sure we have removed <code>moment</code> from our
+<code>bower.json</code> and also that we have removed
+<code>app.import('bower_components/moment/moment.js');</code> from the
+<code>Brocfile</code>.</p>
+
+<p>Next, let&rsquo;s install moment via npm, which we can do with <code>npm install
+moment --save-dev</code>.</p>
+
+<p>Once it has been installed we can consume it from npm thanks to
+ember-browserify just doing <code>import moment from 'npm:moment';</code>.</p>
+
+<p>Let&rsquo;s use it in our <code>date-helpers</code> so <code>formatDate</code> uses <code>moment</code>.</p>
+
+<p><div>
+  <pre><code class='javascript'>import moment from &amp;lsquo;npm:moment&amp;rsquo;;&lt;/p&gt;
+
+&lt;p&gt;function formatDate(date, format) {
+  return moment(date).format(format);
+}&lt;/p&gt;
+
+&lt;p&gt;export {
+  formatDate
+};</code></pre>
+</div>
+</p>
+
+<p>And that&rsquo;s it, we are now consuming MomentJS via browserify just as if
+it was other module in our application.</p>
+
+<p>**<a href="https://leanpub.com/ember-cli-101">Learning Ember.js? Get my book or enroll in my upcoming workshops.</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 2]]></title>
