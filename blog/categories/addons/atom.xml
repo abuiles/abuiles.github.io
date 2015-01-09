@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Addons | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/addons/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2014-12-28T09:37:13-05:00</updated>
+  <updated>2015-01-09T12:13:15-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -24,8 +24,8 @@ ember-cli</a>
 distributed as globas and came up with a pattern for wrapping up
 globals while using the module system.</p>
 
-<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 2</a>
-we&rsquo;ll explored how to work with libraries including a a named AMD
+<p>On <a href="/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/">part 2</a>
+we explored how to work with libraries including a a named AMD
 distribution via <code>app.import</code>.</p>
 
 <p>In this article, we&rsquo;ll explore how to work with libraries via npm and
