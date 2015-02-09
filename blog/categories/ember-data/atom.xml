@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ember-Data | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-data/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-02-09T11:55:58-05:00</updated>
+  <updated>2015-02-09T12:00:06-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -53,7 +53,15 @@ be annoying for you, but on the other side this is a step more towards
     <link href="http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find/"/>
     <updated>2014-11-04T08:55:22-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find</id>
-    <content type="html"><![CDATA[<p><code>Store#find</code> (inject as <code>this.store.find</code>) is one of those methods in Ember-Data which
+    <content type="html"><![CDATA[<h3>Update: Don&rsquo;t worry about this, <code>store.find</code> has been simplified, read <a href="/blog/2015/02/09/update-your-finds/">Update your finds</a>.</h3>
+
+<br/>
+
+
+<br/>
+
+
+<p><code>Store#find</code> (inject as <code>this.store.find</code>) is one of those methods in Ember-Data which
 confuses people, especially since it behaves very different depending
 on the parameters passed-in.</p>
 
