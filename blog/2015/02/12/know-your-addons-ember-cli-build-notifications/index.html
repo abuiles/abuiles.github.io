@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Know Your Addons: Ember-cli-build-notifications - Random Stuff, Ember.js mostly.</title>
+  <meta name="author" content="Adolfo Builes">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications">
+  <link href="/favicon.ico"  type="image/x-icon" rel="icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link href="/atom.xml" rel="alternate" title="Random Stuff, Ember.js mostly." type="application/atom+xml">
+
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications">
+  <meta property="og:title" content="Know Your Addons: Ember-cli-build-notifications - Random Stuff, Ember.js mostly.">
+  
+
+  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
+
+<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+
+
+  
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-32360357-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</head>
+
+<body   >
+  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-md-3">
+        <section class="sidebar">
+  <ul class="nav nav-pills nav-stacked">
+    <h1>Adolfo Builes</h1>
+    <li ><a href="/">Articles</a></li>
+    <li ><a href="/emberjs-consulting">Ember.js Consulting - Free Pairing</a></li>
+    <li ><a href="/ember-rails">Ember.js with Ruby on Rails Articles</a></li>
+    <li ><a href="https://leanpub.com/ember-cli-101?utm_source=enroll">Enroll in my online Ember.js workshop!</a></li>
+    <li>
+      <a href="https://leanpub.com/ember-cli-101?utm_source=image">
+        <p>Learn Ember.js today!</p>
+        <img alt="ember-cli 101: Ember.js book" itemprop="image" src="https://s3.amazonaws.com/titlepages.leanpub.com/ember-cli-101/medium">
+      </a>
+      <a href="https://leanpub.com/ember-cli-101?utm_source=buy" style="text-decoration: underline;">
+        Buy now!
+      </a>
+    </li>
+    <li>
+    </li>
+  </ul>
+</section>
+
+
+      </div>
+      <div class="col-md-9 content">
+        <div class="row">
+  <div class="page-content col-md-9" itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="Random Stuff, Ember.js mostly." />
+    <meta itemprop="description" content="Adolfo Builes's personal blog, consulting and writing about Ember.js and Ruby on Rails mostly." />
+    <meta itemprop="url" content="http://blog.abuiles.com" />
+    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+      
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+      </p>
+    
+    
+    <h1 class="entry-title" itemprop="name headline">
+        Know Your Addons: Ember-cli-build-notifications
+        
+    </h1>
+    
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/" data-via="abuiles" data-counturl="http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+  </header>
+
+
+<div class="entry-content clearfix" itemprop="articleBody description"><p>As today <a href="http://www.emberaddons.com">emberaddons.com</a> registers 602
+(and growing) ember-cli addons distributed via NPM, this means that
+addons and ember-cli are starting to become the de-facto tools to
+share and build  application code.</p>
+
+<p>Addons allows us to do a bunch of different things and it seems to me
+that people are not fully aware of all the scenarios where they can be
+used. If your answer to any of the following question is yes, then use an addon.</p>
+
+<br/>
+
+
+<ul>
+<li>Do you want to write a component that can be used in thousands of different apps?</li>
+<li>Do you want to plug in the build system and do something cool with the result?</li>
+<li>Do you want to extend the generators?</li>
+<li>Do you want to share parts of your code between different apps?</li>
+</ul>
+
+
+<br/>
+
+
+<p>If you know that I wrote a book about Ember (and ember-cli), you might
+be thinking: &ldquo;ok, now you are going to tell me that if I want to
+learn all this then I should buy your book&rdquo; No! I&rsquo;m not <a href="#learn-ember">*</a>!</p>
+
+<p>This post is actually to introduce a new experiment I want to start
+called &ldquo;Know your addons&rdquo;, I&rsquo;ll be covering different addons that I
+find useful and go a bit into their implementation and mention things
+that you could find worthwhile.</p>
+
+<h2>ember-cli-build-notifications</h2>
+
+<p>I&rsquo;d like to start with
+<a href="https://www.npmjs.com/package/ember-cli-build-notifications">ember-cli-build-notifications</a>
+an useful addon to display notifications when there is a build error.</p>
+
+<p><img src="https://s3.amazonaws.com/f.cl.ly/items/3m0843433l1F0J0m1M3p/example.png" alt="ember-cli-build-notifications" /></p>
+
+<h3>How?</h3>
+
+<p>Philip Dudley is the crator of this addon and the code can be found in <a href="https://github.com/pdud/ember-cli-build-notifications">GitHub</a>.</p>
+
+<p>The important file to look at for this addon is the <a href="https://github.com/pdud/ember-cli-build-notifications/blob/master/index.js">index.js</a> which is the main entry point for the addon.</p>
+
+<div>
+  <pre><code class='javascript'>/* jshint node: true */
+&#39;use strict&#39;;
+
+var notifier = require(&#39;./lib/notify&#39;);
+
+module.exports = {
+  name: &#39;ember-cli-build-notifications&#39;,
+
+  buildError: function(error) {
+    notifier.notify({
+      title: &#39;Build Failed&#39;,
+      subtitle: error.file,
+      message: error.toString()
+    });
+  }
+};</code></pre>
+</div>
+
+
+<p>When installed in your ember-cli project&rsquo;s <code>package.json</code>, it will be
+identified as add addon because of the keyword <code>"ember-addon"</code> Once it
+loads, Philip is using the <a href="https://github.com/ember-cli/ember-cli/blob/6c66d2f28ade2e3c58974c353498048a8a55ef4a/ADDON_HOOKS.md#builderror">buildError
+hook</a>
+which gets called every time the build errors and then as soon as it
+gets called it uses his notify implementation to show us the message. Clever right?</p>
+
+<p>So the next time your boss forces you to notify them every time that crazy ember-cli build fails, you can write your own addon which will use the <code>buildError</code> to automate the process:</p>
+
+<div>
+  <pre><code class='javascript'>/* jshint node: true */
+&#39;use strict&#39;;
+
+var bossNotifier = require(&#39;./lib/notifier&#39;);
+
+module.exports = {
+  name: &#39;boss-notifier&#39;,
+
+  buildError: function(error) {
+    bossNotifier.notify({
+      title: &#39;The build failed, it was not my fault&#39;,
+      subtitle: error.file,
+      message: error.toString()
+    });
+  }
+};</code></pre>
+</div>
+
+
+
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<p><strong><a name="learn-ember"></a>Actually you should :), Learn Ember with my book, check it
+  out <a href="https://leanpub.com/ember-cli-101">leanpub.com/ember-cli-101</a> or subscribe to my list for the free webinars</strong></p>
+
+<p><form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL"></label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></p>
+</div>
+
+
+      <footer>
+        <p class="meta text-muted">
+          
+  
+
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <span class="fn" itemprop="name">Adolfo Builes</span></span>
+
+          
+
+<span class="glyphicon glyphicon-tags"></span>&nbsp;
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ember/'>ember</a>, <a class='category' href='/blog/categories/ember-cli/'>ember-cli</a>, <a class='category' href='/blog/categories/ember-cli-addons/'>ember-cli-addons</a>
+  
+</span>
+
+
+        </p>
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/blog/2015/02/09/update-your-finds/" title="Previous Post: Update your finds">&laquo; Update your finds</a></li>
+            
+            
+          </ul>
+        
+      </footer>
+    </article>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

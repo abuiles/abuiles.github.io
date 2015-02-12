@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ember-cli | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-cli/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-02-09T12:00:06-05:00</updated>
+  <updated>2015-02-12T12:17:13-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -12,6 +12,128 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Know Your Addons: Ember-cli-build-notifications]]></title>
+    <link href="http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/"/>
+    <updated>2015-02-12T11:29:12-05:00</updated>
+    <id>http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications</id>
+    <content type="html"><![CDATA[<p>As today <a href="http://www.emberaddons.com">emberaddons.com</a> registers 602
+(and growing) ember-cli addons distributed via NPM, this means that
+addons and ember-cli are starting to become the de-facto tools to
+share and build  application code.</p>
+
+<p>Addons allows us to do a bunch of different things and it seems to me
+that people are not fully aware of all the scenarios where they can be
+used. If your answer to any of the following question is yes, then use an addon.</p>
+
+<br/>
+
+
+<ul>
+<li>Do you want to write a component that can be used in thousands of different apps?</li>
+<li>Do you want to plug in the build system and do something cool with the result?</li>
+<li>Do you want to extend the generators?</li>
+<li>Do you want to share parts of your code between different apps?</li>
+</ul>
+
+
+<br/>
+
+
+<p>If you know that I wrote a book about Ember (and ember-cli), you might
+be thinking: &ldquo;ok, now you are going to tell me that if I want to
+learn all this then I should buy your book&rdquo; No! I&rsquo;m not <a href="#learn-ember">*</a>!</p>
+
+<p>This post is actually to introduce a new experiment I want to start
+called &ldquo;Know your addons&rdquo;, I&rsquo;ll be covering different addons that I
+find useful and go a bit into their implementation and mention things
+that you could find worthwhile.</p>
+
+<h2>ember-cli-build-notifications</h2>
+
+<p>I&rsquo;d like to start with
+<a href="https://www.npmjs.com/package/ember-cli-build-notifications">ember-cli-build-notifications</a>
+an useful addon to display notifications when there is a build error.</p>
+
+<p><img src="https://s3.amazonaws.com/f.cl.ly/items/3m0843433l1F0J0m1M3p/example.png" alt="ember-cli-build-notifications" /></p>
+
+<h3>How?</h3>
+
+<p>Philip Dudley is the crator of this addon and the code can be found in <a href="https://github.com/pdud/ember-cli-build-notifications">GitHub</a>.</p>
+
+<p>The important file to look at for this addon is the <a href="https://github.com/pdud/ember-cli-build-notifications/blob/master/index.js">index.js</a> which is the main entry point for the addon.</p>
+
+<p><div>
+  <pre><code class='javascript'>/&lt;em&gt; jshint node: true &lt;/em&gt;/
+&amp;lsquo;use strict&amp;rsquo;;&lt;/p&gt;
+
+&lt;p&gt;var notifier = require(&amp;lsquo;./lib/notify&amp;rsquo;);&lt;/p&gt;
+
+&lt;p&gt;module.exports = {
+  name: &amp;lsquo;ember-cli-build-notifications&amp;rsquo;,&lt;/p&gt;
+
+&lt;p&gt;  buildError: function(error) {&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;notifier.notify({
+  title: &#39;Build Failed&#39;,
+  subtitle: error.file,
+  message: error.toString()
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;  }
+};</code></pre>
+</div>
+</p>
+
+<p>When installed in your ember-cli project&rsquo;s <code>package.json</code>, it will be
+identified as add addon because of the keyword <code>"ember-addon"</code> Once it
+loads, Philip is using the <a href="https://github.com/ember-cli/ember-cli/blob/6c66d2f28ade2e3c58974c353498048a8a55ef4a/ADDON_HOOKS.md#builderror">buildError
+hook</a>
+which gets called every time the build errors and then as soon as it
+gets called it uses his notify implementation to show us the message. Clever right?</p>
+
+<p>So the next time your boss forces you to notify them every time that crazy ember-cli build fails, you can write your own addon which will use the <code>buildError</code> to automate the process:</p>
+
+<p><div>
+  <pre><code class='javascript'>/&lt;em&gt; jshint node: true &lt;/em&gt;/
+&amp;lsquo;use strict&amp;rsquo;;&lt;/p&gt;
+
+&lt;p&gt;var bossNotifier = require(&amp;lsquo;./lib/notifier&amp;rsquo;);&lt;/p&gt;
+
+&lt;p&gt;module.exports = {
+  name: &amp;lsquo;boss-notifier&amp;rsquo;,&lt;/p&gt;
+
+&lt;p&gt;  buildError: function(error) {&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bossNotifier.notify({
+  title: &#39;The build failed, it was not my fault&#39;,
+  subtitle: error.file,
+  message: error.toString()
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;  }
+};</code></pre>
+</div>
+</p>
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<p><strong><a name="learn-ember"></a>Actually you should :), Learn Ember with my book, check it
+  out <a href="https://leanpub.com/ember-cli-101">leanpub.com/ember-cli-101</a> or subscribe to my list for the free webinars</strong></p>
+
+<p><form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL"></label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 3]]></title>
