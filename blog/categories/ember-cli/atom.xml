@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Ember-cli | Random Stuff, Ember.js mostly.]]></title>
+  <title><![CDATA[Category: Ember-cli, | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-cli/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-02-12T12:17:13-05:00</updated>
+  <updated>2015-02-25T10:18:20-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -14,671 +14,358 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Know Your Addons: Ember-cli-build-notifications]]></title>
-    <link href="http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/"/>
-    <updated>2015-02-12T11:29:12-05:00</updated>
-    <id>http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications</id>
-    <content type="html"><![CDATA[<p>As today <a href="http://www.emberaddons.com">emberaddons.com</a> registers 602
-(and growing) ember-cli addons distributed via NPM, this means that
-addons and ember-cli are starting to become the de-facto tools to
-share and build  application code.</p>
-
-<p>Addons allows us to do a bunch of different things and it seems to me
-that people are not fully aware of all the scenarios where they can be
-used. If your answer to any of the following question is yes, then use an addon.</p>
-
-<br/>
-
-
-<ul>
-<li>Do you want to write a component that can be used in thousands of different apps?</li>
-<li>Do you want to plug in the build system and do something cool with the result?</li>
-<li>Do you want to extend the generators?</li>
-<li>Do you want to share parts of your code between different apps?</li>
-</ul>
-
-
-<br/>
-
-
-<p>If you know that I wrote a book about Ember (and ember-cli), you might
-be thinking: &ldquo;ok, now you are going to tell me that if I want to
-learn all this then I should buy your book&rdquo; No! I&rsquo;m not <a href="#learn-ember">*</a>!</p>
-
-<p>This post is actually to introduce a new experiment I want to start
-called &ldquo;Know your addons&rdquo;, I&rsquo;ll be covering different addons that I
-find useful and go a bit into their implementation and mention things
-that you could find worthwhile.</p>
-
-<h2>ember-cli-build-notifications</h2>
-
-<p>I&rsquo;d like to start with
-<a href="https://www.npmjs.com/package/ember-cli-build-notifications">ember-cli-build-notifications</a>
-an useful addon to display notifications when there is a build error.</p>
-
-<p><img src="https://s3.amazonaws.com/f.cl.ly/items/3m0843433l1F0J0m1M3p/example.png" alt="ember-cli-build-notifications" /></p>
-
-<h3>How?</h3>
-
-<p>Philip Dudley is the crator of this addon and the code can be found in <a href="https://github.com/pdud/ember-cli-build-notifications">GitHub</a>.</p>
-
-<p>The important file to look at for this addon is the <a href="https://github.com/pdud/ember-cli-build-notifications/blob/master/index.js">index.js</a> which is the main entry point for the addon.</p>
-
-<p><div>
-  <pre><code class='javascript'>/&lt;em&gt; jshint node: true &lt;/em&gt;/
-&amp;lsquo;use strict&amp;rsquo;;&lt;/p&gt;
-
-&lt;p&gt;var notifier = require(&amp;lsquo;./lib/notify&amp;rsquo;);&lt;/p&gt;
-
-&lt;p&gt;module.exports = {
-  name: &amp;lsquo;ember-cli-build-notifications&amp;rsquo;,&lt;/p&gt;
-
-&lt;p&gt;  buildError: function(error) {&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;notifier.notify({
-  title: &#39;Build Failed&#39;,
-  subtitle: error.file,
-  message: error.toString()
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  }
-};</code></pre>
-</div>
-</p>
-
-<p>When installed in your ember-cli project&rsquo;s <code>package.json</code>, it will be
-identified as add addon because of the keyword <code>"ember-addon"</code> Once it
-loads, Philip is using the <a href="https://github.com/ember-cli/ember-cli/blob/6c66d2f28ade2e3c58974c353498048a8a55ef4a/ADDON_HOOKS.md#builderror">buildError
-hook</a>
-which gets called every time the build errors and then as soon as it
-gets called it uses his notify implementation to show us the message. Clever right?</p>
-
-<p>So the next time your boss forces you to notify them every time that crazy ember-cli build fails, you can write your own addon which will use the <code>buildError</code> to automate the process:</p>
-
-<p><div>
-  <pre><code class='javascript'>/&lt;em&gt; jshint node: true &lt;/em&gt;/
-&amp;lsquo;use strict&amp;rsquo;;&lt;/p&gt;
-
-&lt;p&gt;var bossNotifier = require(&amp;lsquo;./lib/notifier&amp;rsquo;);&lt;/p&gt;
-
-&lt;p&gt;module.exports = {
-  name: &amp;lsquo;boss-notifier&amp;rsquo;,&lt;/p&gt;
-
-&lt;p&gt;  buildError: function(error) {&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;bossNotifier.notify({
-  title: &#39;The build failed, it was not my fault&#39;,
-  subtitle: error.file,
-  message: error.toString()
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  }
-};</code></pre>
-</div>
-</p>
-
-<br/>
-
-
-<br/>
-
-
-<br/>
-
-
-<p><strong><a name="learn-ember"></a>Actually you should :), Learn Ember with my book, check it
-  out <a href="https://leanpub.com/ember-cli-101">leanpub.com/ember-cli-101</a> or subscribe to my list for the free webinars</strong></p>
-
-<p><form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL"></label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 3]]></title>
-    <link href="http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/"/>
-    <updated>2014-12-28T09:17:46-05:00</updated>
-    <id>http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3</id>
-    <content type="html"><![CDATA[<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
-ember-cli</a>
-, we explore how to work with JavaScript plugins which are still
-distributed as globas and came up with a pattern for wrapping up
-globals while using the module system.</p>
-
-<p>On <a href="/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/">part 2</a>
-we explored how to work with libraries including a a named AMD
-distribution via <code>app.import</code>.</p>
-
-<p>In this article, we&rsquo;ll explore how to work with libraries via npm and
-browserify.</p>
-
-<h2>ember-browserify</h2>
-
-<p><a href="http://browserify.org/">Browserify</a> is a Node library which allows us
-to consume other Node libraries in the Browser using CommonJS (which
-is Node&rsquo;s module system), what this means is that we can install
-libraries like MomentJS using npm and then consume them in the browser
-via browserify. But wait, to use Browserify we actually need to
-install the library and create a &ldquo;bundle&rdquo; with our
-dependencies, normally we&rsquo;ll run something like <code>browserify main.js -o
-bundle.js</code> and then use <code>bundle.js</code> via a script tag <code>&lt;script
-src="bundle.js"&gt;&lt;/script&gt;</code>.</p>
-
-<p>As we can imagine this can get tricky and hard to manage in our
-ember-cli application, but thanks to
-<a href="https://github.com/ef4">Edward Faulkner</a> there is addon which allow
-us to consume libraries from npm with browserify without needing us to
-worry about the bundling process, it is called <a href="https://github.com/ef4/ember-browserify">ember-browserify</a>.</p>
-
-<h3>Using ember-browserify</h3>
-
-<p>First we need to install the addon, which we can do running <code>ember
-install</code>:</p>
-
-<p><code>
-$ ember install:addon ember-browserify
-</code></p>
-
-<p>Once the addon has been installed, we are going to use it to consume
-MomentJS from npm in our <code>data-helpers</code> file.</p>
-
-<p>Before doing that, let&rsquo;s make sure we have removed <code>moment</code> from our
-<code>bower.json</code> and also that we have removed
-<code>app.import('bower_components/moment/moment.js');</code> from the
-<code>Brocfile</code>.</p>
-
-<p>Next, let&rsquo;s install moment via npm, which we can do with <code>npm install
-moment --save-dev</code>.</p>
-
-<p>Once it has been installed we can consume it from npm thanks to
-ember-browserify just doing <code>import moment from 'npm:moment';</code>.</p>
-
-<p>Let&rsquo;s use it in our <code>date-helpers</code> so <code>formatDate</code> uses <code>moment</code>.</p>
-
-<p><div>
-  <pre><code class='javascript'>import moment from &amp;lsquo;npm:moment&amp;rsquo;;&lt;/p&gt;
-
-&lt;p&gt;function formatDate(date, format) {
-  return moment(date).format(format);
-}&lt;/p&gt;
-
-&lt;p&gt;export {
-  formatDate
-};</code></pre>
-</div>
-</p>
-
-<p>And that&rsquo;s it, we are now consuming MomentJS via browserify just as if
-it was other module in our application.</p>
-
-<p>**<a href="https://leanpub.com/ember-cli-101">Learning Ember.js? Get my book or enroll in my upcoming workshops.</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 2]]></title>
-    <link href="http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/"/>
-    <updated>2014-10-17T09:16:04-05:00</updated>
-    <id>http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2</id>
-    <content type="html"><![CDATA[<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
-ember-cli</a>
-, we explore how to work with JavaScript plugins which are still
-distributed as globas and came up with a pattern for wrapping up
-globals while using the module system.</p>
-
-<p>In this article, we&rsquo;ll explore how to work with libraries which
-include a named AMD distribution.</p>
-
-<h2>Working with libraries with named AMD distributions.</h2>
-
-<p>Before the addons system exist the easiest way to distribute
-JavaScript libraries to be consume in ember-cli was to have a distribution
-with a named-AMD version, then importing such library using <code>app.import</code>
-and whitelisting the library&rsquo;s exports.</p>
-
-<p>On of the libraries distributed in this way is
-<a href="https://github.com/instructure/ic-ajax/tree/v2.0.1/lib">ic-ajax</a> an
-&ldquo;Ember-friendly <code>jQuery.ajax</code> wrapper&rdquo;, if we navigate to the
-<a href="https://github.com/instructure/ic-ajax/blob/master/lib/main.js">lib/main.js</a>
-we&rsquo;ll notice that the source of the application is written with
-<code>ES6</code> syntax but it is
-<a href="https://github.com/instructure/ic-ajax/tree/v2.0.1/dist">distributed</a>
-in different formats so you can consume it like a global or in a
-module format.</p>
-
-<p>As mentioned in the previously post <code>loader.js</code> doesn&rsquo;t work with anonymous AMD
-distributions so if we want to include <code>ic-ajax</code> we need to use the
-<code>named-amd</code> output.</p>
-
-<p>Let&rsquo;s create a new ember-cli project like <code>ember new amd-example</code></p>
-
-<p>Once the project has been created, let&rsquo;s go to the directory and run the following command</p>
-
-<p><div>
-  <pre><code class='bash'>npm uninstall ember-cli-ic-ajax &amp;mdash;save-dev</code></pre>
-</div>
-</p>
-
-<p>The library we just removed is an <code>ember-cli addon</code> which wraps all
-the steps we are about to do but we won&rsquo;t be using it since we are
-interested in learning how things are working under the hood and what
-are we gaining when using the addon.</p>
-
-<p>Next we need to add the library to bower, we can do so with <code>bower
-install ic-ajax --save</code>, once installed let&rsquo;s import it in our
-<code>Brocfile.js</code> as follows:</p>
-
-<p> <div>
-  <pre><code class='JavaScript'>app.import(&amp;lsquo;bower_components/ic-ajax/dist/named-amd/main.js&amp;rsquo;);</code></pre>
-</div>
-</p>
-
-<p><code>ic-ajax</code> default export is the <code>request</code> function which allows us to
-make request and manage them as if they were promises, we&rsquo;ll use
-<code>request</code> to pull data from our backend.</p>
-
-<p>We&rsquo;ll be using ember-cli&rsquo;s <code>proxy</code> to connect to a public API from my <a href="https://leanpub.com/ember-cli-101">Ember.js book: ember-cli 101</a>, pull some data and then render it in the index template.</p>
-
-<p>Let&rsquo;s start by creating an index route with the following command: <code>ember g route index</code> and then put the following content in <code>app/routes/index.js</code>:</p>
-
-<p><div>
-  <pre><code class='JavaScript'>import Ember from &amp;lsquo;ember&amp;rsquo;;&lt;/p&gt;
-
-&lt;p&gt;//
-// Here we are importing the default export from ic-ajax and assigning it to
-// the variable request
-//&lt;/p&gt;
-
-&lt;p&gt;import request from &amp;lsquo;ic-ajax&amp;rsquo;;&lt;/p&gt;
-
-&lt;p&gt;export default Ember.Route.extend({
-  model: function()  {&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;//
-// We&#39;ll be loading a collection from a resource called friends, it will
-// response with a JSON array which main key is friends
-//
-// We can see this response going to http://api.ember-cli-101.com/api/friends
-//
-
-return request(&#39;/api/friends&#39;).then(function(data){
-  return {
-    friendsCount: data.friends.length
-  };
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;  }
-});</code></pre>
-</div>
-</p>
-
-<p>And then replace <code>app/templates/index.hbs</code> so it uses
-<code>friendsCount</code>:</p>
-
-<p>
-```html</p>
-
-<h1>Total friends in api.ember-cli-101.com {{friendsCount}}</h1>
-
+    <title type="html"><![CDATA[Lightning Fast Deployments With Rails (in the Wild).]]></title>
+    <link href="http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/"/>
+    <updated>2014-07-08T16:30:18-05:00</updated>
+    <id>http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails</id>
+    <content type="html"><![CDATA[<p><strong><a href="https://leanpub.com/ember-cli-101">Getting started with Ember.js? I cover different deploying strategies in my Ember.js book</a></strong></p>
+
+<p>A couple of months ago I wrote an article about deploying ember-cli
+apps to heroku. Looking back, it was more a dirty hack to get things
+working than a long term solution.</p>
+
+<p>During Ember Conf  I had the opportunity to talk with some of the @yapplabs folks
+about the method they were using to deploy their apps and
+then Luke Melia gave an interesting talk on Rails Conf [1] about it.</p>
+
+<p>Then, there was a blog post by Feifan Wang [2] implementing Luke&rsquo;s concepts, and I used
+that as the backbone for my current solution.</p>
+
+<p>Instead of prefixing the current deploy with timestamps, we put all
+the files on the same dir to avoid cache busting. By default when
+accessing the app in Rails, we&rsquo;ll serve serve the latest stable
+release which is stored in Redis as &ldquo;release:index.html&rdquo;, or if the
+user asks for the &ldquo;canary&rdquo; version (?version=canary) then serve the
+latest known deployment.</p>
+
+<p>The reason for including a &lsquo;canary&rsquo; release [3] is that I can test stuff
+in production before making it available to the public, also being
+able to serve other versions, means we can develop different features
+and share the same &ldquo;staging&rdquo; app, and then just test by passing as
+param the feature&rsquo;s shortSHA.</p>
+
+<p>There are more advantages about this approach, check out Luke&rsquo;s video
+for more enlightment!</p>
+
+<h1>Generating the build.</h1>
+
+<p>First let&rsquo;s examine the Brocfile, we just tell Broccoli to fingerprint our assets preprending our cloudfront url to all of them.
+the final result would look something like <code>https://d29bb5msqib8gy.cloudfront.net/assets/vendor-6673dc1e2f6a7bece01002d43fae1b5b.js</code>.</p>
 
 <p>```
-</p>
+var EmberApp = require(&lsquo;ember-cli/lib/broccoli/ember-app&rsquo;);</p>
 
-<p>The previous code is correct but we&rsquo;ll see an error when running ember server, try the following:</p>
+<p>var app = new EmberApp({
+  // broccoli-asset-rev is now an ember-cli addon.
+  fingerprint: {</p>
 
-<p><div>
-  <pre><code class='bash'>$ ember server &amp;mdash;proxy &lt;a href=&quot;http://api.ember-cli-101.com&quot;&gt;http://api.ember-cli-101.com&lt;/a&gt;
-version: 0.0.46
-Proxying to &lt;a href=&quot;http://api.ember-cli-101.com&quot;&gt;http://api.ember-cli-101.com&lt;/a&gt;
-Livereload server on port 35729
-Serving on &lt;a href=&quot;http://0.0.0.0:4200&quot;&gt;http://0.0.0.0:4200&lt;/a&gt;
-ENOENT, no such file or directory &amp;lsquo;/borrowers/tmp/tree_merger-tmp_dest_dir-KIfHrFRc.tmp/ic-ajax.js&amp;rsquo;
-Error: ENOENT, no such file or directory &amp;lsquo;/borrowers/tmp/tree_merger-tmp_dest_dir-KIfHrFRc.tmp/ic-ajax.js&amp;rsquo;
-&amp;hellip;</code></pre>
-</div>
-</p>
+<pre><code>prepend: 'https://d29bb5msqib8gy.cloudfront.net/'
+</code></pre>
 
-<p>At the beginning of the article we mentioned that part of the process
-on consuming named AMD libraries was to use <code>app.import</code> and
-<code>whitelist</code> the library&rsquo;s exports without explaining what we meant
-with the later.</p>
+<p>  },
+  minifyCSS: {</p>
 
-<p>During the build process all our files under <code>app/</code> go through a
-transformation step where the <code>ES6 Modules</code> are converted to <code>AMD format</code>,
-when something like the following is found <code>import request from
-'ic-ajax';</code> internally the tool in charge of transpiling the code,
-checks if that is something already registered in the module system
-and if not it tries to find the module and convert it to the proper
-format, in the previous scenario it will try to find a file called
-<code>ic-ajax.js</code>, but since it is a library we are including externally
-such file doesn&rsquo;t exist hence causing the build to fail.</p>
+<pre><code>enabled: true,
+options: {}
+</code></pre>
 
-<p>Whitelisting in this context means telling the tool in charge of
-transforming our <code>ES6 Modules</code> to <code>AMD</code> that whenever <code>import request from
-'ic-ajax'</code> is found, then assume is already included so it doesn&rsquo;t
-try to resolve it.</p>
+<p>  }
+});</p>
 
-<p>To do so we pass an option called exports to <code>app.import</code> which
-whitelist <code>ic-ajax</code> and and its <code>exports</code>. The exports are also used to whitelist variables in <code>JSHint</code>.</p>
+<p>module.exports = app.toTree();
+```</p>
 
-<p>In the <code>Brocfile.js</code>, let&rsquo;s replace the call to <code>import</code> with the
-following:</p>
+<p>With that we get our desired &lsquo;dist&rsquo; output. Next we need to upload it
+to S3 (we might be able to do this directly with ember-cli soon)</p>
 
-<p><div>
-  <pre><code class='JavaScript'>app.import(&amp;lsquo;bower_components/ic-ajax/dist/named-amd/main.js&amp;rsquo;, {
-  exports: {&lt;/p&gt;
+<h2>Gruntfile</h2>
 
-&lt;pre&gt;&lt;code&gt;&#39;ic-ajax&#39;: [
-  &#39;default&#39;,
-  &#39;defineFixture&#39;,
-  &#39;lookupFixture&#39;,
-  &#39;raw&#39;,
-  &#39;request&#39;,
-]
-&lt;/code&gt;&lt;/pre&gt;
+<p>Next we tell grunt to upload to S3 and push the generated index to
+Redis. The default task publish the index as a canary release (meaning
+it doesn&rsquo;t get served by default) just if the user explicitly requires
+<code>?version=canary</code>. If we want to make the current version the
+one that the users get served then we run <code>grunt
+publish-release</code>.</p>
 
-&lt;p&gt;  }
-});</code></pre>
-</div>
-</p>
+<p>Normally we&rsquo;ll run the default task on our CI server against staging,
+and then when things get merged into production run the release task,
+optionally we can run always the default task against production, in that way your
+clients can try the latest version of the app before making it
+available to everyone else.</p>
 
-<p>If we run <code>ember server --proxy http://api.ember-cli-101.com</code> we&rsquo;ll see that everything works and we&rsquo;ll see the friends count in our index visiting
-<a href="http://localhost:4200/">http://localhost:4200/</a></p>
+<p>```
+module.exports = function(grunt) {
+  grunt.initConfig({</p>
 
-<h3>ember-cli-ic-ajax</h3>
-
-<p>We started the chapter by removing <code>ember-cli-ic-ajax</code> which is an
-addon wrapping the call to import and include the exports for us, if
-we inspect the
-<a href="https://github.com/rwjblue/ember-cli-ic-ajax/blob/master/index.js#L18">index file in the addon</a>,
-we&rsquo;ll notice that it has almost the same things we added to our
-<code>Brocfile.js</code>.</p>
-
-<p>Now that we understand how importing <code>named AMD libraries</code> works, we can
-remove the <code>import</code> for <code>ic-ajax</code> from the <code>Brocfile.js</code> and use
-it via the <code>addon</code>, let&rsquo;s run the following commands and then stop and
-start the server, everything should work:</p>
-
-<p><div>
-  <pre><code class='bash'>$ bower uninstall ic-ajax &amp;mdash;save
-$ npm i ember-cli-ic-ajax &amp;mdash;save</code></pre>
-</div>
-</p>
-
-<h3>Protip</h3>
-
-<p>Did you know ember-cli has an <code>.ember-cli</code> file where you can specify the default value for some commands? Instead of passing <code>--proxy</code> all the time to our <code>ember server</code> command, we can edit the <code>.ember-cli</code> to include the proxy option as follows:</p>
-
-<p><div>
-  <pre><code class='javascript'>{
-  &amp;ldquo;disableAnalytics&amp;rdquo;: false,
-  &amp;ldquo;proxy&amp;rdquo;: &amp;ldquo;&lt;a href=&quot;http://api.ember-cli-101.com&quot;&gt;http://api.ember-cli-101.com&lt;/a&gt;&amp;rdquo;
-}</code></pre>
-</div>
-</p>
-
-<p>With that we can run <code>ember server</code> and it will read the <code>--proxy</code> option from the <code>.ember-cli</code> file.</p>
-
-<p><strong><a href="https://leanpub.com/ember-cli-101">Getting started with Ember.js? I&rsquo;m writing an Ember.js book, learn Ember.js</a> with <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a>. Ping me on #ember-cli-101 in Freenode if you have any question about it</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli]]></title>
-    <link href="http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/"/>
-    <updated>2014-10-03T12:09:10-05:00</updated>
-    <id>http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli</id>
-    <content type="html"><![CDATA[<p>In this post we&rsquo;ll use momentjs to write an Ember helpers called
-<code>formatted-date</code> which we&rsquo;ll be using in our templates to render
-dates as <code>September 28, 2014</code> instead of <code>Sun Sep 28 2014 04:58:30
-GMT-0500</code></p>
-
-<p><strong> This post is extracted from my Ember.js book: <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a></strong></p>
-
-<h2>Installing moment</h2>
-
-<p>ember-cli uses Bower to manage frontend dependencies (we can also use
-addons but that&rsquo;s a different story), the simplest way to consume a
-library is to add it via bower and then use <code>app.import</code> in our
-<code>Brocfile.js</code>.</p>
-
-<p>Assuming you have ember-cli already install, create a project doing <code>ember new deps-demo</code>.</p>
-
-<p>Once npm is done, install <code>moment</code> with</p>
-
-<p><div>
-  <pre><code class='bash'>$ bower install moment &amp;mdash;save</code></pre>
-</div>
-</p>
-
-<p>The option <code>--save</code> adds the dependency to our <code>bower.json</code>, we
-should find something similar to <code>"moment": "~2.8.3"</code> (the version
-might be different).</p>
-
-<p>Next, let&rsquo;s import <code>moment</code>, to know which file to import we can go
-to <code>bower_components/moment/</code> and we&rsquo;ll see that it has a
-<code>moment.js</code> file which is the non-minified version of the library or
-we can point to any of the version under the directory <code>min/</code>, for
-now let&rsquo;s use the non-minified.</p>
-
-<p>Let&rsquo;s add the following to our <code>Brocfile.js</code>:</p>
-
-<p><code>
-app.import('bower_components/moment/moment.js');
-</code></p>
-
-<p>Next, if we start our application with <code>ember server</code>, and navigate to
-<a href="http://localhost:4200">http://localhost:4200</a>, open the console and
-type &ldquo;moment&rdquo;, we should have access to the <code>moment</code> object.</p>
-
-<p>With that we have successfully included our first JavaScript plugin,
-but there are some gotchas we need to be aware of.</p>
-
-<h2>It&rsquo;s a global!</h2>
-
-<p>ember-cli fosters the use of <code>ES6 Modules</code>, so it feels like giving a
-step backwards if we add a library and then use it through its global,
-right?.</p>
-
-<p>The sad news is that not all libraries are written in such way that
-they can be consumed easily via a modules loader, and even so if there is
-an <code>AMD</code> definition included in the library not all of them are
-compatible with the modules loader used by <code>ember-cli</code>.</p>
-
-<p>For example, <code>moment</code> includes an <code>AMD</code> version</p>
-
-<p><div>
-  <pre><code class='javascript'>&amp;hellip;
-} else if (typeof define === &amp;lsquo;function&amp;rsquo; &amp;amp;&amp;amp; define.amd) {&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;define(&#39;moment&#39;, function (require, exports, module) {
-    if (module.config &amp;amp;&amp;amp; module.config() &amp;amp;&amp;amp; module.config().noGlobal === true) {
-        // release the global variable
-        globalScope.moment = oldGlobalMoment;
+<pre><code>env: grunt.file.readJSON('.env'),
+s3: {
+  options: {
+    key: '&lt;%= env.AWS_ACCESS_KEY_ID %&gt;',
+    secret: '&lt;%= env.AWS_SECRET_ACCESS_KEY %&gt;',
+    bucket: '&lt;%= env.AWS_BUCKET %&gt;',
+    access: 'public-read',
+    headers: {
+      "Cache-Control": "max-age=630720000, public",
+      "Expires": new Date(Date.now() + 630720000).toUTCString()
+    },
+  },
+  dev: {
+    upload: [
+      {
+        src: 'dist/assets/**/*',
+        dest: 'assets/',
+        rel: 'dist/assets',
+        options: { verify: true }
+      }
+    ]
+  }
+},
+redis: {
+  options: {
+    manifestKey: 'releases',
+    manifestSize: 10,
+    host: '&lt;%= env.REDISTOGO.host %&gt;',
+    port: '&lt;%= env.REDISTOGO.port %&gt;',
+    connectionOptions: {
+      auth_pass: '&lt;%= env.REDISTOGO.password %&gt;'
     }
+  },
+  canary: {
+    options: {
+      prefix: '&lt;%= gitinfo.local.branch.current.shortSHA %&gt;:',
+      currentDeployKey: '&lt;%= gitinfo.local.branch.current.shortSHA %&gt;',
+    },
+    files: {
+      src: ["dist/index.html"]
+    }
+  },
+  release: {
+    options: {
+      prefix: 'release:'
+    },
+    files: {
+      src: ["dist/index.html"]
+    }
+  }
+},
+</code></pre>
 
-    return moment;
-});
-&lt;/code&gt;&lt;/pre&gt;
+<p>  });
+  grunt.loadNpmTasks(&lsquo;grunt-gitinfo&rsquo;);
+  grunt.loadNpmTasks(&lsquo;grunt-s3&rsquo;);
+  grunt.loadNpmTasks(&lsquo;grunt-redis&rsquo;);</p>
 
-&lt;p&gt;</code></pre>
-</div>
-</p>
+<p>  grunt.registerTask(&lsquo;release&rsquo;, [&lsquo;gitinfo&rsquo;, &lsquo;redis:release&rsquo;]);
+  grunt.registerTask(&lsquo;canary&rsquo;, [&lsquo;gitinfo&rsquo;, &lsquo;redis:canary&rsquo;]);
+  grunt.registerTask(&lsquo;publish-release&rsquo;, [&lsquo;default&rsquo;, &lsquo;release&rsquo;]);
+  return grunt.registerTask(&lsquo;default&rsquo;, [&lsquo;gitinfo&rsquo;, &lsquo;s3:dev&rsquo;, &lsquo;canary&rsquo;]);
+};
+```</p>
 
-<p>But unfortunately the stable version of loader.js doesn&rsquo;t support that
-yet.</p>
+<h1>Rails</h1>
 
-<p>Other libraries do the following:</p>
+<p>In rails we will need to have <code>redis</code> gem installed and then
+in our root action just serve the index.html from Redis.</p>
 
-<p><div>
-  <pre><code class='JavaScript'>define( [], function() {&lt;/p&gt;
+<p>```
+class LandingController &lt; ApplicationController
+  def index</p>
 
-&lt;pre&gt;&lt;code&gt;return lib;
-&lt;/code&gt;&lt;/pre&gt;
+<pre><code>render text: index_html
+</code></pre>
 
-&lt;p&gt;});</code></pre>
-</div>
-</p>
+<p>  end</p>
 
-<p>That&rsquo;s is known as an anonymous module and even though it&rsquo;s syntax is
-valid, loader.js doesn&rsquo;t support that either since it expects
-named modules.</p>
+<p>  private</p>
 
-<p>This whole problem is not really ember-cli&rsquo;s fault but the fact
-everyone is building their libraries in different formats making hard
-for consumers to use.</p>
+<p>  def index_html</p>
 
-<p>On the ember-cli side there is work in progress so in a near future
-people will be able to use <code>moment</code> or other JavaScript libraries via
-<code>import</code> but the integration is not ready yet. See
-<a href="https://github.com/stefanpenner/ember-cli/issues/2177">ember-cli#2177</a>
-for more info.</p>
+<pre><code>redis.get "#{deploy_key}:index.html"
+</code></pre>
 
-<p>So, what can we do about it?</p>
+<p>  end</p>
 
-<h2>Wrapping globals</h2>
+<p>  # By default serve release, if canary is specified then the latest
+  # known release, otherwise the requested version.
+  def deploy_key</p>
 
-<p>Instead of consuming globals directly let&rsquo;s wrap then in a helper
-module which will help us foster the use of modules and also update or
-replace easily <code>moment</code> once we have a way to load it via the module
-loader.</p>
+<pre><code>params[:version] ||= 'release'
+case params[:version]
+when 'release' then 'release'
+when 'canary'  then  redis.lindex('releases', 0)
+else
+  params[:version]
+end
+</code></pre>
 
-<p>First, let&rsquo;s create an utils file called <code>date-helpers</code>:</p>
+<p>  end</p>
 
-<p><div>
-  <pre><code class='bash'>$ ember g util date-helpers
-installing
-  create app/utils/date-helpers.js
-installing
-  create tests/unit/utils/date-helpers-test.js</code></pre>
-</div>
-</p>
+<p>  def redis</p>
 
-<p>Replace <code>app/utils/date-helpers.js</code> with the following:</p>
+<pre><code>if Rails.env.development?
+  redis = Redis.new()
+else
+  Redis.new(:url =&gt; ENV['REDISTOGO_URL'])
+end
+</code></pre>
 
-<p><div>
-  <pre><code class='javascript'>function formatDate(date, format) {
-  return window.moment(date).format(format);
-}&lt;/p&gt;
+<p>  end
+end
+```</p>
 
-&lt;p&gt;export default {
-  formatDate
-}</code></pre>
-</div>
-</p>
+<p>And voilá! You have separated your Ember.js and Rails app with super fast deployments!</p>
 
-<p>Here we are wrapping the call to <code>moment#format</code> in the function
-<code>format</code> which we can consume doing <code>import { formatDate } from
-'utils/date-helpers';</code>, with that we are back to our idea of using
-modules, and also we&rsquo;ll have the facility to update easily <code>moment</code>
-when our loader is ready to load it.</p>
+<p>Dealing with CSRF can be done injecting the csrf token in your header
+and then telling Ember to pick it up for you, or use my
+<a href="https://github.com/abuiles/rails-csrf">rails-csrf</a> plugin which will
+take care of everything, it just requires and end-point for
+fetching the csrf token.</p>
 
-<p>Also if we decide to stop using <code>moment</code> and replace it with any
-other library which does the same, we don&rsquo;t need to change our
-consuming code since it doesn&rsquo;t care how <code>format-date</code> is being
-implemented.</p>
+<p>If you want to see this in a real app check the client-side part in
+<a href="https://github.com/abuiles/facturas-client/blob/master/Gruntfile.js">facturas-client</a>
+and the Rails part in <a href="https://github.com/abuiles/facturas/commit/391fcfad81ba8afcabf33bd349d05ba19e3073da">facturas Rails</a></p>
 
-<h2>Writing an Ember helper: formatted-date.</h2>
+<h2>Standing on the shoulder of giants.</h2>
 
-<p>Helpers are pieces of code that help us augment our templates, in this
-case we want to write a helper to have a a date as a formatted string.</p>
+<p>Thanks Luke, for your Rails Conf talk!</p>
 
-<p><code>ember-cli</code> includes a generator for helpers too, so let&rsquo;s create
-<code>formatted-date</code> with the command <code>ember g helper formatted-date</code>, and
-then modify <code>app/helpers/formatted-date</code> so it consumes our format
-function.</p>
+<p><img src="http://cl.ly/image/1Z3M2B1Q2X2a/Screen%20Shot%202014-07-08%20at%202.12.20%20PM.png" alt="Luke Melia" /></p>
 
-<p><div>
-  <pre><code class='javascript'>import Ember from &amp;lsquo;ember&amp;rsquo;;&lt;/p&gt;
+<p>Thanks Feifan Wang for you blog post and <code>grunt-redis-manifest</code>.</p>
 
-&lt;p&gt;// We are consuming the function defined in our utils/date-helpers.
-import { formatDate } from &amp;lsquo;../utils/date-helpers&amp;rsquo;;&lt;/p&gt;
+<h4>Pair with me.</h4>
 
-&lt;p&gt;export default Ember.Handlebars.makeBoundHelper(function(date, format) {
-  return formatDate(date, format);
-});</code></pre>
-</div>
-</p>
+<p>If you are looking for help with Ember.js/ember-cli/Rails, I do a free hour of
+pairing every week, shoot me an email to <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#98;&#117;&#105;&#x6c;&#101;&#115;&#46;&#97;&#100;&#111;&#108;&#x66;&#x6f;&#64;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#98;&#x75;&#x69;&#x6c;&#x65;&#115;&#x2e;&#x61;&#100;&#x6f;&#x6c;&#102;&#x6f;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a>.</p>
 
-<p>Once we have our helper defined, we can use it in our templates like</p>
-
-<p>
-<code>html
-{{formatted-date createdAt 'LL'}}
-</code>
-</p>
-
-<h1>Wrapping up</h1>
-
-<p>This is the first one of a 3 series articles on consuming JavaScript
-libraries, here we cover the first scenario about consuming libraries
-which distribution can&rsquo;t be consumed with loader.js. Next we&rsquo;ll
-explore and understand how to consume libraries distributed in AMD.</p>
-
-<p><strong><a href="https://leanpub.com/ember-cli-101">Getting started with Ember.js? I&rsquo;m writing an Ember.js book, learn Ember.js and ember-cli</a> with <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a>.</strong></p>
-
-<p><strong>Looking for an Ember.js Coach? <a href="http://blog.abuiles.com/emberjs-consulting/">Hire me</a>  and I&rsquo;ll help your team stay in the flow with my unlimited support plan</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ember-cli Anatomy]]></title>
-    <link href="http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy/"/>
-    <updated>2014-08-29T13:30:05-05:00</updated>
-    <id>http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy</id>
-    <content type="html"><![CDATA[<p>Every new developer coming to Ember.js is probably using ember-cli,
-but I&rsquo;ve noticed that most of the time they are not fully aware of
-ember-cli&rsquo;s main components and how they interact together so I took
-this from my <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a> book
-where I try to explain it.</p>
-
-<p><code>ember-cli</code> is a <code>Node.js</code> command line application sitting on top of
-other libraries.</p>
-
-<p>Its main component is <a href="https://github.com/broccolijs/broccoli">Broccoli</a>, which allows us to have fast builds,
-<code>Broccoli</code> is a builder designed with the goal of keeping builds as
-fast as possible (currently there are some issues on Mac which slows down the build time but there is work in progress to fix it).</p>
-
-<p>When we run <code>ember server</code>, <code>Broccoli</code> compiles our project and put it
-in a directory where it can be served using
-<a href="http://expressjs.com/"><code>Express.js</code></a> which is a <code>Node.js</code> library.
-<code>Express</code> is not only used to served files but also to extend
-<code>ember-cli</code> functionality using its <code>middlewares</code>, an example of this
-is the <code>http-proxy</code> which supports the <code>--proxy</code> option, allowing us
-to develop against our development backend.</p>
-
-<p>Testing is powered by <code>QUnit</code> and <code>Testem</code>, we can always navigate to
-<code>http:/localhost:4200/tests</code> and our test will be run automatically.
-We can also run Testem in <code>CI</code> or <code>--development</code> mode with the <code>ember
-test</code> command. Currently there is just support for <code>QUnit</code> through an
-<code>ember-cli add-on</code>, we will probably see support for other testing
-frameworks and runners as people get familiar with the add-on system.</p>
-
-<p><code>ember-cli</code> uses it&rsquo;s <a href="https://github.com/stefanpenner/ember-jj-abrams-resolver">own
-resolver</a>
-and has a different naming convention to <code>Ember.js's</code> defaults.</p>
-
-<p><code>ember-cli</code> makes us write our application using <code>ES6 Modules</code>, then the code gets transpiled (compiled)[1] to <code>AMD</code>[2] and finally it is loaded with <code>loader.js</code> which is a minimalist <code>AMD</code> loader.</p>
-
-<p>If you want to use coffee script you can use it but it is encouraged
-to use plain JS and ES6 where possible.</p>
-
-<p>Finally we need to cover <code>Broccoli</code>&rsquo;s plugins because without them,
-<code>Broccoli</code> wouldn&rsquo;t be as helpful. Every transformation that your
-files are going through, are done with a <code>Broccoli</code> plugin, e.g.
-transpiling, minifying, finger-printing, uglifying. You can have your
-own <code>Broccoli</code> plugins and plug it wherever you want in the build
-process.</p>
-
-<p><strong> <a href="https://leanpub.com/ember-cli-101">Learn how to write apps with Ember.js and ember-cli</a> with my <a href="https://leanpub.com/ember-cli-101">ember-cli-101 book</a>.</strong></p>
+<p><strong><a href="https://leanpub.com/ember-cli-101">Get my Ember.js book and to learn how to write apps with Ember.js, Ruby on Rails and ember-cli</a></strong></p>
 
 <ul>
-<li>[1]: The transpiring process is done with <a href="https://github.com/esnext/es6-module-transpiler">es6-module-transpiler</a>.</li>
-<li>[2]: To know more about <code>AMD</code> checkout <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">their wiki</a></li>
+<li>[1] <a href="https://www.youtube.com/watch?v=QZVYP3cPcWQ">RailsConf 2014 &ndash; Lightning Fast Deployment of Your Rails-backed JavaScript app</a></li>
+<li>[2] <a href="https://medium.com/@feifanw/framework-agnostic-fast-zero-downtime-javascript-app-deployment-df40cf105622">Framework agnostic, fast zero-downtime Javascript app deployment</a></li>
+<li>[3] <a href="http://martinfowler.com/bliki/CanaryRelease.html">Canary Release</a></li>
 </ul>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Deploying Ember-cli and Rails to Heroku]]></title>
+    <link href="http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku/"/>
+    <updated>2014-05-21T08:09:55-05:00</updated>
+    <id>http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku</id>
+    <content type="html"><![CDATA[<p><strong> this post is out-dated use <a href="http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails">Lightning Fast Deployments instead</a> </strong></p>
+
+<p>I moved the app which I was doing as part of my Ember.js with Rails
+series to ember-cli, but just until very recently deployed to heroku.</p>
+
+<p>I want to put my ember-cli output into my <code>rails/public</code> and then
+include the scripts into my application layout</p>
+
+<p>```html
+&lt;!DOCTYPE html>
+<html>
+  <head></p>
+
+<pre><code>&lt;base href="http://blog.abuiles.com/" /&gt;
+
+&lt;link rel="stylesheet" href="ember-assets/vendor.css"&gt;
+&lt;link rel="stylesheet" href="ember-assets/client.css"&gt;
+&lt;%= csrf_meta_tags %&gt;
+</code></pre>
+
+<p>  </head>
+  <body></p>
+
+<pre><code>&lt;%= yield %&gt;
+&lt;script&gt;
+  window.ENV = {"railsCsrf":{"csrfURL":"api/v1/csrf"},"baseURL":"/","locationType":"auto","FEATURES":{"query-params-new":true},"APP":{}};
+&lt;/script&gt;
+&lt;script src="ember-assets/client.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.Client = require('client/app')['default'].create(ENV.APP);
+&lt;/script&gt;
+</code></pre>
+
+<p>  </body>
+</html>
+```</p>
+
+<p>I do it like this because I want to include my <code>csrf_tags</code> in the body
+and also have the option of preloading any data if I need to.</p>
+
+<p>Out of topic, but since handling csrf-tags is such a common scenario I
+wrote <a href="http://github.com/abuiles/rails-csrf">rails-csrf</a>, a plugin
+which you can install through bower for handling CSRF for you.</p>
+
+<h2>Building</h2>
+
+<p>I came through a script by Jason Madsen(@jason_madsen) which would
+take care of building the ember-cli app and putting it under public,
+it works great but the final output is under your <code>public/index.html</code>
+which I don&rsquo;t want.</p>
+
+<p>I modified the script to do a couple of things more.</p>
+
+<ol>
+<li>Add <code>&lt;%= csrf_meta_tags %&gt;</code> before head (line 40).</li>
+<li>Add <code>&lt;%= yield %&gt;</code> after body (line 43).</li>
+<li>Replace <code>application.html.erb</code> with my final <code>index.html</code> (line 46)</li>
+</ol>
+
+
+<p>The script can be found on the following <a href="https://gist.github.com/abuiles/5c281123fc41e6b988e3">gist</a></p>
+
+<h2>Deploying</h2>
+
+<p>Now with the desired output, is just a matter of <code>git commit</code> and <code>git push</code> to heroku.</p>
+
+<p>To make it easier I added the following task to my Rakefile, it:</p>
+
+<ol>
+<li>Accepts the &ldquo;env&rdquo; I want to deploy and the remote name (heroku end-point).</li>
+<li>Moves to the specified env and merges master.</li>
+<li>Runs the <code>build</code> script and commit the changes.</li>
+<li>Push the changes to heroku.</li>
+</ol>
+
+
+<p>```ruby
+task :deploy, :env, :remote do |t, args|
+  sh &ldquo;git checkout #{args[:env]}&rdquo;
+  sh &lsquo;git merge master -m &ldquo;Merging for deployment&rdquo;&rsquo;
+  sh &lsquo;./build.sh&rsquo;</p>
+
+<p>  sh &lsquo;git add -A&rsquo;
+  sh &lsquo;git commit -m &ldquo;Compile for deployment&rdquo;&rsquo;</p>
+
+<p>  sh &ldquo;git push #{args[:remote]} head:master&rdquo;
+end
+```</p>
+
+<p>A standard deployment would be something like <code>rake deploy[production, heroku]</code></p>
+
+<p>It assumes you have a branch called <code>production</code> and that your remote is called <code>heroku</code>.</p>
+
+<h2>Acknowledgements</h2>
+
+<p>Thanks to Jason Madsen for his initial script, he also made a rails template <a href="https://github.com/knomedia/ember-cli-rails">knomedia/ember-cli-rails</a>.</p>
+
+<p>The rake task was mostly inspired by <a href="https://github.com/dockyard/ember-cli-plus-backend">DockYard&rsquo;s ember-cli-plus-backend</a>.</p>
+
+<h2>Future work</h2>
+
+<p>There is still a lot of things to improve which I&rsquo;ll be blogging about as part of my ember-cli + Rails series. Here&rsquo;s a list of things:</p>
+
+<ol>
+<li>Deploying to heroku just the Rails files, currently we include the ember-cli app as well.</li>
+<li>Using cloud front for serving your assets.</li>
+<li><del>Fingerprinting</del> is super simple with <a href="https://github.com/rickharrison/broccoli-asset-rev">broccoli-asset-rev</a> see it in use <a href="https://github.com/abuiles/facturas/commit/12b23d5fc36d0906a1e21cae7aed97bdbb8cba9e">here</a>.</li>
+<li>Doing lightning fast deployments (see <a href="http://www.confreaks.com/videos/3324-railsconf-lightning-fast-deployment-of-your-rails-backed-javascript-app">Luke&rsquo;s Melia talk on Rails Conf</a>).</li>
+</ol>
+
+
+<p><strong><a href="http://blog.abuiles.com/ember-rails/">Learn how to write apps with Ember.js, ember-cli and Ruby on Rails</a>, subscribe to my list and I will let you know every time I publish an article. </strong></p>
 ]]></content>
   </entry>
   
