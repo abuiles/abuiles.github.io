@@ -137,7 +137,7 @@ doSomething: function() {
 <p>We&rsquo;ll use the following syntax</p>
 
 <div>
-  <pre><code class='JavaScript'>fullName: Ember.property(&#39;model.firstName&#39;, &#39;model.lastName&#39;, function() {
+  <pre><code class='JavaScript'>fullName: Ember.computed(&#39;model.firstName&#39;, &#39;model.lastName&#39;, function() {
   // make fullName
 }),
 doSomething: Ember.observer(&#39;model.firstName&#39;, &#39;model.lastName&#39;, function() {
