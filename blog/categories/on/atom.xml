@@ -4,7 +4,7 @@
   <title><![CDATA[Category: On | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/on/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-04-06T09:40:01-05:00</updated>
+  <updated>2015-06-27T20:06:49-07:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ember-cli + Rails]]></title>
     <link href="http://blog.abuiles.com/blog/2014/05/12/ember-cli-plus-rails/"/>
-    <updated>2014-05-12T18:42:36-05:00</updated>
+    <updated>2014-05-12T16:42:36-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/05/12/ember-cli-plus-rails</id>
     <content type="html"><![CDATA[<p>I stopped writing my series of getting started with Ember.js using
 Ember AppKit Rails after finding out that the gem was doomed to die in

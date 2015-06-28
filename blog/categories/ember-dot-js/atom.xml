@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ember.js | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-dot-js/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-04-06T09:40:01-05:00</updated>
+  <updated>2015-06-27T20:06:49-07:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ember-cli Anatomy]]></title>
     <link href="http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy/"/>
-    <updated>2014-08-29T13:30:05-05:00</updated>
+    <updated>2014-08-29T11:30:05-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy</id>
     <content type="html"><![CDATA[<p>Every new developer coming to Ember.js is probably using ember-cli,
 but I&rsquo;ve noticed that most of the time they are not fully aware of

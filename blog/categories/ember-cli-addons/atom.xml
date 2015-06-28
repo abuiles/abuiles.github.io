@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ember-cli-addons | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-cli-addons/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-04-06T09:40:01-05:00</updated>
+  <updated>2015-06-27T20:06:49-07:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Removing Prototype Extensions With Ember-watson]]></title>
     <link href="http://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/"/>
-    <updated>2015-03-30T10:34:20-05:00</updated>
+    <updated>2015-03-30T08:34:20-07:00</updated>
     <id>http://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson</id>
     <content type="html"><![CDATA[<p>If you follow Ember folks on twitter you might have noticed that a
 bunch of them keep talking about something called prototype extensions
@@ -77,7 +77,7 @@ ember watson:convert-prototype-extensions</code></pre>
   <entry>
     <title type="html"><![CDATA[Upgrading Your Ember CLI QUnit Tests in Less Than 5 Minutes]]></title>
     <link href="http://blog.abuiles.com/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes/"/>
-    <updated>2015-02-25T08:56:31-05:00</updated>
+    <updated>2015-02-25T05:56:31-08:00</updated>
     <id>http://blog.abuiles.com/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes</id>
     <content type="html"><![CDATA[<p>Recently ember CLI updated its tests blueprints to match QUnit&rsquo;s 2.0
 upcoming syntax. Meaning that if we wanted to live on the edge we would need to update our existing tests to match such changes or ignore the changes to <a href="https://github.com/ember-cli/ember-cli/pull/3197/files#diff-26f52f3fec353435f47247381c4f1189L12">tests/.jshintrc</a> and continue using globals.</p>
@@ -140,7 +140,7 @@ but not impossible, if you want to contribute you can find the repo in
   <entry>
     <title type="html"><![CDATA[Know Your Addons: Ember-cli-build-notifications]]></title>
     <link href="http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/"/>
-    <updated>2015-02-12T11:29:12-05:00</updated>
+    <updated>2015-02-12T08:29:12-08:00</updated>
     <id>http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications</id>
     <content type="html"><![CDATA[<p>As today <a href="http://www.emberaddons.com">emberaddons.com</a> registers 602
 (and growing) ember-cli addons distributed via NPM, this means that
@@ -250,7 +250,7 @@ gets called it uses his notify implementation to show us the message. Clever rig
   <entry>
     <title type="html"><![CDATA[Ruby on Rails MVC Is Not the Same as Ember.js MVC]]></title>
     <link href="http://blog.abuiles.com/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
-    <updated>2014-01-26T23:17:52-05:00</updated>
+    <updated>2014-01-26T20:17:52-08:00</updated>
     <id>http://blog.abuiles.com/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
     <content type="html"><![CDATA[<p>One of the most confusing parts for people coming from Rails (or any
 other backend web application framework) it&rsquo;s that what Ember.js

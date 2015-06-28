@@ -4,7 +4,7 @@
   <title><![CDATA[Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-04-06T09:40:01-05:00</updated>
+  <updated>2015-06-27T20:06:49-07:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Removing Prototype Extensions With Ember-watson]]></title>
     <link href="http://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/"/>
-    <updated>2015-03-30T10:34:20-05:00</updated>
+    <updated>2015-03-30T08:34:20-07:00</updated>
     <id>http://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson</id>
     <content type="html"><![CDATA[<p>If you follow Ember folks on twitter you might have noticed that a
 bunch of them keep talking about something called prototype extensions
@@ -77,7 +77,7 @@ ember watson:convert-prototype-extensions</code></pre>
   <entry>
     <title type="html"><![CDATA[Upgrading Your Ember CLI QUnit Tests in Less Than 5 Minutes]]></title>
     <link href="http://blog.abuiles.com/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes/"/>
-    <updated>2015-02-25T08:56:31-05:00</updated>
+    <updated>2015-02-25T05:56:31-08:00</updated>
     <id>http://blog.abuiles.com/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes</id>
     <content type="html"><![CDATA[<p>Recently ember CLI updated its tests blueprints to match QUnit&rsquo;s 2.0
 upcoming syntax. Meaning that if we wanted to live on the edge we would need to update our existing tests to match such changes or ignore the changes to <a href="https://github.com/ember-cli/ember-cli/pull/3197/files#diff-26f52f3fec353435f47247381c4f1189L12">tests/.jshintrc</a> and continue using globals.</p>
@@ -141,7 +141,7 @@ but not impossible, if you want to contribute you can find the repo in
   <entry>
     <title type="html"><![CDATA[Know Your Addons: Ember-cli-build-notifications]]></title>
     <link href="http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/"/>
-    <updated>2015-02-12T11:29:12-05:00</updated>
+    <updated>2015-02-12T08:29:12-08:00</updated>
     <id>http://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications</id>
     <content type="html"><![CDATA[<p>As today <a href="http://www.emberaddons.com">emberaddons.com</a> registers 602
 (and growing) ember-cli addons distributed via NPM, this means that
@@ -245,7 +245,7 @@ module.exports = {
   <entry>
     <title type="html"><![CDATA[Update Your Finds]]></title>
     <link href="http://blog.abuiles.com/blog/2015/02/09/update-your-finds/"/>
-    <updated>2015-02-09T11:40:52-05:00</updated>
+    <updated>2015-02-09T08:40:52-08:00</updated>
     <id>http://blog.abuiles.com/blog/2015/02/09/update-your-finds</id>
     <content type="html"><![CDATA[<p>A couple of months ago I wrote a post about <code>store.find</code> (
 <a href="http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find/">Understading Ember-Data
@@ -280,7 +280,7 @@ be annoying for you, but on the other side this is a step more towards
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 3]]></title>
     <link href="http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/"/>
-    <updated>2014-12-28T09:17:46-05:00</updated>
+    <updated>2014-12-28T06:17:46-08:00</updated>
     <id>http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3</id>
     <content type="html"><![CDATA[<p>On <a href="http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
 ember-cli</a>
@@ -361,7 +361,7 @@ it was other module in our application.</p>
   <entry>
     <title type="html"><![CDATA[Announcing My Ember Book: Ember-cli-101]]></title>
     <link href="http://blog.abuiles.com/blog/2014/11/16/announcing-my-ember-book-ember-cli-101/"/>
-    <updated>2014-11-16T11:48:22-05:00</updated>
+    <updated>2014-11-16T08:48:22-08:00</updated>
     <id>http://blog.abuiles.com/blog/2014/11/16/announcing-my-ember-book-ember-cli-101</id>
     <content type="html"><![CDATA[<p>In June I was traveling to Patagonia and had problems sleeping in the
 plane. I opened notes in my iPhone and started to write what became
@@ -399,7 +399,7 @@ can enroll buying the workshop package in
   <entry>
     <title type="html"><![CDATA[Understading Ember-Data Store#find]]></title>
     <link href="http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find/"/>
-    <updated>2014-11-04T08:55:22-05:00</updated>
+    <updated>2014-11-04T05:55:22-08:00</updated>
     <id>http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find</id>
     <content type="html"><![CDATA[<h3>Update: Don&rsquo;t worry about this, <code>store.find</code> has been simplified, read <a href="http://blog.abuiles.com/blog/2015/02/09/update-your-finds/">Update your finds</a>.</h3>
 
@@ -568,7 +568,7 @@ need to keep this in mind.</p>
   <entry>
     <title type="html"><![CDATA[Ember.js Debugging Tip: Use the Ember Inspector]]></title>
     <link href="http://blog.abuiles.com/blog/2014/10/28/ember-js-debugging-tip-use-ember-inspector/"/>
-    <updated>2014-10-28T08:53:50-05:00</updated>
+    <updated>2014-10-28T06:53:50-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/10/28/ember-js-debugging-tip-use-ember-inspector</id>
     <content type="html"><![CDATA[<p>We can grab any instance of a Route, Controller, View or Model
 with the <strong>ember-inspector</strong> and then reference it in the console with
@@ -589,7 +589,7 @@ the <code>store</code>.</p>
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 2]]></title>
     <link href="http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/"/>
-    <updated>2014-10-17T09:16:04-05:00</updated>
+    <updated>2014-10-17T07:16:04-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2</id>
     <content type="html"><![CDATA[<p>On <a href="http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
 ember-cli</a>
@@ -787,7 +787,7 @@ $ npm i ember-cli-ic-ajax --save</code></pre>
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli]]></title>
     <link href="http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/"/>
-    <updated>2014-10-03T12:09:10-05:00</updated>
+    <updated>2014-10-03T10:09:10-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli</id>
     <content type="html"><![CDATA[<p>In this post we&rsquo;ll use momentjs to write an Ember helpers called
 <code>formatted-date</code> which we&rsquo;ll be using in our templates to render
@@ -977,7 +977,7 @@ explore and understand how to consume libraries distributed in AMD.</p>
   <entry>
     <title type="html"><![CDATA[Ember.js Route Hooks]]></title>
     <link href="http://blog.abuiles.com/blog/2014/10/01/ember-dot-js-route-hooks/"/>
-    <updated>2014-10-01T09:33:17-05:00</updated>
+    <updated>2014-10-01T07:33:17-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/10/01/ember-dot-js-route-hooks</id>
     <content type="html"><![CDATA[<p>As part of my Ember.js Coaching business, I explain very often to
 people how the Ember Route hooks work and the kind of stuff they can
@@ -1000,7 +1000,7 @@ Jackson (@rwjblue)</a> which shows exactly the order in which the hooks are call
   <entry>
     <title type="html"><![CDATA[Ember-cli Anatomy]]></title>
     <link href="http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy/"/>
-    <updated>2014-08-29T13:30:05-05:00</updated>
+    <updated>2014-08-29T11:30:05-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy</id>
     <content type="html"><![CDATA[<p>Every new developer coming to Ember.js is probably using ember-cli,
 but I&rsquo;ve noticed that most of the time they are not fully aware of
@@ -1059,7 +1059,7 @@ process.</p>
   <entry>
     <title type="html"><![CDATA[Lightning Fast Deployments With Rails (in the Wild).]]></title>
     <link href="http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails/"/>
-    <updated>2014-07-08T16:30:18-05:00</updated>
+    <updated>2014-07-08T14:30:18-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails</id>
     <content type="html"><![CDATA[<p><strong><a href="https://leanpub.com/ember-cli-101">Getting started with Ember.js? I cover different deploying strategies in my Ember.js book</a></strong></p>
 
@@ -1363,7 +1363,7 @@ and the Rails part in <a href="https://github.com/abuiles/facturas/commit/391fcf
 <h4>Pair with me.</h4>
 
 <p>If you are looking for help with Ember.js/ember-cli/Rails, I do a free hour of
-pairing every week, shoot me an email to <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x62;&#x75;&#105;&#108;&#101;&#115;&#x2e;&#x61;&#100;&#x6f;&#x6c;&#102;&#x6f;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#x62;&#117;&#x69;&#x6c;&#x65;&#x73;&#x2e;&#x61;&#100;&#x6f;&#108;&#x66;&#x6f;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a>.</p>
+pairing every week, shoot me an email to <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#98;&#x75;&#x69;&#x6c;&#x65;&#115;&#x2e;&#x61;&#x64;&#111;&#108;&#x66;&#x6f;&#64;&#103;&#109;&#97;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#98;&#x75;&#x69;&#x6c;&#x65;&#115;&#x2e;&#x61;&#100;&#111;&#x6c;&#102;&#111;&#x40;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;</a>.</p>
 
 <p><strong><a href="https://leanpub.com/ember-cli-101">Get my Ember.js book and to learn how to write apps with Ember.js, Ruby on Rails and ember-cli</a></strong></p>
 
@@ -1379,7 +1379,7 @@ pairing every week, shoot me an email to <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&
   <entry>
     <title type="html"><![CDATA[Deploying Ember-cli and Rails to Heroku]]></title>
     <link href="http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku/"/>
-    <updated>2014-05-21T08:09:55-05:00</updated>
+    <updated>2014-05-21T06:09:55-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku</id>
     <content type="html"><![CDATA[<p><strong> this post is out-dated use <a href="http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails">Lightning Fast Deployments instead</a> </strong></p>
 
@@ -1523,7 +1523,7 @@ which I don&rsquo;t want.</p>
   <entry>
     <title type="html"><![CDATA[Ember-cli + Rails]]></title>
     <link href="http://blog.abuiles.com/blog/2014/05/12/ember-cli-plus-rails/"/>
-    <updated>2014-05-12T18:42:36-05:00</updated>
+    <updated>2014-05-12T16:42:36-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/05/12/ember-cli-plus-rails</id>
     <content type="html"><![CDATA[<p>I stopped writing my series of getting started with Ember.js using
 Ember AppKit Rails after finding out that the gem was doomed to die in
@@ -1560,7 +1560,7 @@ following are the commits since I started the migration <a href="https://github.
   <entry>
     <title type="html"><![CDATA[Handling Errors in Ember.js and Ruby on Rails]]></title>
     <link href="http://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/"/>
-    <updated>2014-04-14T21:39:22-05:00</updated>
+    <updated>2014-04-14T19:39:22-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails</id>
     <content type="html"><![CDATA[<p>Ember.js has built-in support to handle errors returned by the backend through the computed property <code>errors</code>, to get it working with the <code>ActiveModelAdapter</code> you payload&rsquo;s root key has to be called <code>errors</code> and your status code should be <code>422</code>.</p>
 
@@ -1593,7 +1593,7 @@ following are the commits since I started the migration <a href="https://github.
   <entry>
     <title type="html"><![CDATA[Router, Routes and Templates]]></title>
     <link href="http://blog.abuiles.com/blog/2014/02/21/router-routes-and-templates/"/>
-    <updated>2014-02-21T08:01:26-05:00</updated>
+    <updated>2014-02-21T05:01:26-08:00</updated>
     <id>http://blog.abuiles.com/blog/2014/02/21/router-routes-and-templates</id>
     <content type="html"><![CDATA[<p><strong>This post is part of my series about <a href="http://blog.abuiles.com/ember-js-with-ruby-on-rails">learning Ember.js with Ruby on Rails</a>.</strong></p>
 
@@ -1729,7 +1729,7 @@ template and then rendered it into the template!</p>
   <entry>
     <title type="html"><![CDATA[Building an App for My Mom With Ember Appkit Rails.]]></title>
     <link href="http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/"/>
-    <updated>2014-02-07T07:56:18-05:00</updated>
+    <updated>2014-02-07T04:56:18-08:00</updated>
     <id>http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails</id>
     <content type="html"><![CDATA[<p><strong>This post is part of my series about <a href="http://blog.abuiles.com/ember-js-with-ruby-on-rails">learning Ember.js with Ruby on Rails</a>.</strong></p>
 
@@ -1853,7 +1853,7 @@ Ember.js with Ruby on Rails.</p>
   <entry>
     <title type="html"><![CDATA[Getting Started With Ember.js and Ruby on Rails: Ember Appkit Rails]]></title>
     <link href="http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/"/>
-    <updated>2014-01-31T06:46:28-05:00</updated>
+    <updated>2014-01-31T03:46:28-08:00</updated>
     <id>http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails</id>
     <content type="html"><![CDATA[<p><strong>This is the second post of my series about <a href="http://blog.abuiles.com/ember-rails/">learning Ember.js
 with Ruby on Rails</a>.</strong></p>
@@ -1963,7 +1963,7 @@ into some of Ember.js concepts as we start to come across them.</p>
   <entry>
     <title type="html"><![CDATA[Ruby on Rails MVC Is Not the Same as Ember.js MVC]]></title>
     <link href="http://blog.abuiles.com/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/"/>
-    <updated>2014-01-26T23:17:52-05:00</updated>
+    <updated>2014-01-26T20:17:52-08:00</updated>
     <id>http://blog.abuiles.com/blog/2014/01/26/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc</id>
     <content type="html"><![CDATA[<p>One of the most confusing parts for people coming from Rails (or any
 other backend web application framework) it&rsquo;s that what Ember.js

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ember-cli-101 | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-cli-101/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-04-06T09:40:01-05:00</updated>
+  <updated>2015-06-27T20:06:49-07:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 3]]></title>
     <link href="http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/"/>
-    <updated>2014-12-28T09:17:46-05:00</updated>
+    <updated>2014-12-28T06:17:46-08:00</updated>
     <id>http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3</id>
     <content type="html"><![CDATA[<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
 ember-cli</a>
@@ -97,7 +97,7 @@ it was other module in our application.</p>
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 2]]></title>
     <link href="http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/"/>
-    <updated>2014-10-17T09:16:04-05:00</updated>
+    <updated>2014-10-17T07:16:04-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2</id>
     <content type="html"><![CDATA[<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
 ember-cli</a>
@@ -306,7 +306,7 @@ $ npm i ember-cli-ic-ajax &amp;mdash;save</code></pre>
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli]]></title>
     <link href="http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/"/>
-    <updated>2014-10-03T12:09:10-05:00</updated>
+    <updated>2014-10-03T10:09:10-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli</id>
     <content type="html"><![CDATA[<p>In this post we&rsquo;ll use momentjs to write an Ember helpers called
 <code>formatted-date</code> which we&rsquo;ll be using in our templates to render
@@ -504,7 +504,7 @@ explore and understand how to consume libraries distributed in AMD.</p>
   <entry>
     <title type="html"><![CDATA[Ember-cli Anatomy]]></title>
     <link href="http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy/"/>
-    <updated>2014-08-29T13:30:05-05:00</updated>
+    <updated>2014-08-29T11:30:05-07:00</updated>
     <id>http://blog.abuiles.com/blog/2014/08/29/ember-cli-anatomy</id>
     <content type="html"><![CDATA[<p>Every new developer coming to Ember.js is probably using ember-cli,
 but I&rsquo;ve noticed that most of the time they are not fully aware of
