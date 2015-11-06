@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Removing Prototype Extensions With Ember-watson - Random Stuff, Ember.js mostly.</title>
+  <title>Making Ember-101 Creative Commons - Random Stuff, Ember.js mostly.</title>
   <meta name="author" content="Adolfo Builes">
 
   
@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson">
+  <link rel="canonical" href="http://blog.abuiles.com/blog/2015/11/06/making-ember-101-creative-commons">
   <link href="/favicon.ico"  type="image/x-icon" rel="icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -23,8 +23,8 @@
   <!-- http://opengraphprotocol.org/ -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson">
-  <meta property="og:title" content="Removing Prototype Extensions With Ember-watson - Random Stuff, Ember.js mostly.">
+  <meta property="og:url" content="http://blog.abuiles.com/blog/2015/11/06/making-ember-101-creative-commons">
+  <meta property="og:title" content="Making Ember-101 Creative Commons - Random Stuff, Ember.js mostly.">
   
 
   <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
@@ -94,14 +94,14 @@
     
     
     <h1 class="entry-title" itemprop="name headline">
-        Removing Prototype Extensions With Ember-watson
+        Making Ember-101 Creative Commons
         
     </h1>
     
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/" data-via="abuiles" data-counturl="http://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/blog/2015/11/06/making-ember-101-creative-commons/" data-via="abuiles" data-counturl="http://blog.abuiles.com/blog/2015/11/06/making-ember-101-creative-commons/" >Tweet</a>
   
   
   
@@ -111,59 +111,31 @@
   </header>
 
 
-<div class="entry-content clearfix" itemprop="articleBody description"><p>If you follow Ember folks on twitter you might have noticed that a
-bunch of them keep talking about something called prototype extensions
-and disabling them. What&rsquo;s that? without getting into much details is
-what allow us to set observers or computed properties calling
-<code>.observes</code> or <code>property</code> at the end of a function.</p>
+<div class="entry-content clearfix" itemprop="articleBody description"><p>Over a year ago I started to work on a book then called
+<a href="https://leanpub.com/ember-cli-101">ember-cli-101</a>. This was a crazy experiment on my end, I didn&rsquo;t have
+any writing experience, started to sell the book without finishing it,
+and committed to keep it up to date with the latest Ember version.</p>
 
-<p>Recently a pull request [1] was open by Stefan Penner to encourage the
-use of decorator styles for declaring observers and computed
-properties, in means that instead of declaring our computed properties
-and observers like:</p>
+<p>With almost 3000 readers today, the book was a total success, people
+loved it and it helped them to get started with Ember which was my main
+goal.</p>
 
-<div>
-  <pre><code class='JavaScript'>fullName: function() {
-  // make fullName
-}.property(&#39;model.firstName&#39;, &#39;model.lastName&#39;),
-doSomething: function() {
-  // do something
-}.observes(&#39;model.firstName&#39;, &#39;model.lastName&#39;)</code></pre>
-</div>
+<p>Today I want to make a stronger commitment with the Ember community
+and make my book accessible to everyone. To achieve this I&rsquo;m dropping
+the price on leanpub to $0, so money won&rsquo;t be a problem if you want to
+learn Ember, while still allowing other people to pay whatever they
+think is worth (I&rsquo;m suggesting $9.99). Also, I&rsquo;m renaming the book to
+&ldquo;ember-101&rdquo; since it is not really a book about ember-cli but a book
+about Ember.</p>
 
+<p>Oh, and as I say it in the title, I&rsquo;m releasing my book under a
+creative commons license so everyone can suggest edits and together
+craft the best book about Ember!</p>
 
-<p>We&rsquo;ll use the following syntax</p>
+<p>You can find the source code of the book here <a href="https://github.com/abuiles/ember-101">https://github.com/abuiles/ember-101</a> and download it from leanpub <a href="https://leanpub.com/ember-cli-101">https://leanpub.com/ember-cli-101</a>.</p>
 
-<div>
-  <pre><code class='JavaScript'>fullName: Ember.computed(&#39;model.firstName&#39;, &#39;model.lastName&#39;, function() {
-  // make fullName
-}),
-doSomething: Ember.observer(&#39;model.firstName&#39;, &#39;model.lastName&#39;, function() {
-  // do something
-})</code></pre>
-</div>
-
-
-<p>If you are like &ldquo;OMG! that Stefan guy is crazy! I have like 1000
-computed properties and observers&rdquo; then no worries, good tool
-<a href="https://github.com/abuiles/ember-watson">ember-watson</a> got you
-covered.</p>
-
-<p>Thanks to <a href="twitter.com/kamal">@kamal</a> we can update our code
-automatically running the following commands:</p>
-
-<div>
-  <pre><code class='bash'>npm install ember-watson@latest --save-dev
-ember watson:convert-prototype-extensions</code></pre>
-</div>
-
-
-<p><strong>Also, if you have 1000 observers then think you have $10000 in debt
-(more about that later).</strong></p>
-
-<p><strong><a href="https://leanpub.com/ember-cli-101">Do you want to learn Ember with a private tutor? Get my living book Ember CLI 101 and keep your Ember knowledge up to date</a></strong></p>
-
-<p>[1] &ndash; <a href="https://github.com/emberjs/guides/pull/110">https://github.com/emberjs/guides/pull/110</a></p>
+<p>I want to thank everyone who bought the book, without you I wouldn&rsquo;t
+be able to do this. <strong>Thanks for helping me spread the Ember love around the world!</strong></p>
 </div>
 
 
@@ -179,7 +151,7 @@ ember watson:convert-prototype-extensions</code></pre>
 <span class="glyphicon glyphicon-tags"></span>&nbsp;
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ember/'>ember</a>, <a class='category' href='/blog/categories/ember-cli/'>ember-cli</a>, <a class='category' href='/blog/categories/ember-cli-addons/'>ember-cli-addons</a>
+    <a class='category' href='/blog/categories/ember-dot-js/'>Ember.js</a>, <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/ember-101/'>ember-101</a>, <a class='category' href='/blog/categories/ember-cli/'>ember-cli</a>, <a class='category' href='/blog/categories/ember-cli-101/'>ember-cli-101</a>
   
 </span>
 
@@ -188,10 +160,8 @@ ember watson:convert-prototype-extensions</code></pre>
         
           <ul class="meta text-muted pager">
             
-            <li class="previous"><a href="/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes/" title="Previous Post: Upgrading your ember CLI QUnit tests in less than 5 minutes">&laquo; Upgrading your ember CLI QUnit tests in less than 5 minutes</a></li>
+            <li class="previous"><a href="/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/" title="Previous Post: Removing prototype extensions with ember-watson">&laquo; Removing prototype extensions with ember-watson</a></li>
             
-            
-            <li class="next"><a href="/blog/2015/11/06/making-ember-101-creative-commons/" title="Next Post: making ember-101 creative commons">making ember-101 creative commons &raquo;</a></li>
             
           </ul>
         

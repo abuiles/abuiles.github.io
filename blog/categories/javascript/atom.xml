@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-06-27T20:06:49-07:00</updated>
+  <updated>2015-11-06T12:11:26-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -14,9 +14,42 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Making Ember-101 Creative Commons]]></title>
+    <link href="http://blog.abuiles.com/blog/2015/11/06/making-ember-101-creative-commons/"/>
+    <updated>2015-11-06T11:17:49-03:00</updated>
+    <id>http://blog.abuiles.com/blog/2015/11/06/making-ember-101-creative-commons</id>
+    <content type="html"><![CDATA[<p>Over a year ago I started to work on a book then called
+<a href="https://leanpub.com/ember-cli-101">ember-cli-101</a>. This was a crazy experiment on my end, I didn&rsquo;t have
+any writing experience, started to sell the book without finishing it,
+and committed to keep it up to date with the latest Ember version.</p>
+
+<p>With almost 3000 readers today, the book was a total success, people
+loved it and it helped them to get started with Ember which was my main
+goal.</p>
+
+<p>Today I want to make a stronger commitment with the Ember community
+and make my book accessible to everyone. To achieve this I&rsquo;m dropping
+the price on leanpub to $0, so money won&rsquo;t be a problem if you want to
+learn Ember, while still allowing other people to pay whatever they
+think is worth (I&rsquo;m suggesting $9.99). Also, I&rsquo;m renaming the book to
+&ldquo;ember-101&rdquo; since it is not really a book about ember-cli but a book
+about Ember.</p>
+
+<p>Oh, and as I say it in the title, I&rsquo;m releasing my book under a
+creative commons license so everyone can suggest edits and together
+craft the best book about Ember!</p>
+
+<p>You can find the source code of the book here <a href="https://github.com/abuiles/ember-101">https://github.com/abuiles/ember-101</a> and download it from leanpub <a href="https://leanpub.com/ember-cli-101">https://leanpub.com/ember-cli-101</a>.</p>
+
+<p>I want to thank everyone who bought the book, without you I wouldn&rsquo;t
+be able to do this. <strong>Thanks for helping me spread the Ember love around the world!</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 3]]></title>
     <link href="http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/"/>
-    <updated>2014-12-28T06:17:46-08:00</updated>
+    <updated>2014-12-28T11:17:46-03:00</updated>
     <id>http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3</id>
     <content type="html"><![CDATA[<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
 ember-cli</a>
@@ -97,7 +130,7 @@ it was other module in our application.</p>
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 2]]></title>
     <link href="http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/"/>
-    <updated>2014-10-17T07:16:04-07:00</updated>
+    <updated>2014-10-17T11:16:04-03:00</updated>
     <id>http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2</id>
     <content type="html"><![CDATA[<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
 ember-cli</a>
@@ -306,7 +339,7 @@ $ npm i ember-cli-ic-ajax &amp;mdash;save</code></pre>
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli]]></title>
     <link href="http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/"/>
-    <updated>2014-10-03T10:09:10-07:00</updated>
+    <updated>2014-10-03T14:09:10-03:00</updated>
     <id>http://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli</id>
     <content type="html"><![CDATA[<p>In this post we&rsquo;ll use momentjs to write an Ember helpers called
 <code>formatted-date</code> which we&rsquo;ll be using in our templates to render

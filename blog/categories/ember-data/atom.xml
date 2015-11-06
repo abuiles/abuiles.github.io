@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ember-Data | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/ember-data/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-06-27T20:06:49-07:00</updated>
+  <updated>2015-11-06T12:11:26-03:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Update Your Finds]]></title>
     <link href="http://blog.abuiles.com/blog/2015/02/09/update-your-finds/"/>
-    <updated>2015-02-09T08:40:52-08:00</updated>
+    <updated>2015-02-09T13:40:52-03:00</updated>
     <id>http://blog.abuiles.com/blog/2015/02/09/update-your-finds</id>
     <content type="html"><![CDATA[<p>A couple of months ago I wrote a post about <code>store.find</code> (
 <a href="/blog/2014/11/04/understading-ember-data-store-find/">Understading Ember-Data
@@ -51,7 +51,7 @@ be annoying for you, but on the other side this is a step more towards
   <entry>
     <title type="html"><![CDATA[Understading Ember-Data Store#find]]></title>
     <link href="http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find/"/>
-    <updated>2014-11-04T05:55:22-08:00</updated>
+    <updated>2014-11-04T10:55:22-03:00</updated>
     <id>http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find</id>
     <content type="html"><![CDATA[<h3>Update: Don&rsquo;t worry about this, <code>store.find</code> has been simplified, read <a href="/blog/2015/02/09/update-your-finds/">Update your finds</a>.</h3>
 
