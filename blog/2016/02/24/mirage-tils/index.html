@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mirage TILs - Random Stuff, Ember.js mostly.</title>
+  <meta name="author" content="Adolfo Builes">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.abuiles.com/blog/2016/02/24/mirage-tils">
+  <link href="/favicon.ico"  type="image/x-icon" rel="icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <link href="/atom.xml" rel="alternate" title="Random Stuff, Ember.js mostly." type="application/atom+xml">
+
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://blog.abuiles.com/blog/2016/02/24/mirage-tils">
+  <meta property="og:title" content="Mirage TILs - Random Stuff, Ember.js mostly.">
+  
+
+  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
+
+<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+
+
+  
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-32360357-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</head>
+
+<body   >
+  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-md-3">
+        <section class="sidebar">
+  <ul class="nav nav-pills nav-stacked">
+    <h1>Adolfo Builes</h1>
+    <li ><a href="/">Articles</a></li>
+    <li ><a href="/ember-rails">Ember.js with Ruby on Rails Articles</a></li>
+    <li>
+      <a href="https://leanpub.com/ember-cli-101?utm_source=image">
+        <p>Learn Ember.js today!</p>
+        <img alt="ember-cli 101: Ember.js book" itemprop="image" src="https://s3.amazonaws.com/titlepages.leanpub.com/ember-cli-101/medium">
+      </a>
+      <a href="https://leanpub.com/ember-cli-101?utm_source=buy" style="text-decoration: underline;">
+        Buy now!
+      </a>
+    </li>
+    <li>
+    </li>
+  </ul>
+</section>
+
+
+      </div>
+      <div class="col-md-9 content">
+        <div class="row">
+  <div class="page-content col-md-9" itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="Random Stuff, Ember.js mostly." />
+    <meta itemprop="description" content="Adolfo Builes's personal blog, consulting and writing about Ember.js and Ruby on Rails mostly." />
+    <meta itemprop="url" content="http://blog.abuiles.com" />
+    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+      
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+      </p>
+    
+    
+    <h1 class="entry-title" itemprop="name headline">
+        Mirage TILs
+        
+    </h1>
+    
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/blog/2016/02/24/mirage-tils/" data-via="abuiles" data-counturl="http://blog.abuiles.com/blog/2016/02/24/mirage-tils/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+  </header>
+
+
+<div class="entry-content clearfix" itemprop="articleBody description"><p>This is not a post about tumor infiltrating lymphocytes (TILs). But
+rather about the things I learn while moving all our acceptance tests
+to Mirage.</p>
+
+<p>The last time I looked at it was over a year ago, so I
+was super impressed with all the new stuff <a href="https://github.com/samselikoff/ember-cli-mirage/blob/master/CHANGELOG.md">Sam has been working
+on</a>. An
+ORM, DB, request shortcuts, OMG so many cool stuff!</p>
+
+<p>As part of the migration process I started to document the things that
+I was learning and shared them with <a href="https://envoy.com">my team</a> so
+it was easier for everyone to pick up.</p>
+
+<p>Without further ado, the following list compiles a bunch of things I
+wanted to do and how I did it using ember-cli-mirage 0.2.0-beta.5.</p>
+
+<div id="table-of-contents">
+<h3>TILs</h3>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline2">1. How can I check the serialized version of a model?</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgheadline1">1.0.1. What is this useful for?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline3">2. How do I make assertions in a request and build a new model with the serializer?</a></li>
+<li><a href="#orgheadline4">3. polymorphic models</a></li>
+<li><a href="#orgheadline5">4. How to return a  204?</a></li>
+<li><a href="#orgheadline8">5. Stop settings expectations inside requests.</a>
+<ul>
+<li><a href="#orgheadline6">5.1. before</a></li>
+<li><a href="#orgheadline7">5.2. after</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline9">6. Stop matching against your &#8220;API format&#8221;</a></li>
+</ul>
+</div>
+</div>
+
+
+<h2>How can I check the serialized version of a model?<a id="orgheadline2"></a></h2>
+
+<pre><code>server.get('api/employee's, function(schema, request) {
+  employee = schema.employee.find(1);
+  this.serializerOrRegistry.serialize(employee, request);
+
+  return foo;
+});
+</code></pre>
+
+<h3>What is this useful for?<a id="orgheadline1"></a></h3>
+
+<p>As I was getting started with mirage, this was super helpful for
+debugging, but also, at this point I&rsquo;m not sure how to include
+meta-data in the response, and one of our endpoints returns pagination
+in the meta key. What I did was generate the payload and then add meta
+manually.</p>
+
+<pre><code>this.get('api/employees', function(schema, request) {
+  let employees = schema.employee.all();
+  let response =  this.serializerOrRegistry.serialize(employees, request);
+
+  response.meta = {
+    total: employees.length,
+    totalPages: 1
+  };
+
+
+  return new Mirage.Response(200, {}, response);
+});
+</code></pre>
+
+<h2>How do I make assertions in a request and build a new model with the serializer?<a id="orgheadline3"></a></h2>
+
+<p>As I was moving away from a mix of Factory Guy and Pretender, we had a
+bunch of request where we were matching that it was &ldquo;done&rdquo; and then
+returning a new model.</p>
+
+<p><a href="https://github.com/samselikoff/ember-cli-mirage/issues/556">https://github.com/samselikoff/ember-cli-mirage/issues/556</a></p>
+
+<pre><code>// import the following from mirage
+
+import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
+
+server.post('/api/employees', function(schema, request) {
+  assert.ok(true, 'did post');
+
+  let handler = new BaseShorthandRouteHandler(schema, this.serializerOrRegistry);
+
+  return schema.employee.create(handler._getAttrsForRequest(request, 'employee'));
+})
+</code></pre>
+
+<h2>polymorphic models<a id="orgheadline4"></a></h2>
+
+<p>Let&rsquo;s say you have the models &ldquo;car&rdquo; and &ldquo;motorcycle&rdquo; which inherit
+from &ldquo;vehicle&rdquo; and you want to return all available &ldquo;vehicles&rdquo; through
+the end-point `/api/vehicles`. The following can help you.</p>
+
+<pre><code>this.get('/api/vehicles', function(schema, request) {
+  // fetch all the cars, it returns a mirage collection
+  let collection = schema.car.all();
+
+  // push all the motorcycles into the mirage collection
+  collection.push(...schema.motorcycle.all());
+
+  // Make sure there is a serializer for vehicle `ember g mirage-serializer vehicle`
+  // since we are using JSONAPI, it will use the model.type to create the
+  // final response.
+  //
+  // This will probably work only with JSONAPI :P
+
+  collection.modelName = 'vehicle';
+
+  return collection;
+});
+</code></pre>
+
+<h2>How to return a  204?<a id="orgheadline5"></a></h2>
+
+<pre><code>server.delete('/api/employees/:id', function() {
+  return new Mirage.Response(204);
+});
+</code></pre>
+
+<h2>Stop settings expectations inside requests.<a id="orgheadline8"></a></h2>
+
+<p>Sam recommends to let mirage shortcut do their job and then match
+against mirage&rsquo;s DB. Let&rsquo;s see an example.</p>
+
+<h3>before<a id="orgheadline6"></a></h3>
+
+<pre><code>andThen(function(){
+  server.patch('/api/employee/1', function(schema, request) {
+    var data = JSON.parse(request.requestBody).data;
+    assert.equal(data.attributes.name, 'Sam', 'name is Sam');
+
+    return new Mirage.Response(204);
+  });
+});
+click('thing that fires post');
+</code></pre>
+
+<h3>after<a id="orgheadline7"></a></h3>
+
+<p>The snippet above is removed letting mirage takes care of the patch
+via shortcuts.</p>
+
+<pre><code>andThen(function(){
+  assert.equal(
+    server.schema.employee.find(1).name,
+    'tom',
+    'Name is Tom'
+  );
+});
+click('thing that fires put');
+andThen(function(){
+  assert.equal(
+    server.schema.employee.find(1).name,
+    'Sam',
+    'Name was updated to Sam'
+  );
+});
+</code></pre>
+
+<p>Now we check against mirage&rsquo;s db that it was updated.</p>
+
+<p>There are scenarios where we might still need to intercept the request
+and do something inside of it, but for most of the cases we can let
+mirage do its magic.</p>
+
+<h2>Stop matching against your &ldquo;API format&rdquo;<a id="orgheadline9"></a></h2>
+
+<p>Let&rsquo;s say we still want to have assertions inside requests. It is
+common to see tests that depend on the API format, this can be really
+problematic if we decide to change the format of our API. suppose we
+are using AMS and have something like the following:</p>
+
+<pre><code>server.post('/api/employees', function(schema, request){
+  var employee = JSON.parse(request.requestBody).employee;
+
+  assert.equal(employee.name, 'Sam Selikoff', 'foo woot buu');
+  assert.equal(employee.phone_number, '+14159353143', 'number is persisted');
+
+  // ...
+});
+</code></pre>
+
+<p>And then decide to move to JSON API.</p>
+
+<pre><code>server.post('/api/employees', function(schema, request){
+  var employee = JSON.parse(request.requestBody).data;
+
+  assert.equal(employee.attributes.name, 'Sam Selikoff', 'foo woot buu');
+  assert.equal(employee.attributes['phone-number'], '+14159353143', 'number is persisted');
+
+  // ...
+});
+</code></pre>
+
+<p>But then realized everyone have been wrong and SOAP was actually what
+we needed. If you have only 1 tests then this is not a problem but if
+you have a lot of tests updating this is not a fun task.</p>
+
+<p>Since mirage works with serializers, we can use that instead and then
+stop worrying about the format of the payload. The following can be
+used to achieve the same as the previous test, but this we don&rsquo;t care
+if we are are using JSON API, AMS or SOAP.</p>
+
+<pre><code>import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
+
+server.post('/api/employees', function(schema, request){
+  let handler = new BaseShorthandRouteHandler(schema, this.serializerOrRegistry);
+  let employee = handler._getAttrsForRequest(request, 'employee');
+
+  // employee has been normalized to mirage's DB format.
+
+  assert.equal(employee.name, 'Sam Selikoff', 'foo woot buu');
+  assert.equal(employee.phoneNumber, '+14159353143', 'number is persisted');
+
+  // ...
+});
+</code></pre>
+
+<h2>Wrapping Up</h2>
+
+<p>I hope you find this useful, and if you have your own mirage tricks,
+let me know, I&rsquo;ll love to have them in my org-mode file
+<a href="https://gist.github.com/abuiles/4a672ccc8b5371c09ea7">here</a>.</p>
+
+<p>If you have problems with mirage, don&rsquo;t try to call Sam to that
+number, I made that up. Hopefully we&rsquo;ll find soon who owns
+\#ember-cli-mirage on the Ember slack and make it public so we can all
+talk about our ups and downs.</p>
+
+<p>Finally, if you enjoy talking about APIs, IPAs, Ember and want to work
+with me, at Envoy we are always hiring, check out <a href="https://envoy.com/jobs/">our jobs
+page</a>.</p>
+</div>
+
+
+      <footer>
+        <p class="meta text-muted">
+          
+  
+
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <span class="fn" itemprop="name">Adolfo Builes</span></span>
+
+          
+
+<span class="glyphicon glyphicon-tags"></span>&nbsp;
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ember/'>ember</a>, <a class='category' href='/blog/categories/ember-cli-mirage/'>ember-cli-mirage</a>
+  
+</span>
+
+
+        </p>
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/blog/2015/11/06/making-ember-101-creative-commons/" title="Previous Post: making ember-101 creative commons">&laquo; making ember-101 creative commons</a></li>
+            
+            
+          </ul>
+        
+      </footer>
+    </article>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

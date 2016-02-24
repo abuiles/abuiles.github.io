@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Addons | Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/blog/categories/addons/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2015-11-06T12:11:26-03:00</updated>
+  <updated>2016-02-24T12:24:55-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 3]]></title>
     <link href="http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/"/>
-    <updated>2014-12-28T11:17:46-03:00</updated>
+    <updated>2014-12-28T09:17:46-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3</id>
     <content type="html"><![CDATA[<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
 ember-cli</a>
@@ -97,7 +97,7 @@ it was other module in our application.</p>
   <entry>
     <title type="html"><![CDATA[Working With JavaScript Plugins in Ember-cli: Part 2]]></title>
     <link href="http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/"/>
-    <updated>2014-10-17T11:16:04-03:00</updated>
+    <updated>2014-10-17T09:16:04-05:00</updated>
     <id>http://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2</id>
     <content type="html"><![CDATA[<p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
 ember-cli</a>
