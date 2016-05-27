@@ -4,7 +4,7 @@
   <title><![CDATA[Random Stuff, Ember.js mostly.]]></title>
   <link href="http://blog.abuiles.com/atom.xml" rel="self"/>
   <link href="http://blog.abuiles.com/"/>
-  <updated>2016-02-24T13:25:02-05:00</updated>
+  <updated>2016-05-27T10:09:13-05:00</updated>
   <id>http://blog.abuiles.com/</id>
   <author>
     <name><![CDATA[Adolfo Builes]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Upgrading Mirage With JSCodeshift]]></title>
+    <link href="http://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/"/>
+    <updated>2016-05-27T09:24:25-05:00</updated>
+    <id>http://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift</id>
+    <content type="html"><![CDATA[<p>If you have been using the beta release of mirage, chances are that
+you haven&rsquo;t made the jump from beta.7 to beta.9 because some of the
+breaking deprecations.</p>
+
+<p>The deprecations are not super complicated but if you have a lot of
+tests files then it can be a very boring and task consuming task.</p>
+
+<p>Instead of fixing my code manually, I thought about my old friend
+<a href="https://github.com/benjamn/recast">recast</a> to automate the whole
+process , but then I remembered this &ldquo;new&rdquo; tool called
+<a href="https://github.com/facebook/jscodeshift">jscodeshit</a> which offers a
+nice API on top of recast to do code modifications.</p>
+
+<p>The following script help us with the first deprecation <a href="https://github.com/samselikoff/ember-cli-mirage/releases/tag/v0.2.0-beta.9">listed
+here</a>
+which is pluralizing all the schema models. If we have something like
+<code>schema.user.all()</code> or <code>server.schema.user.all()</code> then after running
+the script we&rsquo;ll have <code>schema.users.all()</code>.</p>
+
+<script src="https://gist.github.com/abuiles/f15539c683e2121a3027b220073569b0.js"></script>
+
+
+<p>To run the script we need to install the following npm packages:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install -g jscodeshift
+</span><span class='line'>npm install inflected</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For the second breaking deprecation which was calling <code>.models</code> on
+<code>Collections</code>, I decided not to use
+codeshift since it would be faster for me to just use perl:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>find . -type f | xargs perl -pi -e 's/all\(\)\.length/all\(\)\.models\.length/g'
+</span><span class='line'>find . -type f | xargs perl -pi -e 's/all\(\)\.forEach/all\(\)\.models\.forEach/g'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I hope you find this useful and if come up with a <code>codeshift</code> solution
+please let me know and I&rsquo;ll link it here.</p>
+
+<p><strong><a href="https://leanpub.com/json-api-by-example">Do you Want to learn about JSONAPI? Check out my book JSONAPI By Example.</a></strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mirage TILs]]></title>
@@ -1646,7 +1698,7 @@ and the Rails part in <a href="https://github.com/abuiles/facturas/commit/391fcf
 <h4>Pair with me.</h4>
 
 <p>If you are looking for help with Ember.js/ember-cli/Rails, I do a free hour of
-pairing every week, shoot me an email to <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#98;&#117;&#105;&#x6c;&#101;&#x73;&#46;&#97;&#100;&#111;&#x6c;&#x66;&#111;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#98;&#117;&#x69;&#x6c;&#x65;&#x73;&#x2e;&#97;&#x64;&#x6f;&#x6c;&#x66;&#x6f;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a>.</p>
+pairing every week, shoot me an email to <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x62;&#117;&#x69;&#108;&#101;&#115;&#x2e;&#x61;&#100;&#x6f;&#x6c;&#x66;&#111;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#x62;&#x75;&#x69;&#108;&#x65;&#x73;&#46;&#97;&#100;&#111;&#x6c;&#102;&#111;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a>.</p>
 
 <p><strong><a href="https://leanpub.com/ember-cli-101">Get my Ember.js book and to learn how to write apps with Ember.js, Ruby on Rails and ember-cli</a></strong></p>
 
@@ -2004,130 +2056,6 @@ template and then rendered it into the template!</p>
 
 
 <h4>Want to learn more about  Ember.js with Ruby on Rails? Subscribe</h4>
-
-<p><form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Building an App for My Mom With Ember Appkit Rails.]]></title>
-    <link href="http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/"/>
-    <updated>2014-02-07T07:56:18-05:00</updated>
-    <id>http://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails</id>
-    <content type="html"><![CDATA[<p><strong>This post is part of my series about <a href="http://blog.abuiles.com/ember-js-with-ruby-on-rails">learning Ember.js with Ruby on Rails</a>.</strong></p>
-
-<p>In previous post we explored what is
-<a href="http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/">Ember.js MVC</a>
-and then did a
-<a href="http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/">high level overview of Ember Appkit Rails</a>,
-in this post we&rsquo;ll start to work on a project which we will use as
-reference for upcoming posts.</p>
-
-<h2>The Problem</h2>
-
-<p>My mother lives in a small town in Colombia where she owns a store,
-access to credit cards in Colombia is really really hard, so stores
-and people in small towns tend to buy and sell on credit, trusting
-that people will come back and pay them (crazy, isn&rsquo;t?).</p>
-
-<p>During my last visit I was really shocked when I saw that she was
-keeping all her records on physical invoices in under an A-Z folder.</p>
-
-<p>If <code>John Smith</code> takes a t-shirt on credit, they would create an
-invoice with his name, add a description (e.g. t-shirt) with the price
-<code>$25</code> and then throw that into the A-Z in the section for surnames
-starting with <code>S</code>.</p>
-
-<p>Later John returns to the store and makes a partial payment (e.g.
-<code>$10</code>) or pays the whole thing.</p>
-
-<p>This approach is horrible, insecure, my mother doesn&rsquo;t know how much
-is people really owing her, she can&rsquo;t have insights, etc.</p>
-
-<p>Let&rsquo;s then  build an App for my mother where she can keep her records, the app name will be <code>facturas</code> which means <code>invoices</code> in Spanish.</p>
-
-<h2>Starting the project.</h2>
-
-<p>For this project we will use <code>Ruby on Rails 4.1.0.beta1</code> and <code>Ember.js 1.4.0-beta</code>.</p>
-
-<p>Install Ruby on Rails <code>gem install rails --pre</code>, once it&rsquo;s completed
-run <code>rails new facturas</code> and we should have the basic structure for
-our project.</p>
-
-<p>Let&rsquo;s keep everything under <code>git</code> so we can keep track of changes.</p>
-
-<pre><code>  $ git init
-  $ git add .
-  $ git commit -m 'Getting started!.'
-</code></pre>
-
-<p>I use <a href="https://github.com/github/hub">hub</a> so I will just push this to a new repo on GitHub.</p>
-
-<pre><code>  $ hub create ember-rails-week-1
-    Updating origin
-    created repository: abuiles/ember-rails-week-1
-  $ git push origin master
-</code></pre>
-
-<p>Install <code>Ember Appkit Rails</code>, since I want to use a new feature we
-have been working on to include testing out of the box, we won&rsquo;t
-install from rubygems but directly from GitHub.</p>
-
-<p>Add the following to you Gemfile:</p>
-
-<pre><code>gem 'ember-appkit-rails', git: 'https://github.com/dockyard/ember-appkit-rails.git'
-</code></pre>
-
-<p>Run <code>bundle install</code>.</p>
-
-<p>Now we can bootstrap our Rails project with Ember Appkit Rails.</p>
-
-<pre><code>  $ rails g ember:bootstrap
-</code></pre>
-
-<p>For now just focus on this two files:</p>
-
-<pre><code>  create  config/router.es6
-  create  config/application.js
-</code></pre>
-
-<p><code>router.es6</code> would be the main entry point for our Ember App, it&rsquo;s
-something similar to <code>routes.rb</code>, it will help us defined how users
-interact with our application. We will talk more about it later but if
-you can&rsquo;t wait, check the awesome <a href="http://emberjs.com/guides/routing/">routing
-guide</a> on Ember.js.</p>
-
-<p><code>application.js</code> is the replacement for <code>app/assets/javascript/application.js</code>.</p>
-
-<p>Remove your <code>app/assets/javascripts</code> since it will be ignore by EAKR <code>rm -rf app/assets/javascripts</code>.</p>
-
-<p>Start your rails server <code>rails s</code> and go to <code>http://localhost:3000</code>, you will see <code>"Welcome to Ember!"</code>.</p>
-
-<p>We are ready to start! In the next post we will create our first
-model, talk a bit about testing and keep our journey of mastery of
-Ember.js with Ruby on Rails.</p>
-
-<h3>Can&rsquo;t wait?</h3>
-
-<ol>
-<li><p>Create an &lsquo;Ember&rsquo; application template</p>
-
-<pre><code>$ echo  &gt; app/templates/application.hbs
-</code></pre></li>
-<li><p>In <code>config/routes.rb</code> uncomment the last line <code>get '*foo', :to =&gt; 'landing#index'</code>. It should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64">https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64</a></p></li>
-<li>In route.es6 uncomment   <code>location: 'history'</code> it should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8">https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8</a></li>
-</ol>
-
-
-<p>EAKR also has a scaffold command try the following</p>
-
-<pre><code>   $ rails g scaffold clients first_name:string last_name:string --ember
-   $ rake db:migrate
-</code></pre>
-
-<p>Now navigate to <code>http://localhost:3000/clients</code> &ndash; Congrats! you have your first Ember app running.</p>
-
-<h4>Don&rsquo;t fall behind subscribe to the Ember.js with Ruby on Rails list and stay updated.</h4>
 
 <p><form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></p>
 ]]></content>
