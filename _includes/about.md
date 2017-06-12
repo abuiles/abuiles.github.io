@@ -1,14 +1,13 @@
 ## Me
-
 Hola, my name is Adolfo and you can currently find me in San Francisco where I work as an engineering manager at [Envoy](https://envoy.com).
 
 I spend most of my time using technology to bring ideas to life.
 
-I do a bunch of things in my free time, but some common themes are: riding motorcycles, traveling, reading, running or working on side-projects.
+I do a bunch of things in my free time, some common themes are: riding motorcycles, traveling, reading, running or working on side-projects.
 
 I like to help people, teach and to always be learning.
 
-I learn best by doing, that's why I tend to have always a side-projet.
+I learn best by doing, that's why I tend to have always a side-projet going on.
 
 One day I want to go around the world in a motorcycle with my wife.
 
@@ -19,7 +18,7 @@ One day I want to go around the world in a motorcycle with my wife.
 - [ember-watson](http://github.com/abuiles/ember-cli)
 - [Listening-Crowd](https://www.listeningcrowd.com/)
 - [Kintrospect](https://kintrospect.com/)
-- Blogging
+- [Blogging](articles)
 
 
 ## Helping you
