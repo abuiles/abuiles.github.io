@@ -1,322 +1,276 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
+<html lang="en">
+
+  <head>
   <meta charset="utf-8">
-  <title>Understading Ember-Data Store#find - Random Stuff, Ember.js mostly.</title>
-  <meta name="author" content="Adolfo Builes">
-
-  
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Understading Ember-Data Store#find</title>
+  <meta name="description" content="###Update: Don’t worry about this, store.find has been simplified, read Update your finds.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/2014/11/04/understading-ember-data-store-find/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
   
-  <link rel="canonical" href="http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find">
-  <link href="/favicon.ico"  type="image/x-icon" rel="icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-  <link href="/atom.xml" rel="alternate" title="Random Stuff, Ember.js mostly." type="application/atom+xml">
-
-  <!-- http://opengraphprotocol.org/ -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find">
-  <meta property="og:title" content="Understading Ember-Data Store#find - Random Stuff, Ember.js mostly.">
   
-
-  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
-
-<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
-
-
-  
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-
-  
-   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-32360357-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-
-
 </head>
 
-<body   >
-  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="col-md-3">
-        <section class="sidebar">
-  <ul class="nav nav-pills nav-stacked">
-    <h1>Adolfo Builes</h1>
-    <li ><a href="/">Articles</a></li>
-    <li>
-      <a href="https://leanpub.com/json-api-by-example?utm_source=image">
-        <p>Learn JSONAPI with my book</p>
-        <img alt="JSONAPI by example : JSONAPI book" itemprop="image" src="https://s3.amazonaws.com/titlepages.leanpub.com/json-api-by-example/medium">
-      </a>
-      <a href="https://leanpub.com/json-api-by-example?utm_source=buy" style="text-decoration: underline;">
-        Buy it here
-      </a>
-    </li>
-    <li>
-      <a href="https://leanpub.com/ember-cli-101?utm_source=image">
-        <img alt="ember-cli 101: Ember.js book" itemprop="image" src="https://s3.amazonaws.com/titlepages.leanpub.com/ember-cli-101/medium">
-      </a>
-      <a href="https://leanpub.com/ember-cli-101?utm_source=buy" style="text-decoration: underline;">
-        Download for free!
-      </a>
-    </li>
-    <li>
-    </li>
-  </ul>
-</section>
+  <body>
 
+    <header class="site-header" role="banner">
 
-      </div>
-      <div class="col-md-9 content">
-        <div class="row">
-  <div class="page-content col-md-9" itemscope itemtype="http://schema.org/Blog">
-    <meta itemprop="name" content="Random Stuff, Ember.js mostly." />
-    <meta itemprop="description" content="Adolfo Builes's personal blog, consulting and writing about Ember.js and Ruby on Rails mostly." />
-    <meta itemprop="url" content="http://blog.abuiles.com" />
-    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-      
-  <header class="page-header">
+  <div class="wrapper">
     
-      <p class="meta text-muted text-uppercase">
+    
+    <a class="site-title" href="/">Adolfo Builes</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Understading Ember-Data Store#find</h1>
+    <p class="post-meta">
+      <time datetime="2014-11-04T05:55:22-08:00" itemprop="datePublished">
         
+        Nov 4, 2014
+      </time>
       </p>
-    
-    
-    <h1 class="entry-title" itemprop="name headline">
-        Understading Ember-Data Store#find
-        
-    </h1>
-    
-    
-      <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find/" data-via="abuiles" data-counturl="http://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find/" >Tweet</a>
-  
-  
-  
-</div>
-
-    
   </header>
 
+  <div class="post-content" itemprop="articleBody">
+    <p>###Update: Don’t worry about this, <code class="highlighter-rouge">store.find</code> has been simplified, read <a href="/blog/2015/02/09/update-your-finds/">Update your finds</a>.</p>
 
-<div class="entry-content clearfix" itemprop="articleBody description"><h3>Update: Don&rsquo;t worry about this, <code>store.find</code> has been simplified, read <a href="/blog/2015/02/09/update-your-finds/">Update your finds</a>.</h3>
+<p><br />
+<br /></p>
 
-<br/>
-
-
-<br/>
-
-
-<p><code>Store#find</code> (inject as <code>this.store.find</code>) is one of those methods in Ember-Data which
+<p><code class="highlighter-rouge">Store#find</code> (inject as <code class="highlighter-rouge">this.store.find</code>) is one of those methods in Ember-Data which
 confuses people, especially since it behaves very different depending
 on the parameters passed-in.</p>
 
-<p>This article try to demystify <code>store.find</code> and explain how it will
+<p>This article try to demystify <code class="highlighter-rouge">store.find</code> and explain how it will
 behave accordingly to the parameters.</p>
 
-<p>Let&rsquo;s have its definition on top and then use it as reference:</p>
+<p>Let’s have its definition on top and then use it as reference:</p>
 
-<div>
-  <pre><code class='javascript'>find: function(type, id, preload) {
-    Ember.assert(&quot;You need to pass a type to the store&#39;s find method&quot;, arguments.length &gt;= 1);
-    Ember.assert(&quot;You may not pass `&quot; + id + &quot;` as id to the store&#39;s find method&quot;, arguments.length === 1 || !Ember.isNone(id));
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">find</span><span class="err">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">preload</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">Ember</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="s2">"You need to pass a type to the store's find method"</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nx">Ember</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="s2">"You may not pass `"</span> <span class="o">+</span> <span class="nx">id</span> <span class="o">+</span> <span class="s2">"` as id to the store's find method"</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">||</span> <span class="o">!</span><span class="nx">Ember</span><span class="p">.</span><span class="nx">isNone</span><span class="p">(</span><span class="nx">id</span><span class="p">));</span>
 
-    if (arguments.length === 1) {
-      return this.findAll(type);
-    }
+    <span class="k">if</span> <span class="p">(</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">findAll</span><span class="p">(</span><span class="nx">type</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    // We are passed a query instead of an id.
-    if (Ember.typeOf(id) === &#39;object&#39;) {
-      return this.findQuery(type, id);
-    }
+    <span class="c1">// We are passed a query instead of an id.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">Ember</span><span class="p">.</span><span class="nx">typeOf</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'object'</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">findQuery</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
+    <span class="p">}</span>
 
-    return this.findById(type, coerceId(id), preload);
-}</code></pre>
-</div>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">findById</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">coerceId</span><span class="p">(</span><span class="nx">id</span><span class="p">),</span> <span class="nx">preload</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
 
-
-<p>We can use <code>find</code> to load a single record or a collection of records.</p>
+<p>We can use <code class="highlighter-rouge">find</code> to load a single record or a collection of records.</p>
 
 <p>If you want to run the commands in the article, you can download the
-following ember-cli application <a href="https://github.com/abuiles/borrowers">https://github.com/abuiles/borrowers</a> and then
-run <code>ember server</code> it will proxy all the API request to a public
+following ember-cli application https://github.com/abuiles/borrowers and then
+run <code class="highlighter-rouge">ember server</code> it will proxy all the API request to a public
 API.</p>
 
-<div>
-  <pre><code class='bash'>$ git clone https://github.com/abuiles/borrowers
-$ cd borrowers
-$ npm install &amp;&amp; bower install</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone https://github.com/abuiles/borrowers
+<span class="gp">$ </span><span class="nb">cd </span>borrowers
+<span class="gp">$ </span>npm install <span class="o">&amp;&amp;</span> bower install</code></pre></figure>
 
+<h4 id="scenario-1-loading-a-collection">Scenario #1: Loading a collection</h4>
 
-<h4>Scenario #1: Loading a collection</h4>
-
-<p>If we call <code>find</code> only with a model&rsquo;s name then it will make a request
+<p>If we call <code class="highlighter-rouge">find</code> only with a model’s name then it will make a request
 to load a list of records of that type, the following is an example of
 such request:</p>
 
-<div>
-  <pre><code class='javascript'>friends =  $E.store.find(&#39;friend&#39;)
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">friends</span> <span class="o">=</span>  <span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">)</span>
 
-XHR finished loading: GET &quot;http://localhost:4200/api/v2/friends&quot;.</code></pre>
-</div>
+<span class="nx">XHR</span> <span class="nx">finished</span> <span class="nx">loading</span><span class="err">:</span> <span class="nx">GET</span> <span class="s2">"http://localhost:4200/api/v2/friends"</span><span class="p">.</span></code></pre></figure>
 
-
-<p>First, in case you are wondering what <code>$E</code> is, I&rsquo;m grabbing an
-instance of the application router using the <code>ember-inspector</code>.</p>
+<p>First, in case you are wondering what <code class="highlighter-rouge">$E</code> is, I’m grabbing an
+instance of the application router using the <code class="highlighter-rouge">ember-inspector</code>.</p>
 
 <p>If we want to send query parameters with our request, we can pass an
 object as second argument and every key on the object will be included
 as parameter:</p>
 
-<div>
-  <pre><code class='javascript'>friends =  $E.store.find(&#39;friend&#39;, {hasArticles: true, sort_by: &#39;created_at&#39;})
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">friends</span> <span class="o">=</span>  <span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="p">{</span><span class="na">hasArticles</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">sort_by</span><span class="p">:</span> <span class="s1">'created_at'</span><span class="p">})</span>
 
-XHR finished loading: GET &quot;http://localhost:4200/api/v2/friends?hasArticles=true&amp;sort_by=created_at&quot;.</code></pre>
-</div>
+<span class="nx">XHR</span> <span class="nx">finished</span> <span class="nx">loading</span><span class="err">:</span> <span class="nx">GET</span> <span class="s2">"http://localhost:4200/api/v2/friends?hasArticles=true&amp;sort_by=created_at"</span><span class="p">.</span></code></pre></figure>
 
-
-<p>In the previous request we asked <code>find</code> to load all the articles,
-sending as parameters the key <code>hasArticles</code> and <code>sort_by</code>.</p>
+<p>In the previous request we asked <code class="highlighter-rouge">find</code> to load all the articles,
+sending as parameters the key <code class="highlighter-rouge">hasArticles</code> and <code class="highlighter-rouge">sort_by</code>.</p>
 
 <p>Like
 <a href="http://emberjs.com/api/data/classes/DS.Store.html#method_all">all</a>
 and
 <a href="http://emberjs.com/api/data/classes/DS.Store.html#method_filter">filter</a>
-the result from <code>find</code> is a <code>live array</code> too. When called it will make
+the result from <code class="highlighter-rouge">find</code> is a <code class="highlighter-rouge">live array</code> too. When called it will make
 a request to the server and then the collection will be updated if
 more records are added or removed from the store.</p>
 
-<p>I&rsquo;ve seen people using the private methods <code>findQuery</code> and <code>findByIds</code>
+<p>I’ve seen people using the private methods <code class="highlighter-rouge">findQuery</code> and <code class="highlighter-rouge">findByIds</code>
 like:</p>
 
-<div>
-  <pre><code class='javascript'>// Using the private function store.findQuery
-   model: function (params) {
-      return this.store.findQuery(&#39;friend&#39;, {hasArticles: true, sort_by: &#39;created_at&#39;});
-   }
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">   <span class="c1">// Using the private function store.findQuery</span>
+   <span class="nl">model</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">findQuery</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="p">{</span><span class="na">hasArticles</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">sort_by</span><span class="p">:</span> <span class="s1">'created_at'</span><span class="p">});</span>
+   <span class="p">}</span>
 
-   // Using the private funcion findByIds
-   model: function (params) {
-      return this.store.findByIds(&#39;friend&#39;, [1,2,3]);
-   }</code></pre>
-</div>
-
+   <span class="c1">// Using the private funcion findByIds</span>
+   <span class="nl">model</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">findByIds</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]);</span>
+   <span class="p">}</span></code></pre></figure>
 
 <p>We should never rely on private functions, they are marked private for
 a reason. Although <a href="https://twitter.com/terzicigor">Igor Terzic</a>
-pointed that <code>findQuery</code> might be marked as private by mistake.</p>
+pointed that <code class="highlighter-rouge">findQuery</code> might be marked as private by mistake.</p>
 
-<p>We can achieve the same result using the method <code>find</code>:</p>
+<p>We can achieve the same result using the method <code class="highlighter-rouge">find</code>:</p>
 
-<div>
-  <pre><code class='javascript'>model: function (params) {
-      // bad
-      // return this.store.findQuerygo(&#39;friend&#39;, {hasArticles: true, sort_by: &#39;created_at&#39;});
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">   <span class="nx">model</span><span class="err">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// bad</span>
+      <span class="c1">// return this.store.findQuerygo('friend', {hasArticles: true, sort_by: 'created_at'});</span>
 
-      // Good
-      return this.store.find(&#39;friend&#39;, {hasArticles: true, sort_by: &#39;created_at&#39;})
-   }
+      <span class="c1">// Good</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="p">{</span><span class="na">hasArticles</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">sort_by</span><span class="p">:</span> <span class="s1">'created_at'</span><span class="p">})</span>
+   <span class="p">}</span>
 
-   model: function (params) {
-      // bad
-      // return this.store.findByIds(&#39;friend&#39;, [1,2,3]);
+   <span class="nl">model</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// bad</span>
+      <span class="c1">// return this.store.findByIds('friend', [1,2,3]);</span>
 
-      // good
-      return this.store.find(&#39;friend&#39;, {ids: [1,2,3]});
-   }</code></pre>
-</div>
+      <span class="c1">// good</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="p">{</span><span class="na">ids</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]});</span>
+   <span class="p">}</span></code></pre></figure>
 
+<h4 id="scenario-2-loading-a-single-record">Scenario #2: Loading a single record</h4>
 
-<h4>Scenario #2: Loading a single record</h4>
+<p>We can also use <code class="highlighter-rouge">find</code> to load an specific record, to do that we’ll
+only need to pass the record <code class="highlighter-rouge">id</code> as second argument:</p>
 
-<p>We can also use <code>find</code> to load an specific record, to do that we&rsquo;ll
-only need to pass the record <code>id</code> as second argument:</p>
-
-<div>
-  <pre><code class='javascript'>$E.store.find(&#39;friend&#39;, 15)
-XHR finished loading: GET &quot;http://localhost:4200/api/v2/friends/15&quot;.</code></pre>
-</div>
-
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="nx">XHR</span> <span class="nx">finished</span> <span class="nx">loading</span><span class="err">:</span> <span class="nx">GET</span> <span class="s2">"http://localhost:4200/api/v2/friends/15"</span><span class="p">.</span></code></pre></figure>
 
 <p>In the previous example we are loading the friend with id 15, the
-<code>store</code> will only make a request to the server if the friend is not
-available in the store, to understand this, let&rsquo;s go to
-<a href="http://localhost:4200/friends">http://localhost:4200/friends</a> and then on the console try the following:</p>
+<code class="highlighter-rouge">store</code> will only make a request to the server if the friend is not
+available in the store, to understand this, let’s go to
+http://localhost:4200/friends and then on the console try the following:</p>
 
-<div>
-  <pre><code class='javascript'>id = $E.store.all(&#39;friend&#39;).get(&#39;firstObject&#39;).id
-$E.store.find(&#39;friend&#39;, id)</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">id</span> <span class="o">=</span> <span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="s1">'firstObject'</span><span class="p">).</span><span class="nx">id</span>
+<span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="nx">id</span><span class="p">)</span></code></pre></figure>
 
-
-<p>If we open our network tab, we&rsquo;ll see that the store didn&rsquo;t make any request
+<p>If we open our network tab, we’ll see that the store didn’t make any request
 this time, the reason is that we asked for a friend which was already
 loaded into the store.</p>
 
 <p>Is important to mention that <strong>find</strong>, <strong>all</strong> and <strong>filter</strong> return
-promises, when testing on the browser&rsquo;s console we don&rsquo;t have to worry
+promises, when testing on the browser’s console we don’t have to worry
 about it, but if we want to use the result in our application then we
 need to keep this in mind.</p>
 
 <p><strong><a href="https://leanpub.com/ember-cli-101?utm_source=ed-store">Want to learn Ember.js? Enroll in my upcoming Ember.js workshop by buying my book</a></strong></p>
-</div>
 
-
-      <footer>
-        <p class="meta text-muted">
-          
-  
-
-<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <span class="fn" itemprop="name">Adolfo Builes</span></span>
-
-          
-
-<span class="glyphicon glyphicon-tags"></span>&nbsp;
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/ember-data/'>Ember-Data</a>, <a class='category' href='/blog/categories/ember-dot-js/'>Ember.js</a>
-  
-</span>
-
-
-        </p>
-        
-          <ul class="meta text-muted pager">
-            
-            <li class="previous"><a href="/blog/2014/10/28/ember-js-debugging-tip-use-ember-inspector/" title="Previous Post: Ember.js debugging tip: use the ember inspector">&laquo; Ember.js debugging tip: use the ember inspector</a></li>
-            
-            
-            <li class="next"><a href="/blog/2014/11/16/announcing-my-ember-book-ember-cli-101/" title="Next Post: Announcing my Ember book: ember-cli-101">Announcing my Ember book: ember-cli-101 &raquo;</a></li>
-            
-          </ul>
-        
-      </footer>
-    </article>
   </div>
-</div>
+
+  
+</article>
 
       </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Adolfo Builes
+            
+            </li>
+            
+            <li><a href="mailto:builes.adolfo@gmail.com">builes.adolfo@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/abuiles"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">abuiles</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/abuiles"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">abuiles</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>I like to write about tech, humans, books, Ember.js and random stuff.
+</p>
+      </div>
     </div>
+
   </div>
-</body>
+
+</footer>
+
+
+  </body>
+
 </html>

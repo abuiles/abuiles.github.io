@@ -1,297 +1,244 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
+<html lang="en">
+
+  <head>
   <meta charset="utf-8">
-  <title>Deploying Ember-cli and Rails to Heroku - Random Stuff, Ember.js mostly.</title>
-  <meta name="author" content="Adolfo Builes">
-
-  
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Deploying ember-cli and Rails to Heroku</title>
+  <meta name="description" content="** this post is out-dated use Lightning Fast Deployments instead **">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
   
-  <link rel="canonical" href="http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku">
-  <link href="/favicon.ico"  type="image/x-icon" rel="icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-  <link href="/atom.xml" rel="alternate" title="Random Stuff, Ember.js mostly." type="application/atom+xml">
-
-  <!-- http://opengraphprotocol.org/ -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku">
-  <meta property="og:title" content="Deploying Ember-cli and Rails to Heroku - Random Stuff, Ember.js mostly.">
   
-
-  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
-
-<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
-
-
-  
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-
-  
-   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-32360357-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-
-
 </head>
 
-<body   >
-  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="col-md-3">
-        <section class="sidebar">
-  <ul class="nav nav-pills nav-stacked">
-    <h1>Adolfo Builes</h1>
-    <li ><a href="/">Articles</a></li>
-    <li>
-      <a href="https://leanpub.com/json-api-by-example?utm_source=image">
-        <p>Learn JSONAPI with my book</p>
-        <img alt="JSONAPI by example : JSONAPI book" itemprop="image" src="https://s3.amazonaws.com/titlepages.leanpub.com/json-api-by-example/medium">
-      </a>
-      <a href="https://leanpub.com/json-api-by-example?utm_source=buy" style="text-decoration: underline;">
-        Buy it here
-      </a>
-    </li>
-    <li>
-      <a href="https://leanpub.com/ember-cli-101?utm_source=image">
-        <img alt="ember-cli 101: Ember.js book" itemprop="image" src="https://s3.amazonaws.com/titlepages.leanpub.com/ember-cli-101/medium">
-      </a>
-      <a href="https://leanpub.com/ember-cli-101?utm_source=buy" style="text-decoration: underline;">
-        Download for free!
-      </a>
-    </li>
-    <li>
-    </li>
-  </ul>
-</section>
+  <body>
 
+    <header class="site-header" role="banner">
 
-      </div>
-      <div class="col-md-9 content">
-        <div class="row">
-  <div class="page-content col-md-9" itemscope itemtype="http://schema.org/Blog">
-    <meta itemprop="name" content="Random Stuff, Ember.js mostly." />
-    <meta itemprop="description" content="Adolfo Builes's personal blog, consulting and writing about Ember.js and Ruby on Rails mostly." />
-    <meta itemprop="url" content="http://blog.abuiles.com" />
-    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-      
-  <header class="page-header">
+  <div class="wrapper">
     
-      <p class="meta text-muted text-uppercase">
+    
+    <a class="site-title" href="/">Adolfo Builes</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Deploying ember-cli and Rails to Heroku</h1>
+    <p class="post-meta">
+      <time datetime="2014-05-21T06:09:55-07:00" itemprop="datePublished">
         
+        May 21, 2014
+      </time>
       </p>
-    
-    
-    <h1 class="entry-title" itemprop="name headline">
-        Deploying Ember-cli and Rails to Heroku
-        
-    </h1>
-    
-    
-      <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku/" data-via="abuiles" data-counturl="http://blog.abuiles.com/blog/2014/05/21/deploying-ember-cli-and-rails-to-heroku/" >Tweet</a>
-  
-  
-  
-</div>
-
-    
   </header>
 
-
-<div class="entry-content clearfix" itemprop="articleBody description"><p><strong> this post is out-dated use <a href="http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails">Lightning Fast Deployments instead</a> </strong></p>
+  <div class="post-content" itemprop="articleBody">
+    <p>** this post is out-dated use <a href="http://blog.abuiles.com/blog/2014/07/08/lightning-fast-deployments-with-rails">Lightning Fast Deployments instead</a> **</p>
 
 <p>I moved the app which I was doing as part of my Ember.js with Rails
 series to ember-cli, but just until very recently deployed to heroku.</p>
 
-<p>I want to put my ember-cli output into my <code>rails/public</code> and then
+<p>I want to put my ember-cli output into my <code class="highlighter-rouge">rails/public</code> and then
 include the scripts into my application layout</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span><span class='line'><span class="nt">&lt;html&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;head&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;base</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;ember-assets/vendor.css&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;ember-assets/client.css&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="err">&lt;</span>%= csrf_meta_tags %&gt;
-</span><span class='line'>  <span class="nt">&lt;/head&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;body&gt;</span>
-</span><span class='line'>    <span class="err">&lt;</span>%= yield %&gt;
-</span><span class='line'>    <span class="nt">&lt;script&gt;</span>
-</span><span class='line'>      <span class="nb">window</span><span class="p">.</span><span class="nx">ENV</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;railsCsrf&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;csrfURL&quot;</span><span class="o">:</span><span class="s2">&quot;api/v1/csrf&quot;</span><span class="p">},</span><span class="s2">&quot;baseURL&quot;</span><span class="o">:</span><span class="s2">&quot;/&quot;</span><span class="p">,</span><span class="s2">&quot;locationType&quot;</span><span class="o">:</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span><span class="s2">&quot;FEATURES&quot;</span><span class="o">:</span><span class="p">{</span><span class="s2">&quot;query-params-new&quot;</span><span class="o">:</span><span class="kc">true</span><span class="p">},</span><span class="s2">&quot;APP&quot;</span><span class="o">:</span><span class="p">{}};</span>
-</span><span class='line'>    <span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;ember-assets/client.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;script&gt;</span>
-</span><span class='line'>      <span class="nb">window</span><span class="p">.</span><span class="nx">Client</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;client/app&#39;</span><span class="p">)[</span><span class="s1">&#39;default&#39;</span><span class="p">].</span><span class="nx">create</span><span class="p">(</span><span class="nx">ENV</span><span class="p">.</span><span class="nx">APP</span><span class="p">);</span>
-</span><span class='line'>    <span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/body&gt;</span>
-</span><span class='line'><span class="nt">&lt;/html&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;base</span> <span class="na">href=</span><span class="s">"/"</span> <span class="nt">/&gt;</span>
 
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"ember-assets/vendor.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"ember-assets/client.css"</span><span class="nt">&gt;</span>
+    <span class="err">&lt;</span>%= csrf_meta_tags %&gt;
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="err">&lt;</span>%= yield %&gt;
+    <span class="nt">&lt;script&gt;</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">ENV</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"railsCsrf"</span><span class="p">:{</span><span class="s2">"csrfURL"</span><span class="p">:</span><span class="s2">"api/v1/csrf"</span><span class="p">},</span><span class="s2">"baseURL"</span><span class="p">:</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"locationType"</span><span class="p">:</span><span class="s2">"auto"</span><span class="p">,</span><span class="s2">"FEATURES"</span><span class="p">:{</span><span class="s2">"query-params-new"</span><span class="p">:</span><span class="kc">true</span><span class="p">},</span><span class="s2">"APP"</span><span class="p">:{}};</span>
+    <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"ember-assets/client.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">Client</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'client/app'</span><span class="p">)[</span><span class="s1">'default'</span><span class="p">].</span><span class="nx">create</span><span class="p">(</span><span class="nx">ENV</span><span class="p">.</span><span class="nx">APP</span><span class="p">);</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
 
-<p>I do it like this because I want to include my <code>csrf_tags</code> in the body
+<p>I do it like this because I want to include my <code class="highlighter-rouge">csrf_tags</code> in the body
 and also have the option of preloading any data if I need to.</p>
 
 <p>Out of topic, but since handling csrf-tags is such a common scenario I
 wrote <a href="http://github.com/abuiles/rails-csrf">rails-csrf</a>, a plugin
 which you can install through bower for handling CSRF for you.</p>
 
-<h2>Building</h2>
+<h2 id="building">Building</h2>
 
 <p>I came through a script by Jason Madsen(@jason_madsen) which would
 take care of building the ember-cli app and putting it under public,
-it works great but the final output is under your <code>public/index.html</code>
-which I don&rsquo;t want.</p>
+it works great but the final output is under your <code class="highlighter-rouge">public/index.html</code>
+which I don’t want.</p>
 
 <p>I modified the script to do a couple of things more.</p>
 
 <ol>
-<li>Add <code>&lt;%= csrf_meta_tags %&gt;</code> before head (line 40).</li>
-<li>Add <code>&lt;%= yield %&gt;</code> after body (line 43).</li>
-<li>Replace <code>application.html.erb</code> with my final <code>index.html</code> (line 46)</li>
+  <li>Add <code class="highlighter-rouge">&lt;%= csrf_meta_tags %&gt;</code> before head (line 40).</li>
+  <li>Add <code class="highlighter-rouge">&lt;%= yield %&gt;</code> after body (line 43).</li>
+  <li>Replace <code class="highlighter-rouge">application.html.erb</code> with my final <code class="highlighter-rouge">index.html</code> (line 46)</li>
 </ol>
-
 
 <p>The script can be found on the following <a href="https://gist.github.com/abuiles/5c281123fc41e6b988e3">gist</a></p>
 
-<h2>Deploying</h2>
+<h2 id="deploying">Deploying</h2>
 
-<p>Now with the desired output, is just a matter of <code>git commit</code> and <code>git push</code> to heroku.</p>
+<p>Now with the desired output, is just a matter of <code class="highlighter-rouge">git commit</code> and <code class="highlighter-rouge">git push</code> to heroku.</p>
 
 <p>To make it easier I added the following task to my Rakefile, it:</p>
 
 <ol>
-<li>Accepts the &ldquo;env&rdquo; I want to deploy and the remote name (heroku end-point).</li>
-<li>Moves to the specified env and merges master.</li>
-<li>Runs the <code>build</code> script and commit the changes.</li>
-<li>Push the changes to heroku.</li>
+  <li>Accepts the “env” I want to deploy and the remote name (heroku end-point).</li>
+  <li>Moves to the specified env and merges master.</li>
+  <li>Runs the <code class="highlighter-rouge">build</code> script and commit the changes.</li>
+  <li>Push the changes to heroku.</li>
 </ol>
 
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">task</span> <span class="ss">:deploy</span><span class="p">,</span> <span class="ss">:env</span><span class="p">,</span> <span class="ss">:remote</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+  <span class="n">sh</span> <span class="s2">"git checkout </span><span class="si">#{</span><span class="n">args</span><span class="p">[</span><span class="ss">:env</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span>
+  <span class="n">sh</span> <span class="s1">'git merge master -m "Merging for deployment"'</span>
+  <span class="n">sh</span> <span class="s1">'./build.sh'</span>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">task</span> <span class="ss">:deploy</span><span class="p">,</span> <span class="ss">:env</span><span class="p">,</span> <span class="ss">:remote</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
-</span><span class='line'>  <span class="n">sh</span> <span class="s2">&quot;git checkout </span><span class="si">#{</span><span class="n">args</span><span class="o">[</span><span class="ss">:env</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'>  <span class="n">sh</span> <span class="s1">&#39;git merge master -m &quot;Merging for deployment&quot;&#39;</span>
-</span><span class='line'>  <span class="n">sh</span> <span class="s1">&#39;./build.sh&#39;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">sh</span> <span class="s1">&#39;git add -A&#39;</span>
-</span><span class='line'>  <span class="n">sh</span> <span class="s1">&#39;git commit -m &quot;Compile for deployment&quot;&#39;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="n">sh</span> <span class="s2">&quot;git push </span><span class="si">#{</span><span class="n">args</span><span class="o">[</span><span class="ss">:remote</span><span class="o">]</span><span class="si">}</span><span class="s2"> head:master&quot;</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+  <span class="n">sh</span> <span class="s1">'git add -A'</span>
+  <span class="n">sh</span> <span class="s1">'git commit -m "Compile for deployment"'</span>
 
+  <span class="n">sh</span> <span class="s2">"git push </span><span class="si">#{</span><span class="n">args</span><span class="p">[</span><span class="ss">:remote</span><span class="p">]</span><span class="si">}</span><span class="s2"> head:master"</span>
+<span class="k">end</span>
+</code></pre>
+</div>
 
-<p>A standard deployment would be something like <code>rake deploy[production, heroku]</code></p>
+<p>A standard deployment would be something like <code class="highlighter-rouge">rake deploy[production, heroku]</code></p>
 
-<p>It assumes you have a branch called <code>production</code> and that your remote is called <code>heroku</code>.</p>
+<p>It assumes you have a branch called <code class="highlighter-rouge">production</code> and that your remote is called <code class="highlighter-rouge">heroku</code>.</p>
 
-<h2>Acknowledgements</h2>
-
+<h2 id="acknowledgements">Acknowledgements</h2>
 <p>Thanks to Jason Madsen for his initial script, he also made a rails template <a href="https://github.com/knomedia/ember-cli-rails">knomedia/ember-cli-rails</a>.</p>
 
-<p>The rake task was mostly inspired by <a href="https://github.com/dockyard/ember-cli-plus-backend">DockYard&rsquo;s ember-cli-plus-backend</a>.</p>
+<p>The rake task was mostly inspired by <a href="https://github.com/dockyard/ember-cli-plus-backend">DockYard’s ember-cli-plus-backend</a>.</p>
 
-<h2>Future work</h2>
+<h2 id="future-work">Future work</h2>
 
-<p>There is still a lot of things to improve which I&rsquo;ll be blogging about as part of my ember-cli + Rails series. Here&rsquo;s a list of things:</p>
+<p>There is still a lot of things to improve which I’ll be blogging about as part of my ember-cli + Rails series. Here’s a list of things:</p>
 
 <ol>
-<li>Deploying to heroku just the Rails files, currently we include the ember-cli app as well.</li>
-<li>Using cloud front for serving your assets.</li>
-<li><del>Fingerprinting</del> is super simple with <a href="https://github.com/rickharrison/broccoli-asset-rev">broccoli-asset-rev</a> see it in use <a href="https://github.com/abuiles/facturas/commit/12b23d5fc36d0906a1e21cae7aed97bdbb8cba9e">here</a>.</li>
-<li>Doing lightning fast deployments (see <a href="http://www.confreaks.com/videos/3324-railsconf-lightning-fast-deployment-of-your-rails-backed-javascript-app">Luke&rsquo;s Melia talk on Rails Conf</a>).</li>
+  <li>Deploying to heroku just the Rails files, currently we include the ember-cli app as well.</li>
+  <li>Using cloud front for serving your assets.</li>
+  <li><del>Fingerprinting</del> is super simple with <a href="https://github.com/rickharrison/broccoli-asset-rev">broccoli-asset-rev</a> see it in use <a href="https://github.com/abuiles/facturas/commit/12b23d5fc36d0906a1e21cae7aed97bdbb8cba9e">here</a>.</li>
+  <li>Doing lightning fast deployments (see <a href="http://www.confreaks.com/videos/3324-railsconf-lightning-fast-deployment-of-your-rails-backed-javascript-app">Luke’s Melia talk on Rails Conf</a>).</li>
 </ol>
 
+<p>**<a href="http://blog.abuiles.com/ember-rails/">Learn how to write apps with Ember.js, ember-cli and Ruby on Rails</a>, subscribe to my list and I will let you know every time I publish an article. **</p>
 
-<p><strong><a href="http://blog.abuiles.com/ember-rails/">Learn how to write apps with Ember.js, ember-cli and Ruby on Rails</a>, subscribe to my list and I will let you know every time I publish an article. </strong></p>
-</div>
-
-
-      <footer>
-        <p class="meta text-muted">
-          
-  
-
-<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <span class="fn" itemprop="name">Adolfo Builes</span></span>
-
-          
-
-<span class="glyphicon glyphicon-tags"></span>&nbsp;
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/ember-dot-js/'>Ember.js</a>, <a class='category' href='/blog/categories/rails/'>Rails,</a>, <a class='category' href='/blog/categories/ember-cli/'>ember-cli,</a>
-  
-</span>
-
-
-        </p>
-        
-          <ul class="meta text-muted pager">
-            
-            <li class="previous"><a href="/blog/2014/05/12/ember-cli-plus-rails/" title="Previous Post: ember-cli + Rails">&laquo; ember-cli + Rails</a></li>
-            
-            
-            <li class="next"><a href="/blog/2014/07/08/lightning-fast-deployments-with-rails/" title="Next Post: Lightning Fast Deployments with Rails (in the wild).">Lightning Fast Deployments with Rails (in the wild). &raquo;</a></li>
-            
-          </ul>
-        
-      </footer>
-    </article>
   </div>
-</div>
+
+  
+</article>
 
       </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Adolfo Builes
+            
+            </li>
+            
+            <li><a href="mailto:builes.adolfo@gmail.com">builes.adolfo@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/abuiles"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">abuiles</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/abuiles"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">abuiles</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>I like to write about tech, humans, books, Ember.js and random stuff.
+</p>
+      </div>
     </div>
+
   </div>
-</body>
+
+</footer>
+
+
+  </body>
+
 </html>
