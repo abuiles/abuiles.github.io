@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Smart contracts for the impatient</title>
-  <meta name="description" content="I’ve been learning about ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.">
+  <meta name="description" content="I’ve been learning about Ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.">
 
   <link rel="stylesheet" href="/assets/main.css">
 
@@ -92,7 +92,7 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>I’ve been learning about ethereum and smart contracts, and one of the
+    <p>I’ve been learning about Ethereum and smart contracts, and one of the
 biggest issues I’ve found is the lack of documentation to do some
 basic things.</p>
 
@@ -102,8 +102,8 @@ of resembles our first program ever: “Hello World”.</p>
 <p>I’ll show you how to:</p>
 
 <ul>
-  <li>Run mist using the testnet <a href="https://www.rinkeby.io/">rinkeby</a> and get free ether for testing.</li>
-  <li>Deploy a contract and interact with it using mist.</li>
+  <li>Run Mist using the testnet <a href="https://www.rinkeby.io/">rinkeby</a> and get free ether for testing.</li>
+  <li>Deploy a contract and interact with it using Mist.</li>
 </ul>
 
 <p>For easiness, I’ll assume people is using macOS.</p>
@@ -118,23 +118,23 @@ of resembles our first program ever: “Hello World”.</p>
 
 <p>It not only works as a browser, but also allow us to create wallets and contracts.</p>
 
-<p>We can downloading it from <a href="https://github.com/ethereum/mist/releases">https://github.com/ethereum/mist/releases</a>.</p>
+<p>We can downloading it from <a href="https://github.com/Ethereum/Mist/releases">https://github.com/Ethereum/Mist/releases</a>.</p>
 
 <p>Once it is installed, don’t bother yet about setting a wallet.</p>
 
 <p>Since we don’t want to run on the default testnet or main network, we
 need to install geth, which is a command line interface for running an
-ethereum node. It will allow us to interact with rinkeby which is a
+Ethereum node. It will allow us to interact with rinkeby which is a
 different testnet.</p>
 
-<p>Follow the instructions here <a href="https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum">https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum</a>.</p>
+<p>Follow the instructions here <a href="https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum">https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum</a>.</p>
 
-<p>Once we have mist and geth installed, let’s get rinkeby running.</p>
+<p>Once we have Mist and geth installed, let’s get rinkeby running.</p>
 
-<h2 id="running-mist-with-rinkeby">Running mist with rinkeby</h2>
+<h2 id="running-mist-with-rinkeby">Running Mist with rinkeby</h2>
 
-<p>Since mist doesn’t have out of the box support for rinkeby. We need
-to connect to it using geth and then tell mist to use that connection.</p>
+<p>Since Mist doesn’t have out of the box support for rinkeby. We need
+to connect to it using geth and then tell Mist to use that connection.</p>
 
 <p>Let’s run in the console the following command:</p>
 
@@ -142,9 +142,9 @@ to connect to it using geth and then tell mist to use that connection.</p>
 </code></pre>
 </div>
 
-<p>It starts a new ethereum node connected to rinkeby.</p>
+<p>It starts a new Ethereum node connected to rinkeby.</p>
 
-<p>Let’s open mist and tell it to connect to the running node. It
+<p>Let’s open Mist and tell it to connect to the running node. It
 will show you an alert saying the connection is insecure, but since
 this is a testnet, we can ignore it.</p>
 
@@ -157,7 +157,7 @@ blockchain is downloaded, go for a walk and then come back.</p>
 
 <h2 id="creating-a-wallet-in-rinkeby">Creating a wallet in rinkeby</h2>
 
-<p>After mist has started, we’ll see an interface similar to the following:</p>
+<p>After Mist has started, we’ll see an interface similar to the following:</p>
 
 <p><img src="/assets/wallet.png" alt="" /></p>
 
@@ -165,7 +165,7 @@ blockchain is downloaded, go for a walk and then come back.</p>
 
 <iframe width="100%" height="400px" src="https://www.youtube.com/embed/5fGRdbuQReo" frameborder="0" allowfullscreen=""></iframe>
 
-<p>There are two types of “accounts” in ethereum:</p>
+<p>There are two types of “accounts” in Ethereum:</p>
 
 <ul>
   <li>Externally Owned Account (EOA) or just “accounts”</li>
@@ -233,7 +233,7 @@ don’t have any cost since they don’t change the state of the network.</p>
 setter. Anything that changes the contract state is considered a
 transaction.</p>
 
-<p>In ethereum, transaction have some of the following characteristics:</p>
+<p>In Ethereum, transaction have some of the following characteristics:</p>
 
 <ul>
   <li>Change the state of the blockchain.</li>
@@ -330,11 +330,11 @@ call. If we select <code class="highlighter-rouge">setMessage</code> it will ask
 <p>Congrats! You have deployed your first hello world contract. Now you
 have the bare minium to start getting into more serious stuff.</p>
 
-<p>If you are interested in ethereum and writing smart contracts,
+<p>If you are interested in Ethereum and writing smart contracts,
 subscribe to my feed or <a href="https://twitter.com/abuiles">follow me on
 twitter</a>.</p>
 
-<p>I’ll be writing more about ethereum, working with contracts and how to
+<p>I’ll be writing more about Ethereum, working with contracts and how to
 use <a href="http://truffleframework.com/">Truffle</a> to stay sane while doing
 so.</p>
 

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-14T08:42:05-07:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
-</subtitle><entry><title type="html">Smart contracts for the impatient</title><link href="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart contracts for the impatient" /><published>2017-06-13T06:10:40-07:00</published><updated>2017-06-13T06:10:40-07:00</updated><id>http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;I’ve been learning about ethereum and smart contracts, and one of the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-14T09:03:42-07:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
+</subtitle><entry><title type="html">Smart contracts for the impatient</title><link href="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart contracts for the impatient" /><published>2017-06-13T06:10:40-07:00</published><updated>2017-06-13T06:10:40-07:00</updated><id>http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;I’ve been learning about Ethereum and smart contracts, and one of the
 biggest issues I’ve found is the lack of documentation to do some
 basic things.&lt;/p&gt;
 
@@ -9,8 +9,8 @@ of resembles our first program ever: “Hello World”.&lt;/p&gt;
 &lt;p&gt;I’ll show you how to:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Run mist using the testnet &lt;a href=&quot;https://www.rinkeby.io/&quot;&gt;rinkeby&lt;/a&gt; and get free ether for testing.&lt;/li&gt;
-  &lt;li&gt;Deploy a contract and interact with it using mist.&lt;/li&gt;
+  &lt;li&gt;Run Mist using the testnet &lt;a href=&quot;https://www.rinkeby.io/&quot;&gt;rinkeby&lt;/a&gt; and get free ether for testing.&lt;/li&gt;
+  &lt;li&gt;Deploy a contract and interact with it using Mist.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;For easiness, I’ll assume people is using macOS.&lt;/p&gt;
@@ -25,23 +25,23 @@ of resembles our first program ever: “Hello World”.&lt;/p&gt;
 
 &lt;p&gt;It not only works as a browser, but also allow us to create wallets and contracts.&lt;/p&gt;
 
-&lt;p&gt;We can downloading it from &lt;a href=&quot;https://github.com/ethereum/mist/releases&quot;&gt;https://github.com/ethereum/mist/releases&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We can downloading it from &lt;a href=&quot;https://github.com/Ethereum/Mist/releases&quot;&gt;https://github.com/Ethereum/Mist/releases&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Once it is installed, don’t bother yet about setting a wallet.&lt;/p&gt;
 
 &lt;p&gt;Since we don’t want to run on the default testnet or main network, we
 need to install geth, which is a command line interface for running an
-ethereum node. It will allow us to interact with rinkeby which is a
+Ethereum node. It will allow us to interact with rinkeby which is a
 different testnet.&lt;/p&gt;
 
-&lt;p&gt;Follow the instructions here &lt;a href=&quot;https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum&quot;&gt;https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Follow the instructions here &lt;a href=&quot;https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum&quot;&gt;https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Once we have mist and geth installed, let’s get rinkeby running.&lt;/p&gt;
+&lt;p&gt;Once we have Mist and geth installed, let’s get rinkeby running.&lt;/p&gt;
 
-&lt;h2 id=&quot;running-mist-with-rinkeby&quot;&gt;Running mist with rinkeby&lt;/h2&gt;
+&lt;h2 id=&quot;running-mist-with-rinkeby&quot;&gt;Running Mist with rinkeby&lt;/h2&gt;
 
-&lt;p&gt;Since mist doesn’t have out of the box support for rinkeby. We need
-to connect to it using geth and then tell mist to use that connection.&lt;/p&gt;
+&lt;p&gt;Since Mist doesn’t have out of the box support for rinkeby. We need
+to connect to it using geth and then tell Mist to use that connection.&lt;/p&gt;
 
 &lt;p&gt;Let’s run in the console the following command:&lt;/p&gt;
 
@@ -49,9 +49,9 @@ to connect to it using geth and then tell mist to use that connection.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;It starts a new ethereum node connected to rinkeby.&lt;/p&gt;
+&lt;p&gt;It starts a new Ethereum node connected to rinkeby.&lt;/p&gt;
 
-&lt;p&gt;Let’s open mist and tell it to connect to the running node. It
+&lt;p&gt;Let’s open Mist and tell it to connect to the running node. It
 will show you an alert saying the connection is insecure, but since
 this is a testnet, we can ignore it.&lt;/p&gt;
 
@@ -64,7 +64,7 @@ blockchain is downloaded, go for a walk and then come back.&lt;/p&gt;
 
 &lt;h2 id=&quot;creating-a-wallet-in-rinkeby&quot;&gt;Creating a wallet in rinkeby&lt;/h2&gt;
 
-&lt;p&gt;After mist has started, we’ll see an interface similar to the following:&lt;/p&gt;
+&lt;p&gt;After Mist has started, we’ll see an interface similar to the following:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/wallet.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -72,7 +72,7 @@ blockchain is downloaded, go for a walk and then come back.&lt;/p&gt;
 
 &lt;iframe width=&quot;100%&quot; height=&quot;400px&quot; src=&quot;https://www.youtube.com/embed/5fGRdbuQReo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;There are two types of “accounts” in ethereum:&lt;/p&gt;
+&lt;p&gt;There are two types of “accounts” in Ethereum:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Externally Owned Account (EOA) or just “accounts”&lt;/li&gt;
@@ -140,7 +140,7 @@ don’t have any cost since they don’t change the state of the network.&lt;/p&
 setter. Anything that changes the contract state is considered a
 transaction.&lt;/p&gt;
 
-&lt;p&gt;In ethereum, transaction have some of the following characteristics:&lt;/p&gt;
+&lt;p&gt;In Ethereum, transaction have some of the following characteristics:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Change the state of the blockchain.&lt;/li&gt;
@@ -237,15 +237,15 @@ call. If we select &lt;code class=&quot;highlighter-rouge&quot;&gt;setMessage&lt
 &lt;p&gt;Congrats! You have deployed your first hello world contract. Now you
 have the bare minium to start getting into more serious stuff.&lt;/p&gt;
 
-&lt;p&gt;If you are interested in ethereum and writing smart contracts,
+&lt;p&gt;If you are interested in Ethereum and writing smart contracts,
 subscribe to my feed or &lt;a href=&quot;https://twitter.com/abuiles&quot;&gt;follow me on
 twitter&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I’ll be writing more about ethereum, working with contracts and how to
+&lt;p&gt;I’ll be writing more about Ethereum, working with contracts and how to
 use &lt;a href=&quot;http://truffleframework.com/&quot;&gt;Truffle&lt;/a&gt; to stay sane while doing
 so.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Found a typo? Please let me &lt;a href=&quot;mailto:builes.adolfo@gmail.com&quot;&gt;know&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been learning about ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.</summary></entry><entry><title type="html">Upgrading mirage with JSCodeshift</title><link href="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/" rel="alternate" type="text/html" title="Upgrading mirage with JSCodeshift" /><published>2016-05-27T07:24:25-07:00</published><updated>2016-05-27T07:24:25-07:00</updated><id>http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift</id><content type="html" xml:base="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/">&lt;p&gt;If you have been using the beta release of mirage, chances are that
+&lt;p&gt;&lt;strong&gt;Found a typo? Please let me &lt;a href=&quot;mailto:builes.adolfo@gmail.com&quot;&gt;know&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been learning about Ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.</summary></entry><entry><title type="html">Upgrading mirage with JSCodeshift</title><link href="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/" rel="alternate" type="text/html" title="Upgrading mirage with JSCodeshift" /><published>2016-05-27T07:24:25-07:00</published><updated>2016-05-27T07:24:25-07:00</updated><id>http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift</id><content type="html" xml:base="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/">&lt;p&gt;If you have been using the beta release of mirage, chances are that
 you haven’t made the jump from beta.7 to beta.9 because some of the
 breaking deprecations.&lt;/p&gt;
 
