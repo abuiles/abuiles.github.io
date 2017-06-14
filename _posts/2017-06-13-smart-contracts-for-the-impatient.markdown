@@ -3,7 +3,7 @@ layout: post
 title: "Smart contracts for the impatient"
 date: 2017-06-13T06:10:40-07:00
 ---
-I've been learning about ethereum and smart contracts, and one of the
+I've been learning about Ethereum and smart contracts, and one of the
 biggest issues I've found is the lack of documentation to do some
 basic things.
 
@@ -12,8 +12,8 @@ of resembles our first program ever: "Hello World".
 
 I'll show you how to:
 
-- Run mist using the testnet [rinkeby](https://www.rinkeby.io/) and get free ether for testing.
-- Deploy a contract and interact with it using mist.
+- Run Mist using the testnet [rinkeby](https://www.rinkeby.io/) and get free ether for testing.
+- Deploy a contract and interact with it using Mist.
 
 For easiness, I'll assume people is using macOS.
 
@@ -25,23 +25,23 @@ To get started we need to install Mist, from the README:
 
 It not only works as a browser, but also allow us to create wallets and contracts.
 
-We can downloading it from [https://github.com/ethereum/mist/releases](https://github.com/ethereum/mist/releases).
+We can downloading it from [https://github.com/Ethereum/Mist/releases](https://github.com/Ethereum/Mist/releases).
 
 Once it is installed, don't bother yet about setting a wallet.
 
 Since we don't want to run on the default testnet or main network, we
 need to install geth, which is a command line interface for running an
-ethereum node. It will allow us to interact with rinkeby which is a
+Ethereum node. It will allow us to interact with rinkeby which is a
 different testnet.
 
-Follow the instructions here [https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum).
+Follow the instructions here [https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum](https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum).
 
-Once we have mist and geth installed, let's get rinkeby running.
+Once we have Mist and geth installed, let's get rinkeby running.
 
-## Running mist with rinkeby
+## Running Mist with rinkeby
 
-Since mist doesn't have out of the box support for rinkeby. We need
-to connect to it using geth and then tell mist to use that connection.
+Since Mist doesn't have out of the box support for rinkeby. We need
+to connect to it using geth and then tell Mist to use that connection.
 
 Let's run in the console the following command:
 
@@ -49,9 +49,9 @@ Let's run in the console the following command:
 geth --rinkeby --rpc console --rpcapi db,eth,net,web3,personal
 ```
 
-It starts a new ethereum node connected to rinkeby.
+It starts a new Ethereum node connected to rinkeby.
 
-Let's open mist and tell it to connect to the running node. It
+Let's open Mist and tell it to connect to the running node. It
 will show you an alert saying the connection is insecure, but since
 this is a testnet, we can ignore it.
 
@@ -65,7 +65,7 @@ blockchain is downloaded, go for a walk and then come back.
 
 ## Creating a wallet in rinkeby
 
-After mist has started, we'll see an interface similar to the following:
+After Mist has started, we'll see an interface similar to the following:
 
 ![](/assets/wallet.png)
 
@@ -73,7 +73,7 @@ We can then create our first account in rinkeby by clicking the "Add account" bu
 
 <iframe width="100%" height="400px" src="https://www.youtube.com/embed/5fGRdbuQReo" frameborder="0" allowfullscreen></iframe>
 
-There are two types of "accounts" in ethereum:
+There are two types of "accounts" in Ethereum:
 
 - Externally Owned Account (EOA) or just "accounts"
 - Contracts accounts or "contracts"
@@ -131,7 +131,7 @@ To change the internal state of the contract, we'll define a
 setter. Anything that changes the contract state is considered a
 transaction.
 
-In ethereum, transaction have some of the following characteristics:
+In Ethereum, transaction have some of the following characteristics:
 
 - Change the state of the blockchain.
 - Are run by multiple nodes and are verified.
@@ -226,11 +226,11 @@ The following are the transactions for my hello world contract: [https://rinkeby
 Congrats! You have deployed your first hello world contract. Now you
 have the bare minium to start getting into more serious stuff.
 
-If you are interested in ethereum and writing smart contracts,
+If you are interested in Ethereum and writing smart contracts,
 subscribe to my feed or [follow me on
 twitter](https://twitter.com/abuiles).
 
-I'll be writing more about ethereum, working with contracts and how to
+I'll be writing more about Ethereum, working with contracts and how to
 use [Truffle](http://truffleframework.com/) to stay sane while doing
 so.
 
