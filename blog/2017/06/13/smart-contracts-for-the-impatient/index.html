@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Smart contracts for the impatient</title>
+  <meta name="description" content="I’ve been learning about ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+
+  
+  <link rel="canonical" href="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32360357-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Adolfo Builes</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Smart contracts for the impatient</h1>
+    <p class="post-meta">
+      <time datetime="2017-06-13T06:10:40-07:00" itemprop="datePublished">
+        
+        Jun 13, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I’ve been learning about ethereum and smart contracts, and one of the
+biggest issues I’ve found is the lack of documentation to do some
+basic things.</p>
+
+<p>In this article I want to do the dumbest contract possible, which kind
+of resembles our first program ever: “Hello World”.</p>
+
+<p>I’ll show you how to:</p>
+
+<ul>
+  <li>Run mist using the test net <a href="https://www.rinkeby.io/">rinkeby</a> and get free ether for testing.</li>
+  <li>Deploy a contract and interact with it using mist.</li>
+</ul>
+
+<p>For easiness, I’ll assume people is using macOS.</p>
+
+<h2 id="setting-up-a-test-net">Setting up a test net</h2>
+
+<p>To get started we need to install Mist, from the readme:</p>
+
+<blockquote>
+  <p>The Mist browser is the tool of choice to browse and use Ðapps.</p>
+</blockquote>
+
+<p>It not only works as a browser, but also allow us to create wallets and contracts.</p>
+
+<p>We can downloading it from <a href="https://github.com/ethereum/mist/releases">https://github.com/ethereum/mist/releases</a>.</p>
+
+<p>Once it is installed, don’t bother yet about setting a wallet.</p>
+
+<p>Since we don’t want to run on the default <code class="highlighter-rouge">test-net</code> or <code class="highlighter-rouge">main network</code>, we
+need install <code class="highlighter-rouge">geth</code>, which is a command line interface for running a
+ethereum node. It will allow us to interact with rinkeby.</p>
+
+<p>Follow the instructions here <a href="https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum">https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum</a>.</p>
+
+<p>Once we have mist and get installed, let’s get rinkeby running.</p>
+
+<h2 id="running-mist-with-rinkeby">Running mist with rinkeby</h2>
+
+<p>Since <code class="highlighter-rouge">mist</code> doesn’t have out of the box support for rinkeby. We need
+to connect to it using <code class="highlighter-rouge">geth</code> and then tell mist to use that connection.</p>
+
+<p>Let’s run in the console the following command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>geth --rinkeby --rpc console --rpcapi db,eth,net,web3,personal
+</code></pre>
+</div>
+
+<p>That will start the a new ethereum node, connected to rinkeby.</p>
+
+<p>Let’s open mist and tell it to connect to our running node. It
+will show you an alert saying the connection is insecure, but since
+this is a test net, we can ignore it.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
+</code></pre>
+</div>
+
+<p>It will take some time the first time we run it since it has to
+download the test blockchain, go for a walk and then come back.</p>
+
+<h2 id="creating-a-wallet-in-rinkeby">Creating a wallet in rinkeby</h2>
+
+<p>After mist has started, we’ll see an interface similar to the following:</p>
+
+<p><img src="/assets/wallet.png" alt="" /></p>
+
+<p>We can then create our first account in rinkeby by clicking in the “Add account” button.</p>
+
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/5fGRdbuQReo" frameborder="0" allowfullscreen=""></iframe>
+
+<p>There are two types of “accounts” in ethereum:</p>
+
+<ul>
+  <li>Externally Owned Account (EOA) or just “accounts”</li>
+  <li>Contracts accounts or “contracts”</li>
+</ul>
+
+<p>What we created was an EOA, and is normally what people would refer to as a wallet.</p>
+
+<p>Now that we have an account, let’s send ether to it. Since we are using a testnet, we can get ether doing one of the following:</p>
+
+<ul>
+  <li>Mining: we are running a test-net and it has all the same functionalities as the main-net. Mining here is faster but the ether you are mining does not have any value.</li>
+  <li>Asking someone to send us ETH.</li>
+  <li>Use a public faucet.</li>
+</ul>
+
+<p>Luckily for us, there is a public faucet where we can get “free” ether from. We need to do the following steps:</p>
+
+<ul>
+  <li>Copy our account address.</li>
+  <li>Paste it in GitHub gist.</li>
+  <li>Submit the gist to https://faucet.rinkeby.io and get free ether.</li>
+</ul>
+
+<p>The following video demonstrates the 3 steps above:</p>
+
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/wKFz5c3TU4s" frameborder="0" allowfullscreen=""></iframe>
+
+<p>In the video above, that user already maxed out the allowance for 3
+days, but we should see a success message under normal circumstances.
+After that, the ether should be in the wallet balance.</p>
+
+<p><img src="/assets/wallet2.png" alt="" /></p>
+
+<h2 id="hello-world">Hello world</h2>
+
+<p>With rinkeby configured and ether to spend, let’s deploy our hello
+world contract.</p>
+
+<p>The contract is going to be called HelloWorld.</p>
+
+<p>It has 4 state variables:</p>
+
+<ul>
+  <li>creator: the account who created the contract</li>
+  <li>lastCaller: the last account who changed the state of the contract.</li>
+  <li>message: an internal message.</li>
+  <li>totalGas: total amount of gas spend interacting with the contract.</li>
+</ul>
+
+<p>We’ll define four getters for each of the state variables:</p>
+
+<ul>
+  <li>getMessage</li>
+  <li>getLastCaller</li>
+  <li>getCreator</li>
+  <li>getTotalGas</li>
+</ul>
+
+<p>We call the functions above by making calls to the contract. Calls
+don’t have any cost since they don’t change the state of the network,
+therefore you don’t need to pay gas to run them.</p>
+
+<p>To change the internal state of the contract, we’ll define a
+setter. Anything that changes the contract state is considered a
+transaction. Transactions change the state of the blockchain, they
+have to be run by multiple nodes and be verified. Transactions have an
+associated cost and we have to pay gas to run them.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.4</span><span class="p">.</span><span class="mi">4</span><span class="p">;</span>
+
+<span class="nx">contract</span> <span class="nx">HelloWorld</span> <span class="p">{</span>
+  <span class="c1">//Begin: state variables</span>
+  <span class="nx">address</span> <span class="kr">private</span> <span class="nx">creator</span><span class="p">;</span>
+  <span class="nx">address</span> <span class="kr">private</span> <span class="nx">lastCaller</span><span class="p">;</span>
+  <span class="nx">string</span> <span class="kr">private</span> <span class="nx">message</span><span class="p">;</span>
+  <span class="nx">uint</span> <span class="kr">private</span> <span class="nx">totalGas</span><span class="p">;</span>
+  <span class="c1">//End: state variables</span>
+
+  <span class="c1">//Begin: constructor</span>
+  <span class="kd">function</span> <span class="nx">HelloWorld</span><span class="p">()</span> <span class="p">{</span>
+    <span class="cm">/*
+      We can use the special variable `tx` which gives us information
+      about the current transaction.
+
+      `tx.origin` returns the sender of the transaction.
+      `tx.gasprice` returns how much we pay for the transaction
+    */</span>
+    <span class="nx">creator</span> <span class="o">=</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">origin</span><span class="p">;</span>
+    <span class="nx">totalGas</span> <span class="o">=</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">gasprice</span><span class="p">;</span>
+    <span class="nx">message</span> <span class="o">=</span> <span class="s1">'hello world'</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//End: constructor</span>
+
+  <span class="c1">//Begin: getters</span>
+  <span class="kd">function</span> <span class="nx">getMessage</span><span class="p">()</span> <span class="nx">constant</span> <span class="nx">returns</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">message</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">getLastCaller</span><span class="p">()</span> <span class="nx">constant</span> <span class="nx">returns</span><span class="p">(</span><span class="nx">address</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">lastCaller</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">getCreator</span><span class="p">()</span> <span class="nx">constant</span> <span class="nx">returns</span><span class="p">(</span><span class="nx">address</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">creator</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">getTotalGas</span><span class="p">()</span> <span class="nx">constant</span> <span class="nx">returns</span><span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">totalGas</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//End: getters</span>
+
+  <span class="c1">//Being: setters</span>
+  <span class="kd">function</span> <span class="nx">setMessage</span><span class="p">(</span><span class="nx">string</span> <span class="nx">newMessage</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">message</span> <span class="o">=</span> <span class="nx">newMessage</span><span class="p">;</span>
+    <span class="nx">lastCaller</span> <span class="o">=</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">origin</span><span class="p">;</span>
+    <span class="nx">totalGas</span> <span class="o">+=</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">gasprice</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//End: setters</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>To deploy the contract above, we need to copy it into the clipboard and then do the following steps:</p>
+
+<ul>
+  <li>Click “Contracts” in the button next to the balance.</li>
+  <li>Click “Deploy new contract”.</li>
+  <li>Select your account and the paste the code in the text editor.</li>
+  <li>Select how much gas to pay to get the contract created.</li>
+  <li>Click deploy.</li>
+</ul>
+
+<p><img src="/assets/deploy-smart-contracts.gif" alt="" /></p>
+
+<h2 id="interacting-with-the-contract">Interacting with the contract</h2>
+
+<p>Once the contract has been deployed, we can interact with it.</p>
+
+<p>Let’s click in “Contracts” and then select our recently deployed contract.</p>
+
+<p>We’ll see a screen similar to the following which shows the result for each getter:</p>
+
+<p><img src="/assets/contract.png" alt="" /></p>
+
+<p>Next, let’s try changing the message. On the top right corner of the
+screen, we’ll see a section called “Write to contract”, and we can
+pick the function to call. If we select <code class="highlighter-rouge">setMessage</code> it will ask us
+for the message and then write to the contract.</p>
+
+<p><img src="/assets/contract-transaction.gif" alt="" /></p>
+
+<p>We can see all the activity for our contract by copying its address and then going to <a href="https://rinkeby.etherscan.io">rinkeby</a>.</p>
+
+<p>The following are the transactions for my hellow world contract: <a href="https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab">https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab</a></p>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+
+<p>Congrats! You have deployed your first hello world contract. Now you
+have the bare minium to start getting into more serious stuff.</p>
+
+<p>If you are interested in ethereum and writing smart contract,
+subscribe to my feed or <a href="https://twitter.com/abuiles">follow me on
+twitter</a>.</p>
+
+<p>Through the following weeks, we’ll be exploring
+<a href="http://truffleframework.com/">Truffle</a> to code the examples from the
+ethereum website and work on our first Ðapps.</p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Adolfo Builes
+            
+            </li>
+            
+            <li><a href="mailto:builes.adolfo@gmail.com">builes.adolfo@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/abuiles"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">abuiles</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/abuiles"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">abuiles</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>I like to write about tech, humans, books, Ember.js and random stuff.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

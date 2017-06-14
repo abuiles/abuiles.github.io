@@ -1,5 +1,243 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://blog.abuiles.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.abuiles.com/" rel="alternate" type="text/html" /><updated>2017-06-12T22:19:15-07:00</updated><id>https://blog.abuiles.com/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
-</subtitle><entry><title type="html">Upgrading mirage with JSCodeshift</title><link href="https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/" rel="alternate" type="text/html" title="Upgrading mirage with JSCodeshift" /><published>2016-05-27T07:24:25-07:00</published><updated>2016-05-27T07:24:25-07:00</updated><id>https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift</id><content type="html" xml:base="https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/">&lt;p&gt;If you have been using the beta release of mirage, chances are that
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-13T19:01:06-07:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
+</subtitle><entry><title type="html">Smart contracts for the impatient</title><link href="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart contracts for the impatient" /><published>2017-06-13T06:10:40-07:00</published><updated>2017-06-13T06:10:40-07:00</updated><id>http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;I’ve been learning about ethereum and smart contracts, and one of the
+biggest issues I’ve found is the lack of documentation to do some
+basic things.&lt;/p&gt;
+
+&lt;p&gt;In this article I want to do the dumbest contract possible, which kind
+of resembles our first program ever: “Hello World”.&lt;/p&gt;
+
+&lt;p&gt;I’ll show you how to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run mist using the test net &lt;a href=&quot;https://www.rinkeby.io/&quot;&gt;rinkeby&lt;/a&gt; and get free ether for testing.&lt;/li&gt;
+  &lt;li&gt;Deploy a contract and interact with it using mist.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For easiness, I’ll assume people is using macOS.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-a-test-net&quot;&gt;Setting up a test net&lt;/h2&gt;
+
+&lt;p&gt;To get started we need to install Mist, from the readme:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The Mist browser is the tool of choice to browse and use Ðapps.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It not only works as a browser, but also allow us to create wallets and contracts.&lt;/p&gt;
+
+&lt;p&gt;We can downloading it from &lt;a href=&quot;https://github.com/ethereum/mist/releases&quot;&gt;https://github.com/ethereum/mist/releases&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once it is installed, don’t bother yet about setting a wallet.&lt;/p&gt;
+
+&lt;p&gt;Since we don’t want to run on the default &lt;code class=&quot;highlighter-rouge&quot;&gt;test-net&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;main network&lt;/code&gt;, we
+need install &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt;, which is a command line interface for running a
+ethereum node. It will allow us to interact with rinkeby.&lt;/p&gt;
+
+&lt;p&gt;Follow the instructions here &lt;a href=&quot;https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum&quot;&gt;https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once we have mist and get installed, let’s get rinkeby running.&lt;/p&gt;
+
+&lt;h2 id=&quot;running-mist-with-rinkeby&quot;&gt;Running mist with rinkeby&lt;/h2&gt;
+
+&lt;p&gt;Since &lt;code class=&quot;highlighter-rouge&quot;&gt;mist&lt;/code&gt; doesn’t have out of the box support for rinkeby. We need
+to connect to it using &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; and then tell mist to use that connection.&lt;/p&gt;
+
+&lt;p&gt;Let’s run in the console the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;geth --rinkeby --rpc console --rpcapi db,eth,net,web3,personal
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;That will start the a new ethereum node, connected to rinkeby.&lt;/p&gt;
+
+&lt;p&gt;Let’s open mist and tell it to connect to our running node. It
+will show you an alert saying the connection is insecure, but since
+this is a test net, we can ignore it.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It will take some time the first time we run it since it has to
+download the test blockchain, go for a walk and then come back.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-wallet-in-rinkeby&quot;&gt;Creating a wallet in rinkeby&lt;/h2&gt;
+
+&lt;p&gt;After mist has started, we’ll see an interface similar to the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/wallet.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can then create our first account in rinkeby by clicking in the “Add account” button.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;400px&quot; src=&quot;https://www.youtube.com/embed/5fGRdbuQReo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;There are two types of “accounts” in ethereum:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Externally Owned Account (EOA) or just “accounts”&lt;/li&gt;
+  &lt;li&gt;Contracts accounts or “contracts”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What we created was an EOA, and is normally what people would refer to as a wallet.&lt;/p&gt;
+
+&lt;p&gt;Now that we have an account, let’s send ether to it. Since we are using a testnet, we can get ether doing one of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mining: we are running a test-net and it has all the same functionalities as the main-net. Mining here is faster but the ether you are mining does not have any value.&lt;/li&gt;
+  &lt;li&gt;Asking someone to send us ETH.&lt;/li&gt;
+  &lt;li&gt;Use a public faucet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Luckily for us, there is a public faucet where we can get “free” ether from. We need to do the following steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Copy our account address.&lt;/li&gt;
+  &lt;li&gt;Paste it in GitHub gist.&lt;/li&gt;
+  &lt;li&gt;Submit the gist to https://faucet.rinkeby.io and get free ether.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following video demonstrates the 3 steps above:&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;400px&quot; src=&quot;https://www.youtube.com/embed/wKFz5c3TU4s&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;In the video above, that user already maxed out the allowance for 3
+days, but we should see a success message under normal circumstances.
+After that, the ether should be in the wallet balance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/wallet2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hello-world&quot;&gt;Hello world&lt;/h2&gt;
+
+&lt;p&gt;With rinkeby configured and ether to spend, let’s deploy our hello
+world contract.&lt;/p&gt;
+
+&lt;p&gt;The contract is going to be called HelloWorld.&lt;/p&gt;
+
+&lt;p&gt;It has 4 state variables:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;creator: the account who created the contract&lt;/li&gt;
+  &lt;li&gt;lastCaller: the last account who changed the state of the contract.&lt;/li&gt;
+  &lt;li&gt;message: an internal message.&lt;/li&gt;
+  &lt;li&gt;totalGas: total amount of gas spend interacting with the contract.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’ll define four getters for each of the state variables:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;getMessage&lt;/li&gt;
+  &lt;li&gt;getLastCaller&lt;/li&gt;
+  &lt;li&gt;getCreator&lt;/li&gt;
+  &lt;li&gt;getTotalGas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We call the functions above by making calls to the contract. Calls
+don’t have any cost since they don’t change the state of the network,
+therefore you don’t need to pay gas to run them.&lt;/p&gt;
+
+&lt;p&gt;To change the internal state of the contract, we’ll define a
+setter. Anything that changes the contract state is considered a
+transaction. Transactions change the state of the blockchain, they
+have to be run by multiple nodes and be verified. Transactions have an
+associated cost and we have to pay gas to run them.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;pragma&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//Begin: state variables&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;creator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lastCaller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//End: state variables&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;//Begin: constructor&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;cm&quot;&gt;/*
+      We can use the special variable `tx` which gives us information
+      about the current transaction.
+
+      `tx.origin` returns the sender of the transaction.
+      `tx.gasprice` returns how much we pay for the transaction
+    */&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;creator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gasprice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello world'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//End: constructor&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;//Begin: getters&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getLastCaller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lastCaller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getCreator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;creator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getTotalGas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//End: getters&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;//Being: setters&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;lastCaller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gasprice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//End: setters&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To deploy the contract above, we need to copy it into the clipboard and then do the following steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Click “Contracts” in the button next to the balance.&lt;/li&gt;
+  &lt;li&gt;Click “Deploy new contract”.&lt;/li&gt;
+  &lt;li&gt;Select your account and the paste the code in the text editor.&lt;/li&gt;
+  &lt;li&gt;Select how much gas to pay to get the contract created.&lt;/li&gt;
+  &lt;li&gt;Click deploy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/deploy-smart-contracts.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;interacting-with-the-contract&quot;&gt;Interacting with the contract&lt;/h2&gt;
+
+&lt;p&gt;Once the contract has been deployed, we can interact with it.&lt;/p&gt;
+
+&lt;p&gt;Let’s click in “Contracts” and then select our recently deployed contract.&lt;/p&gt;
+
+&lt;p&gt;We’ll see a screen similar to the following which shows the result for each getter:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/contract.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, let’s try changing the message. On the top right corner of the
+screen, we’ll see a section called “Write to contract”, and we can
+pick the function to call. If we select &lt;code class=&quot;highlighter-rouge&quot;&gt;setMessage&lt;/code&gt; it will ask us
+for the message and then write to the contract.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/contract-transaction.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see all the activity for our contract by copying its address and then going to &lt;a href=&quot;https://rinkeby.etherscan.io&quot;&gt;rinkeby&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The following are the transactions for my hellow world contract: &lt;a href=&quot;https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab&quot;&gt;https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
+
+&lt;p&gt;Congrats! You have deployed your first hello world contract. Now you
+have the bare minium to start getting into more serious stuff.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in ethereum and writing smart contract,
+subscribe to my feed or &lt;a href=&quot;https://twitter.com/abuiles&quot;&gt;follow me on
+twitter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Through the following weeks, we’ll be exploring
+&lt;a href=&quot;http://truffleframework.com/&quot;&gt;Truffle&lt;/a&gt; to code the examples from the
+ethereum website and work on our first Ðapps.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been learning about ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.</summary></entry><entry><title type="html">Upgrading mirage with JSCodeshift</title><link href="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/" rel="alternate" type="text/html" title="Upgrading mirage with JSCodeshift" /><published>2016-05-27T07:24:25-07:00</published><updated>2016-05-27T07:24:25-07:00</updated><id>http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift</id><content type="html" xml:base="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/">&lt;p&gt;If you have been using the beta release of mirage, chances are that
 you haven’t made the jump from beta.7 to beta.9 because some of the
 breaking deprecations.&lt;/p&gt;
 
@@ -39,7 +277,7 @@ find . -type f | xargs perl -pi -e 's/all\(\)\.forEach/all\(\)\.models\.forEach/
 &lt;p&gt;I hope you find this useful and if come up with a &lt;code class=&quot;highlighter-rouge&quot;&gt;codeshift&lt;/code&gt; solution
 please let me know and I’ll link it here.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/json-api-by-example&quot;&gt;Do you Want to learn about JSONAPI? Check out my book JSONAPI By Example.&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">If you have been using the beta release of mirage, chances are that you haven’t made the jump from beta.7 to beta.9 because some of the breaking deprecations.</summary></entry><entry><title type="html">Mirage TILs</title><link href="https://blog.abuiles.com/blog/2016/02/24/mirage-tils/" rel="alternate" type="text/html" title="Mirage TILs" /><published>2016-02-24T08:36:38-08:00</published><updated>2016-02-24T08:36:38-08:00</updated><id>https://blog.abuiles.com/blog/2016/02/24/mirage-tils</id><content type="html" xml:base="https://blog.abuiles.com/blog/2016/02/24/mirage-tils/">&lt;p&gt;This is not a post about tumor infiltrating lymphocytes (TILs). But
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/json-api-by-example&quot;&gt;Do you Want to learn about JSONAPI? Check out my book JSONAPI By Example.&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">If you have been using the beta release of mirage, chances are that you haven’t made the jump from beta.7 to beta.9 because some of the breaking deprecations.</summary></entry><entry><title type="html">Mirage TILs</title><link href="http://localhost:4000/blog/2016/02/24/mirage-tils/" rel="alternate" type="text/html" title="Mirage TILs" /><published>2016-02-24T08:36:38-08:00</published><updated>2016-02-24T08:36:38-08:00</updated><id>http://localhost:4000/blog/2016/02/24/mirage-tils</id><content type="html" xml:base="http://localhost:4000/blog/2016/02/24/mirage-tils/">&lt;p&gt;This is not a post about tumor infiltrating lymphocytes (TILs). But
 rather about the things I learn while moving all our acceptance tests
 to Mirage.&lt;/p&gt;
 
@@ -289,7 +527,7 @@ talk about our ups and downs.&lt;/p&gt;
 
 &lt;p&gt;Finally, if you enjoy talking about APIs, IPAs, Ember and want to work
 with me, at Envoy we are always hiring, check out &lt;a href=&quot;https://envoy.com/jobs/&quot;&gt;our jobs
-page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is not a post about tumor infiltrating lymphocytes (TILs). But rather about the things I learn while moving all our acceptance tests to Mirage.</summary></entry><entry><title type="html">Making ember-101 creative commons</title><link href="https://blog.abuiles.com/blog/2015/11/06/making-ember-101-creative-commons/" rel="alternate" type="text/html" title="Making ember-101 creative commons" /><published>2015-11-06T06:17:49-08:00</published><updated>2015-11-06T06:17:49-08:00</updated><id>https://blog.abuiles.com/blog/2015/11/06/making-ember-101-creative-commons</id><content type="html" xml:base="https://blog.abuiles.com/blog/2015/11/06/making-ember-101-creative-commons/">&lt;p&gt;Over a year ago I started to work on a book then called
+page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is not a post about tumor infiltrating lymphocytes (TILs). But rather about the things I learn while moving all our acceptance tests to Mirage.</summary></entry><entry><title type="html">Making ember-101 creative commons</title><link href="http://localhost:4000/blog/2015/11/06/making-ember-101-creative-commons/" rel="alternate" type="text/html" title="Making ember-101 creative commons" /><published>2015-11-06T06:17:49-08:00</published><updated>2015-11-06T06:17:49-08:00</updated><id>http://localhost:4000/blog/2015/11/06/making-ember-101-creative-commons</id><content type="html" xml:base="http://localhost:4000/blog/2015/11/06/making-ember-101-creative-commons/">&lt;p&gt;Over a year ago I started to work on a book then called
 &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;ember-cli-101&lt;/a&gt;. This was a crazy experiment on my end, I didn’t have
 any writing experience, started to sell the book without finishing it,
 and committed to keep it up to date with the latest Ember version.&lt;/p&gt;
@@ -313,7 +551,7 @@ craft the best book about Ember!&lt;/p&gt;
 &lt;p&gt;You can find the source code of the book here &lt;a href=&quot;https://github.com/abuiles/ember-101&quot;&gt;https://github.com/abuiles/ember-101&lt;/a&gt; and download it from leanpub &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;https://leanpub.com/ember-cli-101&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I want to thank everyone who bought the book, without you I wouldn’t
-be able to do this. &lt;strong&gt;Thanks for helping me spread the Ember love around the world!&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Over a year ago I started to work on a book then called ember-cli-101. This was a crazy experiment on my end, I didn’t have any writing experience, started to sell the book without finishing it, and committed to keep it up to date with the latest Ember version.</summary></entry><entry><title type="html">Removing prototype extensions with ember-watson</title><link href="https://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/" rel="alternate" type="text/html" title="Removing prototype extensions with ember-watson" /><published>2015-03-30T08:34:20-07:00</published><updated>2015-03-30T08:34:20-07:00</updated><id>https://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson</id><content type="html" xml:base="https://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/">&lt;p&gt;If you follow Ember folks on twitter you might have noticed that a
+be able to do this. &lt;strong&gt;Thanks for helping me spread the Ember love around the world!&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Over a year ago I started to work on a book then called ember-cli-101. This was a crazy experiment on my end, I didn’t have any writing experience, started to sell the book without finishing it, and committed to keep it up to date with the latest Ember version.</summary></entry><entry><title type="html">Removing prototype extensions with ember-watson</title><link href="http://localhost:4000/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/" rel="alternate" type="text/html" title="Removing prototype extensions with ember-watson" /><published>2015-03-30T08:34:20-07:00</published><updated>2015-03-30T08:34:20-07:00</updated><id>http://localhost:4000/blog/2015/03/30/removing-prototype-extensions-with-ember-watson</id><content type="html" xml:base="http://localhost:4000/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/">&lt;p&gt;If you follow Ember folks on twitter you might have noticed that a
 bunch of them keep talking about something called prototype extensions
 and disabling them. What’s that? without getting into much details is
 what allow us to set observers or computed properties calling
@@ -356,7 +594,7 @@ ember watson:convert-prototype-extensions&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt
 
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Do you want to learn Ember with a private tutor? Get my living book Ember CLI 101 and keep your Ember knowledge up to date&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;[1] - https://github.com/emberjs/guides/pull/110&lt;/p&gt;</content><author><name></name></author><summary type="html">If you follow Ember folks on twitter you might have noticed that a bunch of them keep talking about something called prototype extensions and disabling them. What’s that? without getting into much details is what allow us to set observers or computed properties calling .observes or property at the end of a function.</summary></entry><entry><title type="html">Upgrading your ember CLI QUnit tests in less than 5 minutes</title><link href="https://blog.abuiles.com/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes/" rel="alternate" type="text/html" title="Upgrading your ember CLI QUnit tests in less than 5 minutes" /><published>2015-02-25T05:56:31-08:00</published><updated>2015-02-25T05:56:31-08:00</updated><id>https://blog.abuiles.com/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes</id><content type="html" xml:base="https://blog.abuiles.com/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes/">&lt;p&gt;Recently ember CLI updated its tests blueprints to match QUnit’s 2.0
+&lt;p&gt;[1] - https://github.com/emberjs/guides/pull/110&lt;/p&gt;</content><author><name></name></author><summary type="html">If you follow Ember folks on twitter you might have noticed that a bunch of them keep talking about something called prototype extensions and disabling them. What’s that? without getting into much details is what allow us to set observers or computed properties calling .observes or property at the end of a function.</summary></entry><entry><title type="html">Upgrading your ember CLI QUnit tests in less than 5 minutes</title><link href="http://localhost:4000/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes/" rel="alternate" type="text/html" title="Upgrading your ember CLI QUnit tests in less than 5 minutes" /><published>2015-02-25T05:56:31-08:00</published><updated>2015-02-25T05:56:31-08:00</updated><id>http://localhost:4000/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes</id><content type="html" xml:base="http://localhost:4000/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes/">&lt;p&gt;Recently ember CLI updated its tests blueprints to match QUnit’s 2.0
 upcoming syntax. Meaning that if we wanted to live on the edge we would need to update our existing tests to match such changes or ignore the changes to &lt;a href=&quot;https://github.com/ember-cli/ember-cli/pull/3197/files#diff-26f52f3fec353435f47247381c4f1189L12&quot;&gt;tests/.jshintrc&lt;/a&gt; and continue using globals.&lt;/p&gt;
 
 &lt;p&gt;As an early adopter I decided to upgrade my test, the first time I
@@ -410,7 +648,7 @@ about changes on the API, I think this one will be a bit more trickier
 but not impossible, if you want to contribute you can find the repo in
 &lt;a href=&quot;https://github.com/abuiles/ember-watson&quot;&gt;https://github.com/abuiles/ember-watson&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Did you find this useful? Learn Ember and support my work at the same time buying my living book Ember CLI 101&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Recently ember CLI updated its tests blueprints to match QUnit’s 2.0 upcoming syntax. Meaning that if we wanted to live on the edge we would need to update our existing tests to match such changes or ignore the changes to tests/.jshintrc and continue using globals.</summary></entry><entry><title type="html">Know your addons: ember-cli-build-notifications</title><link href="https://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/" rel="alternate" type="text/html" title="Know your addons: ember-cli-build-notifications" /><published>2015-02-12T08:29:12-08:00</published><updated>2015-02-12T08:29:12-08:00</updated><id>https://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications</id><content type="html" xml:base="https://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/">&lt;p&gt;As today &lt;a href=&quot;http://www.emberaddons.com&quot;&gt;emberaddons.com&lt;/a&gt; registers 602
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Did you find this useful? Learn Ember and support my work at the same time buying my living book Ember CLI 101&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Recently ember CLI updated its tests blueprints to match QUnit’s 2.0 upcoming syntax. Meaning that if we wanted to live on the edge we would need to update our existing tests to match such changes or ignore the changes to tests/.jshintrc and continue using globals.</summary></entry><entry><title type="html">Know your addons: ember-cli-build-notifications</title><link href="http://localhost:4000/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/" rel="alternate" type="text/html" title="Know your addons: ember-cli-build-notifications" /><published>2015-02-12T08:29:12-08:00</published><updated>2015-02-12T08:29:12-08:00</updated><id>http://localhost:4000/blog/2015/02/12/know-your-addons-ember-cli-build-notifications</id><content type="html" xml:base="http://localhost:4000/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/">&lt;p&gt;As today &lt;a href=&quot;http://www.emberaddons.com&quot;&gt;emberaddons.com&lt;/a&gt; registers 602
 (and growing) ember-cli addons distributed via NPM, this means that
 addons and ember-cli are starting to become the de-facto tools to
 share and build  application code.&lt;/p&gt;
@@ -496,7 +734,7 @@ gets called it uses his notify implementation to show us the message. Clever rig
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a name=&quot;learn-ember&quot;&gt;&lt;/a&gt;Actually you should :), Learn Ember with my book, check it out &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;leanpub.com/ember-cli-101&lt;/a&gt; or &lt;a href=&quot;/ember-rails&quot;&gt;subscribe to my list for the free webinars&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">As today emberaddons.com registers 602 (and growing) ember-cli addons distributed via NPM, this means that addons and ember-cli are starting to become the de-facto tools to share and build application code.</summary></entry><entry><title type="html">Update your finds</title><link href="https://blog.abuiles.com/blog/2015/02/09/update-your-finds/" rel="alternate" type="text/html" title="Update your finds" /><published>2015-02-09T08:40:52-08:00</published><updated>2015-02-09T08:40:52-08:00</updated><id>https://blog.abuiles.com/blog/2015/02/09/update-your-finds</id><content type="html" xml:base="https://blog.abuiles.com/blog/2015/02/09/update-your-finds/">&lt;p&gt;A couple of months ago I wrote a post about &lt;code class=&quot;highlighter-rouge&quot;&gt;store.find&lt;/code&gt; (
+&lt;p&gt;&lt;strong&gt;&lt;a name=&quot;learn-ember&quot;&gt;&lt;/a&gt;Actually you should :), Learn Ember with my book, check it out &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;leanpub.com/ember-cli-101&lt;/a&gt; or &lt;a href=&quot;/ember-rails&quot;&gt;subscribe to my list for the free webinars&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">As today emberaddons.com registers 602 (and growing) ember-cli addons distributed via NPM, this means that addons and ember-cli are starting to become the de-facto tools to share and build application code.</summary></entry><entry><title type="html">Update your finds</title><link href="http://localhost:4000/blog/2015/02/09/update-your-finds/" rel="alternate" type="text/html" title="Update your finds" /><published>2015-02-09T08:40:52-08:00</published><updated>2015-02-09T08:40:52-08:00</updated><id>http://localhost:4000/blog/2015/02/09/update-your-finds</id><content type="html" xml:base="http://localhost:4000/blog/2015/02/09/update-your-finds/">&lt;p&gt;A couple of months ago I wrote a post about &lt;code class=&quot;highlighter-rouge&quot;&gt;store.find&lt;/code&gt; (
 &lt;a href=&quot;/blog/2014/11/04/understading-ember-data-store-find/&quot;&gt;Understading Ember-Data
 Store#find&lt;/a&gt;), in
 that post I covered the different scenarios to use it and how it would
@@ -521,7 +759,7 @@ store! They were only marked as private and used internally by &lt;code class=&q
 be annoying for you, but on the other side this is a step more towards
 1.0 and having a better API,so, update your finds!&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Getting started with Ember? I’m the author of a living book on Ember, learn Ember and ember-cli&lt;/a&gt; with &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;ember-cli-101&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">A couple of months ago I wrote a post about store.find ( Understading Ember-Data Store#find), in that post I covered the different scenarios to use it and how it would behave depending on the parameters.</summary></entry><entry><title type="html">Working With JavaScript Plugins in Ember-cli: Part 3</title><link href="https://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/" rel="alternate" type="text/html" title="Working With JavaScript Plugins in Ember-cli: Part 3" /><published>2014-12-28T06:17:46-08:00</published><updated>2014-12-28T06:17:46-08:00</updated><id>https://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3</id><content type="html" xml:base="https://blog.abuiles.com/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/">&lt;p&gt;On &lt;a href=&quot;/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/&quot;&gt;part 1 of Working With JavaScript Plugins in
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Getting started with Ember? I’m the author of a living book on Ember, learn Ember and ember-cli&lt;/a&gt; with &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;ember-cli-101&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">A couple of months ago I wrote a post about store.find ( Understading Ember-Data Store#find), in that post I covered the different scenarios to use it and how it would behave depending on the parameters.</summary></entry><entry><title type="html">Working With JavaScript Plugins in Ember-cli: Part 3</title><link href="http://localhost:4000/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/" rel="alternate" type="text/html" title="Working With JavaScript Plugins in Ember-cli: Part 3" /><published>2014-12-28T06:17:46-08:00</published><updated>2014-12-28T06:17:46-08:00</updated><id>http://localhost:4000/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3</id><content type="html" xml:base="http://localhost:4000/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/">&lt;p&gt;On &lt;a href=&quot;/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/&quot;&gt;part 1 of Working With JavaScript Plugins in
 ember-cli&lt;/a&gt;
 , we explore how to work with JavaScript plugins which are still
 distributed as globas and came up with a pattern for wrapping up
@@ -590,7 +828,7 @@ ember-browserify just doing &lt;code class=&quot;highlighter-rouge&quot;&gt;impo
 &lt;p&gt;And that’s it, we are now consuming MomentJS via browserify just as if
 it was other module in our application.&lt;/p&gt;
 
-&lt;p&gt;**&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Learning Ember.js? Get my book or enroll in my upcoming workshops.&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">On part 1 of Working With JavaScript Plugins in ember-cli , we explore how to work with JavaScript plugins which are still distributed as globas and came up with a pattern for wrapping up globals while using the module system.</summary></entry><entry><title type="html">Announcing my Ember book: ember-cli-101</title><link href="https://blog.abuiles.com/blog/2014/11/16/announcing-my-ember-book-ember-cli-101/" rel="alternate" type="text/html" title="Announcing my Ember book: ember-cli-101" /><published>2014-11-16T08:48:22-08:00</published><updated>2014-11-16T08:48:22-08:00</updated><id>https://blog.abuiles.com/blog/2014/11/16/announcing-my-ember-book-ember-cli-101</id><content type="html" xml:base="https://blog.abuiles.com/blog/2014/11/16/announcing-my-ember-book-ember-cli-101/">&lt;p&gt;In June I was traveling to Patagonia and had problems sleeping in the
+&lt;p&gt;**&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Learning Ember.js? Get my book or enroll in my upcoming workshops.&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">On part 1 of Working With JavaScript Plugins in ember-cli , we explore how to work with JavaScript plugins which are still distributed as globas and came up with a pattern for wrapping up globals while using the module system.</summary></entry><entry><title type="html">Announcing my Ember book: ember-cli-101</title><link href="http://localhost:4000/blog/2014/11/16/announcing-my-ember-book-ember-cli-101/" rel="alternate" type="text/html" title="Announcing my Ember book: ember-cli-101" /><published>2014-11-16T08:48:22-08:00</published><updated>2014-11-16T08:48:22-08:00</updated><id>http://localhost:4000/blog/2014/11/16/announcing-my-ember-book-ember-cli-101</id><content type="html" xml:base="http://localhost:4000/blog/2014/11/16/announcing-my-ember-book-ember-cli-101/">&lt;p&gt;In June I was traveling to Patagonia and had problems sleeping in the
 plane. I opened notes in my iPhone and started to write what became
 the first 2 chapters of an Ember.js book with ember-cli.&lt;/p&gt;
 
@@ -619,137 +857,4 @@ time.&lt;/p&gt;
 personally give guidance to people reading the book + online sessions
 of Q&amp;amp;A, I plan to do 1 batch monthly, the first starts tomorrow, you
 can enroll buying the workshop package in
-&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;https://leanpub.com/ember-cli-101&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In June I was traveling to Patagonia and had problems sleeping in the plane. I opened notes in my iPhone and started to write what became the first 2 chapters of an Ember.js book with ember-cli.</summary></entry><entry><title type="html">Understading Ember-Data Store#find</title><link href="https://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find/" rel="alternate" type="text/html" title="Understading Ember-Data Store#find" /><published>2014-11-04T05:55:22-08:00</published><updated>2014-11-04T05:55:22-08:00</updated><id>https://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find</id><content type="html" xml:base="https://blog.abuiles.com/blog/2014/11/04/understading-ember-data-store-find/">&lt;p&gt;###Update: Don’t worry about this, &lt;code class=&quot;highlighter-rouge&quot;&gt;store.find&lt;/code&gt; has been simplified, read &lt;a href=&quot;/blog/2015/02/09/update-your-finds/&quot;&gt;Update your finds&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Store#find&lt;/code&gt; (inject as &lt;code class=&quot;highlighter-rouge&quot;&gt;this.store.find&lt;/code&gt;) is one of those methods in Ember-Data which
-confuses people, especially since it behaves very different depending
-on the parameters passed-in.&lt;/p&gt;
-
-&lt;p&gt;This article try to demystify &lt;code class=&quot;highlighter-rouge&quot;&gt;store.find&lt;/code&gt; and explain how it will
-behave accordingly to the parameters.&lt;/p&gt;
-
-&lt;p&gt;Let’s have its definition on top and then use it as reference:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;You need to pass a type to the store's find method&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;You may not pass `&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;` as id to the store's find method&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isNone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// We are passed a query instead of an id.&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;typeOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'object'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;findQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;findById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;coerceId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;We can use &lt;code class=&quot;highlighter-rouge&quot;&gt;find&lt;/code&gt; to load a single record or a collection of records.&lt;/p&gt;
-
-&lt;p&gt;If you want to run the commands in the article, you can download the
-following ember-cli application https://github.com/abuiles/borrowers and then
-run &lt;code class=&quot;highlighter-rouge&quot;&gt;ember server&lt;/code&gt; it will proxy all the API request to a public
-API.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone https://github.com/abuiles/borrowers
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;borrowers
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm install &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; bower install&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;scenario-1-loading-a-collection&quot;&gt;Scenario #1: Loading a collection&lt;/h4&gt;
-
-&lt;p&gt;If we call &lt;code class=&quot;highlighter-rouge&quot;&gt;find&lt;/code&gt; only with a model’s name then it will make a request
-to load a list of records of that type, the following is an example of
-such request:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;friends&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;$E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'friend'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;XHR&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;finished&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;loading&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GET&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost:4200/api/v2/friends&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;First, in case you are wondering what &lt;code class=&quot;highlighter-rouge&quot;&gt;$E&lt;/code&gt; is, I’m grabbing an
-instance of the application router using the &lt;code class=&quot;highlighter-rouge&quot;&gt;ember-inspector&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If we want to send query parameters with our request, we can pass an
-object as second argument and every key on the object will be included
-as parameter:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;friends&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;$E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'friend'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasArticles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;sort_by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'created_at'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;XHR&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;finished&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;loading&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GET&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost:4200/api/v2/friends?hasArticles=true&amp;amp;sort_by=created_at&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;In the previous request we asked &lt;code class=&quot;highlighter-rouge&quot;&gt;find&lt;/code&gt; to load all the articles,
-sending as parameters the key &lt;code class=&quot;highlighter-rouge&quot;&gt;hasArticles&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;sort_by&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Like
-&lt;a href=&quot;http://emberjs.com/api/data/classes/DS.Store.html#method_all&quot;&gt;all&lt;/a&gt;
-and
-&lt;a href=&quot;http://emberjs.com/api/data/classes/DS.Store.html#method_filter&quot;&gt;filter&lt;/a&gt;
-the result from &lt;code class=&quot;highlighter-rouge&quot;&gt;find&lt;/code&gt; is a &lt;code class=&quot;highlighter-rouge&quot;&gt;live array&lt;/code&gt; too. When called it will make
-a request to the server and then the collection will be updated if
-more records are added or removed from the store.&lt;/p&gt;
-
-&lt;p&gt;I’ve seen people using the private methods &lt;code class=&quot;highlighter-rouge&quot;&gt;findQuery&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;findByIds&lt;/code&gt;
-like:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;   &lt;span class=&quot;c1&quot;&gt;// Using the private function store.findQuery&lt;/span&gt;
-   &lt;span class=&quot;nl&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;findQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'friend'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasArticles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;sort_by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'created_at'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-   &lt;span class=&quot;c1&quot;&gt;// Using the private funcion findByIds&lt;/span&gt;
-   &lt;span class=&quot;nl&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;findByIds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'friend'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;We should never rely on private functions, they are marked private for
-a reason. Although &lt;a href=&quot;https://twitter.com/terzicigor&quot;&gt;Igor Terzic&lt;/a&gt;
-pointed that &lt;code class=&quot;highlighter-rouge&quot;&gt;findQuery&lt;/code&gt; might be marked as private by mistake.&lt;/p&gt;
-
-&lt;p&gt;We can achieve the same result using the method &lt;code class=&quot;highlighter-rouge&quot;&gt;find&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;   &lt;span class=&quot;nx&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// bad&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// return this.store.findQuerygo('friend', {hasArticles: true, sort_by: 'created_at'});&lt;/span&gt;
-
-      &lt;span class=&quot;c1&quot;&gt;// Good&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'friend'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasArticles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;sort_by&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'created_at'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-   &lt;span class=&quot;nl&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// bad&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;// return this.store.findByIds('friend', [1,2,3]);&lt;/span&gt;
-
-      &lt;span class=&quot;c1&quot;&gt;// good&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'friend'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ids&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]});&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;scenario-2-loading-a-single-record&quot;&gt;Scenario #2: Loading a single record&lt;/h4&gt;
-
-&lt;p&gt;We can also use &lt;code class=&quot;highlighter-rouge&quot;&gt;find&lt;/code&gt; to load an specific record, to do that we’ll
-only need to pass the record &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt; as second argument:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'friend'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;XHR&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;finished&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;loading&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GET&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost:4200/api/v2/friends/15&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;In the previous example we are loading the friend with id 15, the
-&lt;code class=&quot;highlighter-rouge&quot;&gt;store&lt;/code&gt; will only make a request to the server if the friend is not
-available in the store, to understand this, let’s go to
-http://localhost:4200/friends and then on the console try the following:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'friend'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'firstObject'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;$E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'friend'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;If we open our network tab, we’ll see that the store didn’t make any request
-this time, the reason is that we asked for a friend which was already
-loaded into the store.&lt;/p&gt;
-
-&lt;p&gt;Is important to mention that &lt;strong&gt;find&lt;/strong&gt;, &lt;strong&gt;all&lt;/strong&gt; and &lt;strong&gt;filter&lt;/strong&gt; return
-promises, when testing on the browser’s console we don’t have to worry
-about it, but if we want to use the result in our application then we
-need to keep this in mind.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101?utm_source=ed-store&quot;&gt;Want to learn Ember.js? Enroll in my upcoming Ember.js workshop by buying my book&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">###Update: Don’t worry about this, store.find has been simplified, read Update your finds.</summary></entry></feed>
+&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;https://leanpub.com/ember-cli-101&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In June I was traveling to Patagonia and had problems sleeping in the plane. I opened notes in my iPhone and started to write what became the first 2 chapters of an Ember.js book with ember-cli.</summary></entry></feed>
