@@ -102,15 +102,15 @@ of resembles our first program ever: “Hello World”.</p>
 <p>I’ll show you how to:</p>
 
 <ul>
-  <li>Run mist using the test net <a href="https://www.rinkeby.io/">rinkeby</a> and get free ether for testing.</li>
+  <li>Run mist using the testnet <a href="https://www.rinkeby.io/">rinkeby</a> and get free ether for testing.</li>
   <li>Deploy a contract and interact with it using mist.</li>
 </ul>
 
 <p>For easiness, I’ll assume people is using macOS.</p>
 
-<h2 id="setting-up-a-test-net">Setting up a test net</h2>
+<h2 id="setting-up-a-testnet">Setting up a testnet</h2>
 
-<p>To get started we need to install Mist, from the readme:</p>
+<p>To get started we need to install Mist, from the README:</p>
 
 <blockquote>
   <p>The Mist browser is the tool of choice to browse and use Ðapps.</p>
@@ -122,18 +122,19 @@ of resembles our first program ever: “Hello World”.</p>
 
 <p>Once it is installed, don’t bother yet about setting a wallet.</p>
 
-<p>Since we don’t want to run on the default <code class="highlighter-rouge">test-net</code> or <code class="highlighter-rouge">main network</code>, we
-need install <code class="highlighter-rouge">geth</code>, which is a command line interface for running a
-ethereum node. It will allow us to interact with rinkeby.</p>
+<p>Since we don’t want to run on the default testnet or main network, we
+need to install geth, which is a command line interface for running an
+ethereum node. It will allow us to interact with rinkeby which is a
+different testnet.</p>
 
 <p>Follow the instructions here <a href="https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum">https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum</a>.</p>
 
-<p>Once we have mist and get installed, let’s get rinkeby running.</p>
+<p>Once we have mist and geth installed, let’s get rinkeby running.</p>
 
 <h2 id="running-mist-with-rinkeby">Running mist with rinkeby</h2>
 
-<p>Since <code class="highlighter-rouge">mist</code> doesn’t have out of the box support for rinkeby. We need
-to connect to it using <code class="highlighter-rouge">geth</code> and then tell mist to use that connection.</p>
+<p>Since mist doesn’t have out of the box support for rinkeby. We need
+to connect to it using geth and then tell mist to use that connection.</p>
 
 <p>Let’s run in the console the following command:</p>
 
@@ -141,18 +142,18 @@ to connect to it using <code class="highlighter-rouge">geth</code> and then tell
 </code></pre>
 </div>
 
-<p>That will start the a new ethereum node, connected to rinkeby.</p>
+<p>It starts a new ethereum node connected to rinkeby.</p>
 
-<p>Let’s open mist and tell it to connect to our running node. It
+<p>Let’s open mist and tell it to connect to the running node. It
 will show you an alert saying the connection is insecure, but since
-this is a test net, we can ignore it.</p>
+this is a testnet, we can ignore it.</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
 </code></pre>
 </div>
 
-<p>It will take some time the first time we run it since it has to
-download the test blockchain, go for a walk and then come back.</p>
+<p>During the first run, it will take some time while the rinkeby
+blockchain is downloaded, go for a walk and then come back.</p>
 
 <h2 id="creating-a-wallet-in-rinkeby">Creating a wallet in rinkeby</h2>
 
@@ -160,7 +161,7 @@ download the test blockchain, go for a walk and then come back.</p>
 
 <p><img src="/assets/wallet.png" alt="" /></p>
 
-<p>We can then create our first account in rinkeby by clicking in the “Add account” button.</p>
+<p>We can then create our first account in rinkeby by clicking the “Add account” button.</p>
 
 <iframe width="100%" height="400px" src="https://www.youtube.com/embed/5fGRdbuQReo" frameborder="0" allowfullscreen=""></iframe>
 
@@ -176,16 +177,16 @@ download the test blockchain, go for a walk and then come back.</p>
 <p>Now that we have an account, let’s send ether to it. Since we are using a testnet, we can get ether doing one of the following:</p>
 
 <ul>
-  <li>Mining: we are running a test-net and it has all the same functionalities as the main-net. Mining here is faster but the ether you are mining does not have any value.</li>
+  <li>Mining: we are running a testnet and it has all the same functionalities as the main network. Mining here is faster but the ether does not have any value.</li>
   <li>Asking someone to send us ETH.</li>
-  <li>Use a public faucet.</li>
+  <li>Using a public faucet.</li>
 </ul>
 
 <p>Luckily for us, there is a public faucet where we can get “free” ether from. We need to do the following steps:</p>
 
 <ul>
   <li>Copy our account address.</li>
-  <li>Paste it in GitHub gist.</li>
+  <li>Paste it in a GitHub gist.</li>
   <li>Submit the gist to https://faucet.rinkeby.io and get free ether.</li>
 </ul>
 
@@ -193,9 +194,10 @@ download the test blockchain, go for a walk and then come back.</p>
 
 <iframe width="100%" height="400px" src="https://www.youtube.com/embed/wKFz5c3TU4s" frameborder="0" allowfullscreen=""></iframe>
 
-<p>In the video above, that user already maxed out the allowance for 3
-days, but we should see a success message under normal circumstances.
-After that, the ether should be in the wallet balance.</p>
+<p>In the video, the user already maxed out the allowance for 3 days, but
+under normal circumstances we should see a success message.</p>
+
+<p>We should see the requested ether in the wallet balance.</p>
 
 <p><img src="/assets/wallet2.png" alt="" /></p>
 
@@ -212,10 +214,10 @@ world contract.</p>
   <li>creator: the account who created the contract</li>
   <li>lastCaller: the last account who changed the state of the contract.</li>
   <li>message: an internal message.</li>
-  <li>totalGas: total amount of gas spend interacting with the contract.</li>
+  <li>totalGas: total amount of gas spent interacting with the contract.</li>
 </ul>
 
-<p>We’ll define four getters for each of the state variables:</p>
+<p>And four getters for each of the state variables:</p>
 
 <ul>
   <li>getMessage</li>
@@ -225,14 +227,19 @@ world contract.</p>
 </ul>
 
 <p>We call the functions above by making calls to the contract. Calls
-don’t have any cost since they don’t change the state of the network,
-therefore you don’t need to pay gas to run them.</p>
+don’t have any cost since they don’t change the state of the network.</p>
 
 <p>To change the internal state of the contract, we’ll define a
 setter. Anything that changes the contract state is considered a
-transaction. Transactions change the state of the blockchain, they
-have to be run by multiple nodes and be verified. Transactions have an
-associated cost and we have to pay gas to run them.</p>
+transaction.</p>
+
+<p>In ethereum, transaction have some of the following characteristics:</p>
+
+<ul>
+  <li>Change the state of the blockchain.</li>
+  <li>Are run by multiple nodes and are verified.</li>
+  <li>Have an associated cost (pay gas).</li>
+</ul>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.4</span><span class="p">.</span><span class="mi">4</span><span class="p">;</span>
 
@@ -286,13 +293,13 @@ associated cost and we have to pay gas to run them.</p>
   <span class="c1">//End: setters</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>To deploy the contract above, we need to copy it into the clipboard and then do the following steps:</p>
+<p>To deploy the contract, let’s add a copy into the clipboard and then do the following steps:</p>
 
 <ul>
   <li>Click “Contracts” in the button next to the balance.</li>
   <li>Click “Deploy new contract”.</li>
-  <li>Select your account and the paste the code in the text editor.</li>
-  <li>Select how much gas to pay to get the contract created.</li>
+  <li>Select your account and then paste the code into the text editor.</li>
+  <li>Select how much gas to pay (creating a contract is a transaction and we have to pay gas).</li>
   <li>Click deploy.</li>
 </ul>
 
@@ -308,29 +315,30 @@ associated cost and we have to pay gas to run them.</p>
 
 <p><img src="/assets/contract.png" alt="" /></p>
 
-<p>Next, let’s try changing the message. On the top right corner of the
-screen, we’ll see a section called “Write to contract”, and we can
-pick the function to call. If we select <code class="highlighter-rouge">setMessage</code> it will ask us
-for the message and then write to the contract.</p>
+<p>Next, let’s try changing the message. On the right, we’ll see a
+section called “Write to contract”, where we can pick the function to
+call. If we select <code class="highlighter-rouge">setMessage</code> it will ask us for the message.</p>
 
 <p><img src="/assets/contract-transaction.gif" alt="" /></p>
 
-<p>We can see all the activity for our contract by copying its address and then going to <a href="https://rinkeby.etherscan.io">rinkeby</a>.</p>
+<p>We can see all the activity for a contract by copying its address and then going to <a href="https://rinkeby.etherscan.io">rinkeby</a>.</p>
 
-<p>The following are the transactions for my hellow world contract: <a href="https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab">https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab</a></p>
+<p>The following are the transactions for my hello world contract: <a href="https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab">https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab</a></p>
 
 <h2 id="wrapping-up">Wrapping up</h2>
 
 <p>Congrats! You have deployed your first hello world contract. Now you
 have the bare minium to start getting into more serious stuff.</p>
 
-<p>If you are interested in ethereum and writing smart contract,
+<p>If you are interested in ethereum and writing smart contracts,
 subscribe to my feed or <a href="https://twitter.com/abuiles">follow me on
 twitter</a>.</p>
 
-<p>Through the following weeks, we’ll be exploring
-<a href="http://truffleframework.com/">Truffle</a> to code the examples from the
-ethereum website and work on our first Ðapps.</p>
+<p>I’ll be writing more about ethereum, working with contracts and how to
+use <a href="http://truffleframework.com/">Truffle</a> to stay sane while doing
+so.</p>
+
+<p><strong>Found a typo? Please let me <a href="mailto:builes.adolfo@gmail.com">know</a></strong></p>
 
   </div>
 
