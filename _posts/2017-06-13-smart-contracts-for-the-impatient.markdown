@@ -12,14 +12,14 @@ of resembles our first program ever: "Hello World".
 
 I'll show you how to:
 
-- Run mist using the test net [rinkeby](https://www.rinkeby.io/) and get free ether for testing.
+- Run mist using the testnet [rinkeby](https://www.rinkeby.io/) and get free ether for testing.
 - Deploy a contract and interact with it using mist.
 
 For easiness, I'll assume people is using macOS.
 
-## Setting up a test net
+## Setting up a testnet
 
-To get started we need to install Mist, from the readme:
+To get started we need to install Mist, from the README:
 
 > The Mist browser is the tool of choice to browse and use Ðapps.
 
@@ -29,18 +29,19 @@ We can downloading it from [https://github.com/ethereum/mist/releases](https://g
 
 Once it is installed, don't bother yet about setting a wallet.
 
-Since we don't want to run on the default `test-net` or `main network`, we
-need install `geth`, which is a command line interface for running a
-ethereum node. It will allow us to interact with rinkeby.
+Since we don't want to run on the default testnet or main network, we
+need to install geth, which is a command line interface for running an
+ethereum node. It will allow us to interact with rinkeby which is a
+different testnet.
 
 Follow the instructions here [https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum).
 
-Once we have mist and get installed, let's get rinkeby running.
+Once we have mist and geth installed, let's get rinkeby running.
 
 ## Running mist with rinkeby
 
-Since `mist` doesn't have out of the box support for rinkeby. We need
-to connect to it using `geth` and then tell mist to use that connection.
+Since mist doesn't have out of the box support for rinkeby. We need
+to connect to it using geth and then tell mist to use that connection.
 
 Let's run in the console the following command:
 
@@ -48,19 +49,19 @@ Let's run in the console the following command:
 geth --rinkeby --rpc console --rpcapi db,eth,net,web3,personal
 ```
 
-That will start the a new ethereum node, connected to rinkeby.
+It starts a new ethereum node connected to rinkeby.
 
-Let's open mist and tell it to connect to our running node. It
+Let's open mist and tell it to connect to the running node. It
 will show you an alert saying the connection is insecure, but since
-this is a test net, we can ignore it.
+this is a testnet, we can ignore it.
 
 
 ```bash
 /Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
 ```
 
-It will take some time the first time we run it since it has to
-download the test blockchain, go for a walk and then come back.
+During the first run, it will take some time while the rinkeby
+blockchain is downloaded, go for a walk and then come back.
 
 ## Creating a wallet in rinkeby
 
@@ -68,7 +69,7 @@ After mist has started, we'll see an interface similar to the following:
 
 ![](/assets/wallet.png)
 
-We can then create our first account in rinkeby by clicking in the "Add account" button.
+We can then create our first account in rinkeby by clicking the "Add account" button.
 
 <iframe width="100%" height="400px" src="https://www.youtube.com/embed/5fGRdbuQReo" frameborder="0" allowfullscreen></iframe>
 
@@ -81,23 +82,24 @@ What we created was an EOA, and is normally what people would refer to as a wall
 
 Now that we have an account, let's send ether to it. Since we are using a testnet, we can get ether doing one of the following:
 
-- Mining: we are running a test-net and it has all the same functionalities as the main-net. Mining here is faster but the ether you are mining does not have any value.
+- Mining: we are running a testnet and it has all the same functionalities as the main network. Mining here is faster but the ether does not have any value.
 - Asking someone to send us ETH.
-- Use a public faucet.
+- Using a public faucet.
 
 Luckily for us, there is a public faucet where we can get "free" ether from. We need to do the following steps:
 
 - Copy our account address.
-- Paste it in GitHub gist.
+- Paste it in a GitHub gist.
 - Submit the gist to https://faucet.rinkeby.io and get free ether.
 
 The following video demonstrates the 3 steps above:
 
 <iframe width="100%" height="400px" src="https://www.youtube.com/embed/wKFz5c3TU4s" frameborder="0" allowfullscreen></iframe>
 
-In the video above, that user already maxed out the allowance for 3
-days, but we should see a success message under normal circumstances.
-After that, the ether should be in the wallet balance.
+In the video, the user already maxed out the allowance for 3 days, but
+under normal circumstances we should see a success message.
+
+We should see the requested ether in the wallet balance.
 
 ![](/assets/wallet2.png)
 
@@ -113,9 +115,9 @@ It has 4 state variables:
 - creator: the account who created the contract
 - lastCaller: the last account who changed the state of the contract.
 - message: an internal message.
-- totalGas: total amount of gas spend interacting with the contract.
+- totalGas: total amount of gas spent interacting with the contract.
 
-We'll define four getters for each of the state variables:
+And four getters for each of the state variables:
 
 - getMessage
 - getLastCaller
@@ -123,14 +125,17 @@ We'll define four getters for each of the state variables:
 - getTotalGas
 
 We call the functions above by making calls to the contract. Calls
-don't have any cost since they don't change the state of the network,
-therefore you don't need to pay gas to run them.
+don't have any cost since they don't change the state of the network.
 
 To change the internal state of the contract, we'll define a
 setter. Anything that changes the contract state is considered a
-transaction. Transactions change the state of the blockchain, they
-have to be run by multiple nodes and be verified. Transactions have an
-associated cost and we have to pay gas to run them.
+transaction.
+
+In ethereum, transaction have some of the following characteristics:
+
+- Change the state of the blockchain.
+- Are run by multiple nodes and are verified.
+- Have an associated cost (pay gas).
 
 {% highlight javascript %}
 pragma solidity ^0.4.4;
@@ -186,12 +191,12 @@ contract HelloWorld {
 }
 {% endhighlight %}
 
-To deploy the contract above, we need to copy it into the clipboard and then do the following steps:
+To deploy the contract, let's add a copy into the clipboard and then do the following steps:
 
 - Click "Contracts" in the button next to the balance.
 - Click "Deploy new contract".
-- Select your account and the paste the code in the text editor.
-- Select how much gas to pay to get the contract created.
+- Select your account and then paste the code into the text editor.
+- Select how much gas to pay (creating a contract is a transaction and we have to pay gas).
 - Click deploy.
 
 ![](/assets/deploy-smart-contracts.gif)
@@ -206,26 +211,27 @@ We'll see a screen similar to the following which shows the result for each gett
 
 ![](/assets/contract.png)
 
-Next, let's try changing the message. On the top right corner of the
-screen, we'll see a section called "Write to contract", and we can
-pick the function to call. If we select `setMessage` it will ask us
-for the message and then write to the contract.
+Next, let's try changing the message. On the right, we'll see a
+section called "Write to contract", where we can pick the function to
+call. If we select `setMessage` it will ask us for the message.
 
 ![](/assets/contract-transaction.gif)
 
-We can see all the activity for our contract by copying its address and then going to [rinkeby](https://rinkeby.etherscan.io).
+We can see all the activity for a contract by copying its address and then going to [rinkeby](https://rinkeby.etherscan.io).
 
-The following are the transactions for my hellow world contract: [https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab](https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab)
+The following are the transactions for my hello world contract: [https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab](https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab)
 
 ## Wrapping up
 
 Congrats! You have deployed your first hello world contract. Now you
 have the bare minium to start getting into more serious stuff.
 
-If you are interested in ethereum and writing smart contract,
+If you are interested in ethereum and writing smart contracts,
 subscribe to my feed or [follow me on
 twitter](https://twitter.com/abuiles).
 
-Through the following weeks, we'll be exploring
-[Truffle](http://truffleframework.com/) to code the examples from the
-ethereum website and work on our first Ðapps.
+I'll be writing more about ethereum, working with contracts and how to
+use [Truffle](http://truffleframework.com/) to stay sane while doing
+so.
+
+**Found a typo? Please let me [know](mailto:builes.adolfo@gmail.com)**
