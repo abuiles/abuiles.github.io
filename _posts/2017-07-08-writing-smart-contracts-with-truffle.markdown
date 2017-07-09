@@ -344,7 +344,7 @@ eth_sendTransaction
 {% endhighlight %}
 
 We have successfully deployed a contract using Truffle to `testrpc`
-but we haven't written any test yet. That what we'll do next.
+but we haven't written any test yet. That's what we'll do next.
 
 ## Testing
 
