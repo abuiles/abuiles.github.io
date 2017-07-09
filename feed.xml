@@ -1,5 +1,414 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-06-14T09:10:20-07:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
-</subtitle><entry><title type="html">Smart contracts for the impatient</title><link href="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart contracts for the impatient" /><published>2017-06-13T06:10:40-07:00</published><updated>2017-06-13T06:10:40-07:00</updated><id>http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;I’ve been learning about Ethereum and smart contracts, and one of the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-08T23:10:20-07:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
+</subtitle><entry><title type="html">Writing Smart Contracts With Truffle</title><link href="http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle/" rel="alternate" type="text/html" title="Writing Smart Contracts With Truffle" /><published>2017-07-08T23:10:06-07:00</published><updated>2017-07-08T23:10:06-07:00</updated><id>http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle/">&lt;p&gt;In my article &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;Smart contracts for the
+impatient&lt;/a&gt; I
+documented how to deploy a contract using Mist to the testnet Rinkeby.&lt;/p&gt;
+
+&lt;p&gt;While it is a good example for demonstration purposes, we’ll probably
+go crazy if we try to deploy a Ðapp or contract doing everything
+manually.&lt;/p&gt;
+
+&lt;p&gt;What if we could develop for Ethereum, just as if we were building yet
+another JavaScript application. What if we could:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Automatically test our contracts or Ðapps before deploying to a real network?&lt;/li&gt;
+  &lt;li&gt;Deploy contracts with a simple command?&lt;/li&gt;
+  &lt;li&gt;Write contracts in a modular way?&lt;/li&gt;
+  &lt;li&gt;Interact with our contracts through a CLI?&lt;/li&gt;
+  &lt;li&gt;Have automatic linting?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;truffle&quot;&gt;Truffle&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://truffleframework.com/docs/&quot;&gt;Truffle&lt;/a&gt; is a development
+framework for Ethereum, it not only offers all the things listed above
+but even more!&lt;/p&gt;
+
+&lt;p&gt;From their README, they describe themselves as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;YOUR ETHEREUM SWISS ARMY KNIFE&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For people familiar with JavaScript and Ember.js, we could say Truffle
+is the &lt;a href=&quot;https://ember-cli.com/&quot;&gt;ember-cli&lt;/a&gt; for Ethereum.&lt;/p&gt;
+
+&lt;p&gt;The goal of this article is to teach people how to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install Truffle.&lt;/li&gt;
+  &lt;li&gt;Use the Ethereum RPC client for testing and development.&lt;/li&gt;
+  &lt;li&gt;Familiarize with the basic concepts in Truffle.&lt;/li&gt;
+  &lt;li&gt;Write the “Hello World” contract including tests.&lt;/li&gt;
+  &lt;li&gt;Deploy the contract to Rinkeby.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Basic familiarity with JavaScript and Node.js is required, and we
+assume people is using macOS.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-truffle&quot;&gt;Installing Truffle&lt;/h2&gt;
+
+&lt;p&gt;We can install Truffle using &lt;code class=&quot;highlighter-rouge&quot;&gt;npm&lt;/code&gt;, from &lt;a href=&quot;http://truffleframework.com/docs/getting_started/installation&quot;&gt;their guide&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g truffle
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After running the command above, we should we able to do the following and see some kind of output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ truffle
+Truffle v3.2.5 - a development framework for Ethereum
+
+Usage: truffle &amp;lt;command&amp;gt; [options]
+
+Commands:
+  init      Initialize new Ethereum project with example contracts and
+            tests
+  compile   Compile contract source files
+  migrate   Run migrations to deploy contracts
+  deploy    (alias for migrate)
+  build     Execute build pipeline (if configu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;testrpc&quot;&gt;Testrpc&lt;/h2&gt;
+
+&lt;p&gt;In theory we could use Rinkeby for development, but relying on a real
+blockchain for development is not very efficient. We don’t want to use
+our test Ether or wait for transactions to complete. Also, since we
+don’t have control of such network, it would be very hard for us to
+write test in a deterministic way.&lt;/p&gt;
+
+&lt;p&gt;The Ethereum JavaScript community has an Ethereum RPC client for
+testing and development, which allow us to mock our interactions with
+a real network.&lt;/p&gt;
+
+&lt;p&gt;The name of the project is &lt;a href=&quot;https://github.com/ethereumjs/testrpc&quot;&gt;testrpc&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;testrpc is a Node.js based Ethereum client for testing and development. It uses ethereumjs to simulate full client behavior and make developing Ethereum applications much faster. It also includes all popular RPC functions and features (like events) and can be run deterministically to make development a breeze.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Since it’s published as an npm package, we can install it with the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g ethereumjs-testrpc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once &lt;code class=&quot;highlighter-rouge&quot;&gt;testrpc&lt;/code&gt; is installed, we can start the client by running &lt;code class=&quot;highlighter-rouge&quot;&gt;testrpc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ testrpc
+EthereumJS TestRPC v3.0.5
+
+Available Accounts
+==================
+(0) 0x05dd2f0e2c917d2f83770403359cab4b1645ab9c
+(1) 0xaefcaeeda04808db06abf62a29cfccc2892c48e3
+(2) 0xbd3d2750e62063ace2f6bc7157e4d8a81c36093b
+(3) 0x91c86d236cc301756effae9db74ce8cb3a3c6a1e
+(4) 0x1fed08900dd0420235dc9bb812483299f74200e2
+(5) 0xe42e9f89b2d96ab6dd4711da4ebee4d0f792fb1b
+(6) 0x4166f9a27a7303f3c820d85c0f1641315cfa0474
+(7) 0x51691ae53211fa46c4b1b99d42255e02905f400f
+(8) 0x8dbfdced435891e24e0fa4c54dde78ea843f94e2
+(9) 0xcbd1865983eabac38e3816cdc257bb4fcc65f9d0
+
+Private Keys
+==================
+(0) 8f2dbfaab1307655f2e5751e9f4ff997b5ce312b4b50b14cbd26cb71f89b5b0e
+(1) 2c8c794d7f82ccccdad471aa9d82f59c13396ec266c5cbc227bfe5a7df04f94f
+(2) 55d116cef11e807098f5dac5120b843b1535235241a044f7a0a50cefbd2e3b8e
+(3) 63ef474c8f686774d38f420af459ad32978757dc40c9c28fbdfc46aa161f5362
+(4) 5719fa65b2f360b778dff07ef7daad555cfee0b80988c8a5480a9241c63a5898
+(5) 0b73f66a37fb65dd6410c55ae0293899bf72ccc98b18766b5bc107bfac40f0d7
+(6) 46d745be848383573207615b213abde5c70ec078d2bf087de9de4e1b577368ee
+(7) d3b4a15fb0f13a77c34edd5e630bae7c4faf49eba81573a274fa2abe14db3759
+(8) fdfd64d0167d716bc743bdd1ddb45bb82a6d01fa6db02cebbb8d568dd57b91d3
+(9) 1ae6c6c0cbf4d380adef1a718bf2a2cd62a89212f60cf672a77aaeeb543c1a80
+
+HD Wallet
+==================
+Mnemonic:      audit can stock squeeze equip aerobic abuse access fringe grocery stone novel
+Base HD Path:  m/44'/60'/0'/0/{account_index}
+
+Listening on localhost:8545
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As a quick test, we can start &lt;code class=&quot;highlighter-rouge&quot;&gt;Mist&lt;/code&gt; using this client instead of geth and then we should see all the wallets listed above with some Ether.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Keep &lt;code class=&quot;highlighter-rouge&quot;&gt;testrpc&lt;/code&gt; running and now let’s start using Truffle.&lt;/p&gt;
+
+&lt;h2 id=&quot;starting-a-project&quot;&gt;Starting a project&lt;/h2&gt;
+
+&lt;p&gt;To create a new project do the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir hello-world
+$ cd hello-world
+$ truffle init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After creating the project, we’ll see a basic skeleton app, we can test that everything is working by running the default test:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ truffle test
+Using network 'development'.
+
+Compiling ./contracts/ConvertLib.sol...
+Compiling ./contracts/MetaCoin.sol...
+Compiling ./test/TestMetacoin.sol...
+Compiling truffle/Assert.sol...
+Compiling truffle/DeployedAddresses.sol...
+
+
+  TestMetacoin
+    ✓ testInitialBalanceUsingDeployedContract (63ms)
+    ✓ testInitialBalanceWithNewMetaCoin (60ms)
+
+  Contract: MetaCoin
+    ✓ should put 10000 MetaCoin in the first account (63ms)
+    ✓ should call a function that depends on a linked library (79ms)
+    ✓ should send coin correctly (173ms)
+
+
+  5 passing (840ms)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The command &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle init&lt;/code&gt; uses the following repo as default blueprint &lt;a href=&quot;https://github.com/trufflesuite/truffle-init-default&quot;&gt;https://github.com/trufflesuite/truffle-init-default&lt;/a&gt;, it includes an example contract and tests.&lt;/p&gt;
+
+&lt;p&gt;Since we are going to be writing our own contract and tests, we are going to remove some of the defaults:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm contracts/ConvertLib.sol contracts/MetaCoin.sol
+rm test/TestMetacoin.sol test/metacoin.js
+rm migrations/2_deploy_contracts.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;creating-contracts-with-truffle-and-testing&quot;&gt;Creating contracts with Truffle and testing&lt;/h2&gt;
+
+&lt;p&gt;To &lt;a href=&quot;http://truffleframework.com/docs/advanced/commands#create-contract&quot;&gt;create a new contract&lt;/a&gt;, run the command &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle create&lt;/code&gt;. It
+requires the type of item we want to create and the name.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;truffle create contract HelloWorld
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The name must be &lt;code class=&quot;highlighter-rouge&quot;&gt;CamelCased&lt;/code&gt;. After running the command, the file will be under &lt;code class=&quot;highlighter-rouge&quot;&gt;contracts/HelloWorld.sol&lt;/code&gt; with the following content:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;pragma&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// constructor&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Next, add the code for &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;the hello world contract&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;pragma&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//Begin: state variables&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;creator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lastCaller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//End: state variables&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;//Begin: constructor&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;cm&quot;&gt;/*
+      We can use the special variable `tx` which gives us information
+      about the current transaction.
+
+      `tx.origin` returns the sender of the transaction.
+      `tx.gasprice` returns how much we pay for the transaction
+    */&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;creator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gasprice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello world'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//End: constructor&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;//Begin: getters&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getLastCaller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lastCaller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getCreator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;creator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getTotalGas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//End: getters&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;//Being: setters&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;lastCaller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gasprice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//End: setters&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;migration&quot;&gt;Migration&lt;/h2&gt;
+
+&lt;p&gt;Once we have the code for the contract, we need to find a way to
+deploy it into the blockchain. Truffle has a primitive called
+migration, which can be used to compose and deploy contracts.&lt;/p&gt;
+
+&lt;p&gt;Create a migration called &lt;code class=&quot;highlighter-rouge&quot;&gt;deploy_hello_world&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ truffle create migration deploy_hello_world
+$ git st
+On branch master
+Untracked files:
+  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to include in what will be committed)
+
+	migrations/1499575148_deploy_hello_world.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Above we can see that a new file got created  (if you get a different
+result, it means the following PR has not been merged yet
+&lt;a href=&quot;https://github.com/trufflesuite/truffle-core/pull/13&quot;&gt;https://github.com/trufflesuite/truffle-core/pull/13&lt;/a&gt;, rename it so it look similar to the one above).&lt;/p&gt;
+
+&lt;p&gt;Next, update the code for the contract to deploy our &lt;code class=&quot;highlighter-rouge&quot;&gt;HelloWorld&lt;/code&gt; example, to do so we’ll require the contract and then use the &lt;a href=&quot;http://truffleframework.com/docs/getting_started/migrations#deployer&quot;&gt;deployer&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// We use artifacts.require to tell Truffle which artifacts we'll be&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// interacting with.&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// In the example below, we are requiring the contract HelloWorld&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// which returns an abstraction that we can use for the deployment.&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;artifacts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'HelloWorld'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;deployer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;deployer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Read more about artifacts here http://truffleframework.com/docs/getting_started/migrations#artifacts-require-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We should be able to deploy the contract to the test blockchain
+running &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle migrate --reset&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;truffle migrate --reset
+Compiling ./contracts/HelloWorld.sol...
+Compiling ./contracts/Migrations.sol...
+Writing artifacts to ./build/contracts
+
+Using network &lt;span class=&quot;s1&quot;&gt;'development'&lt;/span&gt;.
+
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  Migrations: 0x665311133c3f2ca24c633da656ded48619fb3239
+Saving successful migration to network...
+Saving artifacts...
+Running migration: 1499575148_deploy_hello_world.js
+  Deploying HelloWorld...
+  HelloWorld: 0xba06f7905d9c4584be914365ae1ce44688e50504
+Saving successful migration to network...
+Saving artifacts...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If we look at the log from &lt;code class=&quot;highlighter-rouge&quot;&gt;testrpc&lt;/code&gt; we’ll see a register of the
+transactions:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;eth_sendTransaction
+  Transaction: 0x11316dc23e638f8d9aaae06fd0751a209f94ed2dd1c42307cf25c6c01198f0df
+  Contract created: 0xba06f7905d9c4584be914365ae1ce44688e50504
+  Gas usage: 0x05a8a4
+  Block Number: 0x07
+  Block Time: Sat Jul 08 2017 22:21:52 GMT-0700 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;PDT&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+eth_sendTransaction
+
+  Transaction: 0x3b0c127d8a8ffe1465091a4208204b97016991f4396d19e40edcbd8323988a7a
+  Gas usage: 0x696e
+  Block Number: 0x08
+  Block Time: Sat Jul 08 2017 22:21:53 GMT-0700 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;PDT&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We have successfully deployed a contract using Truffle to &lt;code class=&quot;highlighter-rouge&quot;&gt;testrpc&lt;/code&gt;
+but we haven’t written any test yet. That what we’ll do next.&lt;/p&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;p&gt;Truffle has built-in support for testing. We’ll write some test for
+the methods defined in our contract.&lt;/p&gt;
+
+&lt;p&gt;To create the test we need to run the command &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle create test HelloWorld&lt;/code&gt; and then put the following content in &lt;code class=&quot;highlighter-rouge&quot;&gt;test/hello_world.js&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const HelloWorld = artifacts.require('HelloWorld')
+
+contract('HelloWorld', function(accounts) {
+  it('sets the first account as the contract creator', async function() {
+    // This give a truffle abstraction which allow us to interact with our contracts.
+    const contract = await HelloWorld.deployed()
+
+    // Once we have the &quot;contract&quot; we can make calls or transations and then assert.
+    // The following is making a call to get the creator.
+    const creator = await contract.getCreator()
+
+    assert.equal(creator, accounts[0], 'main account is the creator')
+  })
+  it('has hello world as initial message ', async function() {
+    const contract = await HelloWorld.deployed()
+    const message = await contract.getMessage()
+
+    assert.equal(message, 'hello world', 'message is hello world')
+  })
+  it('changes the message via setMessage', async function() {
+    const contract = await HelloWorld.deployed()
+
+    // Execute a transaction and change the state of the contract.
+    await contract.setMessage('hola mundo')
+
+    // Get the new state.
+    const message = await contract.getMessage()
+
+    assert.equal(message, 'hola mundo', 'message is hola mundo')
+  })
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once we have the test file setup, we can run our tests with the command
+&lt;code class=&quot;highlighter-rouge&quot;&gt;truffle test&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;truffle &lt;span class=&quot;nb&quot;&gt;test
+&lt;/span&gt;Compiling ./contracts/HelloWorld.sol...
+Compiling ./contracts/Migrations.sol...
+
+
+  Contract: HelloWorld
+    ✓ sets the first account as the contract creator &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;47ms&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    ✓ has hello world as initial message  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;44ms&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    ✓ changes the message via setMessage &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;80ms&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+
+  3 passing &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;197ms&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
+
+&lt;p&gt;In this article, we covered how to create, test and deploy a contract
+using Truffle and testrpc. In a different article, we’ll see how to
+add networks and deploy to Rinkeby. &lt;a href=&quot;http://twitter.com/abuiles&quot;&gt;Follow me on twitter (@abuiles)&lt;/a&gt; or subscribe to my feed to get
+updates on my post.&lt;/p&gt;
+
+&lt;p&gt;You can find the code and steps for this article in github &lt;a href=&quot;https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle&quot;&gt;https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally, we talked superficially about Truffle’s contracts, migrations
+and tests. To learn more about it check their
+&lt;a href=&quot;http://truffleframework.com/docs/getting_started/installation&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In my article Smart contracts for the impatient I documented how to deploy a contract using Mist to the testnet Rinkeby.</summary></entry><entry><title type="html">Smart contracts for the impatient</title><link href="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart contracts for the impatient" /><published>2017-06-13T06:10:40-07:00</published><updated>2017-06-13T06:10:40-07:00</updated><id>http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;I’ve been learning about Ethereum and smart contracts, and one of the
 biggest issues I’ve found is the lack of documentation to do some
 basic things.&lt;/p&gt;
 
@@ -836,33 +1245,4 @@ ember-browserify just doing &lt;code class=&quot;highlighter-rouge&quot;&gt;impo
 &lt;p&gt;And that’s it, we are now consuming MomentJS via browserify just as if
 it was other module in our application.&lt;/p&gt;
 
-&lt;p&gt;**&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Learning Ember.js? Get my book or enroll in my upcoming workshops.&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">On part 1 of Working With JavaScript Plugins in ember-cli , we explore how to work with JavaScript plugins which are still distributed as globas and came up with a pattern for wrapping up globals while using the module system.</summary></entry><entry><title type="html">Announcing my Ember book: ember-cli-101</title><link href="http://localhost:4000/blog/2014/11/16/announcing-my-ember-book-ember-cli-101/" rel="alternate" type="text/html" title="Announcing my Ember book: ember-cli-101" /><published>2014-11-16T08:48:22-08:00</published><updated>2014-11-16T08:48:22-08:00</updated><id>http://localhost:4000/blog/2014/11/16/announcing-my-ember-book-ember-cli-101</id><content type="html" xml:base="http://localhost:4000/blog/2014/11/16/announcing-my-ember-book-ember-cli-101/">&lt;p&gt;In June I was traveling to Patagonia and had problems sleeping in the
-plane. I opened notes in my iPhone and started to write what became
-the first 2 chapters of an Ember.js book with ember-cli.&lt;/p&gt;
-
-&lt;p&gt;A lot of traveling came after that and then after finally settling
-back in my home country, I decided it was time to continue. I started
-to talk about it to friends and putting it on Twitter and Reddit but I
-never did an official release until this day.&lt;/p&gt;
-
-&lt;p&gt;During the last months I’ve been working on &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;ember-cli-101&lt;/a&gt; which is a
-book to teach people Ember, we build a real world application from
-scratch to deployment, covering the 3 main components of the Ember
-ecosystem: Ember, Ember-Data and ember-cli.&lt;/p&gt;
-
-&lt;p&gt;Things are moving fast in Ember world and that’s why I have decided to
-make this a &lt;strong&gt;living book&lt;/strong&gt;, I’ll keep pushing updates for new releases,
-now with 2.0 coming, I’ll start to edit the book so people write their
-applications with 2.0 in mind.&lt;/p&gt;
-
-&lt;p&gt;I want to thank all of you who bought my book trusting I would finish
-it and the whole Ember community for being supportive during this
-time.&lt;/p&gt;
-
-&lt;h2 id=&quot;book--online-workshop&quot;&gt;Book + Online workshop&lt;/h2&gt;
-
-&lt;p&gt;As part of the book I’m also doing an online workshop where I
-personally give guidance to people reading the book + online sessions
-of Q&amp;amp;A, I plan to do 1 batch monthly, the first starts tomorrow, you
-can enroll buying the workshop package in
-&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;https://leanpub.com/ember-cli-101&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In June I was traveling to Patagonia and had problems sleeping in the plane. I opened notes in my iPhone and started to write what became the first 2 chapters of an Ember.js book with ember-cli.</summary></entry></feed>
+&lt;p&gt;**&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Learning Ember.js? Get my book or enroll in my upcoming workshops.&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">On part 1 of Working With JavaScript Plugins in ember-cli , we explore how to work with JavaScript plugins which are still distributed as globas and came up with a pattern for wrapping up globals while using the module system.</summary></entry></feed>
