@@ -1,9 +1,9 @@
 ## Me
-Hola, my name is Adolfo and you can currently find me in San Francisco where I work as an engineering manager at [Envoy](https://envoy.com).
+Hola, my name is Adolfo. I'm from Colombia but today you can find me in San Francisco where I work as an engineering manager at [Envoy - we are hiring!](https://envoy.com/jobs/)
 
 I spend most of my time using technology to bring ideas to life.
 
-I do a bunch of things in my free time, some common themes are: riding motorcycles, traveling, reading, running or working on side-projects.
+I do a bunch of things in my free time, some common themes are: riding motorcycles, traveling, reading, writing, coding, running or working on side-projects.
 
 I like to help people, teach and to always be learning.
 
@@ -31,6 +31,6 @@ As I said, I like to help people. Are you looking to:
 - Beta test your idea.
 - Lose weight.
 
-Send me an [email](mailto:builes.adolfo@gmail.com)
+[Send me an email](mailto:builes.adolfo@gmail.com)
 
 Not in the list? Ping me and and let's see if I can help you.
