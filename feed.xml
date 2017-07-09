@@ -1,5 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-09T11:49:27-07:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
-</subtitle><entry><title type="html">Writing Smart Contracts With Truffle</title><link href="http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle/" rel="alternate" type="text/html" title="Writing Smart Contracts With Truffle" /><published>2017-07-08T23:10:06-07:00</published><updated>2017-07-08T23:10:06-07:00</updated><id>http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle/">&lt;p&gt;In my article &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;Smart contracts for the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-09T14:39:26-07:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
+</subtitle><entry><title type="html">Deploying Truffle Contracts to Rinkeby</title><link href="http://localhost:4000/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/" rel="alternate" type="text/html" title="Deploying Truffle Contracts to Rinkeby" /><published>2017-07-09T11:59:17-07:00</published><updated>2017-07-09T11:59:17-07:00</updated><id>http://localhost:4000/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/">&lt;p&gt;In &lt;a href=&quot;blog/2017/07/08/writing-smart-contracts-with-truffle/&quot;&gt;writing smart contracts with
+Truffle&lt;/a&gt; I
+covered how to get started with Truffle and how to create, test and
+deploy contracts using an in-memory representation of the blockchain.&lt;/p&gt;
+
+&lt;p&gt;The goal of this article is to pick up where we left in that article
+and deploy it to the testnet Rinkeby. To do so we need to perform the following steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; with Rinkeby.&lt;/li&gt;
+  &lt;li&gt;Have a wallet in Rinkeby.&lt;/li&gt;
+  &lt;li&gt;Configure Truffle to use Rinkeby.&lt;/li&gt;
+  &lt;li&gt;Deploy code.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;running-rinkeby&quot;&gt;Running Rinkeby&lt;/h2&gt;
+
+&lt;p&gt;First, start &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; with Rinkeby and make sure that the correct APIs
+for Truffle are enabled.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you don’t have &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; or Rinkeby setup, read my article &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;smart
+contracts for the
+impatient&lt;/a&gt;, which
+has instructions on how to do so.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-your-account-address&quot;&gt;Get your account address&lt;/h2&gt;
+
+&lt;p&gt;Assuming you have an account, open Mist and get the address. For this example I’ll use my main test account &lt;code class=&quot;highlighter-rouge&quot;&gt;0x0085f8e72391Ce4BB5ce47541C846d059399fA6c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/truffle-rinkeby-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Alert! If you are feeling generous and want to buy me beer, don’t send Ether to that account, you can use this one on the real net &lt;code class=&quot;highlighter-rouge&quot;&gt;0x18DB73dEC9170DdcCf0B7b099029160258E1198c&lt;/code&gt; ;)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;configure-truffle&quot;&gt;Configure Truffle&lt;/h2&gt;
+
+&lt;p&gt;Next, we need to add Rinkeby to our truffle config file.  If we open &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle.js&lt;/code&gt; in our contract code we’ll see something like:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;networks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;development&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8545&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;network_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Match any network id&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s add Rinkeby to the list of networks:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;networks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;development&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8545&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;network_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Match any network id&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;rinkeby&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Connect to geth on the specified&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8545&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0x0085f8e72391Ce4BB5ce47541C846d059399fA6c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// default address to use for any transaction Truffle makes during migrations&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;network_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;gas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4612388&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Gas limit used for deploys&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;deploying-to-rinkeby&quot;&gt;Deploying to Rinkeby&lt;/h2&gt;
+
+&lt;p&gt;Once we have added Rinkeby to the list of networks, we can deploy our
+contract by running the command &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle migrate --network rinkeby&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before running the command, we need to unlock our test account so we
+can interact with it via Truffle. To do so, stop &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; and start with
+the following parameters (replace the account address with yours):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal --unlock=&quot;0x0085f8e72391Ce4BB5ce47541C846d059399fA6c&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;With &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; configured, let’s run the migrate command:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;truffle migrate --network rinkeby
+Using network &lt;span class=&quot;s1&quot;&gt;'rinkeby'&lt;/span&gt;.
+
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  Migrations: 0x7bb345184c660bfadca4ba8c766875cd02c4556f
+Saving successful migration to network...
+Saving artifacts...
+Running migration: 1499575148_deploy_hello_world.js
+  Deploying HelloWorld...
+  HelloWorld: 0xbfbbd01ae2ea4bfc777f6ea3a2ad4843c7a104fb
+Saving successful migration to network...
+Saving artifacts...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We have deploy successfully a contract to Rinkeby using Truffle! We
+can go to etherscan and see that our contract is there. The following
+is the information for the contract aboove &lt;a href=&quot;https://rinkeby.etherscan.io/address/0xbfbbd01ae2ea4bfc777f6ea3a2ad4843c7a104fb&quot;&gt;https://rinkeby.etherscan.io/address/0xbfbbd01ae2ea4bfc777f6ea3a2ad4843c7a104fb&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If we look at the artifacts after the deployment, we’ll see the abi for each of the contracts and the contract address. The &lt;a href=&quot;https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle/blob/master/build/contracts/HelloWorld.json#L80&quot;&gt;following is the artifacts for the HelloWorld contract&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
+
+&lt;p&gt;In this article, we picked up on the code from &lt;a href=&quot;blog/2017/07/08/writing-smart-contracts-with-truffle/&quot;&gt;writing smart
+contracts with
+Truffle&lt;/a&gt; and
+manage to deploy our contract to the testnet Rinkeby.&lt;/p&gt;
+
+&lt;p&gt;In a future article, I’ll cover how to interact with your contracts
+using Truffle REPL mode. Follow me on twitter
+(&lt;a href=&quot;http://twitter.com/abuiles&quot;&gt;@abuiles&lt;/a&gt;) or subscribe to my feed to get
+updates.&lt;/p&gt;
+
+&lt;p&gt;You can find the code and steps for this article in GitHub https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle.&lt;/p&gt;</content><author><name></name></author><summary type="html">In writing smart contracts with Truffle I covered how to get started with Truffle and how to create, test and deploy contracts using an in-memory representation of the blockchain.</summary></entry><entry><title type="html">Writing Smart Contracts With Truffle</title><link href="http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle/" rel="alternate" type="text/html" title="Writing Smart Contracts With Truffle" /><published>2017-07-08T23:10:06-07:00</published><updated>2017-07-08T23:10:06-07:00</updated><id>http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle/">&lt;p&gt;In my article &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;Smart contracts for the
 impatient&lt;/a&gt; I
 documented how to deploy a contract using Mist to the testnet Rinkeby.&lt;/p&gt;
 
@@ -44,7 +161,7 @@ is the &lt;a href=&quot;https://ember-cli.com/&quot;&gt;ember-cli&lt;/a&gt; for 
 &lt;/ul&gt;
 
 &lt;p&gt;Basic familiarity with JavaScript and Node.js is required, and we
-assume people is using macOS.&lt;/p&gt;
+assume people is using macOS and Node.js higher or equal to 7.6.&lt;/p&gt;
 
 &lt;h2 id=&quot;installing-truffle&quot;&gt;Installing Truffle&lt;/h2&gt;
 
@@ -400,15 +517,23 @@ Compiling ./contracts/Migrations.sol...
 &lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
 
 &lt;p&gt;In this article, we covered how to create, test and deploy a contract
-using Truffle and testrpc. In a different article, we’ll see how to
-add networks and deploy to Rinkeby. &lt;a href=&quot;http://twitter.com/abuiles&quot;&gt;Follow me on twitter (@abuiles)&lt;/a&gt; or subscribe to my feed to get
-updates on my post.&lt;/p&gt;
+using Truffle and testrpc. In &lt;a href=&quot;/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby&quot;&gt;Deploying Truffle contracts to
+Rinkeby&lt;/a&gt;,
+we’ll see how to add networks and deploy to Rinkeby. &lt;a href=&quot;http://twitter.com/abuiles&quot;&gt;Follow me on
+twitter (@abuiles)&lt;/a&gt; or subscribe to my
+feed to get updates on my post.&lt;/p&gt;
 
-&lt;p&gt;You can find the code and steps for this article in github &lt;a href=&quot;https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle&quot;&gt;https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can find the code and steps for this article in GitHub &lt;a href=&quot;https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle&quot;&gt;https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Finally, we talked superficially about Truffle’s contracts, migrations
 and tests. To learn more about it check their
-&lt;a href=&quot;http://truffleframework.com/docs/getting_started/installation&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In my article Smart contracts for the impatient I documented how to deploy a contract using Mist to the testnet Rinkeby.</summary></entry><entry><title type="html">Smart contracts for the impatient</title><link href="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart contracts for the impatient" /><published>2017-06-13T06:10:40-07:00</published><updated>2017-06-13T06:10:40-07:00</updated><id>http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;I’ve been learning about Ethereum and smart contracts, and one of the
+&lt;a href=&quot;http://truffleframework.com/docs/getting_started/installation&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In my article Smart contracts for the impatient I documented how to deploy a contract using Mist to the testnet Rinkeby.</summary></entry><entry><title type="html">Smart Contracts For The Impatient</title><link href="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart Contracts For The Impatient" /><published>2017-06-13T00:00:00-07:00</published><updated>2017-06-13T00:00:00-07:00</updated><id>http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;–
+layout: post
+title: “Smart contracts for the impatient”
+date: 2017-06-13T06:10:40-07:00
+categories: ethereum smart-contracts
+—
+I’ve been learning about Ethereum and smart contracts, and one of the
 biggest issues I’ve found is the lack of documentation to do some
 basic things.&lt;/p&gt;
 
@@ -418,7 +543,7 @@ of resembles our first program ever: “Hello World”.&lt;/p&gt;
 &lt;p&gt;I’ll show you how to:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Run Mist using the testnet &lt;a href=&quot;https://www.rinkeby.io/&quot;&gt;rinkeby&lt;/a&gt; and get free ether for testing.&lt;/li&gt;
+  &lt;li&gt;Run Mist using the testnet &lt;a href=&quot;https://www.rinkeby.io/&quot;&gt;Rinkeby&lt;/a&gt; and get free ether for testing.&lt;/li&gt;
   &lt;li&gt;Deploy a contract and interact with it using Mist.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -440,16 +565,16 @@ of resembles our first program ever: “Hello World”.&lt;/p&gt;
 
 &lt;p&gt;Since we don’t want to run on the default testnet or main network, we
 need to install geth, which is a command line interface for running an
-Ethereum node. It will allow us to interact with rinkeby which is a
+Ethereum node. It will allow us to interact with Rinkeby which is a
 different testnet.&lt;/p&gt;
 
 &lt;p&gt;Follow the instructions here &lt;a href=&quot;https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum&quot;&gt;https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Once we have Mist and geth installed, let’s get rinkeby running.&lt;/p&gt;
+&lt;p&gt;Once we have Mist and geth installed, let’s get Rinkeby running.&lt;/p&gt;
 
-&lt;h2 id=&quot;running-mist-with-rinkeby&quot;&gt;Running Mist with rinkeby&lt;/h2&gt;
+&lt;h2 id=&quot;running-mist-with-rinkeby&quot;&gt;Running Mist with Rinkeby&lt;/h2&gt;
 
-&lt;p&gt;Since Mist doesn’t have out of the box support for rinkeby. We need
+&lt;p&gt;Since Mist doesn’t have out of the box support for Rinkeby. We need
 to connect to it using geth and then tell Mist to use that connection.&lt;/p&gt;
 
 &lt;p&gt;Let’s run in the console the following command:&lt;/p&gt;
@@ -458,7 +583,7 @@ to connect to it using geth and then tell Mist to use that connection.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;It starts a new Ethereum node connected to rinkeby.&lt;/p&gt;
+&lt;p&gt;It starts a new Ethereum node connected to Rinkeby.&lt;/p&gt;
 
 &lt;p&gt;Let’s open Mist and tell it to connect to the running node. It
 will show you an alert saying the connection is insecure, but since
@@ -468,16 +593,16 @@ this is a testnet, we can ignore it.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;During the first run, it will take some time while the rinkeby
+&lt;p&gt;During the first run, it will take some time while the Rinkeby
 blockchain is downloaded, go for a walk and then come back.&lt;/p&gt;
 
-&lt;h2 id=&quot;creating-a-wallet-in-rinkeby&quot;&gt;Creating a wallet in rinkeby&lt;/h2&gt;
+&lt;h2 id=&quot;creating-a-wallet-in-rinkeby&quot;&gt;Creating a wallet in Rinkeby&lt;/h2&gt;
 
 &lt;p&gt;After Mist has started, we’ll see an interface similar to the following:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/wallet.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;We can then create our first account in rinkeby by clicking the “Add account” button.&lt;/p&gt;
+&lt;p&gt;We can then create our first account in Rinkeby by clicking the “Add account” button.&lt;/p&gt;
 
 &lt;iframe width=&quot;100%&quot; height=&quot;400px&quot; src=&quot;https://www.youtube.com/embed/5fGRdbuQReo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
@@ -519,7 +644,7 @@ under normal circumstances we should see a success message.&lt;/p&gt;
 
 &lt;h2 id=&quot;hello-world&quot;&gt;Hello world&lt;/h2&gt;
 
-&lt;p&gt;With rinkeby configured and ether to spend, let’s deploy our hello
+&lt;p&gt;With Rinkeby configured and ether to spend, let’s deploy our hello
 world contract.&lt;/p&gt;
 
 &lt;p&gt;The contract is going to be called HelloWorld.&lt;/p&gt;
@@ -637,7 +762,7 @@ call. If we select &lt;code class=&quot;highlighter-rouge&quot;&gt;setMessage&lt
 
 &lt;p&gt;&lt;img src=&quot;/assets/contract-transaction.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;We can see all the activity for a contract by copying its address and then going to &lt;a href=&quot;https://rinkeby.etherscan.io&quot;&gt;rinkeby&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We can see all the activity for a contract by copying its address and then going to &lt;a href=&quot;https://rinkeby.etherscan.io&quot;&gt;Rinkeby&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The following are the transactions for my hello world contract: &lt;a href=&quot;https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab&quot;&gt;https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab&lt;/a&gt;&lt;/p&gt;
 
@@ -654,7 +779,7 @@ twitter&lt;/a&gt;.&lt;/p&gt;
 use &lt;a href=&quot;http://truffleframework.com/&quot;&gt;Truffle&lt;/a&gt; to stay sane while doing
 so.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Found a typo? Please let me &lt;a href=&quot;mailto:builes.adolfo@gmail.com&quot;&gt;know&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been learning about Ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.</summary></entry><entry><title type="html">Upgrading mirage with JSCodeshift</title><link href="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/" rel="alternate" type="text/html" title="Upgrading mirage with JSCodeshift" /><published>2016-05-27T07:24:25-07:00</published><updated>2016-05-27T07:24:25-07:00</updated><id>http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift</id><content type="html" xml:base="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/">&lt;p&gt;If you have been using the beta release of mirage, chances are that
+&lt;p&gt;&lt;strong&gt;Found a typo? Please let me &lt;a href=&quot;mailto:builes.adolfo@gmail.com&quot;&gt;know&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">– layout: post title: “Smart contracts for the impatient” date: 2017-06-13T06:10:40-07:00 categories: ethereum smart-contracts — I’ve been learning about Ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.</summary></entry><entry><title type="html">Upgrading mirage with JSCodeshift</title><link href="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/" rel="alternate" type="text/html" title="Upgrading mirage with JSCodeshift" /><published>2016-05-27T07:24:25-07:00</published><updated>2016-05-27T07:24:25-07:00</updated><id>http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift</id><content type="html" xml:base="http://localhost:4000/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/">&lt;p&gt;If you have been using the beta release of mirage, chances are that
 you haven’t made the jump from beta.7 to beta.9 because some of the
 breaking deprecations.&lt;/p&gt;
 
@@ -1176,73 +1301,4 @@ store! They were only marked as private and used internally by &lt;code class=&q
 be annoying for you, but on the other side this is a step more towards
 1.0 and having a better API,so, update your finds!&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Getting started with Ember? I’m the author of a living book on Ember, learn Ember and ember-cli&lt;/a&gt; with &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;ember-cli-101&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">A couple of months ago I wrote a post about store.find ( Understading Ember-Data Store#find), in that post I covered the different scenarios to use it and how it would behave depending on the parameters.</summary></entry><entry><title type="html">Working With JavaScript Plugins in Ember-cli: Part 3</title><link href="http://localhost:4000/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/" rel="alternate" type="text/html" title="Working With JavaScript Plugins in Ember-cli: Part 3" /><published>2014-12-28T06:17:46-08:00</published><updated>2014-12-28T06:17:46-08:00</updated><id>http://localhost:4000/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3</id><content type="html" xml:base="http://localhost:4000/blog/2014/12/28/working-with-javascript-plugins-in-ember-cli-part-3/">&lt;p&gt;On &lt;a href=&quot;/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/&quot;&gt;part 1 of Working With JavaScript Plugins in
-ember-cli&lt;/a&gt;
-, we explore how to work with JavaScript plugins which are still
-distributed as globas and came up with a pattern for wrapping up
-globals while using the module system.&lt;/p&gt;
-
-&lt;p&gt;On &lt;a href=&quot;/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/&quot;&gt;part 2&lt;/a&gt;
-we explored how to work with libraries including a a named AMD
-distribution via &lt;code class=&quot;highlighter-rouge&quot;&gt;app.import&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;In this article, we’ll explore how to work with libraries via npm and
-browserify.&lt;/p&gt;
-
-&lt;h2 id=&quot;ember-browserify&quot;&gt;ember-browserify&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://browserify.org/&quot;&gt;Browserify&lt;/a&gt; is a Node library which allows us
-to consume other Node libraries in the Browser using CommonJS (which
-is Node’s module system), what this means is that we can install
-libraries like MomentJS using npm and then consume them in the browser
-via browserify. But wait, to use Browserify we actually need to
-install the library and create a “bundle” with our
-dependencies, normally we’ll run something like &lt;code class=&quot;highlighter-rouge&quot;&gt;browserify main.js -o
-bundle.js&lt;/code&gt; and then use &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle.js&lt;/code&gt; via a script tag &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;script
-src=&quot;bundle.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;As we can imagine this can get tricky and hard to manage in our
-ember-cli application, but thanks to
-&lt;a href=&quot;https://github.com/ef4&quot;&gt;Edward Faulkner&lt;/a&gt; there is addon which allow
-us to consume libraries from npm with browserify without needing us to
-worry about the bundling process, it is called &lt;a href=&quot;https://github.com/ef4/ember-browserify&quot;&gt;ember-browserify&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;using-ember-browserify&quot;&gt;Using ember-browserify&lt;/h3&gt;
-
-&lt;p&gt;First we need to install the addon, which we can do running &lt;code class=&quot;highlighter-rouge&quot;&gt;ember
-install&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ember install:addon ember-browserify
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Once the addon has been installed, we are going to use it to consume
-MomentJS from npm in our &lt;code class=&quot;highlighter-rouge&quot;&gt;data-helpers&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;p&gt;Before doing that, let’s make sure we have removed &lt;code class=&quot;highlighter-rouge&quot;&gt;moment&lt;/code&gt; from our
-&lt;code class=&quot;highlighter-rouge&quot;&gt;bower.json&lt;/code&gt; and also that we have removed
-&lt;code class=&quot;highlighter-rouge&quot;&gt;app.import('bower_components/moment/moment.js');&lt;/code&gt; from the
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Brocfile&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Next, let’s install moment via npm, which we can do with &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install
-moment --save-dev&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once it has been installed we can consume it from npm thanks to
-ember-browserify just doing &lt;code class=&quot;highlighter-rouge&quot;&gt;import moment from 'npm:moment';&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let’s use it in our &lt;code class=&quot;highlighter-rouge&quot;&gt;date-helpers&lt;/code&gt; so &lt;code class=&quot;highlighter-rouge&quot;&gt;formatDate&lt;/code&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;moment&lt;/code&gt;.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'npm:moment'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formatDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;moment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;formatDate&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;And that’s it, we are now consuming MomentJS via browserify just as if
-it was other module in our application.&lt;/p&gt;
-
-&lt;p&gt;**&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Learning Ember.js? Get my book or enroll in my upcoming workshops.&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">On part 1 of Working With JavaScript Plugins in ember-cli , we explore how to work with JavaScript plugins which are still distributed as globas and came up with a pattern for wrapping up globals while using the module system.</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Getting started with Ember? I’m the author of a living book on Ember, learn Ember and ember-cli&lt;/a&gt; with &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;ember-cli-101&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">A couple of months ago I wrote a post about store.find ( Understading Ember-Data Store#find), in that post I covered the different scenarios to use it and how it would behave depending on the parameters.</summary></entry></feed>
