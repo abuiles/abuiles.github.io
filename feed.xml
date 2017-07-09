@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-09T08:28:14-07:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-09T11:49:27-07:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
 </subtitle><entry><title type="html">Writing Smart Contracts With Truffle</title><link href="http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle/" rel="alternate" type="text/html" title="Writing Smart Contracts With Truffle" /><published>2017-07-08T23:10:06-07:00</published><updated>2017-07-08T23:10:06-07:00</updated><id>http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/08/writing-smart-contracts-with-truffle/">&lt;p&gt;In my article &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;Smart contracts for the
 impatient&lt;/a&gt; I
 documented how to deploy a contract using Mist to the testnet Rinkeby.&lt;/p&gt;
@@ -338,7 +338,7 @@ eth_sendTransaction
   Block Time: Sat Jul 08 2017 22:21:53 GMT-0700 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;PDT&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;We have successfully deployed a contract using Truffle to &lt;code class=&quot;highlighter-rouge&quot;&gt;testrpc&lt;/code&gt;
-but we haven’t written any test yet. That what we’ll do next.&lt;/p&gt;
+but we haven’t written any test yet. That’s what we’ll do next.&lt;/p&gt;
 
 &lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
 
