@@ -2,6 +2,7 @@
 layout: post
 title: "Writing Smart Contracts With Truffle"
 date: 2017-07-08T23:10:06-07:00
+categories: ethereum smart-contracts truffle
 ---
 In my article [Smart contracts for the
 impatient](/blog/2017/06/13/smart-contracts-for-the-impatient/) I
@@ -42,7 +43,7 @@ The goal of this article is to teach people how to:
 - Deploy the contract to Rinkeby.
 
 Basic familiarity with JavaScript and Node.js is required, and we
-assume people is using macOS.
+assume people is using macOS and Node.js higher or equal to 7.6.
 
 ## Installing Truffle
 
@@ -408,11 +409,13 @@ Compiling ./contracts/Migrations.sol...
 ## Wrapping up
 
 In this article, we covered how to create, test and deploy a contract
-using Truffle and testrpc. In a different article, we'll see how to
-add networks and deploy to Rinkeby. [Follow me on twitter (@abuiles)](http://twitter.com/abuiles) or subscribe to my feed to get
-updates on my post.
+using Truffle and testrpc. In [Deploying Truffle contracts to
+Rinkeby](/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby),
+we'll see how to add networks and deploy to Rinkeby. [Follow me on
+twitter (@abuiles)](http://twitter.com/abuiles) or subscribe to my
+feed to get updates on my post.
 
-You can find the code and steps for this article in github [https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle](https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle).
+You can find the code and steps for this article in GitHub [https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle](https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle).
 
 Finally, we talked superficially about Truffle's contracts, migrations
 and tests. To learn more about it check their

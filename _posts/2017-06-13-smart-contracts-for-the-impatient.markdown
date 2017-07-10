@@ -1,7 +1,8 @@
----
+--
 layout: post
 title: "Smart contracts for the impatient"
 date: 2017-06-13T06:10:40-07:00
+categories: ethereum smart-contracts
 ---
 I've been learning about Ethereum and smart contracts, and one of the
 biggest issues I've found is the lack of documentation to do some
@@ -12,7 +13,7 @@ of resembles our first program ever: "Hello World".
 
 I'll show you how to:
 
-- Run Mist using the testnet [rinkeby](https://www.rinkeby.io/) and get free ether for testing.
+- Run Mist using the testnet [Rinkeby](https://www.rinkeby.io/) and get free ether for testing.
 - Deploy a contract and interact with it using Mist.
 
 For easiness, I'll assume people is using macOS.
@@ -31,16 +32,16 @@ Once it is installed, don't bother yet about setting a wallet.
 
 Since we don't want to run on the default testnet or main network, we
 need to install geth, which is a command line interface for running an
-Ethereum node. It will allow us to interact with rinkeby which is a
+Ethereum node. It will allow us to interact with Rinkeby which is a
 different testnet.
 
 Follow the instructions here [https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum](https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum).
 
-Once we have Mist and geth installed, let's get rinkeby running.
+Once we have Mist and geth installed, let's get Rinkeby running.
 
-## Running Mist with rinkeby
+## Running Mist with Rinkeby
 
-Since Mist doesn't have out of the box support for rinkeby. We need
+Since Mist doesn't have out of the box support for Rinkeby. We need
 to connect to it using geth and then tell Mist to use that connection.
 
 Let's run in the console the following command:
@@ -49,7 +50,7 @@ Let's run in the console the following command:
 geth --rinkeby --rpc console --rpcapi db,eth,net,web3,personal
 ```
 
-It starts a new Ethereum node connected to rinkeby.
+It starts a new Ethereum node connected to Rinkeby.
 
 Let's open Mist and tell it to connect to the running node. It
 will show you an alert saying the connection is insecure, but since
@@ -60,16 +61,16 @@ this is a testnet, we can ignore it.
 /Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
 ```
 
-During the first run, it will take some time while the rinkeby
+During the first run, it will take some time while the Rinkeby
 blockchain is downloaded, go for a walk and then come back.
 
-## Creating a wallet in rinkeby
+## Creating a wallet in Rinkeby
 
 After Mist has started, we'll see an interface similar to the following:
 
 ![](/assets/wallet.png)
 
-We can then create our first account in rinkeby by clicking the "Add account" button.
+We can then create our first account in Rinkeby by clicking the "Add account" button.
 
 <iframe width="100%" height="400px" src="https://www.youtube.com/embed/5fGRdbuQReo" frameborder="0" allowfullscreen></iframe>
 
@@ -105,7 +106,7 @@ We should see the requested ether in the wallet balance.
 
 ## Hello world
 
-With rinkeby configured and ether to spend, let's deploy our hello
+With Rinkeby configured and ether to spend, let's deploy our hello
 world contract.
 
 The contract is going to be called HelloWorld.
@@ -217,7 +218,7 @@ call. If we select `setMessage` it will ask us for the message.
 
 ![](/assets/contract-transaction.gif)
 
-We can see all the activity for a contract by copying its address and then going to [rinkeby](https://rinkeby.etherscan.io).
+We can see all the activity for a contract by copying its address and then going to [Rinkeby](https://rinkeby.etherscan.io).
 
 The following are the transactions for my hello world contract: [https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab](https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab)
 
