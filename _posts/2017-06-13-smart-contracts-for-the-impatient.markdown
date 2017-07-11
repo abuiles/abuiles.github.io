@@ -1,9 +1,10 @@
---
+---
 layout: post
 title: "Smart contracts for the impatient"
 date: 2017-06-13T06:10:40-07:00
 categories: ethereum smart-contracts
 ---
+
 I've been learning about Ethereum and smart contracts, and one of the
 biggest issues I've found is the lack of documentation to do some
 basic things.
