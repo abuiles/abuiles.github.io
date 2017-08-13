@@ -4,7 +4,7 @@ title: "My 5 Years Plan"
 date: 2017-08-12T22:05:35-07:00
 ---
 
-> We all Rush through life torn between a desire for the future and a weariness for the present.
+> We all rush through life torn between a desire for the future and a weariness for the present.
 >
 > -- <cite>Seneca</cite>
 
@@ -41,8 +41,8 @@ unhappy about not being there and comparing against others; Instead of
 enjoying life, the opportunities and the things that they have and can
 control today.
 
-I'm still ambitious, I still push for things. Hell some day I still
-wan to work on my own ideas, but I'm not longer unhappy for not having
-that :).
+I'm still ambitious, I still push for things. Some day I still wan to
+work on my own ideas, but I'm not longer unhappy for not having that
+today.
 
-_Thanks to my wife and friend my Rafa, for being there every time I'd freak out about life._
+_Thanks to my wife and my friend Rafa, for being there every time I'd freak out about life._
