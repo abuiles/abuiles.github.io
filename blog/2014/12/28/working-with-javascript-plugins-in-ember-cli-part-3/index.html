@@ -128,9 +128,8 @@ worry about the bundling process, it is called <a href="https://github.com/ef4/e
 <p>First we need to install the addon, which we can do running <code class="highlighter-rouge">ember
 install</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ember install:addon ember-browserify
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ember install:addon ember-browserify
+</code></pre></div></div>
 
 <p>Once the addon has been installed, we are going to use it to consume
 MomentJS from npm in our <code class="highlighter-rouge">data-helpers</code> file.</p>
@@ -148,13 +147,13 @@ ember-browserify just doing <code class="highlighter-rouge">import moment from '
 
 <p>Let’s use it in our <code class="highlighter-rouge">date-helpers</code> so <code class="highlighter-rouge">formatDate</code> uses <code class="highlighter-rouge">moment</code>.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">moment</span> <span class="nx">from</span> <span class="s1">'npm:moment'</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">moment</span> <span class="k">from</span> <span class="s1">'npm:moment'</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">formatDate</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">format</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">moment</span><span class="p">(</span><span class="nx">date</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="nx">format</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kr">export</span> <span class="p">{</span>
+<span class="k">export</span> <span class="p">{</span>
   <span class="nx">formatDate</span>
 <span class="p">};</span></code></pre></figure>
 

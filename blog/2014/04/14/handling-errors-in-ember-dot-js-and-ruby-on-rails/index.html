@@ -96,21 +96,19 @@
 
 <p>Suppose you want to create a post and you get an error like the following:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="err">errors:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">body:</span><span class="w"> </span><span class="err">['can't</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">blank']</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="err">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ errors: { body: ['can't be blank'] } }
+</code></pre></div></div>
 
 <p>Once the requests has been completed you can check if you model is valid or not with <code class="highlighter-rouge">model.get('isValid')</code> and then the  <code class="highlighter-rouge">errors</code> with:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code> post.get('errors').get('body')
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> post.get('errors').get('body')
  [
    Object
    attribute: "body"
    message: "can't be blank"
    __proto__: Object
  ]
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Notice that a record becomes <code class="highlighter-rouge">isInvalid</code> only if <code class="highlighter-rouge">DS.InvalidError</code> can be created, on the <code class="highlighter-rouge">ActiveModelAdapter</code> case that is if the status code is <code class="highlighter-rouge">422</code> and <code class="highlighter-rouge">errors</code> is the root of your payload, otherwise it becomes <code class="highlighter-rouge">isError</code>.</p>
 

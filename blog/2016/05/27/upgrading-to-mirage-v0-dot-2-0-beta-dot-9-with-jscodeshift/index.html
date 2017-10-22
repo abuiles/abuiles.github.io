@@ -115,19 +115,17 @@ the script we’ll have <code class="highlighter-rouge">schema.users.all()</code
 
 <p>To run the script we need to install the following npm packages:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g jscodeshift
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g jscodeshift
 npm install inflected
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>For the second breaking deprecation which was calling <code class="highlighter-rouge">.models</code> on
 <code class="highlighter-rouge">Collections</code>, I decided not to use
 codeshift since it would be faster for me to just use perl:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>find . -type f | xargs perl -pi -e 's/all\(\)\.length/all\(\)\.models\.length/g'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f | xargs perl -pi -e 's/all\(\)\.length/all\(\)\.models\.length/g'
 find . -type f | xargs perl -pi -e 's/all\(\)\.forEach/all\(\)\.models\.forEach/g'
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>I hope you find this useful and if come up with a <code class="highlighter-rouge">codeshift</code> solution
 please let me know and I’ll link it here.</p>

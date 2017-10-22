@@ -106,11 +106,11 @@ behave accordingly to the parameters.</p>
 
 <p>Let’s have its definition on top and then use it as reference:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">find</span><span class="err">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">preload</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">Ember</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="s2">"You need to pass a type to the store's find method"</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">);</span>
-    <span class="nx">Ember</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="s2">"You may not pass `"</span> <span class="o">+</span> <span class="nx">id</span> <span class="o">+</span> <span class="s2">"` as id to the store's find method"</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">||</span> <span class="o">!</span><span class="nx">Ember</span><span class="p">.</span><span class="nx">isNone</span><span class="p">(</span><span class="nx">id</span><span class="p">));</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">find</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">preload</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">Ember</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="s2">"You need to pass a type to the store's find method"</span><span class="p">,</span> <span class="kr">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nx">Ember</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="s2">"You may not pass `"</span> <span class="o">+</span> <span class="nx">id</span> <span class="o">+</span> <span class="s2">"` as id to the store's find method"</span><span class="p">,</span> <span class="kr">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">||</span> <span class="o">!</span><span class="nx">Ember</span><span class="p">.</span><span class="nx">isNone</span><span class="p">(</span><span class="nx">id</span><span class="p">));</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="kr">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">findAll</span><span class="p">(</span><span class="nx">type</span><span class="p">);</span>
     <span class="p">}</span>
 
@@ -129,9 +129,9 @@ following ember-cli application https://github.com/abuiles/borrowers and then
 run <code class="highlighter-rouge">ember server</code> it will proxy all the API request to a public
 API.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git clone https://github.com/abuiles/borrowers
-<span class="gp">$ </span><span class="nb">cd </span>borrowers
-<span class="gp">$ </span>npm install <span class="o">&amp;&amp;</span> bower install</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/abuiles/borrowers
+<span class="nv">$ </span><span class="nb">cd </span>borrowers
+<span class="nv">$ </span>npm install <span class="o">&amp;&amp;</span> bower install</code></pre></figure>
 
 <h4 id="scenario-1-loading-a-collection">Scenario #1: Loading a collection</h4>
 
@@ -141,7 +141,7 @@ such request:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">friends</span> <span class="o">=</span>  <span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">)</span>
 
-<span class="nx">XHR</span> <span class="nx">finished</span> <span class="nx">loading</span><span class="err">:</span> <span class="nx">GET</span> <span class="s2">"http://localhost:4200/api/v2/friends"</span><span class="p">.</span></code></pre></figure>
+<span class="nx">XHR</span> <span class="nx">finished</span> <span class="nx">loading</span><span class="p">:</span> <span class="nx">GET</span> <span class="s2">"http://localhost:4200/api/v2/friends"</span><span class="p">.</span></code></pre></figure>
 
 <p>First, in case you are wondering what <code class="highlighter-rouge">$E</code> is, I’m grabbing an
 instance of the application router using the <code class="highlighter-rouge">ember-inspector</code>.</p>
@@ -152,7 +152,7 @@ as parameter:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">friends</span> <span class="o">=</span>  <span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="p">{</span><span class="na">hasArticles</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">sort_by</span><span class="p">:</span> <span class="s1">'created_at'</span><span class="p">})</span>
 
-<span class="nx">XHR</span> <span class="nx">finished</span> <span class="nx">loading</span><span class="err">:</span> <span class="nx">GET</span> <span class="s2">"http://localhost:4200/api/v2/friends?hasArticles=true&amp;sort_by=created_at"</span><span class="p">.</span></code></pre></figure>
+<span class="nx">XHR</span> <span class="nx">finished</span> <span class="nx">loading</span><span class="p">:</span> <span class="nx">GET</span> <span class="s2">"http://localhost:4200/api/v2/friends?hasArticles=true&amp;sort_by=created_at"</span><span class="p">.</span></code></pre></figure>
 
 <p>In the previous request we asked <code class="highlighter-rouge">find</code> to load all the articles,
 sending as parameters the key <code class="highlighter-rouge">hasArticles</code> and <code class="highlighter-rouge">sort_by</code>.</p>
@@ -169,7 +169,7 @@ more records are added or removed from the store.</p>
 like:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">   <span class="c1">// Using the private function store.findQuery</span>
-   <span class="nl">model</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">model</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">findQuery</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="p">{</span><span class="na">hasArticles</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">sort_by</span><span class="p">:</span> <span class="s1">'created_at'</span><span class="p">});</span>
    <span class="p">}</span>
 
@@ -184,7 +184,7 @@ pointed that <code class="highlighter-rouge">findQuery</code> might be marked as
 
 <p>We can achieve the same result using the method <code class="highlighter-rouge">find</code>:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">   <span class="nx">model</span><span class="err">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">   <span class="nx">model</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
       <span class="c1">// bad</span>
       <span class="c1">// return this.store.findQuerygo('friend', {hasArticles: true, sort_by: 'created_at'});</span>
 
@@ -206,14 +206,14 @@ pointed that <code class="highlighter-rouge">findQuery</code> might be marked as
 only need to pass the record <code class="highlighter-rouge">id</code> as second argument:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
-<span class="nx">XHR</span> <span class="nx">finished</span> <span class="nx">loading</span><span class="err">:</span> <span class="nx">GET</span> <span class="s2">"http://localhost:4200/api/v2/friends/15"</span><span class="p">.</span></code></pre></figure>
+<span class="nx">XHR</span> <span class="nx">finished</span> <span class="nx">loading</span><span class="p">:</span> <span class="nx">GET</span> <span class="s2">"http://localhost:4200/api/v2/friends/15"</span><span class="p">.</span></code></pre></figure>
 
 <p>In the previous example we are loading the friend with id 15, the
 <code class="highlighter-rouge">store</code> will only make a request to the server if the friend is not
 available in the store, to understand this, let’s go to
 http://localhost:4200/friends and then on the console try the following:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">id</span> <span class="o">=</span> <span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="s1">'firstObject'</span><span class="p">).</span><span class="nx">id</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">id</span> <span class="o">=</span> <span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">).</span><span class="kd">get</span><span class="p">(</span><span class="s1">'firstObject'</span><span class="p">).</span><span class="nx">id</span>
 <span class="nx">$E</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'friend'</span><span class="p">,</span> <span class="nx">id</span><span class="p">)</span></code></pre></figure>
 
 <p>If we open our network tab, we’ll see that the store didn’t make any request

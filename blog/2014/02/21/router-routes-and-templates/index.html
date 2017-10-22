@@ -101,12 +101,11 @@ today we are going to talk about 3 important concepts in Ember.js: The
 
 <p>Grab the application from where we left last:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  $ git clone git@github.com:abuiles/ember-rails-week-1.git
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git clone git@github.com:abuiles/ember-rails-week-1.git
   $ git reset --hard week-1
   $ bundle install
   $ rails s
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Go to <code class="highlighter-rouge">http://localhost:3000/</code> and you should see “Welcome to Ember on Rails!”.</p>
 
@@ -116,10 +115,9 @@ today we are going to talk about 3 important concepts in Ember.js: The
 
 <p>Create the file <code class="highlighter-rouge">app/templates/application.hbs</code> and put the following content there.</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Hi Ember.js<span class="nt">&lt;/h1&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Hi Ember.js<span class="nt">&lt;/h1&gt;</span>
 {{outlet}}
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Refresh your browser and you will see <code class="highlighter-rouge">Hi Ember.js</code>.</p>
 
@@ -130,9 +128,8 @@ word <code class="highlighter-rouge">yield</code> on Ember.js we’ll cover late
 <p>Let’s add something into the outlet, create the file
 <code class="highlighter-rouge">app/templates/index.hbs</code> with the following</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>I'm the Index!<span class="nt">&lt;/h1&gt;</span>
-</code></pre>
-</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>I'm the Index!<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
 
 <p>Refresh your browser and you will see “Hi Ember.js” follow by “I’m the Index”.</p>
 
@@ -153,9 +150,8 @@ that a <code class="highlighter-rouge">controller</code> in Ember acts more as d
 <p>In Ember every entry in the <code class="highlighter-rouge">Router</code> matches to a <code class="highlighter-rouge">Route</code>, if we have
 in the <code class="highlighter-rouge">router.es6</code> an entry like:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s2">"about"</span><span class="p">,</span> <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s2">"/about"</span> <span class="p">});</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s2">"about"</span><span class="p">,</span> <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s2">"/about"</span> <span class="p">});</span>
+</code></pre></div></div>
 
 <p>Then it will look for <code class="highlighter-rouge">app/routes/about.es6</code> and the template <code class="highlighter-rouge">app/templates/about.hbs</code>.</p>
 
@@ -175,19 +171,17 @@ creates one by default and then renders the template under <code class="highligh
 
 <p>Let’s create a simple route for <code class="highlighter-rouge">index</code>, put the following under <code class="highlighter-rouge">/app/routes/index.es6</code>.</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="k">default</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Route</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Route</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
   <span class="na">model</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span> <span class="na">date</span><span class="p">:</span> <span class="nb">Date</span><span class="p">()</span> <span class="p">};</span>
   <span class="p">}</span>
 <span class="p">});</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Replace the <code class="highlighter-rouge">index</code> template with</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>I'm the Index! {{date}}<span class="nt">&lt;/h1&gt;</span>
-</code></pre>
-</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>I'm the Index! {{date}}<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
 
 <p>After refreshing you will see <code class="highlighter-rouge">I'm the Index</code> follow by a date, we
 just write our first route, bootstrapped the required stuff for our

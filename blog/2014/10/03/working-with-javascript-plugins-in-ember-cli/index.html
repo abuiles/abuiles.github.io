@@ -110,7 +110,7 @@ library is to add it via bower and then use <code class="highlighter-rouge">app.
 
 <p>Once npm is done, install <code class="highlighter-rouge">moment</code> with</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>bower install moment --save</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower install moment <span class="nt">--save</span></code></pre></figure>
 
 <p>The option <code class="highlighter-rouge">--save</code> adds the dependency to our <code class="highlighter-rouge">bower.json</code>, we
 should find something similar to <code class="highlighter-rouge">"moment": "~2.8.3"</code> (the version
@@ -124,9 +124,8 @@ now let’s use the non-minified.</p>
 
 <p>Let’s add the following to our <code class="highlighter-rouge">Brocfile.js</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>app.import('bower_components/moment/moment.js');
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.import('bower_components/moment/moment.js');
+</code></pre></div></div>
 
 <p>Next, if we start our application with <code class="highlighter-rouge">ember server</code>, and navigate to
 <a href="http://localhost:4200">http://localhost:4200</a>, open the console and
@@ -193,7 +192,7 @@ loader.</p>
 
 <p>First, let’s create an utils file called <code class="highlighter-rouge">date-helpers</code>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>ember g util date-helpers
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ember g util date-helpers
 installing
   create app/utils/date-helpers.js
 installing
@@ -205,7 +204,7 @@ installing
   <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">moment</span><span class="p">(</span><span class="nx">date</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="nx">format</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
   <span class="nx">formatDate</span>
 <span class="p">}</span></code></pre></figure>
 
@@ -230,20 +229,19 @@ case we want to write a helper to have a a date as a formatted string.</p>
 then modify <code class="highlighter-rouge">app/helpers/formatted-date</code> so it consumes our format
 function.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">Ember</span> <span class="nx">from</span> <span class="s1">'ember'</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">Ember</span> <span class="k">from</span> <span class="s1">'ember'</span><span class="p">;</span>
 
 <span class="c1">// We are consuming the function defined in our utils/date-helpers.</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">formatDate</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'../utils/date-helpers'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">formatDate</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'../utils/date-helpers'</span><span class="p">;</span>
 
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Handlebars</span><span class="p">.</span><span class="nx">makeBoundHelper</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">format</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Handlebars</span><span class="p">.</span><span class="nx">makeBoundHelper</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">format</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">formatDate</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span> <span class="nx">format</span><span class="p">);</span>
 <span class="p">});</span></code></pre></figure>
 
 <p>Once we have our helper defined, we can use it in our templates like</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code>{{formatted-date createdAt 'LL'}}
-</code></pre>
-</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{formatted-date createdAt 'LL'}}
+</code></pre></div></div>
 
 <h1 id="wrapping-up">Wrapping up</h1>
 

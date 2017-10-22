@@ -138,9 +138,8 @@ to connect to it using geth and then tell Mist to use that connection.</p>
 
 <p>Let’s run in the console the following command:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>geth --rinkeby --rpc console --rpcapi db,eth,net,web3,personal
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>geth <span class="nt">--rinkeby</span> <span class="nt">--rpc</span> console <span class="nt">--rpcapi</span> db,eth,net,web3,personal
+</code></pre></div></div>
 
 <p>It starts a new Ethereum node connected to Rinkeby.</p>
 
@@ -148,9 +147,8 @@ to connect to it using geth and then tell Mist to use that connection.</p>
 will show you an alert saying the connection is insecure, but since
 this is a testnet, we can ignore it.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Applications/Mist.app/Contents/MacOS/Mist <span class="nt">--rpc</span> http://localhost:8545
+</code></pre></div></div>
 
 <p>During the first run, it will take some time while the Rinkeby
 blockchain is downloaded, go for a walk and then come back.</p>

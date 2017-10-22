@@ -133,20 +133,18 @@ our project.</p>
 
 <p>Let’s keep everything under <code class="highlighter-rouge">git</code> so we can keep track of changes.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  $ git init
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git init
   $ git add .
   $ git commit -m 'Getting started!.'
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>I use <a href="https://github.com/github/hub">hub</a> so I will just push this to a new repo on GitHub.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  $ hub create ember-rails-week-1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ hub create ember-rails-week-1
     Updating origin
     created repository: abuiles/ember-rails-week-1
   $ git push origin master
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Install <code class="highlighter-rouge">Ember Appkit Rails</code>, since I want to use a new feature we
 have been working on to include testing out of the box, we won’t
@@ -154,24 +152,21 @@ install from rubygems but directly from GitHub.</p>
 
 <p>Add the following to you Gemfile:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gem 'ember-appkit-rails', git: 'https://github.com/dockyard/ember-appkit-rails.git'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem 'ember-appkit-rails', git: 'https://github.com/dockyard/ember-appkit-rails.git'
+</code></pre></div></div>
 
 <p>Run <code class="highlighter-rouge">bundle install</code>.</p>
 
 <p>Now we can bootstrap our Rails project with Ember Appkit Rails.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  $ rails g ember:bootstrap
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ rails g ember:bootstrap
+</code></pre></div></div>
 
 <p>For now just focus on this two files:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>  create  config/router.es6
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  create  config/router.es6
   create  config/application.js
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><code class="highlighter-rouge">router.es6</code> would be the main entry point for our Ember App, it’s
 something similar to <code class="highlighter-rouge">routes.rb</code>, it will help us defined how users
@@ -195,9 +190,8 @@ Ember.js with Ruby on Rails.</p>
   <li>
     <p>Create an ‘Ember’ application template</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>$ echo  &gt; app/templates/application.hbs
-</code></pre>
-    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo  &gt; app/templates/application.hbs
+</code></pre></div>    </div>
   </li>
   <li>In <code class="highlighter-rouge">config/routes.rb</code> uncomment the last line <code class="highlighter-rouge">get '*foo', :to =&gt; 'landing#index'</code>. It should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64">https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64</a></li>
   <li>In route.es6 uncomment   <code class="highlighter-rouge">location: 'history'</code> it should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8">https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8</a></li>
@@ -205,10 +199,9 @@ Ember.js with Ruby on Rails.</p>
 
 <p>EAKR also has a scaffold command try the following</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>   $ rails g scaffold clients first_name:string last_name:string --ember
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   $ rails g scaffold clients first_name:string last_name:string --ember
    $ rake db:migrate
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now navigate to <code class="highlighter-rouge">http://localhost:3000/clients</code> - Congrats! you have your first Ember app running.</p>
 

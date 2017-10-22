@@ -98,10 +98,9 @@ upcoming syntax. Meaning that if we wanted to live on the edge we would need to 
 <p>As an early adopter I decided to upgrade my test, the first time I
 went old school with <code class="highlighter-rouge">perl</code> and <code class="highlighter-rouge">xargs</code> running commands like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>find  . -type f | xargs perl -pi -e "s/ deepEqual\(/assert\.deepEqual(/g"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find  . -type f | xargs perl -pi -e "s/ deepEqual\(/assert\.deepEqual(/g"
 find . -type f | xargs perl -pi -e "s/'\, function\(\)/', function\(assert\)/g"a
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The command above worked fine on the first try but it was mostly
 because I run it on a personal project and I knew that nothing else

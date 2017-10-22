@@ -126,7 +126,7 @@ distributions so if we want to include <code class="highlighter-rouge">ic-ajax</
 
 <p>Once the project has been created, let’s go to the directory and run the following command</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm uninstall ember-cli-ic-ajax --save-dev</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm uninstall ember-cli-ic-ajax <span class="nt">--save-dev</span></code></pre></figure>
 
 <p>The library we just removed is an <code class="highlighter-rouge">ember-cli addon</code> which wraps all
 the steps we are about to do but we won’t be using it since we are
@@ -137,7 +137,7 @@ are we gaining when using the addon.</p>
 install ic-ajax --save</code>, once installed let’s import it in our
 <code class="highlighter-rouge">Brocfile.js</code> as follows:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">app</span><span class="p">.</span><span class="kr">import</span><span class="p">(</span><span class="s1">'bower_components/ic-ajax/dist/named-amd/main.js'</span><span class="p">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">app</span><span class="p">.</span><span class="k">import</span><span class="p">(</span><span class="s1">'bower_components/ic-ajax/dist/named-amd/main.js'</span><span class="p">);</span></code></pre></figure>
 
 <p><code class="highlighter-rouge">ic-ajax</code> default export is the <code class="highlighter-rouge">request</code> function which allows us to
 make request and manage them as if they were promises, we’ll use
@@ -147,16 +147,16 @@ make request and manage them as if they were promises, we’ll use
 
 <p>Let’s start by creating an index route with the following command: <code class="highlighter-rouge">ember g route index</code> and then put the following content in <code class="highlighter-rouge">app/routes/index.js</code>:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">Ember</span> <span class="nx">from</span> <span class="s1">'ember'</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">Ember</span> <span class="k">from</span> <span class="s1">'ember'</span><span class="p">;</span>
 
 <span class="c1">//</span>
 <span class="c1">// Here we are importing the default export from ic-ajax and assigning it to</span>
 <span class="c1">// the variable request</span>
 <span class="c1">//</span>
 
-<span class="kr">import</span> <span class="nx">request</span> <span class="nx">from</span> <span class="s1">'ic-ajax'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">request</span> <span class="k">from</span> <span class="s1">'ic-ajax'</span><span class="p">;</span>
 
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Route</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Route</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
   <span class="na">model</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span>  <span class="p">{</span>
     <span class="c1">//</span>
     <span class="c1">// We'll be loading a collection from a resource called friends, it will</span>
@@ -176,13 +176,12 @@ make request and manage them as if they were promises, we’ll use
 <p>And then replace <code class="highlighter-rouge">app/templates/index.hbs</code> so it uses
 <code class="highlighter-rouge">friendsCount</code>:</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Total friends in api.ember-cli-101.com {{friendsCount}}<span class="nt">&lt;/h1&gt;</span>
-</code></pre>
-</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Total friends in api.ember-cli-101.com {{friendsCount}}<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
 
 <p>The previous code is correct but we’ll see an error when running ember server, try the following:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>ember server --proxy http://api.ember-cli-101.com
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ember server <span class="nt">--proxy</span> http://api.ember-cli-101.com
 version: 0.0.46
 Proxying to http://api.ember-cli-101.com
 Livereload server on port 35729
@@ -217,7 +216,7 @@ whitelist <code class="highlighter-rouge">ic-ajax</code> and and its <code class
 <p>In the <code class="highlighter-rouge">Brocfile.js</code>, let’s replace the call to <code class="highlighter-rouge">import</code> with the
 following:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">app</span><span class="p">.</span><span class="kr">import</span><span class="p">(</span><span class="s1">'bower_components/ic-ajax/dist/named-amd/main.js'</span><span class="p">,</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">app</span><span class="p">.</span><span class="k">import</span><span class="p">(</span><span class="s1">'bower_components/ic-ajax/dist/named-amd/main.js'</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">exports</span><span class="p">:</span> <span class="p">{</span>
     <span class="s1">'ic-ajax'</span><span class="p">:</span> <span class="p">[</span>
       <span class="s1">'default'</span><span class="p">,</span>
@@ -246,16 +245,16 @@ remove the <code class="highlighter-rouge">import</code> for <code class="highli
 it via the <code class="highlighter-rouge">addon</code>, let’s run the following commands and then stop and
 start the server, everything should work:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>bower uninstall ic-ajax --save
-<span class="gp">$ </span>npm i ember-cli-ic-ajax --save</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower uninstall ic-ajax <span class="nt">--save</span>
+<span class="nv">$ </span>npm i ember-cli-ic-ajax <span class="nt">--save</span></code></pre></figure>
 
 <h3 id="protip">Protip</h3>
 
 <p>Did you know ember-cli has an <code class="highlighter-rouge">.ember-cli</code> file where you can specify the default value for some commands? Instead of passing <code class="highlighter-rouge">--proxy</code> all the time to our <code class="highlighter-rouge">ember server</code> command, we can edit the <code class="highlighter-rouge">.ember-cli</code> to include the proxy option as follows:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
-  <span class="s2">"disableAnalytics"</span><span class="err">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="s2">"proxy"</span><span class="err">:</span> <span class="s2">"http://api.ember-cli-101.com"</span>
+  <span class="s2">"disableAnalytics"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="s2">"proxy"</span><span class="p">:</span> <span class="s2">"http://api.ember-cli-101.com"</span>
 <span class="p">}</span></code></pre></figure>
 
 <p>With that we can run <code class="highlighter-rouge">ember server</code> and it will read the <code class="highlighter-rouge">--proxy</code> option from the <code class="highlighter-rouge">.ember-cli</code> file.</p>

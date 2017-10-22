@@ -100,17 +100,17 @@ series to ember-cli, but just until very recently deployed to heroku.</p>
 <p>I want to put my ember-cli output into my <code class="highlighter-rouge">rails/public</code> and then
 include the scripts into my application layout</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
   <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;base</span> <span class="na">href=</span><span class="s">"/"</span> <span class="nt">/&gt;</span>
 
     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"ember-assets/vendor.css"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"ember-assets/client.css"</span><span class="nt">&gt;</span>
-    <span class="err">&lt;</span>%= csrf_meta_tags %&gt;
+    <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">csrf_meta_tags</span> <span class="err">%</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
-    <span class="err">&lt;</span>%= yield %&gt;
+    <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">yield</span> <span class="err">%</span><span class="nt">&gt;</span>
     <span class="nt">&lt;script&gt;</span>
       <span class="nb">window</span><span class="p">.</span><span class="nx">ENV</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"railsCsrf"</span><span class="p">:{</span><span class="s2">"csrfURL"</span><span class="p">:</span><span class="s2">"api/v1/csrf"</span><span class="p">},</span><span class="s2">"baseURL"</span><span class="p">:</span><span class="s2">"/"</span><span class="p">,</span><span class="s2">"locationType"</span><span class="p">:</span><span class="s2">"auto"</span><span class="p">,</span><span class="s2">"FEATURES"</span><span class="p">:{</span><span class="s2">"query-params-new"</span><span class="p">:</span><span class="kc">true</span><span class="p">},</span><span class="s2">"APP"</span><span class="p">:{}};</span>
     <span class="nt">&lt;/script&gt;</span>
@@ -120,8 +120,7 @@ include the scripts into my application layout</p>
     <span class="nt">&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>I do it like this because I want to include my <code class="highlighter-rouge">csrf_tags</code> in the body
 and also have the option of preloading any data if I need to.</p>
@@ -160,7 +159,7 @@ which I don’t want.</p>
   <li>Push the changes to heroku.</li>
 </ol>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">task</span> <span class="ss">:deploy</span><span class="p">,</span> <span class="ss">:env</span><span class="p">,</span> <span class="ss">:remote</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">task</span> <span class="ss">:deploy</span><span class="p">,</span> <span class="ss">:env</span><span class="p">,</span> <span class="ss">:remote</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
   <span class="n">sh</span> <span class="s2">"git checkout </span><span class="si">#{</span><span class="n">args</span><span class="p">[</span><span class="ss">:env</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span>
   <span class="n">sh</span> <span class="s1">'git merge master -m "Merging for deployment"'</span>
   <span class="n">sh</span> <span class="s1">'./build.sh'</span>
@@ -170,8 +169,7 @@ which I don’t want.</p>
 
   <span class="n">sh</span> <span class="s2">"git push </span><span class="si">#{</span><span class="n">args</span><span class="p">[</span><span class="ss">:remote</span><span class="p">]</span><span class="si">}</span><span class="s2"> head:master"</span>
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>A standard deployment would be something like <code class="highlighter-rouge">rake deploy[production, heroku]</code></p>
 

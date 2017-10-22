@@ -112,9 +112,8 @@ and deploy it to the testnet Rinkeby. To do so we need to perform the following 
 <p>First, start <code class="highlighter-rouge">geth</code> with Rinkeby and make sure that the correct APIs
 for Truffle are enabled.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal
+</code></pre></div></div>
 
 <p>If you don’t have <code class="highlighter-rouge">geth</code> or Rinkeby setup, read my article <a href="/blog/2017/06/13/smart-contracts-for-the-impatient/">smart
 contracts for the
@@ -171,14 +170,13 @@ contract by running the command <code class="highlighter-rouge">truffle migrate 
 can interact with it via Truffle. To do so, stop <code class="highlighter-rouge">geth</code> and start with
 the following parameters (replace the account address with yours):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal --unlock="0x0085f8e72391Ce4BB5ce47541C846d059399fA6c"
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal --unlock="0x0085f8e72391Ce4BB5ce47541C846d059399fA6c"
+</code></pre></div></div>
 
 <p>With <code class="highlighter-rouge">geth</code> configured, let’s run the migrate command:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>truffle migrate --network rinkeby
-Using network <span class="s1">'rinkeby'</span>.
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>truffle migrate <span class="nt">--network</span> rinkeby
+Using network <span class="s1">'rinkeby'</span><span class="nb">.</span>
 
 Running migration: 1_initial_migration.js
   Deploying Migrations...

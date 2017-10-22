@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://blog.abuiles.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.abuiles.com/" rel="alternate" type="text/html" /><updated>2017-10-22T12:14:19-05:00</updated><id>https://blog.abuiles.com/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
-</subtitle><entry><title type="html">My 5 Years Plan</title><link href="https://blog.abuiles.com/blog/2017/08/12/my-5-years-plan/" rel="alternate" type="text/html" title="My 5 Years Plan" /><published>2017-08-13T00:05:35-05:00</published><updated>2017-08-13T00:05:35-05:00</updated><id>https://blog.abuiles.com/blog/2017/08/12/my-5-years-plan</id><content type="html" xml:base="https://blog.abuiles.com/blog/2017/08/12/my-5-years-plan/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://blog.abuiles.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.abuiles.com/" rel="alternate" type="text/html" /><updated>2017-10-22T12:41:24-05:00</updated><id>https://blog.abuiles.com/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
+</subtitle><entry><title type="html">Consistency</title><link href="https://blog.abuiles.com/blog/2017/10/22/consistency/" rel="alternate" type="text/html" title="Consistency" /><published>2017-10-22T12:18:49-05:00</published><updated>2017-10-22T12:18:49-05:00</updated><id>https://blog.abuiles.com/blog/2017/10/22/consistency</id><content type="html" xml:base="https://blog.abuiles.com/blog/2017/10/22/consistency/">&lt;figure class=&quot;quote&quot;&gt;&lt;blockquote&gt;&lt;p&gt;In the politics of human life, consistency is not a virtue. To be consistent means, according to the Oxford Universal Dictionary, “standing still or not moving.” Men must change with the times or die.&lt;/p&gt;&lt;/blockquote&gt;&lt;figcaption class=&quot;quote-source&quot;&gt;&lt;span class=&quot;quote-author&quot;&gt;Saul Alinsky&lt;/span&gt; &lt;cite class=&quot;quote-title&quot;&gt;&lt;a class=&quot;quote-link&quot; href=&quot;https://www.amazon.com/Rules-Radicals-Practical-Primer-Realistic/dp/0679721134&quot;&gt;Rules for Radicals&lt;/a&gt;&lt;/cite&gt;&lt;/figcaption&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">In the politics of human life, consistency is not a virtue. To be consistent means, according to the Oxford Universal Dictionary, “standing still or not moving.” Men must change with the times or die.Saul Alinsky Rules for Radicals</summary></entry><entry><title type="html">My 5 Years Plan</title><link href="https://blog.abuiles.com/blog/2017/08/12/my-5-years-plan/" rel="alternate" type="text/html" title="My 5 Years Plan" /><published>2017-08-13T00:05:35-05:00</published><updated>2017-08-13T00:05:35-05:00</updated><id>https://blog.abuiles.com/blog/2017/08/12/my-5-years-plan</id><content type="html" xml:base="https://blog.abuiles.com/blog/2017/08/12/my-5-years-plan/">&lt;blockquote&gt;
   &lt;p&gt;We all rush through life torn between a desire for the future and a weariness for the present.&lt;/p&gt;
 
   &lt;p&gt;– &lt;cite&gt;Seneca&lt;/cite&gt;&lt;/p&gt;
@@ -62,9 +62,8 @@ and deploy it to the testnet Rinkeby. To do so we need to perform the following 
 &lt;p&gt;First, start &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; with Rinkeby and make sure that the correct APIs
 for Truffle are enabled.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you don’t have &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; or Rinkeby setup, read my article &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;smart
 contracts for the
@@ -121,14 +120,13 @@ contract by running the command &lt;code class=&quot;highlighter-rouge&quot;&gt;
 can interact with it via Truffle. To do so, stop &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; and start with
 the following parameters (replace the account address with yours):&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal --unlock=&quot;0x0085f8e72391Ce4BB5ce47541C846d059399fA6c&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal --unlock=&quot;0x0085f8e72391Ce4BB5ce47541C846d059399fA6c&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;With &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; configured, let’s run the migrate command:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;truffle migrate --network rinkeby
-Using network &lt;span class=&quot;s1&quot;&gt;'rinkeby'&lt;/span&gt;.
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;truffle migrate &lt;span class=&quot;nt&quot;&gt;--network&lt;/span&gt; rinkeby
+Using network &lt;span class=&quot;s1&quot;&gt;'rinkeby'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 
 Running migration: 1_initial_migration.js
   Deploying Migrations...
@@ -210,13 +208,12 @@ assume people is using macOS and Node.js higher or equal to 7.6.&lt;/p&gt;
 
 &lt;p&gt;We can install Truffle using &lt;code class=&quot;highlighter-rouge&quot;&gt;npm&lt;/code&gt;, from &lt;a href=&quot;http://truffleframework.com/docs/getting_started/installation&quot;&gt;their guide&lt;/a&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g truffle
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g truffle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;After running the command above, we should we able to do the following and see some kind of output:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ truffle
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ truffle
 Truffle v3.2.5 - a development framework for Ethereum
 
 Usage: truffle &amp;lt;command&amp;gt; [options]
@@ -228,8 +225,7 @@ Commands:
   migrate   Run migrations to deploy contracts
   deploy    (alias for migrate)
   build     Execute build pipeline (if configu
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;testrpc&quot;&gt;Testrpc&lt;/h2&gt;
 
@@ -251,13 +247,12 @@ a real network.&lt;/p&gt;
 
 &lt;p&gt;Since it’s published as an npm package, we can install it with the following command:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g ethereumjs-testrpc
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g ethereumjs-testrpc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Once &lt;code class=&quot;highlighter-rouge&quot;&gt;testrpc&lt;/code&gt; is installed, we can start the client by running &lt;code class=&quot;highlighter-rouge&quot;&gt;testrpc&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ testrpc
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ testrpc
 EthereumJS TestRPC v3.0.5
 
 Available Accounts
@@ -292,14 +287,12 @@ Mnemonic:      audit can stock squeeze equip aerobic abuse access fringe grocery
 Base HD Path:  m/44'/60'/0'/0/{account_index}
 
 Listening on localhost:8545
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;As a quick test, we can start &lt;code class=&quot;highlighter-rouge&quot;&gt;Mist&lt;/code&gt; using this client instead of geth and then we should see all the wallets listed above with some Ether.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Keep &lt;code class=&quot;highlighter-rouge&quot;&gt;testrpc&lt;/code&gt; running and now let’s start using Truffle.&lt;/p&gt;
 
@@ -307,15 +300,14 @@ Listening on localhost:8545
 
 &lt;p&gt;To create a new project do the following:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir hello-world
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir hello-world
 $ cd hello-world
 $ truffle init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;After creating the project, we’ll see a basic skeleton app, we can test that everything is working by running the default test:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ truffle test
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ truffle test
 Using network 'development'.
 
 Compiling ./contracts/ConvertLib.sol...
@@ -336,27 +328,24 @@ Compiling truffle/DeployedAddresses.sol...
 
 
   5 passing (840ms)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The command &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle init&lt;/code&gt; uses the following repo as default blueprint &lt;a href=&quot;https://github.com/trufflesuite/truffle-init-default&quot;&gt;https://github.com/trufflesuite/truffle-init-default&lt;/a&gt;, it includes an example contract and tests.&lt;/p&gt;
 
 &lt;p&gt;Since we are going to be writing our own contract and tests, we are going to remove some of the defaults:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm contracts/ConvertLib.sol contracts/MetaCoin.sol
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm contracts/ConvertLib.sol contracts/MetaCoin.sol
 rm test/TestMetacoin.sol test/metacoin.js
 rm migrations/2_deploy_contracts.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;creating-contracts-with-truffle-and-testing&quot;&gt;Creating contracts with Truffle and testing&lt;/h2&gt;
 
 &lt;p&gt;To &lt;a href=&quot;http://truffleframework.com/docs/advanced/commands#create-contract&quot;&gt;create a new contract&lt;/a&gt;, run the command &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle create&lt;/code&gt;. It
 requires the type of item we want to create and the name.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;truffle create contract HelloWorld
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;truffle create contract HelloWorld
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The name must be &lt;code class=&quot;highlighter-rouge&quot;&gt;CamelCased&lt;/code&gt;. After running the command, the file will be under &lt;code class=&quot;highlighter-rouge&quot;&gt;contracts/HelloWorld.sol&lt;/code&gt; with the following content:&lt;/p&gt;
 
@@ -430,15 +419,14 @@ migration, which can be used to compose and deploy contracts.&lt;/p&gt;
 
 &lt;p&gt;Create a migration called &lt;code class=&quot;highlighter-rouge&quot;&gt;deploy_hello_world&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ truffle create migration deploy_hello_world
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ truffle create migration deploy_hello_world
 $ git st
 On branch master
 Untracked files:
   (use &quot;git add &amp;lt;file&amp;gt;...&quot; to include in what will be committed)
 
 	migrations/1499575148_deploy_hello_world.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Above we can see that a new file got created  (if you get a different
 result, it means the following PR has not been merged yet
@@ -451,7 +439,7 @@ result, it means the following PR has not been merged yet
 
 &lt;span class=&quot;c1&quot;&gt;// In the example below, we are requiring the contract HelloWorld&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// which returns an abstraction that we can use for the deployment.&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;artifacts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'HelloWorld'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;artifacts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'HelloWorld'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;deployer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;deployer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -462,12 +450,12 @@ result, it means the following PR has not been merged yet
 &lt;p&gt;We should be able to deploy the contract to the test blockchain
 running &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle migrate --reset&lt;/code&gt;:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;truffle migrate --reset
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;truffle migrate &lt;span class=&quot;nt&quot;&gt;--reset&lt;/span&gt;
 Compiling ./contracts/HelloWorld.sol...
 Compiling ./contracts/Migrations.sol...
 Writing artifacts to ./build/contracts
 
-Using network &lt;span class=&quot;s1&quot;&gt;'development'&lt;/span&gt;.
+Using network &lt;span class=&quot;s1&quot;&gt;'development'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 
 Running migration: 1_initial_migration.js
   Deploying Migrations...
@@ -507,7 +495,7 @@ the methods defined in our contract.&lt;/p&gt;
 
 &lt;p&gt;To create the test we need to run the command &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle create test HelloWorld&lt;/code&gt; and then put the following content in &lt;code class=&quot;highlighter-rouge&quot;&gt;test/hello_world.js&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const HelloWorld = artifacts.require('HelloWorld')
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const HelloWorld = artifacts.require('HelloWorld')
 
 contract('HelloWorld', function(accounts) {
   it('sets the first account as the contract creator', async function() {
@@ -538,13 +526,12 @@ contract('HelloWorld', function(accounts) {
     assert.equal(message, 'hola mundo', 'message is hola mundo')
   })
 })
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Once we have the test file setup, we can run our tests with the command
 &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle test&lt;/code&gt;.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;truffle &lt;span class=&quot;nb&quot;&gt;test
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;truffle &lt;span class=&quot;nb&quot;&gt;test
 &lt;/span&gt;Compiling ./contracts/HelloWorld.sol...
 Compiling ./contracts/Migrations.sol...
 
@@ -616,9 +603,8 @@ to connect to it using geth and then tell Mist to use that connection.&lt;/p&gt;
 
 &lt;p&gt;Let’s run in the console the following command:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;geth --rinkeby --rpc console --rpcapi db,eth,net,web3,personal
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;geth &lt;span class=&quot;nt&quot;&gt;--rinkeby&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--rpc&lt;/span&gt; console &lt;span class=&quot;nt&quot;&gt;--rpcapi&lt;/span&gt; db,eth,net,web3,personal
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;It starts a new Ethereum node connected to Rinkeby.&lt;/p&gt;
 
@@ -626,9 +612,8 @@ to connect to it using geth and then tell Mist to use that connection.&lt;/p&gt;
 will show you an alert saying the connection is insecure, but since
 this is a testnet, we can ignore it.&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Applications/Mist.app/Contents/MacOS/Mist &lt;span class=&quot;nt&quot;&gt;--rpc&lt;/span&gt; http://localhost:8545
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;During the first run, it will take some time while the Rinkeby
 blockchain is downloaded, go for a walk and then come back.&lt;/p&gt;
@@ -839,19 +824,17 @@ the script we’ll have &lt;code class=&quot;highlighter-rouge&quot;&gt;schema.u
 
 &lt;p&gt;To run the script we need to install the following npm packages:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g jscodeshift
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g jscodeshift
 npm install inflected
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;For the second breaking deprecation which was calling &lt;code class=&quot;highlighter-rouge&quot;&gt;.models&lt;/code&gt; on
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Collections&lt;/code&gt;, I decided not to use
 codeshift since it would be faster for me to just use perl:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find . -type f | xargs perl -pi -e 's/all\(\)\.length/all\(\)\.models\.length/g'
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find . -type f | xargs perl -pi -e 's/all\(\)\.length/all\(\)\.models\.length/g'
 find . -type f | xargs perl -pi -e 's/all\(\)\.forEach/all\(\)\.models\.forEach/g'
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;I hope you find this useful and if come up with a &lt;code class=&quot;highlighter-rouge&quot;&gt;codeshift&lt;/code&gt; solution
 please let me know and I’ll link it here.&lt;/p&gt;
@@ -901,14 +884,13 @@ wanted to do and how I did it using ember-cli-mirage 0.2.0-beta.5.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-can-i-check-the-serialized-version-of-a-model&quot;&gt;How can I check the serialized version of a model?&lt;a id=&quot;orgheadline2&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server.get('api/employee's, function(schema, request) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server.get('api/employee's, function(schema, request) {
   employee = schema.employee.find(1);
   this.serializerOrRegistry.serialize(employee, request);
 
   return foo;
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;what-is-this-useful-for&quot;&gt;What is this useful for?&lt;a id=&quot;orgheadline1&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
 
@@ -918,7 +900,7 @@ meta-data in the response, and one of our endpoints returns pagination
 in the meta key. What I did was generate the payload and then add meta
 manually.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;this.get('api/employees', function(schema, request) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;this.get('api/employees', function(schema, request) {
   let employees = schema.employee.all();
   let response =  this.serializerOrRegistry.serialize(employees, request);
 
@@ -930,8 +912,7 @@ manually.&lt;/p&gt;
 
   return new Mirage.Response(200, {}, response);
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;how-do-i-make-assertions-in-a-request-and-build-a-new-model-with-the-serializer&quot;&gt;How do I make assertions in a request and build a new model with the serializer?&lt;a id=&quot;orgheadline3&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
 
@@ -941,7 +922,7 @@ returning a new model.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/samselikoff/ember-cli-mirage/issues/556&quot;&gt;https://github.com/samselikoff/ember-cli-mirage/issues/556&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// import the following from mirage
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// import the following from mirage
 
 import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
 
@@ -952,8 +933,7 @@ server.post('/api/employees', function(schema, request) {
 
   return schema.employee.create(handler._getAttrsForRequest(request, 'employee'));
 })
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;polymorphic-models&quot;&gt;Polymorphic models&lt;a id=&quot;orgheadline4&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
 
@@ -961,7 +941,7 @@ server.post('/api/employees', function(schema, request) {
 from “vehicle” and you want to return all available “vehicles” through
 the end-point `/api/vehicles`. The following can help you.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;this.get('/api/vehicles', function(schema, request) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;this.get('/api/vehicles', function(schema, request) {
   // fetch all the cars, it returns a mirage collection
   let collection = schema.car.all();
 
@@ -978,16 +958,14 @@ the end-point `/api/vehicles`. The following can help you.&lt;/p&gt;
 
   return collection;
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;how-to-return-a--204&quot;&gt;How to return a  204?&lt;a id=&quot;orgheadline5&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server.delete('/api/employees/:id', function() {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server.delete('/api/employees/:id', function() {
   return new Mirage.Response(204);
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;stop-settings-expectations-inside-requests&quot;&gt;Stop settings expectations inside requests.&lt;a id=&quot;orgheadline8&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
 
@@ -996,7 +974,7 @@ against mirage’s DB. Let’s see an example.&lt;/p&gt;
 
 &lt;h3 id=&quot;before&quot;&gt;before&lt;a id=&quot;orgheadline6&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;andThen(function(){
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;andThen(function(){
   server.patch('/api/employee/1', function(schema, request) {
     var data = JSON.parse(request.requestBody).data;
     assert.equal(data.attributes.name, 'Sam', 'name is Sam');
@@ -1005,15 +983,14 @@ against mirage’s DB. Let’s see an example.&lt;/p&gt;
   });
 });
 click('thing that fires post');
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;after&quot;&gt;after&lt;a id=&quot;orgheadline7&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;The snippet above is removed letting mirage takes care of the patch
 via shortcuts.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;andThen(function(){
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;andThen(function(){
   assert.equal(
     server.schema.employee.find(1).name,
     'tom',
@@ -1028,8 +1005,7 @@ andThen(function(){
     'Name was updated to Sam'
   );
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now we check against mirage’s db that it was updated.&lt;/p&gt;
 
@@ -1044,7 +1020,7 @@ common to see tests that depend on the API format, this can be really
 problematic if we decide to change the format of our API. suppose we
 are using AMS and have something like the following:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server.post('/api/employees', function(schema, request){
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server.post('/api/employees', function(schema, request){
   var employee = JSON.parse(request.requestBody).employee;
 
   assert.equal(employee.name, 'Sam Selikoff', 'foo woot buu');
@@ -1052,12 +1028,11 @@ are using AMS and have something like the following:&lt;/p&gt;
 
   // ...
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;And then decide to move to JSON API.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server.post('/api/employees', function(schema, request){
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server.post('/api/employees', function(schema, request){
   var employee = JSON.parse(request.requestBody).data;
 
   assert.equal(employee.attributes.name, 'Sam Selikoff', 'foo woot buu');
@@ -1065,8 +1040,7 @@ are using AMS and have something like the following:&lt;/p&gt;
 
   // ...
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;But then realized everyone have been wrong and SOAP was actually what
 we needed. If you have only 1 tests then this is not a problem but if
@@ -1077,7 +1051,7 @@ stop worrying about the format of the payload. The following can be
 used to achieve the same as the previous test, but this we don’t care
 if we are are using JSON API, AMS or SOAP.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
 
 server.post('/api/employees', function(schema, request){
   let handler = new BaseShorthandRouteHandler(schema, this.serializerOrRegistry);
@@ -1090,8 +1064,7 @@ server.post('/api/employees', function(schema, request){
 
   // ...
 });
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
 
@@ -1141,19 +1114,19 @@ use of decorator styles for declaring observers and computed
 properties, in means that instead of declaring our computed properties
 and observers like:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;fullName&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;fullName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// make fullName&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'model.firstName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'model.lastName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// do something&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;observes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'model.firstName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'model.lastName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;We’ll use the following syntax&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;fullName&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;computed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'model.firstName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'model.lastName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;fullName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;computed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'model.firstName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'model.lastName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// make fullName&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;observer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'model.firstName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'model.lastName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;doSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;observer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'model.firstName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'model.lastName'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// do something&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -1165,7 +1138,7 @@ covered.&lt;/p&gt;
 &lt;p&gt;Thanks to &lt;a href=&quot;twitter.com/kamal&quot;&gt;@kamal&lt;/a&gt; we can update our code
 automatically running the following commands:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install ember-watson@latest --save-dev
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install ember-watson@latest &lt;span class=&quot;nt&quot;&gt;--save-dev&lt;/span&gt;
 ember watson:convert-prototype-extensions&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Also, if you have 1000 observers then think you have $10000 in debt
@@ -1179,10 +1152,9 @@ upcoming syntax. Meaning that if we wanted to live on the edge we would need to 
 &lt;p&gt;As an early adopter I decided to upgrade my test, the first time I
 went old school with &lt;code class=&quot;highlighter-rouge&quot;&gt;perl&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;xargs&lt;/code&gt; running commands like:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find  . -type f | xargs perl -pi -e &quot;s/ deepEqual\(/assert\.deepEqual(/g&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find  . -type f | xargs perl -pi -e &quot;s/ deepEqual\(/assert\.deepEqual(/g&quot;
 find . -type f | xargs perl -pi -e &quot;s/'\, function\(\)/', function\(assert\)/g&quot;a
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The command above worked fine on the first try but it was mostly
 because I run it on a personal project and I knew that nothing else
@@ -1227,90 +1199,4 @@ about changes on the API, I think this one will be a bit more trickier
 but not impossible, if you want to contribute you can find the repo in
 &lt;a href=&quot;https://github.com/abuiles/ember-watson&quot;&gt;https://github.com/abuiles/ember-watson&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Did you find this useful? Learn Ember and support my work at the same time buying my living book Ember CLI 101&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Recently ember CLI updated its tests blueprints to match QUnit’s 2.0 upcoming syntax. Meaning that if we wanted to live on the edge we would need to update our existing tests to match such changes or ignore the changes to tests/.jshintrc and continue using globals.</summary></entry><entry><title type="html">Know your addons: ember-cli-build-notifications</title><link href="https://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/" rel="alternate" type="text/html" title="Know your addons: ember-cli-build-notifications" /><published>2015-02-12T11:29:12-05:00</published><updated>2015-02-12T11:29:12-05:00</updated><id>https://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications</id><content type="html" xml:base="https://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/">&lt;p&gt;As today &lt;a href=&quot;http://www.emberaddons.com&quot;&gt;emberaddons.com&lt;/a&gt; registers 602
-(and growing) ember-cli addons distributed via NPM, this means that
-addons and ember-cli are starting to become the de-facto tools to
-share and build  application code.&lt;/p&gt;
-
-&lt;p&gt;Addons allows us to do a bunch of different things and it seems to me
-that people are not fully aware of all the scenarios where they can be
-used. If your answer to any of the following question is yes, then use an addon.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Do you want to write a component that can be used in thousands of different apps?&lt;/li&gt;
-  &lt;li&gt;Do you want to plug in the build system and do something cool with the result?&lt;/li&gt;
-  &lt;li&gt;Do you want to extend the generators?&lt;/li&gt;
-  &lt;li&gt;Do you want to share parts of your code between different apps?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you know that I wrote a book about Ember (and ember-cli), you might
-be thinking: “ok, now you are going to tell me that if I want to
-learn all this then I should buy your book” No! I’m not &lt;a href=&quot;#learn-ember&quot;&gt;*&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;This post is actually to introduce a new experiment I want to start
-called “Know your addons”, I’ll be covering different addons that I
-find useful and go a bit into their implementation and mention things
-that you could find worthwhile.&lt;/p&gt;
-
-&lt;h2 id=&quot;ember-cli-build-notifications&quot;&gt;ember-cli-build-notifications&lt;/h2&gt;
-
-&lt;p&gt;I’d like to start with
-&lt;a href=&quot;https://www.npmjs.com/package/ember-cli-build-notifications&quot;&gt;ember-cli-build-notifications&lt;/a&gt;
-an useful addon to display notifications when there is a build error.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/f.cl.ly/items/3m0843433l1F0J0m1M3p/example.png&quot; alt=&quot;ember-cli-build-notifications&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how&quot;&gt;How?&lt;/h3&gt;
-
-&lt;p&gt;Philip Dudley is the creator of this addon and the code can be found in &lt;a href=&quot;https://github.com/pdud/ember-cli-build-notifications&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The important file to look at for this addon is the &lt;a href=&quot;https://github.com/pdud/ember-cli-build-notifications/blob/master/index.js&quot;&gt;index.js&lt;/a&gt; which is the main entry point for the addon.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/* jshint node: true */&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;'use strict'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;notifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./lib/notify'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ember-cli-build-notifications'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-
-  &lt;span class=&quot;na&quot;&gt;buildError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;notifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Build Failed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;subtitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;When installed in your ember-cli project’s &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;, it will be
-identified as add addon because of the keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;ember-addon&quot;&lt;/code&gt; Once it
-loads, Philip is using the &lt;a href=&quot;https://github.com/ember-cli/ember-cli/blob/6c66d2f28ade2e3c58974c353498048a8a55ef4a/ADDON_HOOKS.md#builderror&quot;&gt;buildError
-hook&lt;/a&gt;
-which gets called every time the build errors and then as soon as it
-gets called it uses his notify implementation to show us the message. Clever right?&lt;/p&gt;
-
-&lt;p&gt;So the next time your boss forces you to notify them every time that crazy ember-cli build fails, you can write your own addon which will use the &lt;code class=&quot;highlighter-rouge&quot;&gt;buildError&lt;/code&gt; to automate the process:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/* jshint node: true */&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;'use strict'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bossNotifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./lib/notifier'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'boss-notifier'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-
-  &lt;span class=&quot;na&quot;&gt;buildError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;bossNotifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'The build failed, it was not my fault'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;subtitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a name=&quot;learn-ember&quot;&gt;&lt;/a&gt;Actually you should :), Learn Ember with my book, check it out &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;leanpub.com/ember-cli-101&lt;/a&gt; or &lt;a href=&quot;/ember-rails&quot;&gt;subscribe to my list for the free webinars&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">As today emberaddons.com registers 602 (and growing) ember-cli addons distributed via NPM, this means that addons and ember-cli are starting to become the de-facto tools to share and build application code.</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Did you find this useful? Learn Ember and support my work at the same time buying my living book Ember CLI 101&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Recently ember CLI updated its tests blueprints to match QUnit’s 2.0 upcoming syntax. Meaning that if we wanted to live on the edge we would need to update our existing tests to match such changes or ignore the changes to tests/.jshintrc and continue using globals.</summary></entry></feed>

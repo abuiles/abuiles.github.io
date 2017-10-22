@@ -137,14 +137,13 @@ wanted to do and how I did it using ember-cli-mirage 0.2.0-beta.5.</p>
 
 <h2 id="how-can-i-check-the-serialized-version-of-a-model">How can I check the serialized version of a model?<a id="orgheadline2"></a></h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>server.get('api/employee's, function(schema, request) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.get('api/employee's, function(schema, request) {
   employee = schema.employee.find(1);
   this.serializerOrRegistry.serialize(employee, request);
 
   return foo;
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="what-is-this-useful-for">What is this useful for?<a id="orgheadline1"></a></h3>
 
@@ -154,7 +153,7 @@ meta-data in the response, and one of our endpoints returns pagination
 in the meta key. What I did was generate the payload and then add meta
 manually.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>this.get('api/employees', function(schema, request) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.get('api/employees', function(schema, request) {
   let employees = schema.employee.all();
   let response =  this.serializerOrRegistry.serialize(employees, request);
 
@@ -166,8 +165,7 @@ manually.</p>
 
   return new Mirage.Response(200, {}, response);
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="how-do-i-make-assertions-in-a-request-and-build-a-new-model-with-the-serializer">How do I make assertions in a request and build a new model with the serializer?<a id="orgheadline3"></a></h2>
 
@@ -177,7 +175,7 @@ returning a new model.</p>
 
 <p><a href="https://github.com/samselikoff/ember-cli-mirage/issues/556">https://github.com/samselikoff/ember-cli-mirage/issues/556</a></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// import the following from mirage
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// import the following from mirage
 
 import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
 
@@ -188,8 +186,7 @@ server.post('/api/employees', function(schema, request) {
 
   return schema.employee.create(handler._getAttrsForRequest(request, 'employee'));
 })
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="polymorphic-models">Polymorphic models<a id="orgheadline4"></a></h2>
 
@@ -197,7 +194,7 @@ server.post('/api/employees', function(schema, request) {
 from “vehicle” and you want to return all available “vehicles” through
 the end-point `/api/vehicles`. The following can help you.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>this.get('/api/vehicles', function(schema, request) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.get('/api/vehicles', function(schema, request) {
   // fetch all the cars, it returns a mirage collection
   let collection = schema.car.all();
 
@@ -214,16 +211,14 @@ the end-point `/api/vehicles`. The following can help you.</p>
 
   return collection;
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="how-to-return-a--204">How to return a  204?<a id="orgheadline5"></a></h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>server.delete('/api/employees/:id', function() {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.delete('/api/employees/:id', function() {
   return new Mirage.Response(204);
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="stop-settings-expectations-inside-requests">Stop settings expectations inside requests.<a id="orgheadline8"></a></h2>
 
@@ -232,7 +227,7 @@ against mirage’s DB. Let’s see an example.</p>
 
 <h3 id="before">before<a id="orgheadline6"></a></h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>andThen(function(){
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>andThen(function(){
   server.patch('/api/employee/1', function(schema, request) {
     var data = JSON.parse(request.requestBody).data;
     assert.equal(data.attributes.name, 'Sam', 'name is Sam');
@@ -241,15 +236,14 @@ against mirage’s DB. Let’s see an example.</p>
   });
 });
 click('thing that fires post');
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="after">after<a id="orgheadline7"></a></h3>
 
 <p>The snippet above is removed letting mirage takes care of the patch
 via shortcuts.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>andThen(function(){
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>andThen(function(){
   assert.equal(
     server.schema.employee.find(1).name,
     'tom',
@@ -264,8 +258,7 @@ andThen(function(){
     'Name was updated to Sam'
   );
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now we check against mirage’s db that it was updated.</p>
 
@@ -280,7 +273,7 @@ common to see tests that depend on the API format, this can be really
 problematic if we decide to change the format of our API. suppose we
 are using AMS and have something like the following:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>server.post('/api/employees', function(schema, request){
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.post('/api/employees', function(schema, request){
   var employee = JSON.parse(request.requestBody).employee;
 
   assert.equal(employee.name, 'Sam Selikoff', 'foo woot buu');
@@ -288,12 +281,11 @@ are using AMS and have something like the following:</p>
 
   // ...
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And then decide to move to JSON API.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>server.post('/api/employees', function(schema, request){
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.post('/api/employees', function(schema, request){
   var employee = JSON.parse(request.requestBody).data;
 
   assert.equal(employee.attributes.name, 'Sam Selikoff', 'foo woot buu');
@@ -301,8 +293,7 @@ are using AMS and have something like the following:</p>
 
   // ...
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>But then realized everyone have been wrong and SOAP was actually what
 we needed. If you have only 1 tests then this is not a problem but if
@@ -313,7 +304,7 @@ stop worrying about the format of the payload. The following can be
 used to achieve the same as the previous test, but this we don’t care
 if we are are using JSON API, AMS or SOAP.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
 
 server.post('/api/employees', function(schema, request){
   let handler = new BaseShorthandRouteHandler(schema, this.serializerOrRegistry);
@@ -326,8 +317,7 @@ server.post('/api/employees', function(schema, request){
 
   // ...
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="wrapping-up">Wrapping Up</h2>
 

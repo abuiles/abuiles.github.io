@@ -126,7 +126,7 @@ for more enlightment!</p>
 <p>First let’s examine the Brocfile, we just tell Broccoli to fingerprint our assets preprending our cloudfront url to all of them.
 the final result would look something like <code class="highlighter-rouge">https://d29bb5msqib8gy.cloudfront.net/assets/vendor-6673dc1e2f6a7bece01002d43fae1b5b.js</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
   // broccoli-asset-rev is now an ember-cli addon.
@@ -140,8 +140,7 @@ var app = new EmberApp({
 });
 
 module.exports = app.toTree();
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>With that we get our desired ‘dist’ output. Next we need to upload it
 to S3 (we might be able to do this directly with ember-cli soon)</p>
@@ -161,7 +160,7 @@ optionally we can run always the default task against production, in that way yo
 clients can try the latest version of the app before making it
 available to everyone else.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>module.exports = function(grunt) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = function(grunt) {
   grunt.initConfig({
     env: grunt.file.readJSON('.env'),
     s3: {
@@ -224,14 +223,13 @@ available to everyone else.</p>
   grunt.registerTask('publish-release', ['default', 'release']);
   return grunt.registerTask('default', ['gitinfo', 's3:dev', 'canary']);
 };
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="rails">Rails</h1>
 <p>In rails we will need to have <code class="highlighter-rouge">redis</code> gem installed and then
 in our root action just serve the index.html from Redis.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>class LandingController &lt; ApplicationController
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LandingController &lt; ApplicationController
   def index
     render text: index_html
   end
@@ -262,8 +260,7 @@ in our root action just serve the index.html from Redis.</p>
     end
   end
 end
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And voilá! You have separated your Ember.js and Rails app with super fast deployments!</p>
 

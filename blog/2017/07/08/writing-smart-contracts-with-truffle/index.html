@@ -143,13 +143,12 @@ assume people is using macOS and Node.js higher or equal to 7.6.</p>
 
 <p>We can install Truffle using <code class="highlighter-rouge">npm</code>, from <a href="http://truffleframework.com/docs/getting_started/installation">their guide</a>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g truffle
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g truffle
+</code></pre></div></div>
 
 <p>After running the command above, we should we able to do the following and see some kind of output:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ truffle
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ truffle
 Truffle v3.2.5 - a development framework for Ethereum
 
 Usage: truffle &lt;command&gt; [options]
@@ -161,8 +160,7 @@ Commands:
   migrate   Run migrations to deploy contracts
   deploy    (alias for migrate)
   build     Execute build pipeline (if configu
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="testrpc">Testrpc</h2>
 
@@ -184,13 +182,12 @@ a real network.</p>
 
 <p>Since it’s published as an npm package, we can install it with the following command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g ethereumjs-testrpc
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g ethereumjs-testrpc
+</code></pre></div></div>
 
 <p>Once <code class="highlighter-rouge">testrpc</code> is installed, we can start the client by running <code class="highlighter-rouge">testrpc</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ testrpc
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ testrpc
 EthereumJS TestRPC v3.0.5
 
 Available Accounts
@@ -225,14 +222,12 @@ Mnemonic:      audit can stock squeeze equip aerobic abuse access fringe grocery
 Base HD Path:  m/44'/60'/0'/0/{account_index}
 
 Listening on localhost:8545
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>As a quick test, we can start <code class="highlighter-rouge">Mist</code> using this client instead of geth and then we should see all the wallets listed above with some Ether.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
+</code></pre></div></div>
 
 <p>Keep <code class="highlighter-rouge">testrpc</code> running and now let’s start using Truffle.</p>
 
@@ -240,15 +235,14 @@ Listening on localhost:8545
 
 <p>To create a new project do the following:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mkdir hello-world
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir hello-world
 $ cd hello-world
 $ truffle init
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>After creating the project, we’ll see a basic skeleton app, we can test that everything is working by running the default test:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ truffle test
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ truffle test
 Using network 'development'.
 
 Compiling ./contracts/ConvertLib.sol...
@@ -269,27 +263,24 @@ Compiling truffle/DeployedAddresses.sol...
 
 
   5 passing (840ms)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The command <code class="highlighter-rouge">truffle init</code> uses the following repo as default blueprint <a href="https://github.com/trufflesuite/truffle-init-default">https://github.com/trufflesuite/truffle-init-default</a>, it includes an example contract and tests.</p>
 
 <p>Since we are going to be writing our own contract and tests, we are going to remove some of the defaults:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>rm contracts/ConvertLib.sol contracts/MetaCoin.sol
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm contracts/ConvertLib.sol contracts/MetaCoin.sol
 rm test/TestMetacoin.sol test/metacoin.js
 rm migrations/2_deploy_contracts.js
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="creating-contracts-with-truffle-and-testing">Creating contracts with Truffle and testing</h2>
 
 <p>To <a href="http://truffleframework.com/docs/advanced/commands#create-contract">create a new contract</a>, run the command <code class="highlighter-rouge">truffle create</code>. It
 requires the type of item we want to create and the name.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>truffle create contract HelloWorld
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>truffle create contract HelloWorld
+</code></pre></div></div>
 
 <p>The name must be <code class="highlighter-rouge">CamelCased</code>. After running the command, the file will be under <code class="highlighter-rouge">contracts/HelloWorld.sol</code> with the following content:</p>
 
@@ -363,15 +354,14 @@ migration, which can be used to compose and deploy contracts.</p>
 
 <p>Create a migration called <code class="highlighter-rouge">deploy_hello_world</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ truffle create migration deploy_hello_world
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ truffle create migration deploy_hello_world
 $ git st
 On branch master
 Untracked files:
   (use "git add &lt;file&gt;..." to include in what will be committed)
 
 	migrations/1499575148_deploy_hello_world.js
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Above we can see that a new file got created  (if you get a different
 result, it means the following PR has not been merged yet
@@ -384,7 +374,7 @@ result, it means the following PR has not been merged yet
 
 <span class="c1">// In the example below, we are requiring the contract HelloWorld</span>
 <span class="c1">// which returns an abstraction that we can use for the deployment.</span>
-<span class="kr">const</span> <span class="nx">HelloWorld</span> <span class="o">=</span> <span class="nx">artifacts</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s1">'HelloWorld'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">HelloWorld</span> <span class="o">=</span> <span class="nx">artifacts</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s1">'HelloWorld'</span><span class="p">)</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">deployer</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">deployer</span><span class="p">.</span><span class="nx">deploy</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">)</span>
@@ -395,12 +385,12 @@ result, it means the following PR has not been merged yet
 <p>We should be able to deploy the contract to the test blockchain
 running <code class="highlighter-rouge">truffle migrate --reset</code>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>truffle migrate --reset
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>truffle migrate <span class="nt">--reset</span>
 Compiling ./contracts/HelloWorld.sol...
 Compiling ./contracts/Migrations.sol...
 Writing artifacts to ./build/contracts
 
-Using network <span class="s1">'development'</span>.
+Using network <span class="s1">'development'</span><span class="nb">.</span>
 
 Running migration: 1_initial_migration.js
   Deploying Migrations...
@@ -440,7 +430,7 @@ the methods defined in our contract.</p>
 
 <p>To create the test we need to run the command <code class="highlighter-rouge">truffle create test HelloWorld</code> and then put the following content in <code class="highlighter-rouge">test/hello_world.js</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>const HelloWorld = artifacts.require('HelloWorld')
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const HelloWorld = artifacts.require('HelloWorld')
 
 contract('HelloWorld', function(accounts) {
   it('sets the first account as the contract creator', async function() {
@@ -471,13 +461,12 @@ contract('HelloWorld', function(accounts) {
     assert.equal(message, 'hola mundo', 'message is hola mundo')
   })
 })
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Once we have the test file setup, we can run our tests with the command
 <code class="highlighter-rouge">truffle test</code>.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>truffle <span class="nb">test
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>truffle <span class="nb">test
 </span>Compiling ./contracts/HelloWorld.sol...
 Compiling ./contracts/Migrations.sol...
 

@@ -103,19 +103,19 @@ use of decorator styles for declaring observers and computed
 properties, in means that instead of declaring our computed properties
 and observers like:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">fullName</span><span class="err">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">fullName</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// make fullName</span>
 <span class="p">}.</span><span class="nx">property</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">),</span>
-<span class="nx">doSomething</span><span class="err">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">doSomething</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something</span>
 <span class="p">}.</span><span class="nx">observes</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">)</span></code></pre></figure>
 
 <p>We’ll use the following syntax</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">fullName</span><span class="err">:</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">fullName</span><span class="p">:</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// make fullName</span>
 <span class="p">}),</span>
-<span class="nx">doSomething</span><span class="err">:</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">observer</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">doSomething</span><span class="p">:</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">observer</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// do something</span>
 <span class="p">})</span></code></pre></figure>
 
@@ -127,7 +127,7 @@ covered.</p>
 <p>Thanks to <a href="twitter.com/kamal">@kamal</a> we can update our code
 automatically running the following commands:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install ember-watson@latest --save-dev
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install ember-watson@latest <span class="nt">--save-dev</span>
 ember watson:convert-prototype-extensions</code></pre></figure>
 
 <p><strong>Also, if you have 1000 observers then think you have $10000 in debt
