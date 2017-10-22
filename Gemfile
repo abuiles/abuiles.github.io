@@ -28,3 +28,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "octopress-hooks", "~> 2.6.2"
 gem "octopress-escape-code", "~> 2.1.1"
+gem "octopress", "~> 3.0"
