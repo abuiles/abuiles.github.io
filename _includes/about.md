@@ -1,5 +1,5 @@
 ## Me
-Hola, my name is Adolfo. I'm from Colombia but today you can find me in San Francisco where I work as an engineering manager at [Envoy - we are hiring!](https://envoy.com/jobs/)
+Hola, my name is Adolfo. I live in Medellín (Colombia) where I work as an engineering manager for [Envoy](https://envoy.com/jobs/)
 
 I spend most of my time using technology to bring ideas to life.
 
