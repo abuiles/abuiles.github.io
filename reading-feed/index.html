@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Removing prototype extensions with ember-watson</title>
-  <meta name="description" content="If you follow Ember folks on twitter you might have noticed that a bunch of them keep talking about something called prototype extensions and disabling them....">
+  <title>Adolfo Builes</title>
+  <meta name="description" content="I like to write about tech, humans, books, Ember.js and random stuff.">
 
   <link rel="stylesheet" href="/assets/main.css">
 
   
-  <link rel="canonical" href="https://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/">
+  <link rel="canonical" href="https://blog.abuiles.com/reading-feed/">
   <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
 
   
@@ -82,90 +82,16 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Removing prototype extensions with ember-watson</h1>
-    <p class="post-meta">
-      <time datetime="2015-03-30T10:34:20-05:00" itemprop="datePublished">
-        
-        Mar 30, 2015
-      </time>
-      </p>
-  </header>
-
-  <div class="post-content" itemprop="articleBody">
-    <p>If you follow Ember folks on twitter you might have noticed that a
-bunch of them keep talking about something called prototype extensions
-and disabling them. What’s that? without getting into much details is
-what allow us to set observers or computed properties calling
-<code class="highlighter-rouge">.observes</code> or <code class="highlighter-rouge">property</code> at the end of a function.</p>
-
-<p>Recently a pull request [1] was open by Stefan Penner to encourage the
-use of decorator styles for declaring observers and computed
-properties, in means that instead of declaring our computed properties
-and observers like:</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">fullName</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// make fullName</span>
-<span class="p">}.</span><span class="nx">property</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">),</span>
-<span class="nx">doSomething</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// do something</span>
-<span class="p">}.</span><span class="nx">observes</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">)</span></code></pre></figure>
-
-<p>We’ll use the following syntax</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">fullName</span><span class="p">:</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">computed</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// make fullName</span>
-<span class="p">}),</span>
-<span class="nx">doSomething</span><span class="p">:</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">observer</span><span class="p">(</span><span class="s1">'model.firstName'</span><span class="p">,</span> <span class="s1">'model.lastName'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// do something</span>
-<span class="p">})</span></code></pre></figure>
-
-<p>If you are like “OMG! that Stefan guy is crazy! I have like 1000
-computed properties and observers” then no worries, good tool
-<a href="https://github.com/abuiles/ember-watson">ember-watson</a> got you
-covered.</p>
-
-<p>Thanks to <a href="twitter.com/kamal">@kamal</a> we can update our code
-automatically running the following commands:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install ember-watson@latest <span class="nt">--save-dev</span>
-ember watson:convert-prototype-extensions</code></pre></figure>
-
-<p><strong>Also, if you have 1000 observers then think you have $10000 in debt
-(more about that later).</strong></p>
-
-<p><strong><a href="https://leanpub.com/ember-cli-101">Do you want to learn Ember with a private tutor? Get my living book Ember CLI 101 and keep your Ember knowledge up to date</a></strong></p>
-
-<p>[1] - https://github.com/emberjs/guides/pull/110</p>
-
-  </div>
-
-  
+        <div class="home">
+  <h3>Directive like notes from the book I'm reading</h3>
+  <ul class="post-list">
     
-
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = 'https://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/';
-      this.page.identifier = 'https://blog.abuiles.com/blog/2015/03/30/removing-prototype-extensions-with-ember-watson/';
-    };
-
-    (function() {
-      var d = document, s = d.createElement('script');
-
-      s.src = 'https://abuiles.disqus.com/embed.js';
-
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
-  
-</article>
+    <li>
+      <a href="/reading-feed/the-4-hour-workweek.html">the-4-hour-workweek.html</a>
+    </li>
+    
+  </ul>
+</div>
 
       </div>
     </main>
