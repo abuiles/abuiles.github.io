@@ -35,3 +35,6 @@ permalink: /blog/:year/:month/:day/:title/
 google_analytics: UA-32360357-1
 disqus:
   shortname: abuiles
+
+plugins:
+  - directory_tag
