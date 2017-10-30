@@ -3,13 +3,13 @@ title: The 4-Hour Workweek
 ---
 # The 4-Hour Workweek
 
-Some times people think they can only do thing if thety have millions, but that's not always the case.
+Some times people think they can only do thing if they have millions, but that's not always the case.
 
 ‌People don’t want to be millionaires—they want to experience what they believe only millions can buy.[Read more](kindle://book?action=open&asin=B002WE46UW&location=267)‌
 
 **NR** = New Rich = **Their currency is time and mobility**
 
-**LD** = Lyfestyle design
+**LD** = Lifestyle design
 
 **D =** Deferrers
 
@@ -26,7 +26,7 @@ To become a NR follow the **DEAL** process
 *   **A** = Automation => Brings **money**
 *   **L** = Liberation  => Brings **mobility**
 
-**Time, money and mobility are the main ingreatiens of for a luxury LD (lifestyle design)**
+**Time, money and mobility are the main ingredients of for a luxury LD (lifestyle design)**
 
 **Find a market before designing a product.**
 
@@ -108,7 +108,7 @@ Get options, control your Ws
 
 > 8\. Money Alone Is Not the Solution.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=652)</cite>
 
-**Adding more money is not the answer, is lazines.**
+**Adding more money is not the answer, is laziness.**
 
 “If only I had more money” is the easiest way to postpone the intense self-examination and decision-making necessary to create a life of enjoyment— now and not later. By using money as the scapegoat and work as our all-consuming routine, we are able to conveniently disallow ourselves the time to do otherwise:
 
@@ -122,7 +122,7 @@ Get options, control your Ws
 
 > 10\. Distress Is Bad, Eustress Is Good.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=679)</cite>
 
-**Do things and surround yourself with people that  push you and give you exciment.**
+**Do things and surround yourself with people that  push you and give you excitement.**
 
 > Eustress, on the other hand, is a word most of you have probably never heard. Eu-, a Greek prefix for “healthy,” is used in the same sense in the word “euphoria.” Role models who push us to exceed our limits, physical training that removes our spare tires, and risks that expand our sphere of comfortable action are all examples of eustress—stress that is healthful and the stimulus for growth.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=683)</cite>
 
@@ -150,7 +150,7 @@ Get options, control your Ws
 
 > Having an unusually large goal is an adrenaline infusion that provides the endurance to overcome the inevitable trials and tribulations that go along with any goal.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=893)</cite>
 
-### People thing they want happiness, no! They want exciment!
+### People thing they want happiness, no! They want excitement!
 
 > Let’s assume we have 10 goals and we achieve them—what is the desired outcome that makes all the effort worthwhile? The most common response is what I also would have suggested five years ago: happiness. I no longer believe this is a good answer. Happiness<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=908)</cite>
 
@@ -160,10 +160,10 @@ Get options, control your Ws
 
 > Remember—boredom is the enemy, not some abstract “failure.”<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=941)</cite>
 
-### Dreamlining = Focus on achieable goals and steps
+### Dreamlining = Focus on achievable goals and steps
 
 > Dreamlining is so named because it applies timelines to what most would consider dreams. It is much like goal-setting but differs in several fundamental respects: 1\. The goals shift from ambiguous wants to defined steps. 2\. The goals have to be unrealistic to be effective. 3\. It focuses on activities that will fill the vacuum created when work is removed. Living like a millionaire requires doing interesting things and not just owning enviable things.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=945)</cite>
 
-## Uncomfortable exercices
+## Uncomfortable exercises
 
 > Learn to Eye Gaze (2 days)<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1089)</cite>
