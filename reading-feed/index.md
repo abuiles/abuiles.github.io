@@ -6,8 +6,8 @@ layout: default
 ---
 
 <div class="home">
-  <h3>Directive like notes from the books I read</h3>
-  <ul class="post-list">
+  <p><a href="https://sivers.org/2do">Directive like notes</a> from the books I read. Notes extracted and edited with <a href="https://kintrospect.com">Kintrospect</a></p>
+  <ul class="">
     {% directory path: reading-feed exclude: index %}
     <li>
       <a href="{{ file.slug }}">{{ file.slug }}</a>

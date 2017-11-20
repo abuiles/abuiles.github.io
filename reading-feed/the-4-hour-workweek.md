@@ -1,7 +1,12 @@
 ---
-title: The 4-Hour Workweek
+layout: default
 ---
-# The 4-Hour Workweek
+# The 4-Hour Workweek by Tim Ferris
+
+[https://www.amazon.com/4-Hour-Workweek-Expanded-Updated-Cutting-Edge-ebook/dp/B002WE46UW/](https://www.amazon.com/4-Hour-Workweek-Expanded-Updated-Cutting-Edge-ebook/dp/B002WE46UW/)
+
+> Forget the old concept of retirement and the rest of the deferred-life plan–there is no need to wait and every reason not to, especially in unpredictable economic times. Whether your dream is escaping the rat race, experiencing high-end world travel, or earning a monthly five-figure income with zero management, The 4-Hour Workweek is the blueprint.
+
 
 Some times people think they can only do things if they have millions, but that's not always the case.
 
@@ -11,7 +16,7 @@ Some times people think they can only do things if they have millions, but that'
 
 **LD** = Lifestyle design
 
-**D =** Deferrers
+**D =** Deferrers  = **those who save it all for the end**
 
 **W4W =** Work for work
 
@@ -60,13 +65,11 @@ Differences between the **New Rich (options)** and the **Deferrer (those who sav
 
 ### Freedom multiplier
 
-**Money on its own is not practical - Money + W's is practical - What, when, how and with whom you do thing is what counts. W's => Freedom Multiplier**
+**Money on its own is not practical - Money + W's is practical**
 
 > Money is multiplied in practical value depending on the number of W’s you control in your life: what you do, when you do it, where you do it, and with whom you do it. I call this the “freedom multiplier.”<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=466)</cite>
 
 What's the point of making $500K/Y if we are working the whole time?
-
-**it is "richer" the person who does $50k/y and works 10 hours week than the one that makes $100K/y and works 80 hours.**
 
 > Using this as our criterion, the 80-hour-per-week, $500,000-per-year investment banker is less “powerful” than the employed NR who works ¼ the hours for $40,000, but has complete freedom of when, where, and how to live.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=468)</cite>
 
@@ -110,7 +113,7 @@ Get options, control your W's
 
 > 8\. Money Alone Is Not the Solution.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=652)</cite>
 
-**Adding more money is not the answer, is la laziness.**
+**Adding more money is not the answer, is laziness.**
 
 “If only I had more money” is the easiest way to postpone the intense self-examination and decision-making necessary to create a life of enjoyment— now and not later. By using money as the scapegoat and work as our all-consuming routine, we are able to conveniently disallow ourselves the time to do otherwise:
 
@@ -158,7 +161,7 @@ Optimistic denial - "I won't quit because I know I'll make more money after X"
 
 > Having an unusually large goal is an adrenaline infusion that provides the endurance to overcome the inevitable trials and tribulations that go along with any goal.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=893)</cite>
 
-### People thing they want happiness, no! They want excitement!
+**People thing they want happiness, no! They want excitement!**
 
 > Let’s assume we have 10 goals and we achieve them—what is the desired outcome that makes all the effort worthwhile? The most common response is what I also would have suggested five years ago: happiness. I no longer believe this is a good answer. Happiness<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=908)</cite>
 
@@ -186,7 +189,7 @@ Optimistic denial - "I won't quit because I know I'll make more money after X"
 
 > For the next two days, practice gazing into the eyes of others—whether people you pass on the street or conversational partners—until they break contact.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1092)</cite>
 
-# Step 2: Elimination = This will bring you time
+# Step 2: Elimination  (will bring you time)
 
 > Step II: E is for Elimination<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1099)</cite>
 
@@ -295,3 +298,469 @@ Cultivate selective ignorance - **information consumes our attention!**
 > 2\. Using the book to generate intelligent and specific questions, I contacted 10 of the top authors and agents in the world via e-mail and phone, with a response rate of 80%.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1454)</cite>
 
 > I only read the sections of the book that were relevant to immediate next steps, which took less than two hours. To develop a template e-mail and call script took approximately four hours, and the actual e-mails and phone calls took less than an hour. This personal contact approach is not only more effective and more efficient than all-you-can-eat info buffets, it also provided me with the major league alliances and mentors necessary to sell this book. Rediscover the power of the forgotten skill called “talking.” It works. Once again, less is more.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1456)</cite>
+
+## Q&A: QUESTIONS AND ACTIONS
+
+> 1\. Go on an immediate one-week media fast.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1484)</cite>
+
+> No newspapers, magazines, audiobooks, or nonmusic radio. Music is permitted at all times. No news websites whatsoever (cnn.com, drudgereport.com, msn.com,10 etc.). No television at all, except for one hour of pleasure viewing each evening. No reading books, except for this book and one hour of fiction11 pleasure reading prior to bed. No web surfing at the desk unless it is necessary to complete a work task for that day.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1489)</cite>
+
+> 2\. Develop the habit of asking yourself, “Will I definitely use this information for something immediate and important?” It’s not enough to use information for “something”—it needs to be immediate and important. If “no” on either count, don’t consume it. Information is useless if it is not applied to something important or if you will forget it before you have a chance to apply it.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1510)</cite>
+
+**“just-in-time” information instead of “just-in-case” information.**
+
+> Focus on what digerati Kathy Sierra calls “just-in-time” information instead of “just-in-case” information.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1516)</cite>
+
+> 3\. Practice the art of nonfinishing.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1517)</cite>
+
+> This is another one that took me a long time to learn. Starting something doesn’t automatically justify finishing it.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1518)</cite>
+
+## Comfort challenge
+
+> Get Phone Numbers (2 Days) Being sure to maintain eye contact, ask for the phone numbers of at least two (the more you attempt, the less stressful it will be) attractive members of the opposite sex on each day.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1524)</cite>
+
+## Interrupting Interruption and the Art of Refusal [_Read more_](kindle://book?action=open&asin=B002WE46UW&location=1540)
+
+> Meetings are an addictive, highly self-indulgent activity that corporations and other organizations habitually engage in only because they cannot actually masturbate. —DAVE BARRY, Pulitzer Prize–winning American humorist<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1543)</cite>
+
+> Learn to be difficult when it counts. In school as in life, having a reputation for being assertive will help you receive preferential treatment without having to beg or fight for it every time.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1560)</cite>
+
+> Doing the important and ignoring the trivial is hard because so much of the world seems to conspire to force crap upon you. Fortunately, a few simple routine changes make bothering you much more painful than leaving you in peace.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1564)</cite>
+
+> For our purposes, an interruption is anything that prevents the start-to-finish completion of a critical task, and there are three principal offenders:<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1567)</cite>
+
+> 1\. Time wasters: those things that can be ignored with little or no consequence. Common time wasters include meetings, discussions, phone calls, web surfing, and e-mail that are unimportant.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1569)</cite>
+
+> 2\. Time consumers: repetitive tasks or requests that need to be completed but often interrupt high-level work.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1571)</cite>
+
+> 3\. Empowerment failures: instances where someone needs approval to make something small happen.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1574)</cite>
+
+> Time Wasters: Become an Ignoramus The best defense is a good offense. —DAN GABLE, Olympic gold medalist in wrestling and the most successful coach in history; personal record: 299–6–3, with 182 pins Time wasters are the easiest to eliminate and deflect. It is a matter of limiting access and funneling all communication toward immediate action.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1577)</cite>
+
+> First, limit e-mail consumption and production.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1582)</cite>
+
+> MOVE TO ONCE-PER-DAY as quickly as possible. Emergencies are seldom that. People are poor judges of importance and inflate minutiae to fill time and feel important.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1603)</cite>
+
+> 2\. If someone does call your cell phone, it is presumably urgent and should be treated as such. Do not allow them to consume time otherwise.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1625)</cite>
+
+> Don’t encourage people to chitchat and don’t let them chitchat. Get them to the point immediately.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1637)</cite>
+
+> The third step is to master the art of refusal and avoiding meetings.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1641)</cite>
+
+> Once it is clear that remaining on task is your policy and not subject to change, they will accept it and move on with life. Hard feelings pass. Don’t suffer fools or you’ll become one.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1655)</cite>
+
+> It is your job to train those around you to be effective and efficient. No one else will do it for you. Here are a few recommendations:<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1656)</cite>
+
+> 1\. Decide that, given the non-urgent nature of most issues, you will steer people toward the following means of communication, in order of preference: e-mail, phone, and in-person meetings. If someone proposes a meeting, request an e-mail instead and then use the phone as your fallback offer if need be.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1658)</cite>
+
+> 3\. Meetings should only be held to make decisions about a predefined situation, not to define the problem. If someone proposes that you meet with them or “set a time to talk on the phone,” ask that person to send you an e-mail with an agenda to define the purpose: That sounds doable. So I can best prepare, can you please send me an e-mail with an agenda? That is, the topics and questions we’ll need to address? That would be great. Thanks in advance.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1675)</cite>
+
+> 4\. Speaking of 30 minutes, if you absolutely cannot stop a meeting or call from happening, define the end time.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1684)</cite>
+
+> 5\. The cubicle is your temple—don’t permit casual visitors.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1691)</cite>
+
+> 6\. Use the Puppy Dog Close to help your superiors and others develop the no-meeting habit.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1702)</cite>
+
+> The cost- and time-effective solution, therefore, is to wait until you have a larger order, an approach called “batching.” Batching is also the solution to our distracting but necessary time consumers, those repetitive tasks that interrupt the most important.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1732)</cite>
+
+> Empowerment failure refers to being unable to accomplish a task without first obtaining permission or information.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1771)</cite>
+
+> Empower others to act without interrupting you.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1811)</cite>
+
+**SET THE RULES in your favor: Limit access to your time, force people to define their requests before spending time with them, and batch routine menial tasks to prevent postponement of more important projects. Do not let people interrupt you.** [Read more](kindle://book?action=open&asin=B002WE46UW&location=1812)
+
+> 1\. Create systems to limit your availability via e-mail and phone and deflect inappropriate contact.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1828)</cite>
+
+> Batch activities to limit setup cost and provide more time for dreamline milestones.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1839)</cite>
+
+> 3\. Set or request autonomous rules and guidelines with occasional review of results.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1842)</cite>
+
+> Remember, profit is only profitable to the extent that you can use it. For that you need time.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1847)</cite>
+
+## Comfort challenge
+
+> Revisit the Terrible Twos (2 Days) For the next two days, do as all good two-year-olds do and say “no” to all requests.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1920)</cite>
+
+# Step III: A is for Automation (will bring you money)
+
+> Step III: A is for Automation<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=1953)</cite>
+
+> Fun things happen when you earn dollars, live on pesos, and compensate in rupees, but that’s just the beginning.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2057)</cite>
+
+> Nobody can give you freedom. Nobody can give you equality or justice or anything. If you’re a man, you take it. —MALCOLM X, Malcolm X Speaks<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2059)</cite>
+
+> most critical of NR skills: remote management and communication.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2063)</cite>
+
+> If I can do it better than an assistant, why should I pay them at all? Because the goal is to free your time to focus on bigger and better things.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2075)</cite>
+
+> Eliminate before you delegate. Never automate something that can be eliminated, and never delegate something that can be automated or streamlined. Otherwise, you waste someone else’s time instead of your own, which now wastes your hard-earned cash.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2097)</cite>
+
+> Principle number one is to refine rules and processes before adding people. Using people to leverage a refined process multiplies production; using people as a solution to a poor process multiplies problems.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2106)</cite>
+
+## “What should you delegate?”
+
+> Golden Rule #1: Each delegated task must be both time-consuming and well-defined. If you’re running around like a chicken with its head cut off and assign your VA to do that for you, it doesn’t improve the order of the universe.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2115)</cite>
+
+> Golden Rule #2: On a lighter note, have some fun with it. Have someone in Bangalore or Shanghai send e-mails to friends as your personal concierge to set lunch dates or similar basics.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2117)</cite>
+
+> First, per-hour cost is not the ultimate determinant of cost. Look at per-task cost.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2230)</cite>
+
+> Commit to memory the following—never use the new hire. Prohibit small-operation VAs from subcontracting work to untested freelancers without your written permission.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2260)</cite>
+
+> 1\. Never use debit cards for online transactions or with remote assistants. Reversing unauthorized credit card charges, particularly with American Express, is painless and near instantaneous.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2278)</cite>
+
+> 2\. If your VA will be accessing websites on your behalf, create a new unique login and password to be used on those sites.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2281)</cite>
+
+> Ask foreign VAs to rephrase tasks to confirm understanding before getting started.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2316)</cite>
+
+> 3\. I gave him a license to waste time. This brings us again to damage control. Request a status update after a few hours of work on a task to ensure that the task is both understood and achievable.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2317)</cite>
+
+> 4\. I set the deadline a week in advance.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2320)</cite>
+
+> WHAT DOES A good VA task e-mail look like? The following example was recently sent to an Indian VA whose results have been nothing short of spectacular:<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2329)</cite>
+
+> How do you assemble a business and coordinate all its parts without lifting a finger? How do you automate cash deposits in your bank account while avoiding the most common problems? It begins with understanding the options, the art of dodging information flow, and what we will call “muses.”<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2345)</cite>
+
+> Q&A: QUESTIONS AND ACTIONS 1\. Get an assistant—even if you don’t need one.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2351)</cite>
+
+> 2\. Start small but think big.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2379)</cite>
+
+> Look at your to-do list—what has been sitting on it the longest? Each time you are interrupted or change tasks, ask, “Could a VA do this?” Examine pain points—what causes you the most frustration and boredom?<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2382)</cite>
+
+> 3\. Identify your top five time-consuming non-work tasks and five personal tasks you could assign for sheer fun.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2400)</cite>
+
+> 4\. Keep in sync: scheduling and calendars<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2401)</cite>
+
+## Comfort challenge
+
+> COMFORT CHALLENGE Use the Criticism Sandwich (2 Days and Weekly)<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2410)</cite>
+
+## Income Autopilot - FINDING THE MUSE [_Read more_](kindle://book?action=open&asin=B002WE46UW&location=2448)
+
+> This chapter is not for people who want to run businesses but for those who want to own businesses and spend no time on them.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2497)</cite>
+
+> People can’t believe that most of the ultrasuccessful companies in the world do not manufacture their own products, answer their own phones, ship their own products, or service their own customers. There are hundreds of companies that exist to pretend to work for someone else and handle these functions, providing rentable infrastructure to anyone who knows where to find them.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2499)</cite>
+
+> Our goal is simple: to create an automated vehicle for generating cash without consuming time. That’s it.22 I will call this vehicle a “muse” whenever possible to separate it from the ambiguous term “business,” which can refer to a lemonade stand or a Fortune 10 oil conglomerate—our objective is more limited and thus requires a more precise label.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2514)</cite>
+
+> It is critical that you decide how you will sell and distribute your product before you commit to a product in the first place. The more middlemen are involved, the higher your margins must be to maintain profitability for all the links in the chain.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2558)</cite>
+
+**Creating demand is hard. Filling demand is much easier.**
+
+> Creating demand is hard. Filling demand is much easier. Don’t create a product, then seek someone to sell it to. Find a market—define your customers—then find or develop a product for them.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2568)</cite>
+
+> Be a member of your target market and don’t speculate what others need or will be willing to buy.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2573)</cite>
+
+> Start Small, Think Big<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2574)</cite>
+
+> It is said that if everyone is your customer, then no one is your customer. If you start off aiming to sell a product to dog- or car-lovers, stop. It’s expensive to advertise to such a broad market, and you are competing with too many products and too much free information. If you focus on how to train German shepherds or a restoration product for antique Fords, on the other hand, the market and competition shrink, making it less expensive to reach your customers and easier to charge premium pricing.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2578)</cite>
+
+> It is more profitable to be a big fish in a small pond than a small undefined fish in a big pond.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2586)</cite>
+
+## Ask yourself the following questions to find profitable niches. [_Read more_](kindle://book?action=open&asin=B002WE46UW&location=2588)
+
+> 1\. Which social, industry, and professional groups do you belong to, have you belonged to, or do you understand, whether dentists, engineers, rock climbers, recreational cyclists, car restoration aficionados, dancers, or other?<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2589)</cite>
+
+> 2\. Which of the groups you identified have their own magazines?<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2595)</cite>
+
+> Step Two: Brainstorm (Do Not Invest In) Products<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2603)</cite>
+
+> Pick the two markets that you are most familiar with that have their own magazines with full-page advertising that costs less than $5,000\. There should be no fewer than 15,000 readers. This is the fun part. Now we get to brainstorm or find products with these two markets in mind.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2606)</cite>
+
+> The Main Benefit Should Be Encapsulated in One Sentence. People can dislike you—and you often sell more by offending some—but they should never misunderstand you.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2611)</cite>
+
+> It Should Cost the Customer $50–200.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2616)</cite>
+
+> 1\. Higher pricing means that we can sell fewer units—and thus manage fewer customers—and fulfill our dreamlines. It’s faster. 2\. Higher pricing attracts lower-maintenance customers (better credit, fewer complaints/questions, fewer returns, etc.). It’s less headache. This is HUGE. 3\. Higher pricing also creates higher profit margins. It’s safer.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2620)</cite>
+
+> Price high and then justify.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2630)</cite>
+
+> It Should Take No More Than 3 to 4 Weeks to Manufacture.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2631)</cite>
+
+> It Should Be Fully Explainable in a Good Online FAQ.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2642)</cite>
+
+> Choose a product that you can fully explain in a good online FAQ. If not, the task of travelling and otherwise forgetting about work becomes very difficult or you end up spending a fortune on call center operators.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2645)</cite>
+
+> “How does one obtain a good muse product that satisfies them?” There are three options we’ll cover in ascending order of recommendation.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2647)</cite>
+
+> Option One: Resell a Product<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2648)</cite>
+
+> Option Two: License a Product<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2660)</cite>
+
+> Option Three: Create a Product<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2677)</cite>
+
+> Information products are low-cost, fast to manufacture, and time-consuming for competitors to duplicate.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2694)</cite>
+
+## But I’m Not an Expert!
+
+> First, “expert” in the context of selling product means that you know more about the topic than the purchaser. No more. It is not necessary to be the best—just better than a small target number of your prospective customers.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2713)</cite>
+
+**Expert status can be created in less than four weeks**
+
+> Second, expert status can be created in less than four weeks if you understand basic credibility indicators. It’s important to learn how the PR pros phrase resume points and position their clients. See the boxed text later in this chapter to learn how.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2718)</cite>
+
+> Use the following questions to brainstorm potential how-to or informational products that can be sold to your markets using your expertise or borrowed expertise.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2731)</cite>
+
+> Digital delivery is perfectly acceptable—in some cases, ideal—if you can create a high enough perceived value.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2733)</cite>
+
+> 1\. How can you tailor a general skill for your market—what I call “niching down”—or add to what is being sold successfully in your target magazines? Think narrow and deep rather than broad.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2735)</cite>
+
+> 2\. What skills are you interested in that you—and others in your markets—would pay to learn? Become an expert in this skill for yourself and then create a product to teach the same.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2737)</cite>
+
+> 3\. What experts could you interview and record to create a sellable audio CD? These people do not need to be the best, but just better than most. Offer them a digital master copy of the interview to do with or sell as they like (this is often enough) and/or offer them a small up-front or ongoing royalty payment.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2739)</cite>
+
+> 4\. Do you have a failure-to-success story that could be turned into a how-to product for others? Consider problems you’ve overcome in the past, both professional and personal.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2744)</cite>
+
+### Being perceived as an expert vs being one
+
+> First and foremost, there is a difference between being perceived as an expert and being one. In the context of business, the former is what sells product and the latter, relative to your “minimal customer base,” is what creates good products and prevents returns. It is possible to know all there is to know about a subject—medicine, for example—but if you don’t have M.D. at the end of your name, few will listen. The M.D. is what I term a “credibility indicator.” The so-called expert with the most credibility indicators, whether acronyms or affiliations, is often the most successful in the marketplace, even if other candidates have more in-depth knowledge. This is a matter of superior positioning, not deception.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2748)</cite>
+
+> “Expert” is nebulous media-speak and so overused as to be indefinable.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2775)</cite>
+
+> In modern PR terms, proof of expertise in most fields is shown with group affiliations, client lists, writing credentials, and media mentions, not IQ points or Ph.D.s.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2775)</cite>
+
+## Comfort challenge
+
+> COMFORT CHALLENGE Find Yoda (3 Days) Call at least one potential superstar mentor per day for three days.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2783)</cite>
+
+## Income Autopilot II TESTING THE MUSE
+
+> To get an accurate indicator of commercial viability, don’t ask people if they would buy—ask them to buy. The response to the second is the only one that matters.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2960)</cite>
+
+> Step Three: Micro-Test Your Products<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=2962)</cite>
+
+## Comfort challenge
+
+> COMFORT CHALLENGE Rejecting First Offers and Walking Away (3 Days)<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3110)</cite>
+
+## Income Autopilot III MBA—MANAGEMENT BY ABSENCE
+
+> The factory of the future will have only two employees, a man and a dog. The man will be there to feed the dog. The dog will be there to keep the man from touching the equipment. —WARREN G. BENNIS,<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3337)</cite>
+
+> Starting with the end in mind—an organizational map of what the eventual business will look like—is not new.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3373)</cite>
+
+> Removing Yourself from the Equation: When and How<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3420)</cite>
+
+> 1\. Contract outsourcing companies53 that specialize in one function vs. freelancers whenever possible so that if someone is fired, quits, or doesn’t perform, you can replace them without interrupting your business.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3425)</cite>
+
+> 2\. Ensure that all outsourcers are willing to communicate among themselves to solve problems, and give them written permission to make most inexpensive decisions without consulting you first (I started at less than $100 and moved to $400 after two months).<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3428)</cite>
+
+> The Art of Undecision: Fewer Options = More Revenue<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3480)</cite>
+
+> Henry Ford once said, referring to his Model-T, the bestselling car of all time,56 “The customer can have any color he wants, so long as it’s black.”<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3491)</cite>
+
+> He understood something that businesspeople seem to have forgotten: Serving the customer (“customer service”) is not becoming a personal concierge and catering to their every whim and want. Customer service is providing an excellent product at an acceptable price and solving legitimate problems (lost packages, replacements, refunds, etc.) in the fastest manner possible. That’s it.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3492)</cite>
+
+> The more options you offer the customer, the more indecision you create and the fewer orders you receive—it is a disservice all around.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3495)</cite>
+
+> 1\. Offer one or two purchase options (“basic” and “premium,” for example) and no more. 2\. Do not offer multiple shipping options. Offer one fast method instead and charge a premium. 3\. Do not offer overnight or expedited shipping (it is possible to refer them to a reseller who does, as is true with all of these points), as these shipping methods will produce hundreds of anxious phone calls. 4\. Eliminate phone orders completely and direct all prospects to online ordering. This seems outrageous until you realize that success stories like Amazon.com have depended on it as a fundamental cost-saver to survive and thrive. 5\. Do not offer international shipments. Spending 10 minutes per order filling out customs forms and then dealing with customer complaints when the product costs 20–100% more with tariffs and duties is about as fun as headbutting a curb. It’s about as profitable, too.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3499)</cite>
+
+> Offering something for free is the best way to attract time-eaters and spend money on those unwilling to return the favor.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3531)</cite>
+
+> Make your customer base an exclusive club, and treat the members well once they’ve been accepted.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3535)</cite>
+
+> Lose-win is the new win-win. Stand out and reap the rewards.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3569)</cite>
+
+### How to Look Fortune 500 in 45 Minutes
+
+> 1\. Don’t be the CEO or founder.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3577)</cite>
+
+> 2\. Put multiple e-mail and phone contacts on the website.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3582)</cite>
+
+> 3\. Set up an Interactive Voice Response (IVR) remote receptionist<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3587)</cite>
+
+> 4\. Do not provide home addresses.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3593)</cite>
+
+## Comfort challenge
+
+> COMFORT CHALLENGE Relax in Public (2 days) This is the last Comfort<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3599)</cite>
+
+# Step IV: L is for Liberation (will bring you movility)
+
+> Step IV: L is for Liberation<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3754)</cite>
+
+> By working faithfully eight hours a day, you may eventually get to be a boss and work twelve hours a day. —ROBERT FROST, American poet and winner of four Pulitzer Prizes<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3760)</cite>
+
+> Being bound to one place will be the new defining feature of middle class. The New Rich are defined by a more elusive power than simple cash—unrestricted mobility.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3793)</cite>
+
+> getting what you want often depends more on when you ask for it than how you ask for it.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3882)</cite>
+
+> While entrepreneurs have the most trouble with Automation, since they fear giving up control, employees get stuck on Liberation because they fear taking control. Resolve to grab the reins—the rest of your life depends on it.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3915)</cite>
+
+### Questions and actions
+
+> Liberty means responsibility. That is why most men dread it. —GEORGE BERNARD SHAW<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3913)</cite>
+
+> 1\. If you had a heart attack, and assuming your boss were sympathetic, how could you work remotely for four weeks?<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3918)</cite>
+
+> 6\. Practice the art of getting past “no” before proposing. Go to farmers’ markets to negotiate prices, ask for free first-class upgrades, ask for compensation if you encounter poor service in restaurants, and otherwise ask for the world and practice using the following magic questions when people refuse to give it to you. “What would I need to do to [desired outcome]?” “Under what circumstances would you [desired outcome]?” “Have you ever made an exception?” “I’m sure you’ve made an exception before, haven’t you?” (If no for either of the last two, ask, “Why not?” If yes, ask, “Why?”)<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=3938)</cite>
+
+> If you must play, decide on three things at the start: the rules of the game, the stakes, and the quitting time. —CHINESE PROVERB<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4016)</cite>
+
+> Just because something has been a lot of work or consumed a lot of time doesn’t make it productive or worthwhile.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4018)</cite>
+
+> Being able to quit things that don’t work is integral to being a winner.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4023)</cite>
+
+## There are several principal phobias that keep people on sinking ships, and there are simple rebuttals for all of them.
+
+> 1\. Quitting is permanent.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4035)</cite>
+
+> 2\. I won’t be able to pay the bills.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4039)</cite>
+
+> Don’t be melodramatic when there is no need<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4048)</cite>
+
+> 3\. Health insurance and retirement accounts disappear if I quit.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4051)</cite>
+
+> 4\. It will ruin my resume.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4058)</cite>
+
+> “I had a once-in-a-lifetime chance to do [exotic and envy-producing experience] and couldn’t turn it down. I figured that, with [20–40] years of work to go, what’s the rush?”<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4065)</cite>
+
+> There are two types of mistakes: mistakes of ambition and mistakes of sloth.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4092)</cite>
+
+> Here are a few exercises to help you realize just how natural job changes are and how simple the transition can be. 1\. First, a familiar reality check: Are you more likely to find what you want in your current job or somewhere else? 2\. If you were fired from your job today, what would you do to get things under financial control? 3\. Take a sick day and post your resume on the major job sites.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4108)</cite>
+
+> In the world of action and negotiation, there is one principle that governs all others: The person who has more options has more power. Don’t wait until you need options to search for them.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4122)</cite>
+
+> 4\. If you run or own a company, imagine that you have just been sued and must declare bankruptcy.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4125)</cite>
+
+## Mini-Retirements EMBRACING THE MOBILE LIFESTYLE
+
+> Mini-Retirements EMBRACING THE MOBILE LIFESTYLE<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4146)</cite>
+
+> There is more to life than increasing its speed. —MOHANDAS GANDHI<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4202)</cite>
+
+> Thanks to the Interstate Highway System, it is now possible to travel from coast to coast without seeing anything. —CHARLES KURALT, CBS news reporter<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4214)</cite>
+
+> The alternative to binge travel—the mini-retirement—entails relocating to one place for one to six months before going home or moving to another locale.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4224)</cite>
+
+> Rather than seeking to see the world through photo ops between foreign-but-familiar hotels, we aim to experience it at a speed that lets it change us.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4227)</cite>
+
+> True freedom is much more than having enough income and time to do what you want. It is quite possible—actually the rule rather than the exception—to have financial and time freedom but still be caught in the throes of the rat race.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4235)</cite>
+
+> Learn to slow down. Get lost intentionally. Observe how you judge both yourself and those around you. Chances are that it’s been a while. Take at least two months to disincorporate old habits and rediscover yourself without the reminder of a looming return flight.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4244)</cite>
+
+> economic argument for mini-retirements<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4247)</cite>
+
+> Four-Week Total for Luxury Living<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4282)</cite>
+
+> Buenos Aires: $1533.20,<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4283)</cite>
+
+> Berlin: $1180,<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4286)</cite>
+
+> I asked every vagabond interviewee in this book what their one recommendation would be for first-time extended travelers. The answer was unanimous: Take less with you.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4390)</cite>
+
+## Questions and actions
+
+> It is fatal to know too much at the outcome: boredom comes as quickly to the traveler who knows his route as to the novelist who is overcertain of his plot. —PAUL THEROUX, To the Ends of the Earth<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4434)</cite>
+
+> 1\. Take an asset and cash-flow snapshot.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4442)</cite>
+
+> 2\. Fear-set a one-year mini-retirement in<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4447)</cite>
+
+> 3\. Choose a location for your actual mini-retirement. Where to start?<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4450)</cite>
+
+> Cheap is good, but bullet holes are bad.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4460)</cite>
+
+## Filling the Void ADDING LIFE AFTER SUBTRACTING WORK
+
+> Decreasing income-driven work isn’t the end goal. Living more—and becoming more—is.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4821)</cite>
+
+> People say that what we are seeking is a meaning for life. I don’t think this is what we’re really seeking. I think what we’re seeking is an experience of being alive. —JOSEPH CAMPBELL, The Power of Myth<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4839)</cite>
+
+> Most of this can be overcome as soon as we recognize it for what it is: outdated comparisons using the more-is-better and money-as-success mind-sets that got us into trouble to begin with.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4857)</cite>
+
+> If you find a focus, an ambitious goal that seems impossible and forces you to grow,81 these doubts disappear.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4862)</cite>
+
+> I am 100% convinced that most big questions we feel compelled to face—handed down through centuries of overthinking and mistranslation—use terms so undefined as to make attempting to answer them a complete waste of time.82 This isn’t depressing. It’s liberating.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4869)</cite>
+
+## Before spending time on a stress-inducing question
+
+> Before spending time on a stress-inducing question, big or otherwise, ensure that the answer is “yes” to the following two questions: 1\. Have I decided on a single meaning for each term in this question? 2\. Can an answer to this question be acted upon to improve things?<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4876)</cite>
+
+> These are not worthwhile questions. If you can’t define it or act upon it, forget it.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4881)</cite>
+
+> Sharpening your logical and practical mental toolbox is not being an atheist or unspiritual. It’s not being crass and it’s not being superficial. It’s being smart and putting your effort where it can make the biggest difference for yourself and others.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4883)</cite>
+
+> I believe that life exists to be enjoyed and that the most important thing is to feel good about yourself.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4889)</cite>
+
+> I can’t offer a single answer that will fit all people, but, based on the dozens of fulfilled NR I’ve interviewed, there are two components that are fundamental: continual learning and service.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4896)</cite>
+
+> Learning Unlimited: Sharpening the Saw<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4898)</cite>
+
+> It need not be a competitive sport—it could be hiking, chess, or almost anything that keeps your nose out of a textbook and you out of your apartment.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4914)</cite>
+
+> Service for the Right Reasons:<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4927)</cite>
+
+> Morality is simply the attitude we adopt toward people we personally dislike.      —OSCAR WILDE<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4928)</cite>
+
+> Service to me is simple: doing something that improves life besides your own.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4931)</cite>
+
+> Do not become a cause snob.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4935)</cite>
+
+> Do your best and hope for the best. If you’re improving the world—however you define that—consider your job well done.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4940)</cite>
+
+> Service is an attitude. Find the cause or vehicle that interests you most and make no apologies.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4944)</cite>
+
+> Q&A: QUESTIONS AND ACTIONS<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4946)</cite>
+
+> 1\. Revisit ground zero: Do nothing.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4959)</cite>
+
+> Slowing down doesn’t mean accomplishing less; it means cutting out counterproductive distractions and the perception of being rushed.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4961)</cite>
+
+> 2\. Make an anonymous donation to the service organization of your choice.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4972)</cite>
+
+> 3\. Take a learning mini-retirement in combination with local volunteering<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=4987)</cite>
+
+> 4\. Revisit and reset dreamlines.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5015)</cite>
+
+> 5\. Based on the outcomes of steps 1–4, consider testing new part- or full-time vocations.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5025)</cite>
+
+# The Top 13 New Rich Mistakes
+
+> 1\. Losing sight of dreams and falling into work for work’s sake (W4W)<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5047)</cite>
+
+> 2\. Micromanaging and e-mailing to fill time<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5049)</cite>
+
+> 3\. Handling problems your outsourcers or co-workers can handle<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5051)</cite>
+
+> 4\. Helping outsourcers or co-workers with the same problem more than once,<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5052)</cite>
+
+> 5\. Chasing customers, particularly unqualified or international prospects, when you have sufficient cash flow to finance your nonfinancial pursuits<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5058)</cite>
+
+> 6\. Answering e-mail that will not result in a sale or that can be answered by a FAQ or auto-responder<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5059)</cite>
+
+> 7\. Working where you live, sleep, or should relax<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5062)</cite>
+
+> 8\. Not performing a thorough 80/20 analysis every two to four weeks for your business and personal life<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5064)</cite>
+
+> 9\. Striving for endless perfection rather than great or simply good enough, whether in your personal or professional life<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5065)</cite>
+
+> Focus on great for a few things and good enough for the rest.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5068)</cite>
+
+> 10\. Blowing minutiae and small problems out of proportion as an excuse to work<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5070)</cite>
+
+> 11\. Making non-time-sensitive issues urgent in order to justify work<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5071)</cite>
+
+> 12\. Viewing one product, job, or project as the end-all and be-all of your existence<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5074)</cite>
+
+> Life is too short to waste, but it is also too long to be a pessimist or nihilist.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5075)</cite>
+
+> 13\. Ignoring the social rewards of life<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5078)</cite>
+
+> Create your muses alone if you must, but do not live your life alone. Happiness shared in the form of friendships and love is happiness multiplied.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5079)</cite>
+
+> There is nothing the busy man is less busied with than living; there is nothing harder to learn.      —SENECA<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5085)</cite>
+
+> Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. —STEVE JOBS,<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5090)</cite>
+
+> So be bold and don’t worry about what people think. They don’t do it that often anyway.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5097)</cite>
+
+> blinders and put things in perspective. Even when you’re not traveling the world, develop the habit of letting small bad things happen. If you don’t, you’ll never find time for the life-changing big things, whether important tasks or true peak experiences.<cite>[Read more](kindle://book?action=open&asin=B002WE46UW&location=5168)</cite>
+
+# Favorite reads of 2008
+
+**Zorba the greek** https://www.amazon.com/Zorba-Greek-Nikos-Kazantzakis-ebook/dp/B00WVMP6ZY/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1510183950&sr=1-1&keywords=zorba+the+greek
+
+**Seneca: Letters from a Stoic**: https://www.amazon.com/Letters-Stoic-Epistulae-Lucilium-Illustrated-ebook/dp/B00OVA77JW/ref=sr_1_3?s=digital-text&ie=UTF8&qid=1510183500&sr=1-3&keywords=Seneca%3A+Letters+from+a+Stoic
+
+**Notes extracted and edited with [Kintrospect](https://kintrospect.com/)**
