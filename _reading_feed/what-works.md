@@ -1,10 +1,16 @@
 ---
-layout: default
+title: What Works by Iris Bohnet
 ---
 
-# What Works by Iris Bohnet
+<a target="_blank"  style="float: left; padding-right: 2rem;" href="https://www.amazon.com/gp/product/B01C5MZGS6/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01C5MZGS6&linkCode=as2&tag=abuiles0c-20&linkId=2edcd0dd2a697876ac3f68a89cce195b"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B01C5MZGS6&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=abuiles0c-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=abuiles0c-20&l=am2&o=1&a=B01C5MZGS6" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-https://www.amazon.com/What-Works-Iris-Bohnet-ebook/dp/B01C5MZGS6
+Gender equality is a moral and a business imperative. But unconscious bias holds us back and de-biasing minds has proven to be difficult and expensive. Behavioral design offers a new solution. Iris Bohnet shows that by de-biasing organizations instead of individuals, we can make smart changes that have big impacts—often at low cost and high speed.
+
+[Buy on amazon to follow along my highlights](https://www.amazon.com/gp/product/B01C5MZGS6/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01C5MZGS6&linkCode=as2&tag=abuiles0c-20&linkId=2edcd0dd2a697876ac3f68a89cce195b)
+
+<div style="clear: both; padding: 0 0 1rem 0;"></div>
+<hr style="margin: 0 0 1rem 0;">
+
 
 > Gender equality is a moral and a business imperative. But unconscious bias holds us back and de-biasing minds has proven to be difficult and expensive. Behavioral design offers a new solution. Iris Bohnet shows that by de-biasing organizations instead of individuals, we can make smart changes that have big impacts—often at low cost and high speed.
 

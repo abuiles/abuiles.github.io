@@ -1,12 +1,15 @@
 ---
-layout: default
+title: "The 4-Hour Workweek by Tim Ferris"
 ---
-# The 4-Hour Workweek by Tim Ferris
 
-[https://www.amazon.com/4-Hour-Workweek-Expanded-Updated-Cutting-Edge-ebook/dp/B002WE46UW/](https://www.amazon.com/4-Hour-Workweek-Expanded-Updated-Cutting-Edge-ebook/dp/B002WE46UW/)
+<a target="_blank"  style="float: left; padding-right: 2rem;" href="https://www.amazon.com/gp/product/B002WE46UW/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B002WE46UW&linkCode=as2&tag=abuiles0c-20&linkId=133509b997abd11c77df2a09a8c29daf"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B002WE46UW&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=abuiles0c-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=abuiles0c-20&l=am2&o=1&a=B002WE46UW" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-> Forget the old concept of retirement and the rest of the deferred-life plan–there is no need to wait and every reason not to, especially in unpredictable economic times. Whether your dream is escaping the rat race, experiencing high-end world travel, or earning a monthly five-figure income with zero management, The 4-Hour Workweek is the blueprint.
+Forget the old concept of retirement and the rest of the deferred-life plan–there is no need to wait and every reason not to, especially in unpredictable economic times. Whether your dream is escaping the rat race, experiencing high-end world travel, or earning a monthly five-figure income with zero management, The 4-Hour Workweek is the blueprint.
 
+[Buy on amazon to follow along my highlights](https://www.amazon.com/gp/product/B002WE46UW/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B002WE46UW&linkCode=as2&tag=abuiles0c-20&linkId=133509b997abd11c77df2a09a8c29daf)
+
+<div style="clear: both; padding: 0 0 1rem 0;"></div>
+<hr style="margin: 0 0 1rem 0;">
 
 Some times people think they can only do things if they have millions, but that's not always the case.
 

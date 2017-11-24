@@ -1,17 +1,14 @@
 ---
-layout: default
+title: "Nonviolent Communication: A Language of Life by Marshall Rosenberg"
 ---
-# Nonviolent Communication: A Language of Life, 3rd Edition: Life-Changing Tools for Healthy Relationships (Nonviolent Communication Guides) by Marshall Rosenberg
-
-<a target="_blank" style="float: left; padding: 2rem;" href="https://www.amazon.com/gp/product/B014OISVU4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B014OISVU4&linkCode=as2&tag=abuiles0c-20&linkId=c24763bc5840547ec93d7c1d2c4c0654"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B014OISVU4&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=abuiles0c-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=abuiles0c-20&l=am2&o=1&a=B014OISVU4" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a target="_blank" style="float: left; padding-right: 2rem;" href="https://www.amazon.com/gp/product/B014OISVU4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B014OISVU4&linkCode=as2&tag=abuiles0c-20&linkId=c24763bc5840547ec93d7c1d2c4c0654"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B014OISVU4&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=abuiles0c-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=abuiles0c-20&l=am2&o=1&a=B014OISVU4" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 An enlightening look at how peaceful communication can create compassionate connections with family, friends, and other acquaintances, this international bestseller uses stories, examples, and sample dialogues to provide solutions to communication problems both at home and in the workplace. Guidance is provided on identifying and articulating feelings and needs, expressing anger fully, and exploring the power of empathy in order to speak honestly without creating hostility, break patterns of thinking that lead to anger and depression, and communicate compassionately.
 
 [Buy on amazon to follow along my highlights](https://www.amazon.com/gp/product/B014OISVU4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B014OISVU4&linkCode=as2&tag=abuiles0c-20&linkId=4a5ad804cbe6c400ccb090bb3989501a)
 
-<hr>
-
-<div style="clear: both;"></div>
+<div style="clear: both; padding: 0 0 1rem 0;"></div>
+<hr style="margin: 0 0 1rem 0;">
 
 * **OFNR = Observations, Feels, Needs, Requests**
 * **Observe without evaluating**

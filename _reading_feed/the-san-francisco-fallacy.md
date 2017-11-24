@@ -1,11 +1,15 @@
 ---
-layout: default
+title: "The San Francisco Fallacy: The Ten Fallacies That Make Founders Fail By Jonathan Siegel"
 ---
-# The San Francisco Fallacy: The Ten Fallacies That Make Founders Fail By Jonathan Siegel
+<a target="_blank" style="float: left; padding-right: 2rem;" href="https://www.amazon.com/gp/product/B071NGMJPN/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B071NGMJPN&linkCode=as2&tag=abuiles0c-20&linkId=e15eeed07e6f187325f94fa05639c8a8"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B071NGMJPN&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=abuiles0c-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=abuiles0c-20&l=am2&o=1&a=B071NGMJPN" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
 
 **THE SAN FRANCISCO FALLACY IS NOT ABOUT SAN FRANCISCO. **Rather, it's about the herd instincts that drive tech companies to set up shop there, and the mistakes these herd instincts lead to. Most importantly, it's about how to avoid making these same mistakes yourself.
 
-**Important: To follow along the notes buy the book for Kindle on Amazon - [The San Francisco Fallacy: The Ten Fallacies That Make Founders Fail](https://www.amazon.com/San-Francisco-Fallacy-Fallacies-Founders-ebook/dp/B071NGMJPN), download the Kindle app for desktop  and then it will open the location when you click on it.**
+[Buy on amazon to follow along my highlights](https://www.amazon.com/gp/product/B071NGMJPN/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B071NGMJPN&linkCode=as2&tag=abuiles0c-20&linkId=e15eeed07e6f187325f94fa05639c8a8)
+
+<div style="clear: both; padding: 0 0 1rem 0;"></div>
+<hr style="margin: 0 0 1rem 0;">
 
 ## The Tech Fallacy
 
