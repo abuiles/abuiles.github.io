@@ -127,3 +127,5 @@ using Truffle REPL mode. Follow me on twitter
 updates.
 
 You can find the code and steps for this article in GitHub https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle.
+
+{% include ethereum_list.html %}

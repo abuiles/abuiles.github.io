@@ -420,3 +420,5 @@ You can find the code and steps for this article in GitHub [https://github.com/a
 Finally, we talked superficially about Truffle's contracts, migrations
 and tests. To learn more about it check their
 [website](http://truffleframework.com/docs/getting_started/installation).
+
+{% include ethereum_list.html %}

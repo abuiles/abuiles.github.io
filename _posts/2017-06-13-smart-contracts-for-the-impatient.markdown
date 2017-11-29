@@ -236,4 +236,4 @@ I'll be writing more about Ethereum, working with contracts and how to
 use [Truffle](http://truffleframework.com/) to stay sane while doing
 so.
 
-**Found a typo? Please let me [know](mailto:builes.adolfo@gmail.com)**
+{% include ethereum_list.html %}
