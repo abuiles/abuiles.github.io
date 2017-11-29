@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://blog.abuiles.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.abuiles.com/" rel="alternate" type="text/html" /><updated>2017-11-24T11:30:09-05:00</updated><id>https://blog.abuiles.com/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://blog.abuiles.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.abuiles.com/" rel="alternate" type="text/html" /><updated>2017-11-29T10:30:23-05:00</updated><id>https://blog.abuiles.com/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about tech, humans, books, Ember.js and random stuff.
 </subtitle><entry><title type="html">Doing More With My Kindle Highlights</title><link href="https://blog.abuiles.com/blog/2017/11/22/doing-more-with-my-kindle-highlights/" rel="alternate" type="text/html" title="Doing More With My Kindle Highlights" /><published>2017-11-22T19:36:02-05:00</published><updated>2017-11-22T19:36:02-05:00</updated><id>https://blog.abuiles.com/blog/2017/11/22/doing-more-with-my-kindle-highlights</id><content type="html" xml:base="https://blog.abuiles.com/blog/2017/11/22/doing-more-with-my-kindle-highlights/">&lt;p&gt;Until recently it was difficult to review and consume the highlights in my Kindle books and then in June (2017) Amazon launched a new page under
 https://read.amazon.com/notebook.&lt;/p&gt;
 
@@ -192,7 +192,33 @@ using Truffle REPL mode. Follow me on twitter
 (&lt;a href=&quot;http://twitter.com/abuiles&quot;&gt;@abuiles&lt;/a&gt;) or subscribe to my feed to get
 updates.&lt;/p&gt;
 
-&lt;p&gt;You can find the code and steps for this article in GitHub https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle.&lt;/p&gt;</content><author><name></name></author><summary type="html">In writing smart contracts with Truffle I covered how to get started with Truffle and how to create, test and deploy contracts using an in-memory representation of the blockchain.</summary></entry><entry><title type="html">Writing Smart Contracts With Truffle</title><link href="https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/" rel="alternate" type="text/html" title="Writing Smart Contracts With Truffle" /><published>2017-07-09T01:10:06-05:00</published><updated>2017-07-09T01:10:06-05:00</updated><id>https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle</id><content type="html" xml:base="https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/">&lt;p&gt;In my article &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;Smart contracts for the
+&lt;p&gt;You can find the code and steps for this article in GitHub https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&quot;padding-bottom: 20px;&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Begin MailChimp Signup Form --&gt;
+&lt;link href=&quot;//cdn-images.mailchimp.com/embedcode/slim-10_7.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+        #mc_embed_signup form { padding: 0 !important; }
+&lt;/style&gt;
+
+&lt;div id=&quot;mc_embed_signup&quot;&gt;
+&lt;form action=&quot;https://abuiles.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;amp;id=68c8310031&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate=&quot;&quot;&gt;
+    &lt;div id=&quot;mc_embed_signup_scroll&quot;&gt;
+    	&lt;label style=&quot;font-size: 21px;&quot; for=&quot;mce-EMAIL&quot;&gt;Did you like this article? I'm working on a set of mini-books about Ethereum - subscribe for updates and get a discount.&lt;/label&gt;
+	&lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;email address&quot; required=&quot;&quot; /&gt;
+    &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+    &lt;div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;b_103dd05cb2005f7b5485df96d_68c8310031&quot; tabindex=&quot;-1&quot; value=&quot;&quot; /&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot; /&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+
+&lt;!--End mc_embed_signup--&gt;</content><author><name></name></author><summary type="html">In writing smart contracts with Truffle I covered how to get started with Truffle and how to create, test and deploy contracts using an in-memory representation of the blockchain.</summary></entry><entry><title type="html">Writing Smart Contracts With Truffle</title><link href="https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/" rel="alternate" type="text/html" title="Writing Smart Contracts With Truffle" /><published>2017-07-09T01:10:06-05:00</published><updated>2017-07-09T01:10:06-05:00</updated><id>https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle</id><content type="html" xml:base="https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/">&lt;p&gt;In my article &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;Smart contracts for the
 impatient&lt;/a&gt; I
 documented how to deploy a contract using Mist to the testnet Rinkeby.&lt;/p&gt;
 
@@ -592,7 +618,33 @@ feed to get updates on my post.&lt;/p&gt;
 
 &lt;p&gt;Finally, we talked superficially about Truffle’s contracts, migrations
 and tests. To learn more about it check their
-&lt;a href=&quot;http://truffleframework.com/docs/getting_started/installation&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">In my article Smart contracts for the impatient I documented how to deploy a contract using Mist to the testnet Rinkeby.</summary></entry><entry><title type="html">Smart contracts for the impatient</title><link href="https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart contracts for the impatient" /><published>2017-06-13T08:10:40-05:00</published><updated>2017-06-13T08:10:40-05:00</updated><id>https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;I’ve been learning about Ethereum and smart contracts, and one of the
+&lt;a href=&quot;http://truffleframework.com/docs/getting_started/installation&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&quot;padding-bottom: 20px;&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Begin MailChimp Signup Form --&gt;
+&lt;link href=&quot;//cdn-images.mailchimp.com/embedcode/slim-10_7.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+        #mc_embed_signup form { padding: 0 !important; }
+&lt;/style&gt;
+
+&lt;div id=&quot;mc_embed_signup&quot;&gt;
+&lt;form action=&quot;https://abuiles.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;amp;id=68c8310031&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate=&quot;&quot;&gt;
+    &lt;div id=&quot;mc_embed_signup_scroll&quot;&gt;
+    	&lt;label style=&quot;font-size: 21px;&quot; for=&quot;mce-EMAIL&quot;&gt;Did you like this article? I'm working on a set of mini-books about Ethereum - subscribe for updates and get a discount.&lt;/label&gt;
+	&lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;email address&quot; required=&quot;&quot; /&gt;
+    &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+    &lt;div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;b_103dd05cb2005f7b5485df96d_68c8310031&quot; tabindex=&quot;-1&quot; value=&quot;&quot; /&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot; /&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+
+&lt;!--End mc_embed_signup--&gt;</content><author><name></name></author><summary type="html">In my article Smart contracts for the impatient I documented how to deploy a contract using Mist to the testnet Rinkeby.</summary></entry><entry><title type="html">Smart contracts for the impatient</title><link href="https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart contracts for the impatient" /><published>2017-06-13T08:10:40-05:00</published><updated>2017-06-13T08:10:40-05:00</updated><id>https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="https://blog.abuiles.com/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;I’ve been learning about Ethereum and smart contracts, and one of the
 biggest issues I’ve found is the lack of documentation to do some
 basic things.&lt;/p&gt;
 
@@ -836,7 +888,31 @@ twitter&lt;/a&gt;.&lt;/p&gt;
 use &lt;a href=&quot;http://truffleframework.com/&quot;&gt;Truffle&lt;/a&gt; to stay sane while doing
 so.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Found a typo? Please let me &lt;a href=&quot;mailto:builes.adolfo@gmail.com&quot;&gt;know&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been learning about Ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.</summary></entry><entry><title type="html">Upgrading mirage with JSCodeshift</title><link href="https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/" rel="alternate" type="text/html" title="Upgrading mirage with JSCodeshift" /><published>2016-05-27T09:24:25-05:00</published><updated>2016-05-27T09:24:25-05:00</updated><id>https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift</id><content type="html" xml:base="https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/">&lt;p&gt;If you have been using the beta release of mirage, chances are that
+&lt;hr /&gt;
+
+&lt;div style=&quot;padding-bottom: 20px;&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Begin MailChimp Signup Form --&gt;
+&lt;link href=&quot;//cdn-images.mailchimp.com/embedcode/slim-10_7.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+        #mc_embed_signup form { padding: 0 !important; }
+&lt;/style&gt;
+
+&lt;div id=&quot;mc_embed_signup&quot;&gt;
+&lt;form action=&quot;https://abuiles.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;amp;id=68c8310031&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate=&quot;&quot;&gt;
+    &lt;div id=&quot;mc_embed_signup_scroll&quot;&gt;
+    	&lt;label style=&quot;font-size: 21px;&quot; for=&quot;mce-EMAIL&quot;&gt;Did you like this article? I'm working on a set of mini-books about Ethereum - subscribe for updates and get a discount.&lt;/label&gt;
+	&lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;email address&quot; required=&quot;&quot; /&gt;
+    &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
+    &lt;div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;b_103dd05cb2005f7b5485df96d_68c8310031&quot; tabindex=&quot;-1&quot; value=&quot;&quot; /&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot; /&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+
+&lt;!--End mc_embed_signup--&gt;</content><author><name></name></author><summary type="html">I’ve been learning about Ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.</summary></entry><entry><title type="html">Upgrading mirage with JSCodeshift</title><link href="https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/" rel="alternate" type="text/html" title="Upgrading mirage with JSCodeshift" /><published>2016-05-27T09:24:25-05:00</published><updated>2016-05-27T09:24:25-05:00</updated><id>https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift</id><content type="html" xml:base="https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/">&lt;p&gt;If you have been using the beta release of mirage, chances are that
 you haven’t made the jump from beta.7 to beta.9 because some of the
 breaking deprecations.&lt;/p&gt;
 
