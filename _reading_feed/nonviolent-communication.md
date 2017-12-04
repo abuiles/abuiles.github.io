@@ -17,35 +17,67 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 <hr style="margin: 0 0 1rem 0;">
 
+
+
 * **OFNR = Observations, Feels, Needs, Requests**
 * **Observe without evaluating**
-* **Identify and express your feelings**
-* **Take responsibility for your feelings**
-
+* **Ask before offering advice or reassurance.**
+* **Behind intimidating messages are merely people appealing to us to meet their needs**
+* **Empathy lies in our ability to be present.**
+* **Make choices motivated purely by our desire to contribute to life rather than out of fear, guilt, shame, duty, or obligation.**
+* **Replace I have to with I choose to**
+* **Be conscious of actions motivated by the desire for money or approval, and by fear, shame, or guilt. Know the price you pay for them**
+* **Divorce the other person from any responsibility for our anger**
+* **The first step in the process of fully expressing our anger is to realize that what other people do is never the cause of how we feel**
+* **it’s not what the other person does, but the images and interpretations in my own head that produce my anger**
+* **Intellectual analysis is often received as criticism.**
+* **Saying “thank you” in NVC: “This is what you did; this is what I feel; this is the need of mine that was met.” Open in Kindle**
 
 ## 1 Giving From the Heart The Heart of Nonviolent Communication
 
 > *1 Giving From the Heart The Heart of Nonviolent Communication [Read more](kindle://book?action=open&asin=B014OISVU4&location=332)*
 
+
+
 > *The NVC Process [Read more](kindle://book?action=open&asin=B014OISVU4&location=406)*
+
+
 
 > *To arrive at a mutual desire to give from the heart, we focus the light of consciousness on four areas—referred to as the four components of the NVC model. [Read more](kindle://book?action=open&asin=B014OISVU4&location=406)*
 
+
+
 > *First, we observe what is actually happening in a situation: what are we observing others saying or doing that is either enriching or not enriching our life? [Read more](kindle://book?action=open&asin=B014OISVU4&location=407)*
+
+
 
 > *Next, we state how we feel when we observe this action: are we hurt, scared, joyful, amused, irritated?[Read more](kindle://book?action=open&asin=B014OISVU4&location=410)*
 
+
+
 > *And thirdly, we say what needs of ours are connected to the feelings we have identified. [Read more](kindle://book?action=open&asin=B014OISVU4&location=410)*
+
+
 
 > *Four components of NVC: 1. observations 2. feelings 3. needs 4. requests [Read more](kindle://book?action=open&asin=B014OISVU4&location=413)*
 
+
+
 > *the fourth component—a very specific request: [Read more](kindle://book?action=open&asin=B014OISVU4&location=418)*
+
+
 
 > *The other part of this communication consists of receiving the same four pieces of information from others. We connect with them by first sensing what they are observing, feeling, and needing; then we discover what would enrich their lives by receiving the fourth piece—their request. [Read more](kindle://book?action=open&asin=B014OISVU4&location=421)*
 
+
+
 > *NVC Process The concrete actions we observe that affect our well-being How we feel in relation to what we observe The needs, values, desires, etc. that create our feelings The concrete actions we request in order to enrich our lives [Read more](kindle://book?action=open&asin=B014OISVU4&location=426)*
 
+
+
 > *Two parts of NVC: expressing honestly through the four components receiving empathically through the four components [Read more](kindle://book?action=open&asin=B014OISVU4&location=436)*
+
+
 
 > *NVC helps us connect with each other and ourselves in a way that allows our natural compassion to flourish. It guides us to reframe the way we express ourselves and listen to others by focusing our consciousness on four areas: what we are observing, feeling, and needing, and what we are requesting to enrich our lives. [Read more](kindle://book?action=open&asin=B014OISVU4&location=492)*
 
@@ -53,25 +85,45 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 > *Certain ways of communicating alienate us from our natural state of compassion. [Read more](kindle://book?action=open&asin=B014OISVU4&location=539)*
 
+
+
 > *Moralistic Judgments One kind of life-alienating communication is the use of moralistic judgments that imply wrongness or badness on the part of people who don’t act in harmony with our values. [Read more](kindle://book?action=open&asin=B014OISVU4&location=540)*
+
+
 
 > *In the world of judgments, our concern centers on “who is what.” [Read more](kindle://book?action=open&asin=B014OISVU4&location=549)*
 
+
+
 > *It is my belief that all such analyses of other human beings are tragic expressions of our own values and needs. They are tragic because when we express our values and needs in this form, we increase defensiveness and resistance among the very people whose behaviors are of concern to us. [Read more](kindle://book?action=open&asin=B014OISVU4&location=560)*
+
+
 
 > *It is important here not to confuse value judgments and moralistic judgments. All of us make value judgments as to the qualities we value in life; for example, we might value honesty, freedom, or peace. Value judgments reflect our beliefs of how life can best be served. We make moralistic judgments of people and behaviors that fail to support our value judgments; for example, “Violence is bad. People who kill others are evil.” [Read more](kindle://book?action=open&asin=B014OISVU4&location=568)*
 
+
+
 > *For example, instead of “Violence is bad,” we might say instead, “I am fearful of the use of violence to resolve conflicts; I value the resolution of human conflicts through other means.” [Read more](kindle://book?action=open&asin=B014OISVU4&location=573)*
+
+
 
 > *Classifying and judging people promotes violence. [Read more](kindle://book?action=open&asin=B014OISVU4&location=582)*
 
 > *Making Comparisons Another form of judgment is the use of comparisons. [Read more](kindle://book?action=open&asin=B014OISVU4&location=589)*
 
+
+
 > *Another kind of life-alienating communication is denial of responsibility. Communication is life-alienating when it clouds our awareness that we are each responsible for our own thoughts, feelings, and actions. [Read more](kindle://book?action=open&asin=B014OISVU4&location=604)*
+
+
 
 > *We deny responsibility for our actions when we attribute their cause to factors outside ourselves: [Read more](kindle://book?action=open&asin=B014OISVU4&location=614)*
 
+
+
 > *We can replace language that implies lack of choice with language that acknowledges choice. [Read more](kindle://book?action=open&asin=B014OISVU4&location=633)*
+
+
 
 > *We are dangerous when we are not conscious of our responsibility for how we behave, think, and feel.[Read more](kindle://book?action=open&asin=B014OISVU4&location=641)*
 
@@ -79,9 +131,15 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 > *Communicating our desires as demands is yet another form of language that blocks compassion.[Read more](kindle://book?action=open&asin=B014OISVU4&location=651)*
 
+
+
 > *Thinking based on “who deserves what” blocks compassionate communication. [Read more](kindle://book?action=open&asin=B014OISVU4&location=665)*
 
+
+
 > *the more people are trained to think in terms of moralistic judgments that imply wrongness and badness, the more they are being trained to look outside themselves—to outside authorities—for the definition of what constitutes right, wrong, good, and bad. When we are in contact with our feelings and needs, we humans no longer make good slaves and underlings. [Read more](kindle://book?action=open&asin=B014OISVU4&location=676)*
+
+
 
 > *Summary It is our nature to enjoy giving and receiving compassionately. We have, however, learned many forms of life-alienating communication that lead us to speak and behave in ways that injure others and ourselves. One form of life-alienating communication is the use of moralistic judgments that imply wrongness or badness on the part of those who don’t act in harmony with our values. Another is the use of comparisons, which can block compassion both for others and for ourselves. Life-alienating communication also obscures our awareness that we are each responsible for our own thoughts, feelings, and actions. Communicating our desires in the form of demands is yet another characteristic of language that blocks compassion. [Read more](kindle://book?action=open&asin=B014OISVU4&location=678)*
 
@@ -105,13 +163,23 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 > *For most of us, it is difficult to make observations, especially of people and their behavior, that are free of judgment, criticism, or other [Read more](kindle://book?action=open&asin=B014OISVU4&location=751)*
 
+
+
 > *Distinguishing Observations From Evaluations The following table distinguishes observations that are separate from evaluation from those that have evaluation mixed in. [Read more](kindle://book?action=open&asin=B014OISVU4&location=780)*
+
+
 
 > *Words like frequently and seldom can also contribute to confusing observation with evaluation. [Read more](kindle://book?action=open&asin=B014OISVU4&location=802)*
 
+
+
 > *The first component of NVC entails the separation of observation from evaluation. When we combine observation with evaluation, others are apt to hear criticism and resist what we are saying. [Read more](kindle://book?action=open&asin=B014OISVU4&location=807)*
 
+
+
 > *Instead, observations are to be made specific to time and context, for example, “Hank Smith has not scored a goal in twenty games,” rather than “Hank Smith is a poor soccer player.” [Read more](kindle://book?action=open&asin=B014OISVU4&location=809)*
+
+
 
 > *NVC in Action “The Most Arrogant Speaker We’ve Ever Had!” [Read more](kindle://book?action=open&asin=B014OISVU4&location=811)*
 
@@ -119,71 +187,139 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 > *4 Identifying and Expressing Feelings [Read more](kindle://book?action=open&asin=B014OISVU4&location=876)*
 
+
+
 > *The first component of NVC is to observe without evaluating; the second component is to express how we are feeling. [Read more](kindle://book?action=open&asin=B014OISVU4&location=878)*
+
+
 
 > *Expressing our vulnerability can help resolve conflicts. [Read more](kindle://book?action=open&asin=B014OISVU4&location=931)*
 
+
+
 > *In general, feelings are not being clearly expressed when the word feel is followed by: Words such as that, like, as if: “I feel that you should know better.” “I feel like a failure.” “I feel as if I’m living with a wall.” The pronouns I, you, he, she, they, it: “I feel I am constantly on call.” “I feel it is useless.” Names or nouns referring to people: “I feel Amy has been pretty responsible.” “I feel my boss is being manipulative.” [Read more](kindle://book?action=open&asin=B014OISVU4&location=946)*
+
+
 
 > *Distinguish feelings from thoughts. [Read more](kindle://book?action=open&asin=B014OISVU4&location=954)*
 
+
+
 > *in the English language, it is not necessary to use the word feel at all when we are actually expressing a feeling: we can say, “I’m feeling irritated,” or simply, “I’m irritated.” [Read more](kindle://book?action=open&asin=B014OISVU4&location=954)*
+
+
 
 > *Distinguish between what we feel and what we think we are. [Read more](kindle://book?action=open&asin=B014OISVU4&location=957)*
 
+
+
 > *In NVC, we distinguish between words that express actual feelings and those that describe what we think we are. [Read more](kindle://book?action=open&asin=B014OISVU4&location=958)*
+
+
 
 > *Distinguish between what we feel and how we think others react or behave toward us. [Read more](kindle://book?action=open&asin=B014OISVU4&location=968)*
 
+
+
 > *The second component necessary for expressing ourselves is feelings. By developing a vocabulary of feelings that allows us to clearly and specifically name or identify our emotions, we can connect more easily with one another. Allowing ourselves to be vulnerable by expressing our feelings can help resolve conflicts. NVC distinguishes the expression of actual feelings from words and statements that describe thoughts, assessments, and interpretations. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1134)*
+
+##
 
 ## 5 Taking Responsibility for Our Feelings
 
+
+
 > *5 Taking Responsibility for Our Feelings [Read more](kindle://book?action=open&asin=B014OISVU4&location=1168)*
+
+
 
 > *The third component of NVC entails the acknowledgment of the root of our feelings. NVC heightens our awareness that what others say and do may be the stimulus, but never the cause, of our feelings. We see that our feelings result from how we choose to receive what others say and do, as well as from our particular needs and expectations in that moment. With this third component, we are led to accept responsibility for what we do to generate our own feelings. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1172)*
 
+
+
 > *Four options for receiving negative messages: 1. blame ourselves. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1182)*
+
+
 
 > *blame others. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1186)*
 
+
+
 > *sense our own feelings and needs. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1191)*
+
+
 
 > *We might for example ask, “Are you feeling hurt because you need more consideration for your preferences?” [Read more](kindle://book?action=open&asin=B014OISVU4&location=1193)*
 
+
+
 > *sense others’ feelings and needs. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1194)*
+
+
 
 > *It is helpful to recognize a number of common speech patterns that tend to mask accountability for our own feelings: [Read more](kindle://book?action=open&asin=B014OISVU4&location=1210)*
 
+
+
 > *Use of impersonal pronouns such as it and that: [Read more](kindle://book?action=open&asin=B014OISVU4&location=1211)*
+
+
 
 > *The use of the expression “I feel (an emotion) because … ” followed by a person or personal pronoun other than I: [Read more](kindle://book?action=open&asin=B014OISVU4&location=1212)*
 
+
+
 > *Connect your feeling with your need: “I feel … because I need …” [Read more](kindle://book?action=open&asin=B014OISVU4&location=1218)*
+
+
 
 > *The basic mechanism of motivating by guilt is to attribute the responsibility for one’s own feelings to others. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1223)*
 
+
+
 > *Judgments, criticisms, diagnoses, and interpretations of others are all alienated expressions of our needs. If someone says, “You never understand me,” they are really telling us that their need to be understood is not being fulfilled. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1231)*
+
+
 
 > *When we express our needs indirectly through the use of evaluations, interpretations, and images, others are likely to hear criticism. And when people hear anything that sounds like criticism, they tend to invest their energy in self-defense or counterattack. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1236)*
 
+
+
 > *If we express our needs, we have a better chance of getting them met. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1240)*
+
+
 
 > *most of us have never been taught to think in terms of needs. We are accustomed to thinking about what’s wrong with other people when our needs aren’t being fulfilled. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1241)*
 
+
+
 > *“What is it you are needing and what would you like to request from one another in relation to those needs?” [Read more](kindle://book?action=open&asin=B014OISVU4&location=1251)*
+
+
 
 > *It has been my experience over and over again that from the moment people begin talking about what they need rather than what’s wrong with one another, the possibility of finding ways to meet everybody’s needs is greatly increased. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1258)*
 
+
+
 > *The following are some of the basic human needs we all share: [Read more](kindle://book?action=open&asin=B014OISVU4&location=1260)*
+
+
 
 > *If we don’t value our needs, others may not either. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1289)*
 
+
+
 > *In our development toward a state of emotional liberation, most of us experience three stages in the way we relate to others. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1308)*
+
+
 
 > *Stage 1: In this stage, which I refer to as emotional slavery, we believe ourselves responsible for the feelings of others. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1309)*
 
+
+
 > *Stage 2: In this stage, we become aware of the high costs of assuming responsibility for others’ feelings and trying to accommodate them at our own expense. When we notice how much of our lives we’ve missed and how little we have responded to the call of our own soul, we may get angry. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1329)*
+
+
 
 > *Stage 3: At the third stage, emotional liberation, we respond to the needs of others out of compassion, never out of fear, guilt, or shame. Our actions are therefore fulfilling to us, as well as to those who receive our efforts. We accept full responsibility for our own intentions and actions, but not for the feelings of others. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1354)*
 
@@ -299,15 +435,15 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> all criticism, attack, insults, and judgments vanish when we focus attention on hearing the feelings and needs behind a message. The more we practice in this way, the more we realize a simple truth: behind all those messages we’ve allowed ourselves to be intimidated by are just individuals with unmet needs appealing to us to contribute to their well-being. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=1969)
+> **all criticism, attack, insults, and judgments vanish when we focus attention on hearing the feelings and needs behind a message.** The more we practice in this way, the more we realize a simple truth: behind all those messages we’ve allowed ourselves to be intimidated by are just individuals with unmet needs appealing to us to contribute to their well-being. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=1969)
 
 
 
-> Behind intimidating messages are merely people appealing to us to meet their needs. A difficult message becomes an opportunity to enrich someone’s life. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=1978)
+> **Behind intimidating messages are merely people appealing to us to meet their needs**. A difficult message becomes an opportunity to enrich someone’s life. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=1978)
 
 
 
-> Paraphrasing tends to save, rather than waste, time. Studies in labor-management negotiations demonstrate that the time required to reach conflict resolution is cut in half when each negotiator agrees, before responding, to accurately repeat what the previous speaker had said. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=1988)
+> **Paraphrasing tends to save, rather than waste, time. **Studies in labor-management negotiations demonstrate that the time required to reach conflict resolution is cut in half when each negotiator agrees, before responding, to accurately repeat what the previous speaker had said. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=1988)
 
 
 
@@ -315,15 +451,13 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> Empathy is a respectful understanding of what others are experiencing. We often have a strong urge to give advice or reassurance and to explain our own position or feeling. Empathy, however, calls upon us to empty our mind and listen to others with our whole being. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2051)
+> Empathy is a respectful understanding of what others are experiencing. **We often have a strong urge to give advice or reassurance and to explain our own position or feeling. Empathy, however, calls upon us to empty our mind and listen to others with our whole being**. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2051)
 
 
 
-
+Set of exercises about the verbal expression of empathy
 
 > Exercise 5 RECEIVING EMPATHICALLY VERSUS NON-EMPATHICALLY [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2106)
-
-
 
 
 
@@ -332,10 +466,6 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 > Empathy allows us “to reperceive [our] world in a new way and to go on.” [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2150)
-
-
-
-> “Don’t just do something….” [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2159)
 
 
 
@@ -367,7 +497,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> It may be difficult to empathize with those who are closest to us. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2276)
+> **It may be difficult to empathize with those who are closest to us**. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2276)
 
 
 
@@ -375,7 +505,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> People are not aware that empathy is often what they are needing. Neither do they realize that they are more likely to receive that empathy by expressing the feelings and needs that are alive in them than by recounting tales of past injustice and hardship. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2306)
+> **People are not aware that empathy is often what they are needing. Neither do they realize that they are more likely to receive that empathy by expressing the feelings and needs that are alive in them than by recounting tales of past injustice and hardship.** [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2306)
 
 
 
@@ -403,25 +533,19 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> Empathy lies in our ability to be present. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2381)
+> **Empathy lies in our ability to be present. **[Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2381)
 
 
 
 ## 9 Connecting Compassionately With Ourselves [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2386)
 
-> NVC’s most important use may be in developing self-compassion. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2391)
+##
+
+> NVC’s most important use may be in developing self-compassion. We use NVC to evaluate ourselves in ways that engender growth rather than self-hatred. It is tragic that so many of us get enmeshed in self-hatred rather than benefit from our mistakes, which show us our limitations and guide us towards growth. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2412)
 
 
 
-> We use NVC to evaluate ourselves in ways that engender growth rather than self-hatred. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2405)
-
-
-
-> It is tragic that so many of us get enmeshed in self-hatred rather than benefit from our mistakes, which show us our limitations and guide us towards growth. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2412)
-
-
-
-> If the way we evaluate ourselves leads us to feel shame, and we consequently change our behavior, we are allowing our growing and learning to be guided by self-hatred. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2416)
+> **If the way we evaluate ourselves leads us to feel shame, and we consequently change our behavior, we are allowing our growing and learning to be guided by self-hatred.** [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2416)
 
 
 
@@ -433,55 +557,31 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> We were not meant to succumb to the dictates of should and have to, whether they come from outside or inside of ourselves. And if we do yield and submit to these demands, our actions arise from an energy that is devoid of life-giving joy. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2430)
+> **We were not meant to succumb to the dictates of should and have to, whether they come from outside or inside of ourselves.** And if we do yield and submit to these demands, our actions arise from an energy that is devoid of life-giving joy. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2430)
 
 
 
-> Translating Self-Judgments and Inner Demands [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2432)
+### Translating Self-Judgments and Inner Demands [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2432)
+
+> Our challenge then, when we are doing something that is not enriching life, is to evaluate ourselves moment by moment in a way that inspires change both (1) in the direction of where we would like to go, and (2) out of respect and compassion for ourselves, rather than out of self-hatred, guilt or shame. Self-judgments, like all judgments, are tragic expressions of unmet needs. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2440)
 
 
 
-> Our challenge then, when we are doing something that is not enriching life, is to evaluate ourselves moment by moment in a way that inspires change both (1) in the direction of where we would like to go, and (2) out of respect and compassion for ourselves, rather than out of self-hatred, guilt or shame. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2437)
+### NVC Mourning [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2441)
+
+> Mourning in NVC is the process of fully connecting with the unmet needs and the feelings that are generated when we have been less than perfect. I**t is an experience of regret, but regret that helps us learn from what we have done without blaming or hating ourselves.** [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2451)
 
 
 
-> Self-judgments, like all judgments, are tragic expressions of unmet needs. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2440)
+### Self-Forgiveness [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2458)
 
 
 
-> NVC Mourning [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2441)
+> I believe that human beings are always acting in the service of needs and values. The process of mourning and self-forgiveness frees us in the direction of learning and growing. In connecting moment by moment to our needs, we increase our creative capacity to act in harmony with them. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2466)
 
 
 
-> Mourning in NVC is the process of fully connecting with the unmet needs and the feelings that are generated when we have been less than perfect. It is an experience of regret, but regret that helps us learn from what we have done without blaming or hating ourselves. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2451)
-
-
-
-> NVC mourning: connecting with the feelings and unmet needs stimulated by past actions we now regret. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2457)
-
-
-
-> Self-Forgiveness [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2458)
-
-
-
-> I believe that human beings are always acting in the service of needs and values. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2461)
-
-
-
-> The process of mourning and self-forgiveness frees us in the direction of learning and growing. In connecting moment by moment to our needs, we increase our creative capacity to act in harmony with them. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2466)
-
-
-
-> NVC self-forgiveness: connecting with the need we were trying to meet when we took the action that we now regret. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2468)
-
-
-
-> The Lesson of the Polka-Dotted Suit [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2470)
-
-
-
-> “What need lies behind my judging myself as ‘careless’ and ‘stupid?’” [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2479)
+> **NVC self-forgiveness: connecting with the need we were trying to meet when we took the action that we now regret. **[Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2468)
 
 
 
@@ -489,9 +589,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> Don’t Do Anything That Isn’t Play! [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2493)
-
-
+### Don’t Do Anything That Isn’t Play! [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2493)
 
 > I earnestly believe, however, that an important form of self-compassion is to make choices motivated purely by our desire to contribute to life rather than out of fear, guilt, shame, duty, or obligation. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2495)
 
@@ -501,59 +599,30 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> Translating “Have to” to “Choose to” [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2505)
+### Translating “Have to” to “Choose to” [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2505)
+
+* Step 1 -What do you do in your life that you don’t experience as playful? List on a piece of paper all those things that you tell yourself you have to do. List any activity you dread but do anyway because you perceive yourself to have no choice.
+* Step 2 After completing your list, clearly acknowledge to yourself that you are doing these things because you choose to do them, not because you have to. Insert the words “I choose to … “ in front of each item you listed.
+* Step 3 After having acknowledged that you choose to do a particular activity, get in touch with the intention behind your choice by completing the statement, I choose to … because I want ….
 
 
 
-> Step 1 What do you do in your life that you don’t experience as playful? List on a piece of paper all those things that you tell yourself you have to do. List any activity you dread but do anyway because you perceive yourself to have no choice. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2506)
+> With every choice you make, be conscious of what need it serves. Cultivating Awareness of the Energy Behind Our Actions As you explore the statement, “I choose to … because I want … ,” you may discover—as I did with the children’s car pool—the important values behind the choices you’ve made. I am convinced that after we gain clarity regarding the need being served by our actions, we can experience those actions as play even when they involve hard work, challenge, or frustration. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2531)
 
 
 
-> Step 2 After completing your list, clearly acknowledge to yourself that you are doing these things because you choose to do them, not because you have to. Insert the words “I choose to … “ in front of each item you listed. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2512)
+### Uncover one or several of the following motivations: [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2535)
 
-
-
-> Step 3 After having acknowledged that you choose to do a particular activity, get in touch with the intention behind your choice by completing the statement, I choose to … because I want …. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2516)
-
-
-
-> With every choice you make, be conscious of what need it serves. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2530)
-
-
-
-> Cultivating Awareness of the Energy Behind Our Actions As you explore the statement, “I choose to … because I want … ,” you may discover—as I did with the children’s car pool—the important values behind the choices you’ve made. I am convinced that after we gain clarity regarding the need being served by our actions, we can experience those actions as play even when they involve hard work, challenge, or frustration. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2531)
-
-
-
-> For some items on your list, however, you might uncover one or several of the following motivations: [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2535)
-
-
-
-> (1) FOR MONEY Money is a major form of extrinsic reward in our society. Choices prompted by a desire for reward are costly: they deprive us of the joy in life that comes with actions grounded in the clear intention to contribute to a human need. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2536)
-
-
-
-> (2) FOR APPROVAL Like money, approval from others is a form of extrinsic reward. Our culture has educated us to hunger for reward. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2539)
-
-
-
-> (3) TO ESCAPE PUNISHMENT Some of us pay income tax primarily to avoid punishment. As a consequence, we are likely to approach that yearly ritual with a degree of resentment. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2548)
-
-
-
-> (4) TO AVOID SHAME There may be some tasks we choose to do just to avoid shame. We know that if we don’t do them, we’ll end up suffering severe self-judgment, hearing our own voice telling us there is something wrong or stupid about us. If we do something stimulated solely by the urge to avoid shame, we will generally end up detesting it. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2553)
-
-
-
-> (5) TO AVOID GUILT In other instances, we may think, “If I don’t do this, people will be disappointed in me.” We are afraid we’ll end up feeling guilty for failing to fulfill other people’s expectations of us. There is a world of difference between doing something for others in order to avoid guilt and doing it out of a clear awareness of our own need to contribute to the happiness of other human beings. The first is a world filled with misery; the second is a world filled with play. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2556)
+* **(1) FOR MONEY** Money is a major form of extrinsic reward in our society. Choices prompted by a desire for reward are costly: they deprive us of the joy in life that comes with actions grounded in the clear intention to contribute to a human need. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2536)
+* (**2) FOR APPROVAL** Like money, approval from others is a form of extrinsic reward. Our culture has educated us to hunger for reward. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2539)
+* **(3) TO ESCAPE PUNISHMENT **Some of us pay income tax primarily to avoid punishment. As a consequence, we are likely to approach that yearly ritual with a degree of resentment. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2548)
+* **(4) TO AVOID SHAME** There may be some tasks we choose to do just to avoid shame. We know that if we don’t do them, we’ll end up suffering severe self-judgment, hearing our own voice telling us there is something wrong or stupid about us. If we do something stimulated solely by the urge to avoid shame, we will generally end up detesting it. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2553)
+* **(5) TO AVOID GUILT** In other instances, we may think, “If I don’t do this, people will be disappointed in me.” We are afraid we’ll end up feeling guilty for failing to fulfill other people’s expectations of us. There is a world of difference between doing something for others in order to avoid guilt and doing it out of a clear awareness of our own need to contribute to the happiness of other human beings. The first is a world filled with misery; the second is a world filled with play. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2556)
+* **(6) TO SATISFY A SENSE OF DUTY** When we use language which denies choice (for example, words such as should, have to, ought, must, can’t, supposed to, etc.), our behaviors arise out of a vague sense of guilt, duty, or obligation. I consider this to be the most socially dangerous and personally unfortunate of all the ways we act when we’re cut off from our needs. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2562)
 
 
 
 > Be conscious of actions motivated by the desire for money or approval, and by fear, shame, or guilt. Know the price you pay for them. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2560)
-
-
-
-> (6) TO SATISFY A SENSE OF DUTY When we use language which denies choice (for example, words such as should, have to, ought, must, can’t, supposed to, etc.), our behaviors arise out of a vague sense of guilt, duty, or obligation. I consider this to be the most socially dangerous and personally unfortunate of all the ways we act when we’re cut off from our needs. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2562)
 
 
 
@@ -565,21 +634,15 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 > The subject of anger gives us a unique opportunity to dive more deeply into NVC. Because it brings many aspects of this process into sharp focus, the expression of anger clearly demonstrates the difference between NVC and other forms of communication. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2582)
 
-
-
-> Hurting people is too superficial. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2584)
-
-
+### Hurting people is too superficial. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2584)
 
 > I would like to suggest that hitting, blaming, hurting others—whether physically or emotionally—are all superficial expressions of what is going on within us when we are angry. If we are truly angry, we would want a much more powerful way to fully express ourselves. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2585)
 
 
 
-> Distinguishing Stimulus From Cause [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2592)
+### Distinguishing Stimulus From Cause [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2592)
 
-
-
-> The first step to fully expressing anger in NVC is to divorce the other person from any responsibility for our anger. We rid ourselves of thoughts such as, “He (or she or they) made me angry when they did that.” Such thinking leads us to express our anger superficially by blaming or punishing the other person. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2593)
+> The first step to fully expressing anger in NVC is to **divorce the other person from any responsibility for our anger**. We rid ourselves of thoughts such as, “He (or she or they) made me angry when they did that.” Such thinking leads us to express our anger superficially by blaming or punishing the other person. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2593)
 
 
 
@@ -587,11 +650,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> To motivate by guilt, mix up stimulus and cause. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2611)
-
-
-
-> The cause of anger lies in our thinking—in thoughts of blame and judgment. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2615)
+> We say: “You make me angry.” “You hurt me by doing that.” “I feel sad because you did that.” We use our language in many different ways to trick ourselves into believing that our feelings result from what others do. **The first step in the process of fully expressing our anger is to realize that what other people do is never the cause of how we feel** [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2615)
 
 
 
@@ -639,11 +698,9 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> Four Steps to Expressing Anger [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2717)
+### Four Steps to Expressing Anger [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2717)
 
-
-
-> Steps to expressing anger: 1. Stop. Breathe. 2. Identify our judgmental thoughts. 3. Connect with our needs. 4. Express our feelings and unmet needs. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2724)
+> 1. Stop. Breathe. 2. Identify our judgmental thoughts. 3. Connect with our needs. 4. Express our feelings and unmet needs. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2724)
 
 
 
@@ -659,7 +716,9 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> When we hear another person’s feelings and needs, we recognize [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2764)
+
+
+> When we hear another person’s feelings and needs, we recognize our common humanity. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2764)
 
 
 
@@ -681,7 +740,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 ## 11 Conflict Resolution and Mediation [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2903)
 
-> resolving conflicts involves all the principles I outlined previously in this book: observing, identifying and expressing feelings, connecting feelings with needs, and making doable requests of another person using clear, concrete, positive action language. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2908)
+> **resolving conflicts involves all the principles I outlined previously in this book:** **observing, identifying and expressing feelings, connecting feelings with needs, and making doable requests of another person using clear, concrete, positive action language.** [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2908)
 
 
 
@@ -709,7 +768,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> In a conflict, both parties usually spend too much time intent on proving themselves right, and the other party wrong, rather than paying attention to their own and the other’s needs. And such verbal conflicts can far too easily escalate into violence—and even war. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2974)
+> **In a conflict, both parties usually spend too much time intent on proving themselves right, and the other party wrong, rather than paying attention to their own and the other’s needs. And such verbal conflicts can far too easily escalate into violence—and even war.** [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2974)
 
 
 
@@ -753,9 +812,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> Using Present and Positive Action Language to Resolve Conflict [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3080)
-
-
+### Using Present and Positive Action Language to Resolve Conflict [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3080)
 
 > A present language statement refers to what is wanted at this moment. For example, one party might say, “I’d like you to tell me if you would be willing to—” and describe the action they’d like the other party to take. The use of a present language request that begins with “Would you be willing to …” helps foster a respectful discussion. If the other side answers that they are not willing, it invites the next step of understanding what prevents their willingness. On the other hand, in the absence of present language, a request such as “I’d like you to go to the show with me Saturday night” fails to convey what’s being asked of the listener at that moment. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3087)
 
@@ -765,9 +822,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> Using Action Verbs [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3097)
-
-
+### Using Action Verbs [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3097)
 
 > focus on what we do want rather than what we do not want. Talking about what one doesn’t want can easily create confusion and resistance among conflicting parties. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3098)
 
@@ -777,7 +832,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> Translating “No” [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3129)
+### Translating “No” [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3129)
 
 
 
@@ -818,6 +873,8 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 ## 12 The Protective Use of Force [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3286)
+
+
 
 > In some situations, however, the opportunity for such dialogue may not exist, and the use of force may be necessary to protect life or individual rights. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3291)
 
@@ -885,10 +942,6 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> NVC in Action [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3583)
-
-
-
 ## 14 Expressing Appreciation in Nonviolent Communication [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3641)
 
 > I define judgments—both positive and negative—as life-alienating communication. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3648)
@@ -907,7 +960,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> Saying “thank you” in NVC: “This is what you did; this is what I feel; this is the need of mine that was met.” [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3670)
+> **Saying “thank you” in NVC: “This is what you did; this is what I feel; this is the need of mine that was met.”** [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3670)
 
 
 
@@ -919,8 +972,105 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 
 
-> The Four-Part Nonviolent Communication Process [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3884)
+## The Four-Part Nonviolent Communication Process [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3884)
 
+### Observations
 
+> What I observe (see, hear, remember, imagine, free from my evaluations) that does or does not contribute to my well-being: “When I (see, hear) … ”
 
-> Some Basic Feelings We All Have [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3913)
+> What you observe (see, hear, remember, imagine, free from your evaluations) that does or does not contribute to your well-being: “When you see/hear … ” (Sometimes unspoken when offering empathy)
+
+>
+
+#### Feelings
+
+> How I feel (emotion or sensation rather than thought) in relation to what I observe: “I feel … ”
+
+> 2. How you feel (emotion or sensation rather than thought) in relation to what you observe: “You feel …”
+
+>
+
+### Needs
+
+> What I need or value (rather than a preference, or a specific action) that causes my feelings: “ … because I need/value … ”
+
+> 3. What you need or value (rather than a preference, or a specific action) that causes your feelings: “ … because you need/value …”
+
+### Requests
+
+> The concrete actions I would like taken: “Would you be willing to … ?”
+
+> The concrete actions you would like taken: “Would you like … ?” (Sometimes unspoken when offering empathy)
+
+>
+
+## Some Basic Feelings We All Have [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3913)
+
+### Feelings when needs are fulfilled
+
+Amazed,Comfortable,Confident,Eager,Energetic,Fulfilled,Glad,Hopeful,Inspired,Intrigued,Joyous,Moved,Optimistic,Proud,Relieved,Stimulated,Surprised,Thankful,Touched,Trustful
+
+### Feelings when needs are not fulfilled
+
+Angry, Annoyed, Concerned, Confused, Disappointed, Discouraged, Distressed, Embarrassed, Frustrated, Helpless, Hopeless, Impatient, Irritated, Lonely, Nervous, Overwhelmed, Puzzled, Reluctant, Sad, Uncomfortable
+
+## Some Basic Needs We All Have [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=3921)
+
+## Autonomy
+
+* Choosing dreams/goals/values
+* Choosing plans for fulfilling one’s dreams, goals, values
+
+### Celebration
+
+* Celebrating the creation of life and dreams fulfilled
+* Celebrating losses: loved ones, dreams, etc. (mourning)
+
+### Integrity
+
+* Authenticity
+* Creativity
+* Meaning
+* Self-worth
+
+### Interdependence
+
+* Acceptance
+* Appreciation
+* Closeness
+* Community
+* Consideration
+* Contribution to the enrichment of life
+* Emotional Safety
+* Empathy Honesty (the empowering honesty that enables us to learn from our limitations)
+* Love
+* Reassurance
+* Respect
+* Support
+* Trust
+* Understanding
+
+### Physical Nurturance
+
+* Air
+* Food
+* Movement, exercise
+* Protection from life-threatening forms of life: viruses, bacteria, insects, predatory animals
+* Rest
+* Sexual Expression
+* Shelter
+* Touch
+* Water
+
+### Play
+
+* Fun
+* Laughter
+
+### Spiritual Communion
+
+* Beauty
+* Harmony
+* Inspiration
+* Order
+* Peace
