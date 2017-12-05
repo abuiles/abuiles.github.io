@@ -10,6 +10,7 @@
   <meta name="description" content="Recently ember CLI updated its tests blueprints to match QUnit’s 2.0 upcoming syntax. Meaning that if we wanted to live on the edge we would need to update o...">
 
   <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
 
   
   <link rel="canonical" href="https://blog.abuiles.com/blog/2015/02/25/upgrading-your-ember-cli-qunit-tests-in-less-than-5-minutes/">
@@ -29,6 +30,14 @@
   
 
   
+  <style>
+       .highlight {
+        background: rgba(255, 230, 0, 0.5);
+        padding-left: 1rem;
+        padding-right: 0.375rem;
+        margin-right: -0.375rem;
+      }
+  </style>
 </head>
 
 
@@ -83,7 +92,7 @@
 
 
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+      <div class="mw7 center">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -96,7 +105,7 @@
       </p>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content f4 lh-copy" itemprop="articleBody">
     <p>Recently ember CLI updated its tests blueprints to match QUnit’s 2.0
 upcoming syntax. Meaning that if we wanted to live on the edge we would need to update our existing tests to match such changes or ignore the changes to <a href="https://github.com/ember-cli/ember-cli/pull/3197/files#diff-26f52f3fec353435f47247381c4f1189L12">tests/.jshintrc</a> and continue using globals.</p>
 
