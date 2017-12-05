@@ -9,9 +9,8 @@ One day I want to go around the world in a motorcycle with my wife.
 
 ## Projects and books
 
+- [Kintrospect](https://kintrospect.com/)
 - [Ember 101](https://leanpub.com/ember-cli-101)
 - [JSON API By Example](https://leanpub.com/json-api-by-example)
-- [ember-watson](http://github.com/abuiles/ember-cli)
-- [Listening-Crowd](https://www.listeningcrowd.com/)
-- [Kintrospect](https://kintrospect.com/)
+- [ember-watson](http://github.com/abuiles/ember-watson)
 - [Blogging](articles)
