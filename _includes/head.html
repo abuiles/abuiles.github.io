@@ -7,6 +7,7 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
 
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
@@ -15,4 +16,12 @@
   {% if site.google_analytics %}
     {% include google-analytics.html %}
   {% endif %}
+  <style>
+       .highlight {
+        background: rgba(255, 230, 0, 0.5);
+        padding-left: 1rem;
+        padding-right: 0.375rem;
+        margin-right: -0.375rem;
+      }
+  </style>
 </head>
