@@ -1,6 +1,7 @@
 ---
 title: "Nonviolent Communication: A Language of Life by Marshall Rosenberg"
 ---
+
 <a target="_blank" style="float: left; padding-right: 2rem;" href="https://www.amazon.com/gp/product/B014OISVU4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B014OISVU4&linkCode=as2&tag=abuiles0c-20&linkId=c24763bc5840547ec93d7c1d2c4c0654"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B014OISVU4&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=abuiles0c-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=abuiles0c-20&l=am2&o=1&a=B014OISVU4" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 
@@ -32,6 +33,10 @@ An enlightening look at how peaceful communication can create compassionate conn
 * **it’s not what the other person does, but the images and interpretations in my own head that produce my anger**
 * **Intellectual analysis is often received as criticism.**
 * **Saying “thank you” in NVC: “This is what you did; this is what I feel; this is the need of mine that was met.” Open in Kindle**
+* **When I make that judgment of a person, what am I needing and not getting?**
+* **I'm angry because I'm needing**
+
+
 
 ## 1 Giving From the Heart The Heart of Nonviolent Communication
 
@@ -223,11 +228,7 @@ An enlightening look at how peaceful communication can create compassionate conn
 
 > *The second component necessary for expressing ourselves is feelings. By developing a vocabulary of feelings that allows us to clearly and specifically name or identify our emotions, we can connect more easily with one another. Allowing ourselves to be vulnerable by expressing our feelings can help resolve conflicts. NVC distinguishes the expression of actual feelings from words and statements that describe thoughts, assessments, and interpretations. [Read more](kindle://book?action=open&asin=B014OISVU4&location=1134)*
 
-##
-
 ## 5 Taking Responsibility for Our Feelings
-
-
 
 > *5 Taking Responsibility for Our Feelings [Read more](kindle://book?action=open&asin=B014OISVU4&location=1168)*
 
@@ -463,8 +464,6 @@ Set of exercises about the verbal expression of empathy
 
 ## 8 The Power of Empathy [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2143)
 
-
-
 > Empathy allows us “to reperceive [our] world in a new way and to go on.” [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2150)
 
 
@@ -538,8 +537,6 @@ Set of exercises about the verbal expression of empathy
 
 
 ## 9 Connecting Compassionately With Ourselves [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2386)
-
-##
 
 > NVC’s most important use may be in developing self-compassion. We use NVC to evaluate ourselves in ways that engender growth rather than self-hatred. It is tragic that so many of us get enmeshed in self-hatred rather than benefit from our mistakes, which show us our limitations and guide us towards growth. [Open in Kindle](kindle://book?action=open&asin=B014OISVU4&location=2412)
 
