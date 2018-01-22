@@ -16,7 +16,7 @@
 title: "Adolfo Builes"
 email: builes.adolfo@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I like to write about tech, humans, books, Ember.js and random stuff.
+  I like to write about technology, being a human and books.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://blog.abuiles.com
 twitter_username: abuiles
@@ -44,10 +44,16 @@ collections:
     output: true
     permalink: /reading-feed/:name
     path: "reading_feed"
-    layout: page
+  motorcycling:
+    output: true
+    permalink: /viajes/:name
 
 defaults:
   - scope:
       type: reading_feed
     values:
-      layout: page
+      layout: book
+
+header_pages:
+  - articles.md
+  - reading-feed.md

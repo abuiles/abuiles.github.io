@@ -5,7 +5,7 @@ date: 2017-07-09T11:59:17-07:00
 categories: ethereum smart-contracts truffle
 ---
 In [writing smart contracts with
-Truffle](blog/2017/07/08/writing-smart-contracts-with-truffle/) I
+Truffle](/blog/2017/07/08/writing-smart-contracts-with-truffle/) I
 covered how to get started with Truffle and how to create, test and
 deploy contracts using an in-memory representation of the blockchain.
 
