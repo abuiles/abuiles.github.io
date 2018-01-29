@@ -55,8 +55,6 @@ The second pattern is "liquid networks". Steven writes on how the social flow of
 > When the first market towns emerged in Italy, they didn't magically create some higher-level group consciousness. They simply widened the pool of minds that could come up with and share good ideas. This is not the wisdom of the crowd, but the wisdom of someone in the crowd. **It’s not that the network itself is smart; it’s that the individuals get smarter because they’re connected to the network.**
 > [Johnson, Steven. Where Good Ideas Come From - Open in Kindle](kindle://book?action=open&asin=B003ZK58TA&location=672)
 
-
-
 > And so, most great ideas first take shape in a partial, incomplete form. They have the seeds of something profound, but they lack a key element that can turn the hunch into something truly powerful. And more often than not, that missing element is somewhere else, living as another hunch in another person’s head. **Liquid networks create an environment where those partial ideas can connect; they provide a kind of dating service for promising hunches. They make it easier to disseminate good ideas, of course, but they also do something more sublime: they help complete ideas.**
 > [Johnson, Steven. Where Good Ideas Come From - Open in Kindle](kindle://book?action=open&asin=B003ZK58TA&location=844)
 
@@ -71,14 +69,11 @@ Darwin, Milton, Bacon, Locke and Erasmus -- they were some of the great thinkers
 > And so, most great ideas first take shape in a partial, incomplete form. They have the seeds of something profound, but they lack a key element that can turn the hunch into something truly powerful. And more often than not, that missing element is somewhere else, living as another hunch in another person’s head. Liquid networks create an environment where those partial ideas can connect; they provide a kind of dating service for promising hunches. They make it easier to disseminate good ideas, of course, but they also do something more sublime: they help complete ideas.
 > [Johnson, Steven. Where Good Ideas Come From - Open in Kindle](kindle://book?action=open&asin=B003ZK58TA&location=844)
 
-
-
 > Darwin’s notebooks lie at the tail end of a long and fruitful tradition that peaked in Enlightenment-era Europe, particularly in England: the practice of maintaining a “commonplace” book. Scholars, amateur scientists, aspiring men of letters—just about anyone with intellectual ambition in the seventeenth and eighteenth centuries was likely to keep a commonplace book. The great minds of the period—Milton, Bacon, Locke—were zealous believers in the memory-enhancing powers of the commonplace book. In its most customary form, “commonplacing,” as it was called, involved transcribing interesting or inspirational passages from one’s reading, assembling a personalized encyclopedia of quotations. There is a distinct self-help quality to the early descriptions of commonplacing’s virtues: maintaining the books enabled one to “lay up a fund of knowledge, from which we may at all times select what is useful in the several pursuits of life.”
 > [Johnson, Steven. Where Good Ideas Come From - Open in Kindle](kindle://book?action=open&asin=B003ZK58TA&location=952)
 
 > So part of the secret of hunch cultivation is simple: write everything down.
 > [Johnson, Steven. Where Good Ideas Come From - Open in Kindle](kindle://book?action=open&asin=B003ZK58TA&location=943)
-
 
 
 ## Pattern 4: SERENDIPITY
@@ -127,7 +122,7 @@ A point that really caught my attention in this chapter was how by being wrong w
 
 As a coincidence, right after writing this I open my twitter account to see the following tweet by Naval:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Success is the enemy of learning. It can deprive you of the time and the incentive to start over. Beginner’s mind also needs beginner’s time.</p>&mdash; Naval (@naval) <a href="https://twitter.com/naval/status/957105232902696961?ref_src=twsrc%5Etfw">January 27, 2018</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Success is the enemy of learning. It can deprive you of the time and the incentive to start over. Beginner’s mind also needs beginner’s time.</p>&mdash; Naval (@naval) <a href="https://twitter.com/naval/status/957105232902696961?ref_src=twsrc%5Etfw">January 27, 2018</a></blockquote>
 
 Steven mentions Charlan Nemeth who through research came out to the conclusion that good ideas are more likely to emerge in environments that contain a certain amount of noise and error.
 
@@ -147,7 +142,6 @@ And concludes quoting Benjamin Franklin:
 This patterns show us how many inventions resulted from taking things that were not meant for that solution and putting them together to build something new. One of the examples in the book is how Gutenberg converted a machine meant to get people drunk into a printing press.
 
 > An important part of Gutenberg’s genius, then, lay not in conceiving an entirely new technology from scratch, but instead from borrowing a mature technology from an entirely different field, and putting it to work to solve an unrelated problem. We don’t know exactly what chain of events led Gutenberg to make that associative link; few documentary records remain of Gutenberg’s life between 1440 and 1448, the period during which he assembled the primary components of his invention. But it is clear that Gutenberg had no formal experience pressing grapes. His radical breakthrough relied, instead, on the ubiquity of the screw press in Rhineland wine-making culture, and on his ability to reach out beyond his specific field of expertise and concoct new uses for an older technology. He took a machine designed to get people drunk and turned it into an engine for mass communication.
-
 > [Johnson, Steven. Where Good Ideas Come From - Open in Kindle](kindle://book?action=open&asin=B003ZK58TA&location=1725)
 
 This patterns was first coined by biologists to explain how
@@ -157,7 +151,6 @@ This patterns was first coined by biologists to explain how
 And a classic example are bird feathers which
 
 > We believe initially evolved for temperature regulation, helping nonflying dinosaurs from the Cretaceous period insulate themselves against cold weather. But when some of their descendants, including a creature we now call Archaeopteryx, began experimenting with flight, feathers turned out to be useful for controlling the airflow over the surface of the wing, allowing those first birds to glide.
-
 > [Johnson, Steven. Where Good Ideas Come From - Open in Kindle](kindle://book?action=open&asin=B003ZK58TA&location=1734)
 
 The author also tell us how legendary innovators end up creating great ideas thanks to their many hobbies and how been curious about many things help us exapt ideas from projects to projects.
@@ -165,7 +158,6 @@ The author also tell us how legendary innovators end up creating great ideas tha
 > Legendary innovators like Franklin, Snow, and Darwin all possess some common intellectual qualities—a certain quickness of mind, unbounded curiosity—but they also share one other defining attribute. They have a lot of hobbies ...
 
 > **That cognitive overlap is what makes this mode so innovative. The current project can exapt ideas from the projects at the margins, make new connections. It is not so much a question of thinking outside the box, as it is allowing the mind to move through multiple boxes. That movement from box to box forces the mind to approach intellectual roadblocks from new angles, or to borrow tools from one discipline to solve problems in another. **
-
 > [Johnson, Steven. Where Good Ideas Come From - Open in Kindle](kindle://book?action=open&asin=B003ZK58TA&location=1984)
 
 In modern era, I'd say Twitter is maybe one of the biggest example of exaptation out there, originally thought as a "micro-blogging" platform, it evolved into something that not even their founders thought it could do. How would you even describe Twitter today? Every time I open my feed there is someone doing something new with it: tweetstorms, polls, moments, personal notes saver, etc.
@@ -204,7 +196,7 @@ Here the author also talks about the possibility for governments to benefit from
 
 ## Conclusion
 
-I really enjoyed this book, I think the author makes a convincing case on his theories using history, biology and other things as evidence. I found the writing style easy to follow and entertaining. I've been a long time fan of Steven and been enjoying his works. If you are into cryptocurrencies, he published recently an article in the New York Times about it titled ["Beyond the Bitcoin Bubble"](https://www.nytimes.com/2018/01/16/magazine/beyond-the-bitcoin-bubble.html) and how it might end up contributing to something bigger than wealth and he's just starting a mailing list called "Cabinet of wonders" - you can subscribe [here](https://stevenberlinjohnson.us17.list-manage.com/subscribe?u=5185922c3f5ee66394913a782&id=c9142e5c21)
+I really enjoyed this book, I think the author makes a convincing case on his theories using history, biology and other things as evidence. I found the writing style easy to follow and entertaining. I've been a long time fan of Steven. If you are into cryptocurrencies, he published recently an article in the New York Times about it titled ["Beyond the Bitcoin Bubble"](https://www.nytimes.com/2018/01/16/magazine/beyond-the-bitcoin-bubble.html) and how it might end up contributing to something bigger than wealth and he's just starting a mailing list called "Cabinet of wonders" - you can subscribe [here](https://stevenberlinjohnson.us17.list-manage.com/subscribe?u=5185922c3f5ee66394913a782&id=c9142e5c21)
 
 If you like this article please leave a comment or share it on twitter - I'd love to hear your thoughts. Also if you come through similar books please send them my way, I have in my list:
 
@@ -217,4 +209,6 @@ If you like this article please leave a comment or share it on twitter - I'd lov
 
 - Bold in quotes was added by me for emphasis.
 - I wrote the first draft of this article using [Kintrospect](https://kintrospect.com) - my tool for building digital commonplace books using your Kindle Highlights and other sources - that's how you can click on the links to Kindle and get the app to open automatically for you.
-- [1]: [https://www.ted.com/talks/steven_johnson_where_good_ideas_come_from]([1] - https://www.ted.com/talks/steven_johnson_where_good_ideas_come_from)
+- [1][TED: Where good Ideas come from by Steven Johnson](https://www.ted.com/talks/steven_johnson_where_good_ideas_come_from)
+
+{% tweet_button %}

@@ -48,6 +48,8 @@ GEM
     octopress-quote-tag (1.0.4)
       jekyll
       rubypants
+    octopress-social (1.4.5)
+      jekyll (>= 2.0)
     pathutil (0.16.0)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.0)
@@ -76,6 +78,7 @@ DEPENDENCIES
   octopress-escape-code (~> 2.1.1)
   octopress-hooks (~> 2.6.2)
   octopress-quote-tag (~> 1.0.4)
+  octopress-social
   tzinfo-data
 
 RUBY VERSION

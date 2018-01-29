@@ -27,6 +27,7 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - octopress-social
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -57,3 +58,13 @@ defaults:
 header_pages:
   - articles.md
   - reading-feed.md
+
+twitter:
+  username: abuiles                         # Add your Twitter handle
+  tweet_count:         false              # Show number of shares on Twitter
+  size:                large             # Or large
+  tweet_message:       ":title by :username :hashtags - :url" # With Tweet button Twitter add the URL last
+  tweet_link_text:     Twitter            # Configure the link text
+  tweet_link_title:    Share on Twitter   # Share link title
+  profile_link_text:   Follow :username
+  profile_link_title:  Follow :username on Twitter  # Profile link title text
