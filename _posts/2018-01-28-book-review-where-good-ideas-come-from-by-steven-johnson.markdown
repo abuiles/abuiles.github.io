@@ -201,7 +201,7 @@ I really enjoyed this book, I think the author makes a convincing case on his th
 If you like this article please leave a comment or share it on twitter - I'd love to hear your thoughts. Also if you come through similar books please send them my way, I have in my list:
 
 * [WTF?: What's the Future and Why It's Up to Us By Tim O'Reilly](https://www.amazon.com/gp/product/0062565710/ref=x_gr_w_bb?ie=UTF8&tag=x_gr_w_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0062565710&SubscriptionId=1MGPYB6YW3HWK55XCGG2)
-* [The Innevitable By Kevin Kelly](https://www.amazon.com/Inevitable-Understanding-Technological-Forces-Future/dp/B01EB3OR32/ref=sr_1_1?s=books&ie=UTF8&qid=1517098196&sr=1-1&keywords=the+inevitable) (**Read**)
+* [The Inevitable By Kevin Kelly](https://www.amazon.com/Inevitable-Understanding-Technological-Forces-Future/dp/B01EB3OR32/ref=sr_1_1?s=books&ie=UTF8&qid=1517098196&sr=1-1&keywords=the+inevitable) (**Read**)
 * [The Shallows by Nicholas Carr ](https://www.amazon.com/gp/product/0393339750/ref=x_gr_w_bb?ie=UTF8&tag=x_gr_w_bb-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0393339750&SubscriptionId=1MGPYB6YW3HWK55XCGG2)(**Reading**)
 
 <div style="clear: both; padding: 0 0 1rem 0;"></div>
