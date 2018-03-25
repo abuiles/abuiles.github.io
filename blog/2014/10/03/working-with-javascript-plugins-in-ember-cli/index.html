@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
 
   
-  <link rel="canonical" href="https://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">
+  <link rel="canonical" href="http://localhost:4000/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">
   <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
 
   
@@ -52,6 +52,10 @@
       margin-top: 0;
       line-height: 1.5;
     }
+
+    html, body {
+      font-size: 18px;
+    }
   </style>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </head>
@@ -80,7 +84,6 @@
         </label>
 
         <div class="trigger">
-          <a class="page-link highlight" href="https://kintrospect.com">Kindle user? <span class="underline">Check out my new thing!</span></a>
           
             
             
@@ -99,9 +102,9 @@
 </header>
 
 
-    <main class="page-content" aria-label="Content">
+    <main class="wrapper" aria-label="Content">
       <div class="mw7 center">
-        <article class="post pa3" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Working with JavaScript plugins in ember-cli</h1>
@@ -113,7 +116,7 @@
       </p>
   </header>
 
-  <div class="post-content f4 lh-copy" itemprop="articleBody">
+  <div class="post-content lh-copy" itemprop="articleBody">
     <p>In this post we’ll use momentjs to write an Ember helpers called
 <code class="highlighter-rouge">formatted-date</code> which we’ll be using in our templates to render
 dates as <code class="highlighter-rouge">September 28, 2014</code> instead of <code class="highlighter-rouge">Sun Sep 28 2014 04:58:30
@@ -280,25 +283,6 @@ explore and understand how to consume libraries distributed in AMD.</p>
 
   
     
-
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = 'https://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/';
-      this.page.identifier = 'https://blog.abuiles.com/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/';
-    };
-
-    (function() {
-      var d = document, s = d.createElement('script');
-
-      s.src = 'https://abuiles.disqus.com/embed.js';
-
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
 
   
 </article>
