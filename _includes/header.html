@@ -19,7 +19,6 @@
         </label>
 
         <div class="trigger">
-          <a class="page-link highlight" href="https://kintrospect.com">Kindle user? <span class="underline">Check out my new thing!</span></a>
           {% for path in page_paths %}
             {% assign my_page = site.pages | where: "path", path | first %}
             {% if my_page.title %}

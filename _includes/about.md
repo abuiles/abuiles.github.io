@@ -1,16 +1,29 @@
-Hola, my name is Adolfo. I live in Medellín (Colombia) where I work as an engineering manager for [Envoy](https://envoy.com/jobs/).
+Hola, my name is Adolfo. I live in Medellín (Colombia) - I'm building a Stellar anchor for Latin America.
 
-I do a bunch of things in my free time, some common themes are: riding motorcycles, traveling, reading, writing, coding, running or working on side-projects.
+I do a bunch of things in my free time, some common themes are:
 
-{::options parse_block_html="true" /}
-<p class="highlight">My current side-project is [Kintrospect](https://kintrospect.com/), a tool to help me build my digital commonplace books and internalize what [I read](reading-feed).</p>
+  - Riding motorcycles.
+  - Traveling.
+  - Reading and writing.
+  - Coding.
+  - Running.
+  - Working on side-projects.
 
 One day I want to go around the world in a motorcycle with my wife.
 
 ## Projects and books
 
+- [AnclaX](https://anclax.com/)
 - [Kintrospect](https://kintrospect.com/)
+- [Listening Crowd](https://github.com/abuiles/listening-crowd)
 - [Ember 101](https://leanpub.com/ember-cli-101)
 - [JSON API By Example](https://leanpub.com/json-api-by-example)
 - [ember-watson](http://github.com/abuiles/ember-watson)
 - [Blogging](articles)
+
+## Past
+
+- 2015 - 2018: Product Engineer and Engineering manager at [Envoy](https://envoy.com/).
+- 2012 - 2015: Consultant, Open-Source developer and writer.
+- 2011 - 2012: Software engineer at [Moviepilot](https://moviepilot.com/).
+- 2006 - 2011: Computer Science Student, Consultant and Google-Summer of Code.
