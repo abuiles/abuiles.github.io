@@ -23,7 +23,7 @@ One day I want to go around the world in a motorcycle with my wife.
 
 ## Past
 
-- 2015 - 2018: Product Engineer and Engineering manager at [Envoy](https://envoy.com/).
-- 2012 - 2015: Consultant, Open-Source developer and writer.
+- 2015 - 2018: Product engineer and engineering manager at [Envoy](https://envoy.com/).
+- 2012 - 2015: Consultant, open-source developer and writer.
 - 2011 - 2012: Software engineer at [Moviepilot](https://moviepilot.com/).
-- 2006 - 2011: Computer Science Student, Consultant and Google-Summer of Code.
+- 2006 - 2012: Computer Science, Consultant and Google Summer of Code.
