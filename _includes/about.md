@@ -1,12 +1,12 @@
-Hola, my name is Adolfo. I live in Medellín (Colombia) - I'm building a Stellar anchor for Latin America.
+Hola, my name is Adolfo. I live in Medellín (Colombia) - I'm still discovering [what's next](/blog/2018/05/23/whats-next/).
 
-I do a bunch of things in my free time, some common themes are:
+I'm a person of many hobbies, some of them are:
 
   - Riding motorcycles.
   - Traveling.
   - Reading and writing.
   - Coding.
-  - Running.
+  - ~~Running~~ Biking.
   - Working on side-projects.
 
 One day I want to go around the world in a motorcycle with my wife.
