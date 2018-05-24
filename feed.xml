@@ -1,5 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-26T12:19:12-05:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about technology, being a human and books.
-</subtitle><entry><title type="html">A Simple Recipe to Make the World a Better Place</title><link href="http://localhost:4000/blog/2018/03/26/a-simple-recipe-to-make-the-world-a-better-place/" rel="alternate" type="text/html" title="A Simple Recipe to Make the World a Better Place" /><published>2018-03-26T11:48:33-05:00</published><updated>2018-03-26T11:48:33-05:00</updated><id>http://localhost:4000/blog/2018/03/26/a-simple-recipe-to-make-the-world-a-better-place</id><content type="html" xml:base="http://localhost:4000/blog/2018/03/26/a-simple-recipe-to-make-the-world-a-better-place/">&lt;p&gt;I’ve been reading a book titled “How Adam Smith Can Change Your Life” by Russell Roberts (&lt;a href=&quot;https://twitter.com/econtalker&quot;&gt;@econtalker&lt;/a&gt;). I thought this book was going to be a mix of philosophy and Smith’s “The Wealth of Nations” but I was wrong.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-23T19:02:07-05:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about technology, being a human and books.
+</subtitle><entry><title type="html">What’s Next?</title><link href="http://localhost:4000/blog/2018/05/23/whats-next/" rel="alternate" type="text/html" title="What's Next?" /><published>2018-05-23T18:24:22-05:00</published><updated>2018-05-23T18:24:22-05:00</updated><id>http://localhost:4000/blog/2018/05/23/whats-next</id><content type="html" xml:base="http://localhost:4000/blog/2018/05/23/whats-next/">&lt;p&gt;I left my job at Envoy without any specific plans in mind. I wanted
+time off to take care of personal stuff and then figure what to do
+next.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;As you start to walk out on the path, the path appears. // Rumi&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Without planning it, I launched AnclaX as an experiment on
+creating a Stellar anchor in Colombia. People started to sign-up and
+they were trading with their Colombian Pesos (COP) and Lumens (XLM).&lt;/p&gt;
+
+&lt;p&gt;After giving it a lot of thought and considering some legal stuff, I
+decided to discard the original idea of building an anchor to give
+access to people to the Stellar distributed exchange.&lt;/p&gt;
+
+&lt;p&gt;A problem that has been in my mind for a long time is how to create a
+financial system which is more inclusive, it’s expensive to be poor&lt;sup&gt;1&lt;/sup&gt;. Making it easy for people to
+speculate, is not going to help that poor person in Colombia paying
+over 300% in interest rate to loan sharks.&lt;/p&gt;
+
+&lt;p&gt;So what’s next? And what is AnclaX? I’m still discovering the answer
+to those questions. For now I have some hypothesis which I’m validating
+against the market.&lt;/p&gt;
+
+&lt;p&gt;The @StellarOrg bio on twitter says:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Stellar is a free, open-source network that lets anyone build low-cost financial products for their community.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;AnclaX is a layer of top of Stellar. I’ve been building
+infrastructure and software to make it easier for companies,
+communities, co-ops and SMBs to take advantage of what Stellar
+offers without having to worry about the technical details.&lt;/p&gt;
+
+&lt;p&gt;I believe that if I can build products and infrastructure which are
+affordable, I’ll be able to pass that benefit to the end user and
+ultimately help more people start building their financial footprint.&lt;/p&gt;
+
+&lt;p&gt;Until this week I was in negotiations with two “big” co-ops in
+Colombia, one with over 1M associates and the other one with over 10K
+associates, but unfortunately we couldn’t make things work&lt;sup&gt;2&lt;/sup&gt;. The fact
+that I got to a late stage in both processes, gives me some hope and
+is a signal that I might be onto something.&lt;/p&gt;
+
+&lt;p&gt;I still don’t know exactly what is next, but I’ll
+continue experimenting until I run out of money&lt;sup&gt;3&lt;/sup&gt; or decide
+that maybe this isn’t a good idea, after all I need to find a model
+where I can make a living and can afford to pay others.&lt;/p&gt;
+
+&lt;hr style=&quot;margin: 0 0 1rem 0;&quot; /&gt;
+
+&lt;p&gt;&lt;sup&gt;1&lt;/sup&gt; &lt;a href=&quot;https://www.economist.com/united-states/2015/09/03/its-expensive-to-be-poor&quot;&gt;The Economist: It’s expensive to be poor&lt;/a&gt;
+&lt;br /&gt;
+&lt;sup&gt;2&lt;/sup&gt; This is the first time I build something for the Colombian market, a friend used to say that it was horrible to sell a B2B SaaS in Colombia, I’m starting to understand why, but that’s material for a post on its own.
+&lt;br /&gt;
+&lt;sup&gt;3&lt;/sup&gt; I have some savings and then thanks to the Stellar Build Challenge I got a price which is helping to pay for lawyers and some contractors.&lt;/p&gt;</content><author><name></name></author><summary type="html">I left my job at Envoy without any specific plans in mind. I wanted time off to take care of personal stuff and then figure what to do next.</summary></entry><entry><title type="html">A Simple Recipe to Make the World a Better Place</title><link href="http://localhost:4000/blog/2018/03/26/a-simple-recipe-to-make-the-world-a-better-place/" rel="alternate" type="text/html" title="A Simple Recipe to Make the World a Better Place" /><published>2018-03-26T11:48:33-05:00</published><updated>2018-03-26T11:48:33-05:00</updated><id>http://localhost:4000/blog/2018/03/26/a-simple-recipe-to-make-the-world-a-better-place</id><content type="html" xml:base="http://localhost:4000/blog/2018/03/26/a-simple-recipe-to-make-the-world-a-better-place/">&lt;p&gt;I’ve been reading a book titled “How Adam Smith Can Change Your Life” by Russell Roberts (&lt;a href=&quot;https://twitter.com/econtalker&quot;&gt;@econtalker&lt;/a&gt;). I thought this book was going to be a mix of philosophy and Smith’s “The Wealth of Nations” but I was wrong.&lt;/p&gt;
 
 &lt;p&gt;Russell covers a less known book by Smith called “The Theory of Moral Sentiments”, in which Smith tries to answer more existencial questions like how to be happy or make the world a better place.&lt;/p&gt;
 
@@ -1001,272 +1058,4 @@ and tests. To learn more about it check their
 &lt;/form&gt;
 &lt;/div&gt;
 
-&lt;!--End mc_embed_signup--&gt;</content><author><name></name></author><summary type="html">In my article Smart contracts for the impatient I documented how to deploy a contract using Mist to the testnet Rinkeby.</summary></entry><entry><title type="html">Smart contracts for the impatient</title><link href="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/" rel="alternate" type="text/html" title="Smart contracts for the impatient" /><published>2017-06-13T08:10:40-05:00</published><updated>2017-06-13T08:10:40-05:00</updated><id>http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient</id><content type="html" xml:base="http://localhost:4000/blog/2017/06/13/smart-contracts-for-the-impatient/">&lt;p&gt;I’ve been learning about Ethereum and smart contracts, and one of the
-biggest issues I’ve found is the lack of documentation to do some
-basic things.&lt;/p&gt;
-
-&lt;p&gt;In this article I want to do the dumbest contract possible, which kind
-of resembles our first program ever: “Hello World”.&lt;/p&gt;
-
-&lt;p&gt;I’ll show you how to:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Run Mist using the testnet &lt;a href=&quot;https://www.rinkeby.io/&quot;&gt;Rinkeby&lt;/a&gt; and get free ether for testing.&lt;/li&gt;
-  &lt;li&gt;Deploy a contract and interact with it using Mist.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For easiness, I’ll assume people is using macOS.&lt;/p&gt;
-
-&lt;h2 id=&quot;setting-up-a-testnet&quot;&gt;Setting up a testnet&lt;/h2&gt;
-
-&lt;p&gt;To get started we need to install Mist, from the README:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The Mist browser is the tool of choice to browse and use Ðapps.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It not only works as a browser, but also allow us to create wallets and contracts.&lt;/p&gt;
-
-&lt;p&gt;We can downloading it from &lt;a href=&quot;https://github.com/Ethereum/Mist/releases&quot;&gt;https://github.com/Ethereum/Mist/releases&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once it is installed, don’t bother yet about setting a wallet.&lt;/p&gt;
-
-&lt;p&gt;Since we don’t want to run on the default testnet or main network, we
-need to install geth, which is a command line interface for running an
-Ethereum node. It will allow us to interact with Rinkeby which is a
-different testnet.&lt;/p&gt;
-
-&lt;p&gt;Follow the instructions here &lt;a href=&quot;https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum&quot;&gt;https://github.com/Ethereum/go-Ethereum/wiki/Building-Ethereum&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once we have Mist and geth installed, let’s get Rinkeby running.&lt;/p&gt;
-
-&lt;h2 id=&quot;running-mist-with-rinkeby&quot;&gt;Running Mist with Rinkeby&lt;/h2&gt;
-
-&lt;p&gt;Since Mist doesn’t have out of the box support for Rinkeby. We need
-to connect to it using geth and then tell Mist to use that connection.&lt;/p&gt;
-
-&lt;p&gt;Let’s run in the console the following command:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;geth &lt;span class=&quot;nt&quot;&gt;--rinkeby&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--rpc&lt;/span&gt; console &lt;span class=&quot;nt&quot;&gt;--rpcapi&lt;/span&gt; db,eth,net,web3,personal
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;It starts a new Ethereum node connected to Rinkeby.&lt;/p&gt;
-
-&lt;p&gt;Let’s open Mist and tell it to connect to the running node. It
-will show you an alert saying the connection is insecure, but since
-this is a testnet, we can ignore it.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/Applications/Mist.app/Contents/MacOS/Mist &lt;span class=&quot;nt&quot;&gt;--rpc&lt;/span&gt; http://localhost:8545
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;During the first run, it will take some time while the Rinkeby
-blockchain is downloaded, go for a walk and then come back.&lt;/p&gt;
-
-&lt;h2 id=&quot;creating-a-wallet-in-rinkeby&quot;&gt;Creating a wallet in Rinkeby&lt;/h2&gt;
-
-&lt;p&gt;After Mist has started, we’ll see an interface similar to the following:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wallet.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can then create our first account in Rinkeby by clicking the “Add account” button.&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;400px&quot; src=&quot;https://www.youtube.com/embed/5fGRdbuQReo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;There are two types of “accounts” in Ethereum:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Externally Owned Account (EOA) or just “accounts”&lt;/li&gt;
-  &lt;li&gt;Contracts accounts or “contracts”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What we created was an EOA, and is normally what people would refer to as a wallet.&lt;/p&gt;
-
-&lt;p&gt;Now that we have an account, let’s send ether to it. Since we are using a testnet, we can get ether doing one of the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mining: we are running a testnet and it has all the same functionalities as the main network. Mining here is faster but the ether does not have any value.&lt;/li&gt;
-  &lt;li&gt;Asking someone to send us ETH.&lt;/li&gt;
-  &lt;li&gt;Using a public faucet.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Luckily for us, there is a public faucet where we can get “free” ether from. We need to do the following steps:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Copy our account address.&lt;/li&gt;
-  &lt;li&gt;Paste it in a GitHub gist.&lt;/li&gt;
-  &lt;li&gt;Submit the gist to https://faucet.rinkeby.io and get free ether.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The following video demonstrates the 3 steps above:&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;400px&quot; src=&quot;https://www.youtube.com/embed/wKFz5c3TU4s&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;In the video, the user already maxed out the allowance for 3 days, but
-under normal circumstances we should see a success message.&lt;/p&gt;
-
-&lt;p&gt;We should see the requested ether in the wallet balance.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/wallet2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;hello-world&quot;&gt;Hello world&lt;/h2&gt;
-
-&lt;p&gt;With Rinkeby configured and ether to spend, let’s deploy our hello
-world contract.&lt;/p&gt;
-
-&lt;p&gt;The contract is going to be called HelloWorld.&lt;/p&gt;
-
-&lt;p&gt;It has 4 state variables:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;creator: the account who created the contract&lt;/li&gt;
-  &lt;li&gt;lastCaller: the last account who changed the state of the contract.&lt;/li&gt;
-  &lt;li&gt;message: an internal message.&lt;/li&gt;
-  &lt;li&gt;totalGas: total amount of gas spent interacting with the contract.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And four getters for each of the state variables:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;getMessage&lt;/li&gt;
-  &lt;li&gt;getLastCaller&lt;/li&gt;
-  &lt;li&gt;getCreator&lt;/li&gt;
-  &lt;li&gt;getTotalGas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We call the functions above by making calls to the contract. Calls
-don’t have any cost since they don’t change the state of the network.&lt;/p&gt;
-
-&lt;p&gt;To change the internal state of the contract, we’ll define a
-setter. Anything that changes the contract state is considered a
-transaction.&lt;/p&gt;
-
-&lt;p&gt;In Ethereum, transaction have some of the following characteristics:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Change the state of the blockchain.&lt;/li&gt;
-  &lt;li&gt;Are run by multiple nodes and are verified.&lt;/li&gt;
-  &lt;li&gt;Have an associated cost (pay gas).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;pragma&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;solidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;contract&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//Begin: state variables&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;creator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lastCaller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;uint&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//End: state variables&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;//Begin: constructor&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;cm&quot;&gt;/*
-      We can use the special variable `tx` which gives us information
-      about the current transaction.
-
-      `tx.origin` returns the sender of the transaction.
-      `tx.gasprice` returns how much we pay for the transaction
-    */&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;creator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gasprice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello world'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//End: constructor&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;//Begin: getters&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getLastCaller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lastCaller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getCreator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;creator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getTotalGas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;constant&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;returns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//End: getters&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;//Being: setters&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;lastCaller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;totalGas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gasprice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//End: setters&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;To deploy the contract, let’s add a copy into the clipboard and then do the following steps:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Click “Contracts” in the button next to the balance.&lt;/li&gt;
-  &lt;li&gt;Click “Deploy new contract”.&lt;/li&gt;
-  &lt;li&gt;Select your account and then paste the code into the text editor.&lt;/li&gt;
-  &lt;li&gt;Select how much gas to pay (creating a contract is a transaction and we have to pay gas).&lt;/li&gt;
-  &lt;li&gt;Click deploy.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/deploy-smart-contracts.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;interacting-with-the-contract&quot;&gt;Interacting with the contract&lt;/h2&gt;
-
-&lt;p&gt;Once the contract has been deployed, we can interact with it.&lt;/p&gt;
-
-&lt;p&gt;Let’s click in “Contracts” and then select our recently deployed contract.&lt;/p&gt;
-
-&lt;p&gt;We’ll see a screen similar to the following which shows the result for each getter:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/contract.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Next, let’s try changing the message. On the right, we’ll see a
-section called “Write to contract”, where we can pick the function to
-call. If we select &lt;code class=&quot;highlighter-rouge&quot;&gt;setMessage&lt;/code&gt; it will ask us for the message.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/contract-transaction.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can see all the activity for a contract by copying its address and then going to &lt;a href=&quot;https://rinkeby.etherscan.io&quot;&gt;Rinkeby&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The following are the transactions for my hello world contract: &lt;a href=&quot;https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab&quot;&gt;https://rinkeby.etherscan.io/address/0xbE8852a2682Fc8C9d7c1619a7488c6F0dE2Ca8ab&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
-
-&lt;p&gt;Congrats! You have deployed your first hello world contract. Now you
-have the bare minium to start getting into more serious stuff.&lt;/p&gt;
-
-&lt;p&gt;If you are interested in Ethereum and writing smart contracts,
-subscribe to my feed or &lt;a href=&quot;https://twitter.com/abuiles&quot;&gt;follow me on
-twitter&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I’ll be writing more about Ethereum, working with contracts and how to
-use &lt;a href=&quot;http://truffleframework.com/&quot;&gt;Truffle&lt;/a&gt; to stay sane while doing
-so.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;div style=&quot;padding-bottom: 20px;&quot;&gt;&lt;/div&gt;
-
-&lt;!-- Begin MailChimp Signup Form --&gt;
-&lt;link href=&quot;//cdn-images.mailchimp.com/embedcode/slim-10_7.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
-
-&lt;style type=&quot;text/css&quot;&gt;
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-        #mc_embed_signup form { padding: 0 !important; }
-&lt;/style&gt;
-
-&lt;div id=&quot;mc_embed_signup&quot;&gt;
-&lt;form action=&quot;https://abuiles.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;amp;id=68c8310031&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate=&quot;&quot;&gt;
-    &lt;div id=&quot;mc_embed_signup_scroll&quot;&gt;
-    	&lt;label class=&quot;highlight&quot; style=&quot;font-size: 21px;&quot; for=&quot;mce-EMAIL&quot;&gt;Learn Ethereum and Solidity with me! I'm writing short guides to Ethereum - get notified when the first volume goes out &amp;darr;&lt;/label&gt;
-	&lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;email address&quot; required=&quot;&quot; /&gt;
-    &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
-    &lt;div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;b_103dd05cb2005f7b5485df96d_68c8310031&quot; tabindex=&quot;-1&quot; value=&quot;&quot; /&gt;&lt;/div&gt;
-    &lt;div class=&quot;clear&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot; /&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/form&gt;
-&lt;/div&gt;
-
-&lt;!--End mc_embed_signup--&gt;</content><author><name></name></author><summary type="html">I’ve been learning about Ethereum and smart contracts, and one of the biggest issues I’ve found is the lack of documentation to do some basic things.</summary></entry></feed>
+&lt;!--End mc_embed_signup--&gt;</content><author><name></name></author><summary type="html">In my article Smart contracts for the impatient I documented how to deploy a contract using Mist to the testnet Rinkeby.</summary></entry></feed>
