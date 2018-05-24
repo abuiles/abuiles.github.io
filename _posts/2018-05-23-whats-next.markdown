@@ -57,4 +57,4 @@ where I can make a living and can afford to pay others.
 <br/>
 <sup>2</sup> This is the first time I build something for the Colombian market, a friend used to say that it was horrible to sell a B2B SaaS in Colombia, I'm starting to understand why, but that's material for a post on its own.
 <br/>
-<sup>3</sup> I have some savings and then thanks to the Stellar Build Challenge I got a price which is helping to pay for lawyers and some contractors.
+<sup>3</sup> I have some savings which help me go without requiring external funding and then thanks to the Stellar Build Challenge I got a price which is helping to pay for lawyers and some contractors.
