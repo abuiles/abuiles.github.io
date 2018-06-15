@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-28T19:56:53-05:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about technology, being a human and books.
-</subtitle><entry><title type="html">Open Source by Default?</title><link href="http://localhost:4000/blog/2018/05/28/open-source-by-default/" rel="alternate" type="text/html" title="Open Source by Default?" /><published>2018-05-28T19:26:33-05:00</published><updated>2018-05-28T19:26:33-05:00</updated><id>http://localhost:4000/blog/2018/05/28/open-source-by-default</id><content type="html" xml:base="http://localhost:4000/blog/2018/05/28/open-source-by-default/">&lt;p&gt;My favorite engineering team out there is probably Artsy. If you go
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-15T14:31:01-05:00</updated><id>http://localhost:4000/</id><title type="html">Adolfo Builes</title><subtitle>I like to write about technology, being a human and books.
+</subtitle><entry><title type="html">Building Your Own Venmo With Stellar</title><link href="http://localhost:4000/blog/2018/06/15/building-your-own-venmo-with-stellar/" rel="alternate" type="text/html" title="Building Your Own Venmo With Stellar" /><published>2018-06-15T13:30:05-05:00</published><updated>2018-06-15T13:30:05-05:00</updated><id>http://localhost:4000/blog/2018/06/15/building-your-own-venmo-with-stellar</id><content type="html" xml:base="http://localhost:4000/blog/2018/06/15/building-your-own-venmo-with-stellar/">&lt;p&gt;I often chat with people in the Stellar Slack who want to build something similar to Venmo and they tend to struggle understanding how different concepts apply for what they are trying to do.&lt;/p&gt;
+
+&lt;p&gt;As I wrote in &lt;a href=&quot;/blog/2018/05/28/open-source-by-default/&quot;&gt;“open source by default?”&lt;/a&gt;, I was thinking about open sourcing the backend components which I built for &lt;a href=&quot;http://anclax.com/&quot;&gt;AnclaX&lt;/a&gt;. After giving it some thought, I decided that instead of just putting a bunch of repos in the wild, I’m going to take a more structure approach to it. I’ll be writing a mini-book called “Building Your Own Venmo With Stellar” where I’ll be introducing concepts and building components bit by bit. Unlike my previous books/tutorials, this one will be completely free from the beginning and I’ll leave the doors open for XLM tips.&lt;/p&gt;
+
+&lt;p&gt;To goal with this resource will be to create a product “similar” to Venmo using Stellar. By the end of the series people should have a better grasp on what’s required to build things on top of Stellar and hopefully have an open source wallet and server which they can use to get started.&lt;/p&gt;
+
+&lt;p&gt;I’ll be following a similar approach to what I did with &lt;a href=&quot;https://leanpub.com/ember-cli-101&quot;&gt;Ember 101&lt;/a&gt;, which was making everything available from the beginning - readers will be able to follow through as I write.&lt;/p&gt;
+
+&lt;p&gt;The tutorial will be published in the following URL &lt;a href=&quot;https://blog.abuiles.com/building-your-own-venmo-with-stellar/&quot;&gt;https://blog.abuiles.com/building-your-own-venmo-with-stellar/&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div style=&quot;padding-bottom: 20px;&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;If you are building a product on top of Stellar and need some help, I’m available for consulting. &lt;a class=&quot;page-link&quot; href=&quot;/consulting&quot;&gt;&lt;span class=&quot;underline  highlight&quot;&gt;Click here to learn more&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I often chat with people in the Stellar Slack who want to build something similar to Venmo and they tend to struggle understanding how different concepts apply for what they are trying to do.</summary></entry><entry><title type="html">Open Source by Default?</title><link href="http://localhost:4000/blog/2018/05/28/open-source-by-default/" rel="alternate" type="text/html" title="Open Source by Default?" /><published>2018-05-28T19:26:33-05:00</published><updated>2018-05-28T19:26:33-05:00</updated><id>http://localhost:4000/blog/2018/05/28/open-source-by-default</id><content type="html" xml:base="http://localhost:4000/blog/2018/05/28/open-source-by-default/">&lt;p&gt;My favorite engineering team out there is probably Artsy. If you go
 through their blog you might understand why. One of their core mantras
 is “Open Source by Default”.&lt;/p&gt;
 
@@ -523,145 +537,4 @@ control today.&lt;/p&gt;
 work on my own ideas, but I’m not longer unhappy for not having that
 today.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Thanks to my wife and my friend Rafa, for being there every time I’d freak out about life.&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We all rush through life torn between a desire for the future and a weariness for the present. – Seneca</summary></entry><entry><title type="html">Deploying Truffle Contracts to Rinkeby</title><link href="http://localhost:4000/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/" rel="alternate" type="text/html" title="Deploying Truffle Contracts to Rinkeby" /><published>2017-07-09T13:59:17-05:00</published><updated>2017-07-09T13:59:17-05:00</updated><id>http://localhost:4000/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/">&lt;p&gt;In &lt;a href=&quot;/blog/2017/07/08/writing-smart-contracts-with-truffle/&quot;&gt;writing smart contracts with
-Truffle&lt;/a&gt; I
-covered how to get started with Truffle and how to create, test and
-deploy contracts using an in-memory representation of the blockchain.&lt;/p&gt;
-
-&lt;p&gt;The goal of this article is to pick up where we left in that article
-and deploy it to the testnet Rinkeby. To do so we need to perform the following steps:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; with Rinkeby.&lt;/li&gt;
-  &lt;li&gt;Have a wallet in Rinkeby.&lt;/li&gt;
-  &lt;li&gt;Configure Truffle to use Rinkeby.&lt;/li&gt;
-  &lt;li&gt;Deploy code.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;running-rinkeby&quot;&gt;Running Rinkeby&lt;/h2&gt;
-
-&lt;p&gt;First, start &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; with Rinkeby and make sure that the correct APIs
-for Truffle are enabled.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you don’t have &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; or Rinkeby setup, read my article &lt;a href=&quot;/blog/2017/06/13/smart-contracts-for-the-impatient/&quot;&gt;smart
-contracts for the
-impatient&lt;/a&gt;, which
-has instructions on how to do so.&lt;/p&gt;
-
-&lt;h2 id=&quot;get-your-account-address&quot;&gt;Get your account address&lt;/h2&gt;
-
-&lt;p&gt;Assuming you have an account, open Mist and get the address. For this example I’ll use my main test account &lt;code class=&quot;highlighter-rouge&quot;&gt;0x0085f8e72391Ce4BB5ce47541C846d059399fA6c&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/truffle-rinkeby-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Alert! If you are feeling generous and want to buy me beer, don’t send Ether to that account, you can use this one on the real net &lt;code class=&quot;highlighter-rouge&quot;&gt;0x18DB73dEC9170DdcCf0B7b099029160258E1198c&lt;/code&gt; ;)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;configure-truffle&quot;&gt;Configure Truffle&lt;/h2&gt;
-
-&lt;p&gt;Next, we need to add Rinkeby to our truffle config file.  If we open &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle.js&lt;/code&gt; in our contract code we’ll see something like:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;networks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;development&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8545&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;network_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Match any network id&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let’s add Rinkeby to the list of networks:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;networks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;development&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8545&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;network_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Match any network id&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;rinkeby&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Connect to geth on the specified&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8545&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0x0085f8e72391Ce4BB5ce47541C846d059399fA6c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// default address to use for any transaction Truffle makes during migrations&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;network_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;gas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4612388&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Gas limit used for deploys&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;deploying-to-rinkeby&quot;&gt;Deploying to Rinkeby&lt;/h2&gt;
-
-&lt;p&gt;Once we have added Rinkeby to the list of networks, we can deploy our
-contract by running the command &lt;code class=&quot;highlighter-rouge&quot;&gt;truffle migrate --network rinkeby&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Before running the command, we need to unlock our test account so we
-can interact with it via Truffle. To do so, stop &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; and start with
-the following parameters (replace the account address with yours):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal --unlock=&quot;0x0085f8e72391Ce4BB5ce47541C846d059399fA6c&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;With &lt;code class=&quot;highlighter-rouge&quot;&gt;geth&lt;/code&gt; configured, let’s run the migrate command:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;truffle migrate &lt;span class=&quot;nt&quot;&gt;--network&lt;/span&gt; rinkeby
-Using network &lt;span class=&quot;s1&quot;&gt;'rinkeby'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-
-Running migration: 1_initial_migration.js
-  Deploying Migrations...
-  Migrations: 0x7bb345184c660bfadca4ba8c766875cd02c4556f
-Saving successful migration to network...
-Saving artifacts...
-Running migration: 1499575148_deploy_hello_world.js
-  Deploying HelloWorld...
-  HelloWorld: 0xbfbbd01ae2ea4bfc777f6ea3a2ad4843c7a104fb
-Saving successful migration to network...
-Saving artifacts...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;We have deploy successfully a contract to Rinkeby using Truffle! We
-can go to etherscan and see that our contract is there. The following
-is the information for the contract aboove &lt;a href=&quot;https://rinkeby.etherscan.io/address/0xbfbbd01ae2ea4bfc777f6ea3a2ad4843c7a104fb&quot;&gt;https://rinkeby.etherscan.io/address/0xbfbbd01ae2ea4bfc777f6ea3a2ad4843c7a104fb&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;If we look at the artifacts after the deployment, we’ll see the abi for each of the contracts and the contract address. The &lt;a href=&quot;https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle/blob/master/build/contracts/HelloWorld.json#L80&quot;&gt;following is the artifacts for the HelloWorld contract&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
-
-&lt;p&gt;In this article, we picked up on the code from &lt;a href=&quot;blog/2017/07/08/writing-smart-contracts-with-truffle/&quot;&gt;writing smart
-contracts with
-Truffle&lt;/a&gt; and
-manage to deploy our contract to the testnet Rinkeby.&lt;/p&gt;
-
-&lt;p&gt;In a future article, I’ll cover how to interact with your contracts
-using Truffle REPL mode. Follow me on twitter
-(&lt;a href=&quot;http://twitter.com/abuiles&quot;&gt;@abuiles&lt;/a&gt;) or subscribe to my feed to get
-updates.&lt;/p&gt;
-
-&lt;p&gt;You can find the code and steps for this article in GitHub https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;div style=&quot;padding-bottom: 20px;&quot;&gt;&lt;/div&gt;
-
-&lt;!-- Begin MailChimp Signup Form --&gt;
-&lt;link href=&quot;//cdn-images.mailchimp.com/embedcode/slim-10_7.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
-
-&lt;style type=&quot;text/css&quot;&gt;
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-        #mc_embed_signup form { padding: 0 !important; }
-&lt;/style&gt;
-
-&lt;div id=&quot;mc_embed_signup&quot;&gt;
-&lt;form action=&quot;https://abuiles.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;amp;id=68c8310031&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate=&quot;&quot;&gt;
-    &lt;div id=&quot;mc_embed_signup_scroll&quot;&gt;
-    	&lt;label class=&quot;highlight&quot; style=&quot;font-size: 21px;&quot; for=&quot;mce-EMAIL&quot;&gt;Learn Ethereum and Solidity with me! I'm writing short guides to Ethereum - get notified when the first volume goes out &amp;darr;&lt;/label&gt;
-	&lt;input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;email&quot; id=&quot;mce-EMAIL&quot; placeholder=&quot;email address&quot; required=&quot;&quot; /&gt;
-    &lt;!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--&gt;
-    &lt;div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;b_103dd05cb2005f7b5485df96d_68c8310031&quot; tabindex=&quot;-1&quot; value=&quot;&quot; /&gt;&lt;/div&gt;
-    &lt;div class=&quot;clear&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot; /&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/form&gt;
-&lt;/div&gt;
-
-&lt;!--End mc_embed_signup--&gt;</content><author><name></name></author><summary type="html">In writing smart contracts with Truffle I covered how to get started with Truffle and how to create, test and deploy contracts using an in-memory representation of the blockchain.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Thanks to my wife and my friend Rafa, for being there every time I’d freak out about life.&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We all rush through life torn between a desire for the future and a weariness for the present. – Seneca</summary></entry></feed>
