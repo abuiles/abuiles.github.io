@@ -19,6 +19,7 @@
         </label>
 
         <div class="trigger">
+          <a class="page-link highlight" href="/consulting"><span class="underline">Need help? hire me</span></a>
           {% for path in page_paths %}
             {% assign my_page = site.pages | where: "path", path | first %}
             {% if my_page.title %}

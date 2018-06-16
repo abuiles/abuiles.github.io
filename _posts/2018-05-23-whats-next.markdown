@@ -2,6 +2,7 @@
 layout: post
 title: "What's Next?"
 date: 2018-05-23T18:24:22-05:00
+comments: true
 ---
 
 I left my job at Envoy without any specific plans in mind. I wanted
