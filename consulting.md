@@ -10,10 +10,6 @@ I'm available for consulting. If you answer is yes to any of the following quest
  - **Are you interested in growing your team and hiring people remotely?** I have built effective remote teams. I can help you find engineers, negotiate salaries and make sure that everyone is aligned with your goals and your business.
  - **Do you need someone to share ideas with and build a quick prototype?** I've been part of early stage startups as engineer and manager. I'm happy to help you validate your idea quickly and build something.
 
-## Investing in Startups
-
-If I believe in your idea, I'm willing to take some risk. I'd charge you less per hour and put the difference in a convertible note.
-
 ## Contact
 
 Get in touch: builes.adolfo@gmail.com
