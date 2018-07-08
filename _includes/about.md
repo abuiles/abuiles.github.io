@@ -1,4 +1,4 @@
-Hola, my name is Adolfo. I live in Medellín (Colombia) - I'm still discovering [what's next](/blog/2018/05/23/whats-next/).
+Hola, my name is Adolfo. I'm currently taking a sabbatical and figuring what to do next.
 
 I'm a person of many hobbies, some of them are:
 
@@ -8,8 +8,6 @@ I'm a person of many hobbies, some of them are:
   - Coding.
   - ~~Running~~ Biking.
   - Working on side-projects.
-
-One day I want to go around the world in a motorcycle with my wife.
 
 ## Projects and books
 
