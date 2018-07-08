@@ -1,4 +1,4 @@
-Hola, my name is Adolfo. I'm currently taking a sabbatical and figuring what to do next.
+Hola, my name is Adolfo. I'm currently taking a sabbatical and figuring out what to do next.
 
 I'm a person of many hobbies, some of them are:
 
