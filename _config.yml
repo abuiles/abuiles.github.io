@@ -16,7 +16,7 @@
 title: "Adolfo Builes"
 email: builes.adolfo@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I like to write about technology, being a human and books.
+  I write about technology, being a human and books.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://blog.abuiles.com
 twitter_username: abuiles
