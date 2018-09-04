@@ -12,5 +12,3 @@ To goal with this resource will be to create a product "similar" to Venmo using 
 I'll be following a similar approach to what I did with [Ember 101](https://leanpub.com/ember-cli-101), which was making everything available from the beginning - readers will be able to follow through as I write.
 
 The tutorial will be published in the following URL [https://blog.abuiles.com/building-your-own-venmo-with-stellar/](https://blog.abuiles.com/building-your-own-venmo-with-stellar/)
-
-{% include help.md %}
