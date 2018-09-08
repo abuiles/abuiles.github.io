@@ -48,6 +48,9 @@ collections:
   motorcycling:
     output: true
     permalink: /viajes/:name
+  notes:
+    output: true
+    permalink: /notes/:name
 
 defaults:
   - scope:
