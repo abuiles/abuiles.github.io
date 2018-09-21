@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Ruby on Rails MVC is not the same as Ember.js MVC</title>
-  <meta name="description" content="One of the most confusing parts for people coming from Rails (or any other backend web application framework) it’s that what Ember.js calls MVC is very diffe...">
+  <title>First Principles Thinking</title>
+  <meta name="description" content="Via fs.blog">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
 
   
-  <link rel="canonical" href="https://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/">
+  <link rel="canonical" href="https://blog.abuiles.com/notes/2018-09-21-first-principles-thinking">
   <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
 
   
@@ -106,103 +106,43 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Ruby on Rails MVC is not the same as Ember.js MVC</h1>
+    <h1 class="post-title" itemprop="name headline">First Principles Thinking</h1>
     <p class="post-meta">
-      <time datetime="2014-01-26T23:17:52-05:00" itemprop="datePublished">
+      <time datetime="2018-09-21T10:15:42-05:00" itemprop="datePublished">
         
-        Jan 27, 2014
+        Sep 21, 2018
       </time>
       </p>
   </header>
 
   <div class="post-content lh-copy" itemprop="articleBody">
-    <p>One of the most confusing parts for people coming from Rails (or any
-other backend web application framework) it’s that what Ember.js
-calls MVC is very different to what other frameworks call MVC.</p>
+    <p>Via <a href="https://fs.blog/2018/04/first-principles/">fs.blog</a></p>
 
-<p>To understand what MVC is in both frameworks I recommend watching
-Yehuda Katz presentation:
-<a href="http://www.youtube.com/watch?v=s1dhXamEAKQ">A tale of two MVC’s</a>.</p>
+<blockquote>
+  <p>A first principle is a foundational proposition or assumption that
+stands alone. We cannot deduce first principles from any other
+proposition or assumption.</p>
+</blockquote>
 
-<iframe width="853" height="480" src="//www.youtube.com/embed/s1dhXamEAKQ" frameborder="0" allowfullscreen=""></iframe>
+<h2 id="socratic-questioning-via-fsblog">Socratic Questioning via <a href="https://fs.blog/2018/04/first-principles/">fs.blog</a></h2>
 
-<p>Instead of talking about MVC, Yehuda proposes an unified model for GUI programming which is composed by a series of steps and then explains how different frameworks handle each step.</p>
+<p>Socratic questioning can be used to establish first principles through stringent analysis. This a disciplined questioning process, used to establish truths, reveal underlying assumptions, and separate knowledge from ignorance. The key distinction between Socratic questioning and normal discussions is that the former seeks to draw out first principles in a systematic manner. Socratic questioning generally follows this process:</p>
 
-<p>The following are the steps mention by Yehuda and the components in
-charge of each in both Ruby on Rails and Ember.js.</p>
+<ol>
+  <li>Clarifying your thinking and explaining the origins of your ideas (Why do I think this? What exactly do I think?)</li>
+  <li>Challenging assumptions (How do I know this is true? What if I thought the opposite?)</li>
+  <li>Looking for evidence (How can I back this up? What are the sources?)</li>
+  <li>Considering alternative perspectives (What might others think? How do I know I am correct?)</li>
+  <li>Examining consequences and implications (What if I am wrong? What are the consequences if I am?)</li>
+  <li>Questioning the original questions (Why did I think that? Was I correct? What conclusions can I draw from the reasoning process?)</li>
+</ol>
 
-<h2 id="step-1-bootstrap-object">Step 1: Bootstrap Object</h2>
-<p>Setup the initial state, bootstrap objects that you will require in
-the future. e.g. Current User, Blog Posts.</p>
-
-<ul>
-  <li>Ruby on Rails: Router and Controller</li>
-  <li>Ember.js: Route.</li>
-</ul>
-
-<h2 id="2-draw-initial-ui">2. Draw Initial UI</h2>
-<p>With the objects you setup on step 1 you will draw whatever the initial
-UI is for your system.</p>
+<h2 id="references">References:</h2>
 
 <ul>
-  <li>Ruby on Rails: View</li>
-  <li>Ember.js: Template</li>
+  <li>https://fs.blog/2018/04/first-principles/</li>
+  <li>http://firstround.com/review/future-founders-heres-how-to-spot-and-build-in-nonobvious-markets/</li>
 </ul>
-
-<p>** Views in Ember are not the same as Views in Rails, the
-   equivalent are the templates, you will learn later what views are for.</p>
-
-<h2 id="3-translate-raw-input-into-user-intent">3. Translate Raw Input into User intent</h2>
-<p>Once the user start to use the app, we want to interpret their intend,
-for example clicking somewhere, pressing a key.</p>
-
-<ul>
-  <li>Ruby on Rails: Template/Browser</li>
-  <li>Ember.js: Template or View.</li>
-</ul>
-
-<h2 id="4-update-application-state">4. Update application state</h2>
-<p>As user starts to interact with the system, we need to update the
-state of the app, for example we have an option box which is always in
-the head, if the user click “hide options”, we need to
-update the state of the app to reflect that and remember during the
-rest of the user’s session.</p>
-
-<ul>
-  <li>Ruby on Rails: Controller (In the Session)</li>
-  <li>Ember.js: Route</li>
-</ul>
-
-<h2 id="5-update-domain-objects">5. Update Domain Objects</h2>
-<p>If I remove a tweet for example, then I want to remove it from the system.</p>
-
-<ul>
-  <li>Ruby on Rails: Controller</li>
-  <li>Ember.js: Controller</li>
-</ul>
-
-<h2 id="6-notify-ui-changes">6. Notify UI Changes</h2>
-<p>When there is something new, the UI needs to know somehow about it,
-for example, there are new comments or the value for a field changed.</p>
-
-<ul>
-  <li>Ruby on Rails: HTTP.</li>
-  <li>Ember.js: Data Binding.</li>
-</ul>
-
-<h2 id="7-update-the-ui">7. Update the UI.</h2>
-<p>New changes or whatever needs to be drawn is drawn.</p>
-
-<ul>
-  <li>Ruby on Rails: Browser</li>
-  <li>Ember.js: Template</li>
-</ul>
-
-<p>The next time you are struggling to decide where to put something just look at the steps above and see where it belongs.</p>
-
-<p>P.S I’m <a href="http://blog.abuiles.com/ember-rails/">writing a series of post on working with Ember.js and Ruby on Rails</a>, subscribe to my list and I will let you know every time I publish an article on Ember.js and Ruby on Rails.</p>
-
-<form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value="" /></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />&lt;/div&gt;</form>
 
   </div>
 
@@ -210,8 +150,8 @@ for example, there are new comments or the value for a field changed.</p>
     <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'https://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/';
-      this.page.identifier = 'https://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/';
+      this.page.url = 'https://blog.abuiles.com/notes/2018-09-21-first-principles-thinking';
+      this.page.identifier = 'https://blog.abuiles.com/notes/2018-09-21-first-principles-thinking';
     };
 
     (function() {
