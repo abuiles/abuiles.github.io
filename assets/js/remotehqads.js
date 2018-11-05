@@ -1,5 +1,5 @@
 var _remotehqjobs = {
-  css: '.remotehqad{   display: block;        overflow: hidden;        padding: 1em;        padding-bottom: 0.3em;        font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif;        line-height: 1.5;        border: 4px solid #f5f5f5;        margin-bottom: 10px;    }      .remotehqad span {        display: block;        overflow: hidden      }      .remotehqad .image {        display: block;        margin: 0 auto 1em;        margin-left: 25px; max-width: 130px }      .remotehqad .text {        display: block;        text-align: left;        margin-bottom: 1em;        color: #666;      }',
+  css: '.remotehqad{   display: block;        overflow: hidden;        padding: 1em;        padding-bottom: 0.3em;        font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif;        line-height: 1.5;        border: 4px solid #f5f5f5;        margin-bottom: 10px;    }      .remotehqad span {        display: block;        overflow: hidden      }      .remotehqad .image {        display: block;        margin: 0 auto 1em;        margin-left: 25px; max-width: 130px }      .remotehqad .text {        display: block;        text-align: left;        margin-bottom: 1em;        color: #666;      }.remotehq-poweredby {display: block;    text-align: right;    font-size: .7em;    color: #ccc; }',
   jobs: [
     {
       "company": "Unlock",
@@ -79,7 +79,7 @@ var _remotehqjobs = {
       img = '<h2>' + ad.company + '</h2>'
     }
 
-    el.innerHTML = '<div class="remotehqad"><a href="' + ad.jobsPage + '"><div class="image">' + img +  '</div></a><a href="' + ad.jobsPage + '" class="text">' + ad.title + '</a></div>';
+    el.innerHTML = '<div class="remotehqad"><a href="' + ad.jobsPage + '"><div class="image">' + img +  '</div></a><a href="' + ad.jobsPage + '" class="text">' + ad.title + '</a><a href="http://remotehq.net/?utm_source=' + ad.company + '&utm_medium=ad_via_link&utm_campaign=in_unit" class="remotehq-poweredby" target="_blank" rel="noopener">job via RemoteHQ</a></div>';
     var fdiv = document.createElement('div');
     fdiv.appendChild(el);
     var remotehqjs = document.getElementById('_remotehqads_js');
