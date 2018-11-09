@@ -17,6 +17,10 @@ and deploy it to the testnet Rinkeby. To do so we need to perform the following 
 3. Configure Truffle to use Rinkeby.
 4. Deploy code.
 
+<div class="mt2">
+    <div id="_remotehq_js"></div>
+</div>
+
 ## Running Rinkeby
 
 First, start `geth` with Rinkeby and make sure that the correct APIs
@@ -37,7 +41,6 @@ Assuming you have an account, open Mist and get the address. For this example I'
 
 ![](/assets/truffle-rinkeby-1.png)
 
-**Alert! If you are feeling generous and want to buy me beer, don't send Ether to that account, you can use this one on the real net `0x18DB73dEC9170DdcCf0B7b099029160258E1198c` ;)**
 
 ## Configure Truffle
 
