@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
 
   
-  <link rel="canonical" href="https://blog.abuiles.com/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/">
+  <link rel="canonical" href="http://localhost:4000/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/">
   <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
 
   
@@ -131,10 +131,6 @@ and deploy it to the testnet Rinkeby. To do so we need to perform the following 
   <li>Deploy code.</li>
 </ol>
 
-<div class="mt2">
-    <div id="_remotehq_js"></div>
-</div>
-
 <h2 id="running-rinkeby">Running Rinkeby</h2>
 
 <p>First, start <code class="highlighter-rouge">geth</code> with Rinkeby and make sure that the correct APIs
@@ -153,6 +149,8 @@ has instructions on how to do so.</p>
 <p>Assuming you have an account, open Mist and get the address. For this example I’ll use my main test account <code class="highlighter-rouge">0x0085f8e72391Ce4BB5ce47541C846d059399fA6c</code>.</p>
 
 <p><img src="/assets/truffle-rinkeby-1.png" alt="" /></p>
+
+<p><strong>Alert! If you are feeling generous and want to buy me beer, don’t send Ether to that account, you can use this one on the real net <code class="highlighter-rouge">0x18DB73dEC9170DdcCf0B7b099029160258E1198c</code> ;)</strong></p>
 
 <h2 id="configure-truffle">Configure Truffle</h2>
 
@@ -237,30 +235,13 @@ updates.</p>
 
 <div data-remotehqcompany="Unlock"></div>
 
-
   </div>
   <div class="w-100">
     <script async type="text/javascript" src="https://cdn.remotehq.net/remotehq.js?placement=blog.abuiles.com" id="_remotehq_js"></script>
   </div>
 
   
-    <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = 'https://blog.abuiles.com/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/';
-      this.page.identifier = 'https://blog.abuiles.com/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby/';
-    };
-
-    (function() {
-      var d = document, s = d.createElement('script');
-
-      s.src = 'https://abuiles.disqus.com/embed.js';
-
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    
   
 </article>
 
