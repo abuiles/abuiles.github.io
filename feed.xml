@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-19T11:26:12-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Adolfo Builes</title><subtitle>I write about technology, being a human and books.
-</subtitle><entry><title type="html">Building Your Own Venmo With Stellar</title><link href="http://localhost:4000/blog/2018/06/15/building-your-own-venmo-with-stellar/" rel="alternate" type="text/html" title="Building Your Own Venmo With Stellar" /><published>2018-06-15T13:30:05-05:00</published><updated>2018-06-15T13:30:05-05:00</updated><id>http://localhost:4000/blog/2018/06/15/building-your-own-venmo-with-stellar</id><content type="html" xml:base="http://localhost:4000/blog/2018/06/15/building-your-own-venmo-with-stellar/">&lt;p&gt;I often chat with people in the Stellar Slack who want to build something similar to Venmo and they tend to struggle understanding how different concepts apply for what they are trying to do.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-07T10:02:33-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Adolfo Builes</title><subtitle>I write about technology, being a human and books.
+</subtitle><entry><title type="html">Immediate and Delayed Return environments</title><link href="http://localhost:4000/blog/2019/01/07/immediate-return-and-delayed-return/" rel="alternate" type="text/html" title="Immediate and Delayed Return environments" /><published>2019-01-07T09:37:22-05:00</published><updated>2019-01-07T09:37:22-05:00</updated><id>http://localhost:4000/blog/2019/01/07/immediate-return-and-delayed-return</id><content type="html" xml:base="http://localhost:4000/blog/2019/01/07/immediate-return-and-delayed-return/">&lt;p&gt;Yesterday while reading &lt;a href=&quot;https://jamesclear.com/atomic-habits&quot;&gt;Atomic
+Habits&lt;/a&gt; I came across two new
+concepts which are called &lt;code class=&quot;highlighter-rouge&quot;&gt;immediate return&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;delayed return&lt;/code&gt;
+environments.&lt;/p&gt;
+
+&lt;p&gt;We are under &lt;code class=&quot;highlighter-rouge&quot;&gt;immediate return&lt;/code&gt; when focused on the results which can
+be received instantly. Our ancestor who used to wander in the African
+Savannah use to exist on an immediate results environments. Since they
+didn’t know when was the next time they could secure a meal, take
+shelter or not get devoured by lions, it made sense for them to place
+value in instant gratification.&lt;/p&gt;
+
+&lt;p&gt;Current society lives on a &lt;code class=&quot;highlighter-rouge&quot;&gt;delayed return environment&lt;/code&gt;, most of our
+actions tend to pay-off in the long term. We invest time learning
+something to eventually get our dream job. We put money in our pension
+fund so that we can retire one day.&lt;/p&gt;
+
+&lt;p&gt;In the context of habits, our bias towards instant gratification can
+cause problems when trying to create new habits. Who doesn’t prefer
+those extra 30 minutes of sleep at 5:30 a.m instead of hitting the
+gym.&lt;/p&gt;</content><author><name></name></author><summary type="html">Yesterday while reading Atomic Habits I came across two new concepts which are called immediate return and delayed return environments.</summary></entry><entry><title type="html">Building Your Own Venmo With Stellar</title><link href="http://localhost:4000/blog/2018/06/15/building-your-own-venmo-with-stellar/" rel="alternate" type="text/html" title="Building Your Own Venmo With Stellar" /><published>2018-06-15T13:30:05-05:00</published><updated>2018-06-15T13:30:05-05:00</updated><id>http://localhost:4000/blog/2018/06/15/building-your-own-venmo-with-stellar</id><content type="html" xml:base="http://localhost:4000/blog/2018/06/15/building-your-own-venmo-with-stellar/">&lt;p&gt;I often chat with people in the Stellar Slack who want to build something similar to Venmo and they tend to struggle understanding how different concepts apply for what they are trying to do.&lt;/p&gt;
 
 &lt;p&gt;As I wrote in &lt;a href=&quot;/blog/2018/05/28/open-source-by-default/&quot;&gt;“open source by default?”&lt;/a&gt;, I was thinking about open sourcing the backend components which I built for &lt;a href=&quot;http://anclax.com/&quot;&gt;AnclaX&lt;/a&gt;. After giving it some thought, I decided that instead of just putting a bunch of repos in the wild, I’m going to take a more structure approach to it. I’ll be writing a mini-book called “Building Your Own Venmo With Stellar” where I’ll be introducing concepts and building components bit by bit. Unlike my previous books/tutorials, this one will be completely free from the beginning and I’ll leave the doors open for XLM tips.&lt;/p&gt;
 
@@ -488,47 +508,4 @@ https://read.amazon.com/notebook.&lt;/p&gt;
 
 &lt;p&gt;If you end up using the tool, plese let me know - I’d love to publish your book notes in the Kintrospect page.&lt;/p&gt;
 
-&lt;p&gt;Happy reading!&lt;/p&gt;</content><author><name></name></author><summary type="html">Until recently it was difficult to review and consume the highlights in my Kindle books and then in June (2017) Amazon launched a new page under https://read.amazon.com/notebook.</summary></entry><entry><title type="html">Consistency</title><link href="http://localhost:4000/blog/2017/10/22/consistency/" rel="alternate" type="text/html" title="Consistency" /><published>2017-10-22T12:18:49-05:00</published><updated>2017-10-22T12:18:49-05:00</updated><id>http://localhost:4000/blog/2017/10/22/consistency</id><content type="html" xml:base="http://localhost:4000/blog/2017/10/22/consistency/">&lt;figure class=&quot;quote&quot;&gt;&lt;blockquote&gt;&lt;p&gt;In the politics of human life, consistency is not a virtue. To be consistent means, according to the Oxford Universal Dictionary, “standing still or not moving.” Men must change with the times or die.&lt;/p&gt;&lt;/blockquote&gt;&lt;figcaption class=&quot;quote-source&quot;&gt;&lt;span class=&quot;quote-author&quot;&gt;Saul Alinsky&lt;/span&gt; &lt;cite class=&quot;quote-title&quot;&gt;&lt;a class=&quot;quote-link&quot; href=&quot;https://www.amazon.com/Rules-Radicals-Practical-Primer-Realistic/dp/0679721134&quot;&gt;Rules for Radicals&lt;/a&gt;&lt;/cite&gt;&lt;/figcaption&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">In the politics of human life, consistency is not a virtue. To be consistent means, according to the Oxford Universal Dictionary, “standing still or not moving.” Men must change with the times or die.Saul Alinsky Rules for Radicals</summary></entry><entry><title type="html">My 5 Years Plan</title><link href="http://localhost:4000/blog/2017/08/12/my-5-years-plan/" rel="alternate" type="text/html" title="My 5 Years Plan" /><published>2017-08-13T00:05:35-05:00</published><updated>2017-08-13T00:05:35-05:00</updated><id>http://localhost:4000/blog/2017/08/12/my-5-years-plan</id><content type="html" xml:base="http://localhost:4000/blog/2017/08/12/my-5-years-plan/">&lt;blockquote&gt;
-  &lt;p&gt;We all rush through life torn between a desire for the future and a weariness for the present.&lt;/p&gt;
-
-  &lt;p&gt;– &lt;cite&gt;Seneca&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;One of the questions that I hate the most is: “Where do you see
-yourself in 5 years”.&lt;/p&gt;
-
-&lt;p&gt;I was unhappy for a long time seeing my “5 years” plan not getting
-fulfilled and getting out of my hands.&lt;/p&gt;
-
-&lt;p&gt;Most of the time we are rushing our lives to get to that future, but
-we don’t really have control over many things. Being a millionaire,
-building a company, getting a house; Those were some of the things
-that I had in my 5 years plan but I couldn’t really control, some of them
-can’t be timed and require a lot of things to play in your favor.&lt;/p&gt;
-
-&lt;p&gt;Through reading about stoicism and talking with friends, I changed my
-goals and realized that material stuff isn’t and would never be a good
-goal to have in life.&lt;/p&gt;
-
-&lt;p&gt;My answer to the question above today is “Happy, alive, helping others and have optionality.”&lt;/p&gt;
-
-&lt;p&gt;As I write this, I’m still alive and probably will be tomorrow. I have
-control over my happiness and helping others, and have the options to
-do the things that I want.&lt;/p&gt;
-
-&lt;p&gt;I don’t longer focus in five years but rather what I have in front of
-me and how can I control that to be happy.&lt;/p&gt;
-
-&lt;p&gt;I didn’t start a company, but I’m helping to build a company which is selling millions of dollars and growing a great team.
-I’m not a millionaire, but get pay in a fair way to do my job and I have the option to do the things that I want.&lt;/p&gt;
-
-&lt;p&gt;People are rushing through life, chasing their five years plan, being
-unhappy about not being there and comparing against others; Instead of
-enjoying life, the opportunities and the things that they have and can
-control today.&lt;/p&gt;
-
-&lt;p&gt;I’m still ambitious, I still push for things. Some day I still wan to
-work on my own ideas, but I’m not longer unhappy for not having that
-today.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Thanks to my wife and my friend Rafa, for being there every time I’d freak out about life.&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">We all rush through life torn between a desire for the future and a weariness for the present. – Seneca</summary></entry></feed>
+&lt;p&gt;Happy reading!&lt;/p&gt;</content><author><name></name></author><summary type="html">Until recently it was difficult to review and consume the highlights in my Kindle books and then in June (2017) Amazon launched a new page under https://read.amazon.com/notebook.</summary></entry><entry><title type="html">Consistency</title><link href="http://localhost:4000/blog/2017/10/22/consistency/" rel="alternate" type="text/html" title="Consistency" /><published>2017-10-22T12:18:49-05:00</published><updated>2017-10-22T12:18:49-05:00</updated><id>http://localhost:4000/blog/2017/10/22/consistency</id><content type="html" xml:base="http://localhost:4000/blog/2017/10/22/consistency/">&lt;figure class=&quot;quote&quot;&gt;&lt;blockquote&gt;&lt;p&gt;In the politics of human life, consistency is not a virtue. To be consistent means, according to the Oxford Universal Dictionary, “standing still or not moving.” Men must change with the times or die.&lt;/p&gt;&lt;/blockquote&gt;&lt;figcaption class=&quot;quote-source&quot;&gt;&lt;span class=&quot;quote-author&quot;&gt;Saul Alinsky&lt;/span&gt; &lt;cite class=&quot;quote-title&quot;&gt;&lt;a class=&quot;quote-link&quot; href=&quot;https://www.amazon.com/Rules-Radicals-Practical-Primer-Realistic/dp/0679721134&quot;&gt;Rules for Radicals&lt;/a&gt;&lt;/cite&gt;&lt;/figcaption&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">In the politics of human life, consistency is not a virtue. To be consistent means, according to the Oxford Universal Dictionary, “standing still or not moving.” Men must change with the times or die.Saul Alinsky Rules for Radicals</summary></entry></feed>
