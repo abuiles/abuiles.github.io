@@ -15,18 +15,18 @@ experiences.
 
 There are 3 phases on the inmate's mental reactions to camp life:
 
-    1. The period following his admission, which is characterized by *shock*
-    2. The period when he is well entrenched in camp routine: Characterize by *apathy*, the blunting of the emotions and the feeling that one could not care any more.
-    3. The period following his release and liberation.
+1. The period following his admission, which is characterized by *shock*
+2. The period when he is well entrenched in camp routine: Characterize by *apathy*, the blunting of the emotions and the feeling that one could not care any more.
+3. The period following his release and liberation.
 
 ## First stage
 
 Upon arriving to Auschwitz prisoners were greet by there were some
 people who "spoke in every possible European tongue, and all with a
 certain amount of humor, which sounded grotesque under the
-circumstances". Why did this prisioners looked so well? Could other
+circumstances". Why did this prisoner looked so well? Could other
 shares their position? During this time, Frankl experience what is
-knowwn as `delusion of reprieve`.
+known as `delusion of reprieve`.
 
 > In psychiatry there is a certain condition known as “delusion of reprieve.” The condemned man, immediately before his execution, gets the illusion that he might be reprieved at the very last minute.
 
@@ -34,7 +34,7 @@ When we have nothing to lose we might as well just make fun of our
 naked lives, as did the prisoners when getting showers uncertain if
 water or gas would come from the pipes.
 
-(Frankl, Viktor E.. Man's Search for Meaning (p. 16). Beacon Press. Kindle Edition.)
+
 Thus the illusions some of us still held were destroyed one by one,
 and then, quite unexpectedly, most of us were overcome by a grim sense
 of humor. We knew that we had nothing to lose except our so
@@ -43,16 +43,12 @@ tried very hard to make fun, both about ourselves and about each
 other. After all, real water did flow from the sprays!
 
 
-
-(Frankl, Viktor E.. Man's Search for Meaning (p. 20). Beacon Press. Kindle Edition.)
 I think it was Lessing who once said, “There are things which must cause you to lose your reason or you have none to lose.” An abnormal reaction to an abnormal situation is normal behavior.
 
-## Secon stage
-Frankl, Viktor E.. Man's Search for Meaning (p. 23). Beacon Press. Kindle Edition.
+## Second stage
 Apathy, the blunting of the emotions and the feeling that one could not care any more, were the symptoms arising during the second stage of the prisoner’s psychological reactions, and which eventually made him insensitive to daily and hourly beatings.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 25). Beacon Press. Kindle Edition.
 I want to show with this apparently trivial story that there are
 moments when indignation can rouse even a seemingly hardened
 prisoner—indignation not about cruelty or pain, but about the insult
@@ -66,18 +62,15 @@ my hospital would not even have admitted him to the waiting room.”
 
 Apathy: Lack of interests, enthusiasm or concern.
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 28). Beacon Press. Kindle Edition.
 
 Apathy, the main symptom of the second phase, was a necessary mechanism of self-defense. Reality dimmed, and all efforts and all emotions were centered on one task: preserving one’s own life and that of the other fellow.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 31). Beacon Press. Kindle Edition.
 Those who have not gone through a similar experience can hardly conceive of the soul-destroying mental conflict and clashes of will power which a famished man experiences. They can hardly grasp what it means to stand digging in a trench, listening only for the siren to announce 9:30 or 10:00 A.M.—the half-hour lunch interval—when bread would be rationed out (as long as it was still available); repeatedly asking the foreman—if he wasn’t a disagreeable fellow—what the time was; and tenderly touching a piece of bread in one’s coat pocket, first stroking it with frozen gloveless fingers, then breaking off a crumb and putting it in one’s mouth and finally, with the last bit of will power, pocketing it again, having promised oneself that morning to hold out till afternoon.
 
 
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 37). Beacon Press. Kindle Edition.
 A thought transfixed me: for the first time in my life I saw the truth
 as it is set into song by so many poets, proclaimed as the final
 wisdom by so many thinkers. The truth—that love is the ultimate and
@@ -88,7 +81,6 @@ have to impart: The salvation of man is through love and in love.
 
 Mastering the art of living require us to develop a sense of humor and see things in a humorous way.
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 44). Beacon Press. Kindle Edition.
 The attempt to develop a sense of humor and to see things in a
 humorous light is some kind of a trick learned while mastering the art
 of living. Yet it is possible to practice the art of living even in a
@@ -102,15 +94,12 @@ of human suffering is absolutely relative.
 
 On judging:
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 48). Beacon Press. Kindle Edition.
 No man should judge unless he asks himself in absolute honesty whether in a similar situation he might not have done the same.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 62). Beacon Press. Kindle Edition.
 We found out just how uncertain human decisions are, especially in matters of life and death.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 65). Beacon Press. Kindle Edition.
 In attempting this psychological presentation and a psychopathological
 explanation of the typical characteristics of a concentration camp
 inmate, I may give the impression that the human being is completely
@@ -134,7 +123,6 @@ freedom, of independence of mind, even in such terrible conditions of
 psychic and physical stress.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 66). Beacon Press. Kindle Edition.
 Fundamentally, therefore, any man can, even under such circumstances, decide what shall become of him—mentally and spiritually.
 
 > One could make a victory of those experiences, turning life into an
@@ -142,7 +130,6 @@ Fundamentally, therefore, any man can, even under such circumstances, decide wha
 > as did a majority of the prisoners.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 72). Beacon Press. Kindle Edition.
 Varying this, we could say that most men in a concentration camp
 believed that the real opportunities of life had passed. Yet, in
 reality, there was an opportunity and a challenge. One could make a
@@ -152,7 +139,6 @@ of the prisoners.
 
 Emotion and suffering:
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 74). Beacon Press. Kindle Edition.
 Spinoza: “Affectus, qui passio est, desinit esse passio simulatque eius claram et distinctam formamus ideam.” Emotion, which is suffering, ceases to be suffering as soon as we form a clear and precise picture of it.
 
 >Those who know how close the connection is between the state of mind
@@ -160,7 +146,6 @@ Spinoza: “Affectus, qui passio est, desinit esse passio simulatque eius claram
 >immunity of his body will understand that the sudden loss of hope and
 >courage can have a deadly effect
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 75). Beacon Press. Kindle Edition.
 Those who know how close the connection is between the state of mind
 of a man—his courage and hope, or lack of them—and the state of
 immunity of his body will understand that the sudden loss of hope and
@@ -173,7 +158,6 @@ illness—and thus the voice of his dream was right after all.
 
 >Nietzsche: “He who has a why to live for can bear with almost any how,”
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 76). Beacon Press. Kindle Edition.
 As we said before, any attempt to restore a man’s inner strength in
 the camp had first to succeed in showing him some future
 goal. Nietzsche’s words, “He who has a why to live for can bear with
@@ -189,7 +173,6 @@ existence.
 > one give to that? What was really needed was a fundamental change in
 > our attitude toward life.
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 76). Beacon Press. Kindle Edition.
 “I have nothing to expect from life any more.” What sort of answer can
 one give to that? What was really needed was a fundamental change in
 our attitude toward life.
@@ -225,7 +208,6 @@ finds himself may require him to shape his own fate by action.
 >conduct
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 81). Beacon Press. Kindle Edition.
 So I began by mentioning the most trivial of comforts first. I said
 that even in this Europe in the sixth winter of the Second World War,
 our situation was not the most terrible we could think of. I said that
@@ -247,7 +229,6 @@ macht mich stärker.” (That which does not kill me, makes me stronger.)
 >guards? How is it possible that men of flesh and blood could treat
 >others as so many prisoners say they have been treated?
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 84). Beacon Press. Kindle Edition.
 We now come to the third stage of a prisoner’s mental reactions: the
 psychology of the prisoner after his liberation. But prior to that we
 shall consider a question which the psychologist is asked frequently,
@@ -265,11 +246,9 @@ purest clinical sense.
 
 > There are two races of men in this world, but only these two—the “race” of the decent man and the “race” of the indecent man.
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 86). Beacon Press. Kindle Edition.
 From all this we may learn that there are two races of men in this world, but only these two—the “race” of the decent man and the “race” of the indecent man.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 96). Beacon Press. Kindle Edition.
 The crowning experience of all, for the homecoming man, is the wonderful feeling that, after all he has suffered, there is nothing he need fear any more—except his God.
 
 >The Meaning of Life I doubt whether a doctor can answer this question
@@ -279,7 +258,6 @@ The crowning experience of all, for the homecoming man, is the wonderful feeling
 >person’s life at a given moment
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 108). Beacon Press. Kindle Edition.
 The Meaning of Life I doubt whether a doctor can answer this question
 in general terms. For the meaning of life differs from man to man,
 from day to day and from hour to hour. What matters, therefore, is not
@@ -303,7 +281,6 @@ opportunity to implement it.
 >his specific opportunity to implement it.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 109). Beacon Press. Kindle Edition.
 This emphasis on responsibleness is reflected in the categorical
 imperative of logotherapy, which is: “Live as if you were living
 already for the second time and as if you had acted the first time as
@@ -312,7 +289,6 @@ wrongly as you are about to act now!”
 > Live as if you were living already for the second time and as if you had acted the first time as wrongly as you are about to act now!
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 127). Beacon Press. Kindle Edition.
 Paradoxical intention is no panacea. Yet it lends itself as a useful tool in treating obsessive-compulsive and phobic conditions, especially in cases with underlying anticipatory anxiety.
 
 > Freedom is but the negative aspect of the whole phenomenon whose
@@ -320,7 +296,6 @@ Paradoxical intention is no panacea. Yet it lends itself as a useful tool in tre
 > degenerating into mere arbitrariness unless it is lived in terms of
 > responsibleness.
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 132). Beacon Press. Kindle Edition.
 Freedom, however, is not the last word. Freedom is only part of the
 story and half of the truth. Freedom is but the negative aspect of the
 whole phenomenon whose positive aspect is responsibleness. In fact,
@@ -331,7 +306,6 @@ Responsibility on the West Coast.
 
 > A human being is not one thing among others; things determine each other, but man is ultimately self-determining. What he becomes—within the limits of endowment and environment—he has made out of himself.
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 133). Beacon Press. Kindle Edition.
 A human being is not one thing among others; things determine each other, but man is ultimately self-determining. What he becomes—within the limits of endowment and environment—he has made out of himself.
 
 
@@ -339,12 +313,11 @@ A human being is not one thing among others; things determine each other, but ma
 
 There are three main avenues on which one arrives at meaning in life.
 
-    1. Creating a work or by doing a deed.
-    2. Experiencing something or encountering someone; in other words, meaning can be found not only in work but also in love.
-    3. Even the helpless victim of a hopeless situation, facing a fate he cannot change, may rise above himself, may grow beyond himself, and by so doing change himself. He may turn a personal tragedy into a triumph.
+1. Creating a work or by doing a deed
+2. Experiencing something or encountering someone; in other words, meaning can be found not only in work but also in love.
+3. Even the helpless victim of a hopeless situation, facing a fate he cannot change, may rise above himself, may grow beyond himself, and by so doing change himself. He may turn a personal tragedy into a triumph.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 145). Beacon Press. Kindle Edition.
 As logotherapy teaches, there are three main avenues on which one
 arrives at meaning in life. The first is by creating a work or by
 doing a deed. The second is by experiencing something or encountering
@@ -366,7 +339,6 @@ rather than degrading” so that “he is not only unhappy, but also
 ashamed of being unhappy.”
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 152). Beacon Press. Kindle Edition.
 And George A. Sargent was right when he promulgated the concept of
 “learned meaninglessness.” He himself remembered a therapist who said,
 “George, you must realize that the world is a joke. There is no
@@ -376,14 +348,11 @@ grand purpose in the universe. It just is. There’s no particular
 meaning in what decision you make today about how to act.”
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 154). Beacon Press. Kindle Edition.
 “Sed omnia praeclara tam difficilia quam rara sunt” (but everything great is just as difficult to realize as it is rare to find)
 
 > “It is we ourselves who must answer the questions that life asks of us, and to these questions we can respond only by being responsible for our existence.”
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 154). Beacon Press. Kindle Edition.
 It is true that they form a minority. More than that, they always will remain a minority. And yet I see therein the very challenge to join the minority. For the world is in a bad state, but everything will become still worse unless each of us does his best.
 
 
-Frankl, Viktor E.. Man's Search for Meaning (p. 156). Beacon Press. Kindle Edition.
 “It is we ourselves who must answer the questions that life asks of us, and to these questions we can respond only by being responsible for our existence.”
