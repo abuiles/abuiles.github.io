@@ -4,7 +4,9 @@ layout: page
 
 <div class="home">
   <ul class="post-list">
-    {% for post in site.notes%}
+    {% assign sorted = site.notes | sort: 'date' | reverse %}
+
+    {% for post in sorted %}
     <li>
       {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
       <span class="post-meta">{{ post.date | date: date_format }}</span>
