@@ -1,16 +1,14 @@
-Hola, my name is Adolfo. I work as a software engineer at [Stellar](https://stellar.org/).
-
-I spend most of my free time biking, reading, writing or working on side-projects.
+Hello, my name is Adolfo. I spend my time biking, reading, and working on my own projects.
 
 ## Projects and books
 
-- [PodcastBookmarks: an experiment in Podcast bookmarking](https://podcastbookmarks.com/)
-- [Tutorial: Building your own Venmo with Stellar](https://blog.abuiles.com/building-your-own-venmo-with-stellar/)
+- [PodcastBookmarks: an experiment in podcast bookmarking](https://podcastbookmarks.com/)
+- [Building your own Venmo with Stellar](https://blog.abuiles.com/building-your-own-venmo-with-stellar/)
 - [Kintrospect](https://github.com/abuiles/kintrospect)
 - [Listening Crowd](https://github.com/abuiles/listening-crowd)
-- [Book: Ember 101](https://leanpub.com/ember-cli-101)
-- [Book: JSON API By Example](https://leanpub.com/json-api-by-example)
-- [ember-watson](http://github.com/abuiles/ember-watson)
+- [Ember 101](https://leanpub.com/ember-cli-101)
+- [JSON API By Example](https://leanpub.com/json-api-by-example)
+- [GitHub](http://github.com/abuiles)
 - [Blogging](articles)
 
 ## History
