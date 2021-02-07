@@ -120,11 +120,11 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
 
 <p>I almost went crazy with it. If you are reading this, you probably felt the same way or even worse you’ve already gone mad.</p>
 
-<p>Using <code class="highlighter-rouge">ngrok</code> means every request in your app jumps from the <code class="highlighter-rouge">iframe</code> to <code class="highlighter-rouge">ngrok</code> to <code class="highlighter-rouge">localhost</code>. On top of that, if you are using React chances are you are getting throttled.</p>
+<p>Using <code class="highlighter-rouge">ngrok</code> means every request in your app jumps from an <code class="highlighter-rouge">iFrame</code> to <code class="highlighter-rouge">ngrok</code> to <code class="highlighter-rouge">localhost</code>. On top of that, if you are using React chances are you are getting throttled.</p>
 
 <p>To make your app development faster, get rid of <code class="highlighter-rouge">ngrok</code> and use something like <a href="https://github.com/octavore/lightproxy">https://github.com/octavore/lightproxy</a> which gives you a way to “securely” proxy request to any port in localhost.</p>
 
-<p>With <code class="highlighter-rouge">lightproxy</code> the <code class="highlighter-rouge">iframe</code> will think it is talking to a secure host but under the hood, it’s all going to your localhost without leaving your machine. Explaining how it works is outside of the scope of this post, I encourage you to do your own research.</p>
+<p>With <code class="highlighter-rouge">lightproxy</code> the <code class="highlighter-rouge">iFrame</code> will talk directly to <code class="highlighter-rouge">localhost</code>. Explaining how it works is outside of the scope of this post, I encourage you to do your own research and think about the security implications behind it. For example, what happens if <code class="highlighter-rouge">wip</code> becomes a supported <code class="highlighter-rouge">TLD</code>?</p>
 
 <p>One downside of this approach is that if you are playing with webhooks, you won’t be able to receive those messages. In that situation, get rid of <code class="highlighter-rouge">ngrok</code> and use a <a href="https://developers.cloudflare.com/cloudflare-one/tutorials/share-new-site">CloudFlare tunnel</a>, which is free, faster, and lets you create your own domains for no extra cost.</p>
 
@@ -133,7 +133,7 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
 <p><code class="highlighter-rouge">cloudflared tunnel --hostname my-app.awesomedomain.com --url
 http://localhost:3000 --loglevel-level=debug</code></p>
 
-<p>CloudFlare will create add the subdomain <code class="highlighter-rouge">my-app</code> to <code class="highlighter-rouge">awesomedomain.com</code> which will resolve to <code class="highlighter-rouge">http://localhost:3000</code>,
+<p>CloudFlare will add the subdomain <code class="highlighter-rouge">my-app</code> to <code class="highlighter-rouge">awesomedomain.com</code> which will resolve to <code class="highlighter-rouge">http://localhost:3000</code>,
 this is still faster than <code class="highlighter-rouge">ngrok</code>.</p>
 
 <p>That’s it! Go and get some time of your life back.</p>
