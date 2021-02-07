@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Adolfo Builes</title>
-  <meta name="description" content="I write about technology, being a human and books.">
+  <title>Speeding Up Your Shopify App Development Workflow</title>
+  <meta name="description" content="Developing an embedded Shopify app using React can be a frustrating experience. Following their recommended approach using ngrok means you’ll have a super lo...">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
 
   
-  <link rel="canonical" href="https://blog.abuiles.com/">
+  <link rel="canonical" href="https://blog.abuiles.com/blog/2021/02/07/speeding-up-your-shopify-app-development-workflow/">
   <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
 
   
@@ -103,108 +103,66 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
 
     <main class="wrapper" aria-label="Content">
       <div class="mw7 center">
-        <div class="mt3">
-  
-  <p>Hello, my name is Adolfo. I spend my time biking, reading, and working on my own projects.</p>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<h2 id="projects-and-books">Projects and books</h2>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Speeding Up Your Shopify App Development Workflow</h1>
+    <p class="post-meta">
+      <time datetime="2021-02-07T00:00:10-05:00" itemprop="datePublished">
+        
+        Feb 7, 2021
+      </time>
+      </p>
+  </header>
 
-<ul>
-  <li><a href="https://podcastbookmarks.com/">PodcastBookmarks: an experiment in podcast bookmarking</a></li>
-  <li><a href="https://blog.abuiles.com/building-your-own-venmo-with-stellar/">Building your own Venmo with Stellar</a></li>
-  <li><a href="https://github.com/abuiles/kintrospect">Kintrospect</a></li>
-  <li><a href="https://github.com/abuiles/listening-crowd">Listening Crowd</a></li>
-  <li><a href="https://leanpub.com/ember-cli-101">Ember 101</a></li>
-  <li><a href="https://leanpub.com/json-api-by-example">JSON API By Example</a></li>
-  <li><a href="http://github.com/abuiles">GitHub</a></li>
-  <li><a href="articles">Blogging</a></li>
-</ul>
+  <div class="post-content lh-copy" itemprop="articleBody">
+    <p>Developing an embedded Shopify app using React can be a frustrating experience. Following their recommended approach using <code class="highlighter-rouge">ngrok</code> means you’ll have a super long feedback loop, which will probably make you waste between 15 to 30 seconds to see every change.</p>
 
-<h2 id="history">History</h2>
+<p>I almost went crazy with it. If you are reading this, you probably felt the same way or even worse you’ve already gone mad.</p>
 
-<ul>
-  <li>Present: Following my curiosity.</li>
-  <li>2019 - 2020: Senior software engineer at <a href="https://www.stellar.org/">Stellar</a>.</li>
-  <li>2015 - 2019: I was an early engineer at <a href="https://envoy.com/">Envoy</a>. I had multiple roles like product engineer, engineering manager and senior software engineer.</li>
-  <li>2012 - 2015: During this period I traveled around while doing consulting, developing open-source tools and writing technical articles and books.</li>
-  <li>2011 - 2012: I lived in Berlin where I worked as software engineer at <a href="https://en.wikipedia.org/wiki/Moviepilot">Moviepilot</a></li>
-  <li>2006 - 2012: Computer Science student.</li>
-</ul>
+<p>Using <code class="highlighter-rouge">ngrok</code> means every request in your app jumps from the <code class="highlighter-rouge">iframe</code> to <code class="highlighter-rouge">ngrok</code> to <code class="highlighter-rouge">localhost</code>. On top of that, if you are using React chances are you are getting throttled.</p>
 
+<p>To make your app development faster, get rid of <code class="highlighter-rouge">ngrok</code> and use something like <a href="https://github.com/octavore/lightproxy">https://github.com/octavore/lightproxy</a> which gives you a way to “securely” proxy request to any port in localhost.</p>
 
-  <h2>Recent posts</h2>
-  
+<p>With <code class="highlighter-rouge">lightproxy</code> the <code class="highlighter-rouge">iframe</code> will think it is talking to a secure host but under the hood, it’s all going to your localhost without leaving your machine. Explaining how it works is outside of the scope of this post, I encourage you to do your own research.</p>
 
+<p>One downside of this approach is that if you are playing with webhooks, you won’t be able to receive those messages. In that situation, get rid of <code class="highlighter-rouge">ngrok</code> and use a <a href="https://developers.cloudflare.com/cloudflare-one/tutorials/share-new-site">CloudFlare tunnel</a>, which is free, faster, and lets you create your own domains for no extra cost.</p>
 
-  <ul class="post-list">
-    
-    <li>
-      
-      <span class="post-meta">Feb 7, 2021</span>
+<p>If you do the following:</p>
 
-      <h2>
-        <a class="post-link" href="/blog/2021/02/07/speeding-up-your-shopify-app-development-workflow/">Speeding Up Your Shopify App Development Workflow</a>
-      </h2>
-    </li>
-    
-    <li>
-      
-      <span class="post-meta">May 30, 2020</span>
+<p><code class="highlighter-rouge">cloudflared tunnel --hostname my-app.awesomedomain.com --url
+http://localhost:3000 --loglevel-level=debug</code></p>
 
-      <h2>
-        <a class="post-link" href="/blog/2020/05/30/the-crime-of-poverty/">The Crime of Poverty</a>
-      </h2>
-    </li>
-    
-    <li>
-      
-      <span class="post-meta">Feb 2, 2020</span>
+<p>CloudFlare will create add the subdomain <code class="highlighter-rouge">my-app</code> to <code class="highlighter-rouge">awesomedomain.com</code> which will resolve to <code class="highlighter-rouge">http://localhost:3000</code>,
+this is still faster than <code class="highlighter-rouge">ngrok</code>.</p>
 
-      <h2>
-        <a class="post-link" href="/blog/2020/02/02/finding-space-for-deep-work/">Finding Space for Deep Work</a>
-      </h2>
-    </li>
-    
-    <li>
-      
-      <span class="post-meta">Jan 7, 2019</span>
+<p>That’s it! Go and get some time of your life back.</p>
 
-      <h2>
-        <a class="post-link" href="/blog/2019/01/07/immediate-return-and-delayed-return/">Immediate and Delayed Return environments</a>
-      </h2>
-    </li>
-    
-    <li>
-      
-      <span class="post-meta">Jun 15, 2018</span>
-
-      <h2>
-        <a class="post-link" href="/blog/2018/06/15/building-your-own-venmo-with-stellar/">Building Your Own Venmo With Stellar</a>
-      </h2>
-    </li>
-    
-    <li>
-      
-      <span class="post-meta">May 28, 2018</span>
-
-      <h2>
-        <a class="post-link" href="/blog/2018/05/28/open-source-by-default/">Open Source by Default?</a>
-      </h2>
-    </li>
-    
-    <li>
-      <h2>
-        <a class="post-link" href="/articles">More...</a>
-      </h2>
-    </li>
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
+  </div>
   <div class="w-100">
     <script async type="text/javascript" src="https://cdn.remotehq.net/remotehq.js?placement=blog.abuiles.com" id="_remotehq_js"></script>
   </div>
+
+  
+    <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://blog.abuiles.com/blog/2021/02/07/speeding-up-your-shopify-app-development-workflow/';
+      this.page.identifier = 'https://blog.abuiles.com/blog/2021/02/07/speeding-up-your-shopify-app-development-workflow/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://abuiles.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+</article>
 
       </div>
     </main>
