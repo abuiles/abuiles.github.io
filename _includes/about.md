@@ -13,7 +13,7 @@ Hello, my name is Adolfo. I spend my time biking, reading, and working on my own
 
 ## History
 
-- Present: Taking a break.
+- Present: Following my curiosity.
 - 2019 - 2020: Senior software engineer at [Stellar](https://www.stellar.org/).
 - 2015 - 2019: I was an early engineer at [Envoy](https://envoy.com/). I had multiple roles like product engineer, engineering manager and senior software engineer.
 - 2012 - 2015: During this period I traveled around while doing consulting, developing open-source tools and writing technical articles and books.
