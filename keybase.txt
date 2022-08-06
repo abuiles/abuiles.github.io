@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/abuiles
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://blog.abuiles.com
+  * I am abuiles (https://keybase.io/abuiles) on keybase.
+  * I have a public key ASAAuNSIadCBbDd2ebTNPw7RP4OsZ-SjX0rwwEsMuFS4nAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101566b6e4b69987c92443771e54cbc06403d27ac1469d1bf827e785cc94adc12c60a",
+      "host": "keybase.io",
+      "kid": "012000b8d48869d0816c377679b4cd3f0ed13f83ac67e4a35f4af0c04b0cb854b89c0a",
+      "uid": "3f47578ec76880ad8cde2ffbe6a70e00",
+      "username": "abuiles"
+    },
+    "merkle_root": {
+      "ctime": 1536890692,
+      "hash": "b9487fff0f946dd52ac3e46a1c1eb3159b5ed590dc06cf7d29073503818b3b39e2cba5a7c33f818f5b23da511babbe53ceef604032daad6cf4e5b781a1222682",
+      "hash_meta": "e75cadebe13dfac4f3af9b9ac46fe34997d0a77cf88f624df08770e12c6b3125",
+      "seqno": 3607869
+    },
+    "service": {
+      "entropy": "pD3mYZZNErlcJmnm0oeIoSGS",
+      "hostname": "blog.abuiles.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.6.0"
+  },
+  "ctime": 1536890786,
+  "expire_in": 504576000,
+  "prev": "7c47911fa4c557efa06e557805549375e04e4fb633a535a0867051729c9da07b",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgALjUiGnQgWw3dnm0zT8O0T+DrGfko19K8MBLDLhUuJwKp3BheWxvYWTESpcCGMQgfEeRH6TFV++gblV4BVSTdeBOT7YzpTWghnBRcpydoHvEIDPwaAOX22hOZaoxcJuAzNorG8IR82tRh50wEJJkjBWIAgHCo3NpZ8RA5i9r9nqXIGKbsjYnMzI6I1VCBlC4z+YQP+8HQdNsWlyE4wHVqvo044lQeggtcykBuHWkD20f3iBKzOFxMOP9BKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINI1nx9RYe+K44SuVV4V3ZyccwO6xDBvmfjZwWiOVQBZo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/abuiles
+
+==================================================================

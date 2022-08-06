@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Building an App for my mom with Ember Appkit Rails.</title>
+  <meta name="description" content="This post is part of my series about learning Ember.js with Ruby on Rails.">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+
+  
+  <link rel="canonical" href="https://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
+
+  
+    <script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32360357-1', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+
+  
+  <style>
+    .highlight {
+      background: rgba(255, 230, 0, 0.5);
+      padding-right: 0.375rem;
+      margin-right: -0.375rem;
+    }
+
+    .book blockquote {
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 2rem;
+      border-width: .30rem;
+      border-color: #357edd;
+      border-left-style: solid;
+      border-left-width: 1px;
+    }
+
+    .book blockquote p {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+
+    html, body {
+      font-size: 18px;
+    }
+  </style>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="wrapper" aria-label="Content">
+      <div class="mw7 center">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Building an App for my mom with Ember Appkit Rails.</h1>
+    <p class="post-meta">
+      <time datetime="2014-02-07T07:56:18-05:00" itemprop="datePublished">
+        
+        Feb 7, 2014
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content lh-copy" itemprop="articleBody">
+    <p><strong>This post is part of my series about <a href="http://blog.abuiles.com/ember-js-with-ruby-on-rails">learning Ember.js with Ruby on Rails</a>.</strong></p>
+
+<p>In previous post we explored what is
+<a href="http://blog.abuiles.com/blog/2014/01/27/ruby-on-rails-mvc-is-not-the-same-as-ember-dot-js-mvc/">Ember.js MVC</a>
+and then did a
+<a href="http://blog.abuiles.com/blog/2014/01/31/getting-started-with-ember-and-ruby-on-rails-using-ember-appkit-rails/">high level overview of Ember Appkit Rails</a>,
+in this post we’ll start to work on a project which we will use as
+reference for upcoming posts.</p>
+
+<h2 id="the-problem">The Problem</h2>
+<p>My mother lives in a small town in Colombia where she owns a store,
+access to credit cards in Colombia is really really hard, so stores
+and people in small towns tend to buy and sell on credit, trusting
+that people will come back and pay them (crazy, isn’t?).</p>
+
+<p>During my last visit I was really shocked when I saw that she was
+keeping all her records on physical invoices in under an A-Z folder.</p>
+
+<p>If <code class="highlighter-rouge">John Smith</code> takes a t-shirt on credit, they would create an
+invoice with his name, add a description (e.g. t-shirt) with the price
+<code class="highlighter-rouge">$25</code> and then throw that into the A-Z in the section for surnames
+starting with <code class="highlighter-rouge">S</code>.</p>
+
+<p>Later John returns to the store and makes a partial payment (e.g.
+<code class="highlighter-rouge">$10</code>) or pays the whole thing.</p>
+
+<p>This approach is horrible, insecure, my mother doesn’t know how much
+is people really owing her, she can’t have insights, etc.</p>
+
+<p>Let’s then  build an App for my mother where she can keep her records, the app name will be <code class="highlighter-rouge">facturas</code> which means <code class="highlighter-rouge">invoices</code> in Spanish.</p>
+
+<h2 id="starting-the-project">Starting the project.</h2>
+
+<p>For this project we will use <code class="highlighter-rouge">Ruby on Rails 4.1.0.beta1</code> and <code class="highlighter-rouge">Ember.js 1.4.0-beta</code>.</p>
+
+<p>Install Ruby on Rails <code class="highlighter-rouge">gem install rails --pre</code>, once it’s completed
+run <code class="highlighter-rouge">rails new facturas</code> and we should have the basic structure for
+our project.</p>
+
+<p>Let’s keep everything under <code class="highlighter-rouge">git</code> so we can keep track of changes.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git init
+  $ git add .
+  $ git commit -m 'Getting started!.'
+</code></pre></div></div>
+
+<p>I use <a href="https://github.com/github/hub">hub</a> so I will just push this to a new repo on GitHub.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ hub create ember-rails-week-1
+    Updating origin
+    created repository: abuiles/ember-rails-week-1
+  $ git push origin master
+</code></pre></div></div>
+
+<p>Install <code class="highlighter-rouge">Ember Appkit Rails</code>, since I want to use a new feature we
+have been working on to include testing out of the box, we won’t
+install from rubygems but directly from GitHub.</p>
+
+<p>Add the following to you Gemfile:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem 'ember-appkit-rails', git: 'https://github.com/dockyard/ember-appkit-rails.git'
+</code></pre></div></div>
+
+<p>Run <code class="highlighter-rouge">bundle install</code>.</p>
+
+<p>Now we can bootstrap our Rails project with Ember Appkit Rails.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ rails g ember:bootstrap
+</code></pre></div></div>
+
+<p>For now just focus on this two files:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  create  config/router.es6
+  create  config/application.js
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">router.es6</code> would be the main entry point for our Ember App, it’s
+something similar to <code class="highlighter-rouge">routes.rb</code>, it will help us defined how users
+interact with our application. We will talk more about it later but if
+you can’t wait, check the awesome <a href="http://emberjs.com/guides/routing/">routing
+guide</a> on Ember.js.</p>
+
+<p><code class="highlighter-rouge">application.js</code> is the replacement for <code class="highlighter-rouge">app/assets/javascript/application.js</code>.</p>
+
+<p>Remove your <code class="highlighter-rouge">app/assets/javascripts</code> since it will be ignore by EAKR <code class="highlighter-rouge">rm -rf app/assets/javascripts</code>.</p>
+
+<p>Start your rails server <code class="highlighter-rouge">rails s</code> and go to <code class="highlighter-rouge">http://localhost:3000</code>, you will see <code class="highlighter-rouge">"Welcome to Ember!"</code>.</p>
+
+<p>We are ready to start! In the next post we will create our first
+model, talk a bit about testing and keep our journey of mastery of
+Ember.js with Ruby on Rails.</p>
+
+<h3 id="cant-wait">Can’t wait?</h3>
+
+<ol>
+  <li>
+    <p>Create an ‘Ember’ application template</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo  &gt; app/templates/application.hbs
+</code></pre></div>    </div>
+  </li>
+  <li>In <code class="highlighter-rouge">config/routes.rb</code> uncomment the last line <code class="highlighter-rouge">get '*foo', :to =&gt; 'landing#index'</code>. It should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64">https://github.com/abuiles/ember-rails-week-1/blob/master/config/routes.rb#L64</a></li>
+  <li>In route.es6 uncomment   <code class="highlighter-rouge">location: 'history'</code> it should look like <a href="https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8">https://github.com/abuiles/ember-rails-week-1/blob/master/config/router.es6#L8</a></li>
+</ol>
+
+<p>EAKR also has a scaffold command try the following</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   $ rails g scaffold clients first_name:string last_name:string --ember
+   $ rake db:migrate
+</code></pre></div></div>
+
+<p>Now navigate to <code class="highlighter-rouge">http://localhost:3000/clients</code> - Congrats! you have your first Ember app running.</p>
+
+<p>####Don’t fall behind subscribe to the Ember.js with Ruby on Rails list and stay updated.</p>
+
+<form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value="" /></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />&lt;/div&gt;</form>
+
+  </div>
+  <div class="w-100">
+    <script async type="text/javascript" src="https://cdn.remotehq.net/remotehq.js?placement=blog.abuiles.com" id="_remotehq_js"></script>
+  </div>
+
+  
+    <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/';
+      this.page.identifier = 'https://blog.abuiles.com/blog/2014/02/07/building-an-app-for-my-mom-with-ember-appkit-rails/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://abuiles.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+</article>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Adolfo Builes</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I write about technology, being a human and books.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+ -->
+
+  </body>
+
+</html>

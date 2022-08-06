@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Upgrading mirage with JSCodeshift</title>
+  <meta name="description" content="If you have been using the beta release of mirage, chances are that you haven’t made the jump from beta.7 to beta.9 because some of the breaking deprecations.">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+
+  
+  <link rel="canonical" href="https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
+
+  
+    <script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32360357-1', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+
+  
+  <style>
+    .highlight {
+      background: rgba(255, 230, 0, 0.5);
+      padding-right: 0.375rem;
+      margin-right: -0.375rem;
+    }
+
+    .book blockquote {
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 2rem;
+      border-width: .30rem;
+      border-color: #357edd;
+      border-left-style: solid;
+      border-left-width: 1px;
+    }
+
+    .book blockquote p {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+
+    html, body {
+      font-size: 18px;
+    }
+  </style>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="wrapper" aria-label="Content">
+      <div class="mw7 center">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Upgrading mirage with JSCodeshift</h1>
+    <p class="post-meta">
+      <time datetime="2016-05-27T09:24:25-05:00" itemprop="datePublished">
+        
+        May 27, 2016
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content lh-copy" itemprop="articleBody">
+    <p>If you have been using the beta release of mirage, chances are that
+you haven’t made the jump from beta.7 to beta.9 because some of the
+breaking deprecations.</p>
+
+<p>The deprecations are not super complicated but if you have a lot of
+tests files then it can be a very boring and task consuming task.</p>
+
+<p>Instead of fixing my code manually, I thought about my old friend
+<a href="https://github.com/benjamn/recast">recast</a> to automate the whole
+process , but then I remembered this “new” tool called
+<a href="https://github.com/facebook/jscodeshift">jscodeshift</a> which offers a
+nice API on top of recast to do code modifications.</p>
+
+<p>The following script help us with the first deprecation <a href="https://github.com/samselikoff/ember-cli-mirage/releases/tag/v0.2.0-beta.9">listed
+here</a>
+which is pluralizing all the schema models. If we have something like
+<code class="highlighter-rouge">schema.user.all()</code> or <code class="highlighter-rouge">server.schema.user.all()</code> then after running
+the script we’ll have <code class="highlighter-rouge">schema.users.all()</code>.</p>
+
+<script src="https://gist.github.com/abuiles/f15539c683e2121a3027b220073569b0.js"></script>
+
+<p>To run the script we need to install the following npm packages:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g jscodeshift
+npm install inflected
+</code></pre></div></div>
+
+<p>For the second breaking deprecation which was calling <code class="highlighter-rouge">.models</code> on
+<code class="highlighter-rouge">Collections</code>, I decided not to use
+codeshift since it would be faster for me to just use perl:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f | xargs perl -pi -e 's/all\(\)\.length/all\(\)\.models\.length/g'
+find . -type f | xargs perl -pi -e 's/all\(\)\.forEach/all\(\)\.models\.forEach/g'
+</code></pre></div></div>
+
+<p>I hope you find this useful and if come up with a <code class="highlighter-rouge">codeshift</code> solution
+please let me know and I’ll link it here.</p>
+
+<p><strong><a href="https://leanpub.com/json-api-by-example">Do you Want to learn about JSONAPI? Check out my book JSONAPI By Example.</a></strong></p>
+
+  </div>
+  <div class="w-100">
+    <script async type="text/javascript" src="https://cdn.remotehq.net/remotehq.js?placement=blog.abuiles.com" id="_remotehq_js"></script>
+  </div>
+
+  
+    <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/';
+      this.page.identifier = 'https://blog.abuiles.com/blog/2016/05/27/upgrading-to-mirage-v0-dot-2-0-beta-dot-9-with-jscodeshift/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://abuiles.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+</article>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Adolfo Builes</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I write about technology, being a human and books.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+ -->
+
+  </body>
+
+</html>

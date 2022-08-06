@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Handling Errors in Ember.js and Ruby on Rails</title>
+  <meta name="description" content="Ember.js has built-in support to handle errors returned by the backend through the computed property errors, to get it working with the ActiveModelAdapter yo...">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+
+  
+  <link rel="canonical" href="https://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
+
+  
+    <script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32360357-1', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+
+  
+  <style>
+    .highlight {
+      background: rgba(255, 230, 0, 0.5);
+      padding-right: 0.375rem;
+      margin-right: -0.375rem;
+    }
+
+    .book blockquote {
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 2rem;
+      border-width: .30rem;
+      border-color: #357edd;
+      border-left-style: solid;
+      border-left-width: 1px;
+    }
+
+    .book blockquote p {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+
+    html, body {
+      font-size: 18px;
+    }
+  </style>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="wrapper" aria-label="Content">
+      <div class="mw7 center">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Handling Errors in Ember.js and Ruby on Rails</h1>
+    <p class="post-meta">
+      <time datetime="2014-04-14T21:39:22-05:00" itemprop="datePublished">
+        
+        Apr 14, 2014
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content lh-copy" itemprop="articleBody">
+    <p>Ember.js has built-in support to handle errors returned by the backend through the computed property <code class="highlighter-rouge">errors</code>, to get it working with the <code class="highlighter-rouge">ActiveModelAdapter</code> you payload’s root key has to be called <code class="highlighter-rouge">errors</code> and your status code should be <code class="highlighter-rouge">422</code>.</p>
+
+<p>Suppose you want to create a post and you get an error like the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ errors: { body: ['can't be blank'] } }
+</code></pre></div></div>
+
+<p>Once the requests has been completed you can check if you model is valid or not with <code class="highlighter-rouge">model.get('isValid')</code> and then the  <code class="highlighter-rouge">errors</code> with:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> post.get('errors').get('body')
+ [
+   Object
+   attribute: "body"
+   message: "can't be blank"
+   __proto__: Object
+ ]
+</code></pre></div></div>
+
+<p>Notice that a record becomes <code class="highlighter-rouge">isInvalid</code> only if <code class="highlighter-rouge">DS.InvalidError</code> can be created, on the <code class="highlighter-rouge">ActiveModelAdapter</code> case that is if the status code is <code class="highlighter-rouge">422</code> and <code class="highlighter-rouge">errors</code> is the root of your payload, otherwise it becomes <code class="highlighter-rouge">isError</code>.</p>
+
+<p>If you want a validation library checkout <a href="https://github.com/dockyard/ember-validations">DockYard’s ember-validations</a></p>
+
+<p>P.S I’m <a href="http://blog.abuiles.com/ember-rails/">writing a series of post on working with Ember.js and Ruby on Rails</a>, subscribe to my list and I will let you know every time I publish an article on Ember.js and Ruby on Rails.</p>
+
+<form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value="" /></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />&lt;/div&gt;</form>
+
+  </div>
+  <div class="w-100">
+    <script async type="text/javascript" src="https://cdn.remotehq.net/remotehq.js?placement=blog.abuiles.com" id="_remotehq_js"></script>
+  </div>
+
+  
+    <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/';
+      this.page.identifier = 'https://blog.abuiles.com/blog/2014/04/14/handling-errors-in-ember-dot-js-and-ruby-on-rails/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://abuiles.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+</article>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Adolfo Builes</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I write about technology, being a human and books.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+ -->
+
+  </body>
+
+</html>

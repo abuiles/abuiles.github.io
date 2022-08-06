@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Know your addons: ember-cli-build-notifications</title>
+  <meta name="description" content="As today emberaddons.com registers 602 (and growing) ember-cli addons distributed via NPM, this means that addons and ember-cli are starting to become the de...">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+
+  
+  <link rel="canonical" href="https://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
+
+  
+    <script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32360357-1', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+
+  
+  <style>
+    .highlight {
+      background: rgba(255, 230, 0, 0.5);
+      padding-right: 0.375rem;
+      margin-right: -0.375rem;
+    }
+
+    .book blockquote {
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 2rem;
+      border-width: .30rem;
+      border-color: #357edd;
+      border-left-style: solid;
+      border-left-width: 1px;
+    }
+
+    .book blockquote p {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+
+    html, body {
+      font-size: 18px;
+    }
+  </style>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="wrapper" aria-label="Content">
+      <div class="mw7 center">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Know your addons: ember-cli-build-notifications</h1>
+    <p class="post-meta">
+      <time datetime="2015-02-12T11:29:12-05:00" itemprop="datePublished">
+        
+        Feb 12, 2015
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content lh-copy" itemprop="articleBody">
+    <p>As today <a href="http://www.emberaddons.com">emberaddons.com</a> registers 602
+(and growing) ember-cli addons distributed via NPM, this means that
+addons and ember-cli are starting to become the de-facto tools to
+share and build  application code.</p>
+
+<p>Addons allows us to do a bunch of different things and it seems to me
+that people are not fully aware of all the scenarios where they can be
+used. If your answer to any of the following question is yes, then use an addon.</p>
+
+<p><br /></p>
+
+<ul>
+  <li>Do you want to write a component that can be used in thousands of different apps?</li>
+  <li>Do you want to plug in the build system and do something cool with the result?</li>
+  <li>Do you want to extend the generators?</li>
+  <li>Do you want to share parts of your code between different apps?</li>
+</ul>
+
+<p><br /></p>
+
+<p>If you know that I wrote a book about Ember (and ember-cli), you might
+be thinking: “ok, now you are going to tell me that if I want to
+learn all this then I should buy your book” No! I’m not <a href="#learn-ember">*</a>!</p>
+
+<p>This post is actually to introduce a new experiment I want to start
+called “Know your addons”, I’ll be covering different addons that I
+find useful and go a bit into their implementation and mention things
+that you could find worthwhile.</p>
+
+<h2 id="ember-cli-build-notifications">ember-cli-build-notifications</h2>
+
+<p>I’d like to start with
+<a href="https://www.npmjs.com/package/ember-cli-build-notifications">ember-cli-build-notifications</a>
+an useful addon to display notifications when there is a build error.</p>
+
+<p><img src="https://s3.amazonaws.com/f.cl.ly/items/3m0843433l1F0J0m1M3p/example.png" alt="ember-cli-build-notifications" /></p>
+
+<h3 id="how">How?</h3>
+
+<p>Philip Dudley is the creator of this addon and the code can be found in <a href="https://github.com/pdud/ember-cli-build-notifications">GitHub</a>.</p>
+
+<p>The important file to look at for this addon is the <a href="https://github.com/pdud/ember-cli-build-notifications/blob/master/index.js">index.js</a> which is the main entry point for the addon.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="cm">/* jshint node: true */</span>
+<span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">notifier</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./lib/notify'</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'ember-cli-build-notifications'</span><span class="p">,</span>
+
+  <span class="na">buildError</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">notifier</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
+      <span class="na">title</span><span class="p">:</span> <span class="s1">'Build Failed'</span><span class="p">,</span>
+      <span class="na">subtitle</span><span class="p">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">file</span><span class="p">,</span>
+      <span class="na">message</span><span class="p">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>When installed in your ember-cli project’s <code class="highlighter-rouge">package.json</code>, it will be
+identified as add addon because of the keyword <code class="highlighter-rouge">"ember-addon"</code> Once it
+loads, Philip is using the <a href="https://github.com/ember-cli/ember-cli/blob/6c66d2f28ade2e3c58974c353498048a8a55ef4a/ADDON_HOOKS.md#builderror">buildError
+hook</a>
+which gets called every time the build errors and then as soon as it
+gets called it uses his notify implementation to show us the message. Clever right?</p>
+
+<p>So the next time your boss forces you to notify them every time that crazy ember-cli build fails, you can write your own addon which will use the <code class="highlighter-rouge">buildError</code> to automate the process:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="cm">/* jshint node: true */</span>
+<span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">bossNotifier</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./lib/notifier'</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s1">'boss-notifier'</span><span class="p">,</span>
+
+  <span class="na">buildError</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">bossNotifier</span><span class="p">.</span><span class="nx">notify</span><span class="p">({</span>
+      <span class="na">title</span><span class="p">:</span> <span class="s1">'The build failed, it was not my fault'</span><span class="p">,</span>
+      <span class="na">subtitle</span><span class="p">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">file</span><span class="p">,</span>
+      <span class="na">message</span><span class="p">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p><strong><a name="learn-ember"></a>Actually you should :), Learn Ember with my book, check it out <a href="https://leanpub.com/ember-cli-101">leanpub.com/ember-cli-101</a> or <a href="/ember-rails">subscribe to my list for the free webinars</a></strong></p>
+
+  </div>
+  <div class="w-100">
+    <script async type="text/javascript" src="https://cdn.remotehq.net/remotehq.js?placement=blog.abuiles.com" id="_remotehq_js"></script>
+  </div>
+
+  
+    <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/';
+      this.page.identifier = 'https://blog.abuiles.com/blog/2015/02/12/know-your-addons-ember-cli-build-notifications/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://abuiles.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+</article>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Adolfo Builes</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I write about technology, being a human and books.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+ -->
+
+  </body>
+
+</html>

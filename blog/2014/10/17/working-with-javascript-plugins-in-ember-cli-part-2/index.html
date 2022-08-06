@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Working With JavaScript Plugins in Ember-cli: Part 2</title>
+  <meta name="description" content="On part 1 of Working With JavaScript Plugins in ember-cli , we explore how to work with JavaScript plugins which are still distributed as globas and came up ...">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+
+  
+  <link rel="canonical" href="https://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
+
+  
+    <script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32360357-1', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+
+  
+  <style>
+    .highlight {
+      background: rgba(255, 230, 0, 0.5);
+      padding-right: 0.375rem;
+      margin-right: -0.375rem;
+    }
+
+    .book blockquote {
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 2rem;
+      border-width: .30rem;
+      border-color: #357edd;
+      border-left-style: solid;
+      border-left-width: 1px;
+    }
+
+    .book blockquote p {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+
+    html, body {
+      font-size: 18px;
+    }
+  </style>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="wrapper" aria-label="Content">
+      <div class="mw7 center">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Working With JavaScript Plugins in Ember-cli: Part 2</h1>
+    <p class="post-meta">
+      <time datetime="2014-10-17T09:16:04-05:00" itemprop="datePublished">
+        
+        Oct 17, 2014
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content lh-copy" itemprop="articleBody">
+    <p>On <a href="/blog/2014/10/03/working-with-javascript-plugins-in-ember-cli/">part 1 of Working With JavaScript Plugins in
+ember-cli</a>
+, we explore how to work with JavaScript plugins which are still
+distributed as globas and came up with a pattern for wrapping up
+globals while using the module system.</p>
+
+<p>In this article, we’ll explore how to work with libraries which
+include a named AMD distribution.</p>
+
+<h2 id="working-with-libraries-with-named-amd-distributions">Working with libraries with named AMD distributions.</h2>
+
+<p>Before the addons system exist the easiest way to distribute
+JavaScript libraries to be consume in ember-cli was to have a distribution
+with a named-AMD version, then importing such library using <code class="highlighter-rouge">app.import</code>
+and whitelisting the library’s exports.</p>
+
+<p>On of the libraries distributed in this way is
+<a href="https://github.com/instructure/ic-ajax/tree/v2.0.1/lib">ic-ajax</a> an
+“Ember-friendly <code class="highlighter-rouge">jQuery.ajax</code> wrapper”, if we navigate to the
+<a href="https://github.com/instructure/ic-ajax/blob/master/lib/main.js">lib/main.js</a>
+we’ll notice that the source of the application is written with
+<code class="highlighter-rouge">ES6</code> syntax but it is
+<a href="https://github.com/instructure/ic-ajax/tree/v2.0.1/dist">distributed</a>
+in different formats so you can consume it like a global or in a
+module format.</p>
+
+<p>As mentioned in the previously post <code class="highlighter-rouge">loader.js</code> doesn’t work with anonymous AMD
+distributions so if we want to include <code class="highlighter-rouge">ic-ajax</code> we need to use the
+<code class="highlighter-rouge">named-amd</code> output.</p>
+
+<p>Let’s create a new ember-cli project like <code class="highlighter-rouge">ember new amd-example</code></p>
+
+<p>Once the project has been created, let’s go to the directory and run the following command</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm uninstall ember-cli-ic-ajax <span class="nt">--save-dev</span></code></pre></figure>
+
+<p>The library we just removed is an <code class="highlighter-rouge">ember-cli addon</code> which wraps all
+the steps we are about to do but we won’t be using it since we are
+interested in learning how things are working under the hood and what
+are we gaining when using the addon.</p>
+
+<p>Next we need to add the library to bower, we can do so with <code class="highlighter-rouge">bower
+install ic-ajax --save</code>, once installed let’s import it in our
+<code class="highlighter-rouge">Brocfile.js</code> as follows:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">app</span><span class="p">.</span><span class="k">import</span><span class="p">(</span><span class="s1">'bower_components/ic-ajax/dist/named-amd/main.js'</span><span class="p">);</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">ic-ajax</code> default export is the <code class="highlighter-rouge">request</code> function which allows us to
+make request and manage them as if they were promises, we’ll use
+<code class="highlighter-rouge">request</code> to pull data from our backend.</p>
+
+<p>We’ll be using ember-cli’s <code class="highlighter-rouge">proxy</code> to connect to a public API from my <a href="https://leanpub.com/ember-cli-101">Ember.js book: ember-cli 101</a>, pull some data and then render it in the index template.</p>
+
+<p>Let’s start by creating an index route with the following command: <code class="highlighter-rouge">ember g route index</code> and then put the following content in <code class="highlighter-rouge">app/routes/index.js</code>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">Ember</span> <span class="k">from</span> <span class="s1">'ember'</span><span class="p">;</span>
+
+<span class="c1">//</span>
+<span class="c1">// Here we are importing the default export from ic-ajax and assigning it to</span>
+<span class="c1">// the variable request</span>
+<span class="c1">//</span>
+
+<span class="k">import</span> <span class="nx">request</span> <span class="k">from</span> <span class="s1">'ic-ajax'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Route</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="na">model</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span>  <span class="p">{</span>
+    <span class="c1">//</span>
+    <span class="c1">// We'll be loading a collection from a resource called friends, it will</span>
+    <span class="c1">// response with a JSON array which main key is friends</span>
+    <span class="c1">//</span>
+    <span class="c1">// We can see this response going to http://api.ember-cli-101.com/api/friends</span>
+    <span class="c1">//</span>
+
+    <span class="k">return</span> <span class="nx">request</span><span class="p">(</span><span class="s1">'/api/friends'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+      <span class="k">return</span> <span class="p">{</span>
+        <span class="na">friendsCount</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">friends</span><span class="p">.</span><span class="nx">length</span>
+      <span class="p">};</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>And then replace <code class="highlighter-rouge">app/templates/index.hbs</code> so it uses
+<code class="highlighter-rouge">friendsCount</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Total friends in api.ember-cli-101.com {{friendsCount}}<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div>
+
+<p>The previous code is correct but we’ll see an error when running ember server, try the following:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ember server <span class="nt">--proxy</span> http://api.ember-cli-101.com
+version: 0.0.46
+Proxying to http://api.ember-cli-101.com
+Livereload server on port 35729
+Serving on http://0.0.0.0:4200
+ENOENT, no such file or directory <span class="s1">'/borrowers/tmp/tree_merger-tmp_dest_dir-KIfHrFRc.tmp/ic-ajax.js'</span>
+Error: ENOENT, no such file or directory <span class="s1">'/borrowers/tmp/tree_merger-tmp_dest_dir-KIfHrFRc.tmp/ic-ajax.js'</span>
+...</code></pre></figure>
+
+<p>At the beginning of the article we mentioned that part of the process
+on consuming named AMD libraries was to use <code class="highlighter-rouge">app.import</code> and
+<code class="highlighter-rouge">whitelist</code> the library’s exports without explaining what we meant
+with the later.</p>
+
+<p>During the build process all our files under <code class="highlighter-rouge">app/</code> go through a
+transformation step where the <code class="highlighter-rouge">ES6 Modules</code> are converted to <code class="highlighter-rouge">AMD format</code>,
+when something like the following is found <code class="highlighter-rouge">import request from
+'ic-ajax';</code> internally the tool in charge of transpiling the code,
+checks if that is something already registered in the module system
+and if not it tries to find the module and convert it to the proper
+format, in the previous scenario it will try to find a file called
+<code class="highlighter-rouge">ic-ajax.js</code>, but since it is a library we are including externally
+such file doesn’t exist hence causing the build to fail.</p>
+
+<p>Whitelisting in this context means telling the tool in charge of
+transforming our <code class="highlighter-rouge">ES6 Modules</code> to <code class="highlighter-rouge">AMD</code> that whenever <code class="highlighter-rouge">import request from
+'ic-ajax'</code> is found, then assume is already included so it doesn’t
+try to resolve it.</p>
+
+<p>To do so we pass an option called exports to <code class="highlighter-rouge">app.import</code> which
+whitelist <code class="highlighter-rouge">ic-ajax</code> and and its <code class="highlighter-rouge">exports</code>. The exports are also used to whitelist variables in <code class="highlighter-rouge">JSHint</code>.</p>
+
+<p>In the <code class="highlighter-rouge">Brocfile.js</code>, let’s replace the call to <code class="highlighter-rouge">import</code> with the
+following:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">app</span><span class="p">.</span><span class="k">import</span><span class="p">(</span><span class="s1">'bower_components/ic-ajax/dist/named-amd/main.js'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">exports</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s1">'ic-ajax'</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s1">'default'</span><span class="p">,</span>
+      <span class="s1">'defineFixture'</span><span class="p">,</span>
+      <span class="s1">'lookupFixture'</span><span class="p">,</span>
+      <span class="s1">'raw'</span><span class="p">,</span>
+      <span class="s1">'request'</span><span class="p">,</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>If we run <code class="highlighter-rouge">ember server --proxy http://api.ember-cli-101.com</code> we’ll see that everything works and we’ll see the friends count in our index visiting
+<a href="http://localhost:4200/">http://localhost:4200/</a></p>
+
+<h3 id="ember-cli-ic-ajax">ember-cli-ic-ajax</h3>
+
+<p>We started the chapter by removing <code class="highlighter-rouge">ember-cli-ic-ajax</code> which is an
+addon wrapping the call to import and include the exports for us, if
+we inspect the
+<a href="https://github.com/rwjblue/ember-cli-ic-ajax/blob/master/index.js#L18">index file in the addon</a>,
+we’ll notice that it has almost the same things we added to our
+<code class="highlighter-rouge">Brocfile.js</code>.</p>
+
+<p>Now that we understand how importing <code class="highlighter-rouge">named AMD libraries</code> works, we can
+remove the <code class="highlighter-rouge">import</code> for <code class="highlighter-rouge">ic-ajax</code> from the <code class="highlighter-rouge">Brocfile.js</code> and use
+it via the <code class="highlighter-rouge">addon</code>, let’s run the following commands and then stop and
+start the server, everything should work:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower uninstall ic-ajax <span class="nt">--save</span>
+<span class="nv">$ </span>npm i ember-cli-ic-ajax <span class="nt">--save</span></code></pre></figure>
+
+<h3 id="protip">Protip</h3>
+
+<p>Did you know ember-cli has an <code class="highlighter-rouge">.ember-cli</code> file where you can specify the default value for some commands? Instead of passing <code class="highlighter-rouge">--proxy</code> all the time to our <code class="highlighter-rouge">ember server</code> command, we can edit the <code class="highlighter-rouge">.ember-cli</code> to include the proxy option as follows:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="s2">"disableAnalytics"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="s2">"proxy"</span><span class="p">:</span> <span class="s2">"http://api.ember-cli-101.com"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>With that we can run <code class="highlighter-rouge">ember server</code> and it will read the <code class="highlighter-rouge">--proxy</code> option from the <code class="highlighter-rouge">.ember-cli</code> file.</p>
+
+<p><strong><a href="https://leanpub.com/ember-cli-101">Getting started with Ember.js? I’m writing an Ember.js book, learn Ember.js</a> with <a href="https://leanpub.com/ember-cli-101">ember-cli-101</a>. Ping me on #ember-cli-101 in Freenode if you have any question about it</strong></p>
+
+  </div>
+  <div class="w-100">
+    <script async type="text/javascript" src="https://cdn.remotehq.net/remotehq.js?placement=blog.abuiles.com" id="_remotehq_js"></script>
+  </div>
+
+  
+    <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/';
+      this.page.identifier = 'https://blog.abuiles.com/blog/2014/10/17/working-with-javascript-plugins-in-ember-cli-part-2/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://abuiles.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+</article>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Adolfo Builes</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I write about technology, being a human and books.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+ -->
+
+  </body>
+
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mirage TILs</title>
+  <meta name="description" content="This is not a post about tumor infiltrating lymphocytes (TILs). But rather about the things I learn while moving all our acceptance tests to Mirage.">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+
+  
+  <link rel="canonical" href="https://blog.abuiles.com/blog/2016/02/24/mirage-tils/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
+
+  
+    <script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32360357-1', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+
+  
+  <style>
+    .highlight {
+      background: rgba(255, 230, 0, 0.5);
+      padding-right: 0.375rem;
+      margin-right: -0.375rem;
+    }
+
+    .book blockquote {
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 2rem;
+      border-width: .30rem;
+      border-color: #357edd;
+      border-left-style: solid;
+      border-left-width: 1px;
+    }
+
+    .book blockquote p {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+
+    html, body {
+      font-size: 18px;
+    }
+  </style>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="wrapper" aria-label="Content">
+      <div class="mw7 center">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Mirage TILs</h1>
+    <p class="post-meta">
+      <time datetime="2016-02-24T11:36:38-05:00" itemprop="datePublished">
+        
+        Feb 24, 2016
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content lh-copy" itemprop="articleBody">
+    <p>This is not a post about tumor infiltrating lymphocytes (TILs). But
+rather about the things I learn while moving all our acceptance tests
+to Mirage.</p>
+
+<p>The last time I looked at it was over a year ago, so I
+was super impressed with all the new stuff <a href="https://github.com/samselikoff/ember-cli-mirage/blob/master/CHANGELOG.md">Sam has been working
+on</a>. An
+ORM, DB, request shortcuts, OMG so many cool stuff!</p>
+
+<p>As part of the migration process I started to document the things that
+I was learning and shared them with <a href="https://envoy.com">my team</a> so
+it was easier for everyone to pick up.</p>
+
+<p>Without further ado, the following list compiles a bunch of things I
+wanted to do and how I did it using ember-cli-mirage 0.2.0-beta.5.</p>
+
+<div id="table-of-contents">
+<h3>TILs</h3>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgheadline2">1. How can I check the serialized version of a model?</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgheadline1">1.0.1. What is this useful for?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgheadline3">2. How do I make assertions in a request and build a new model with the serializer?</a></li>
+<li><a href="#orgheadline4">3. Polymorphic models</a></li>
+<li><a href="#orgheadline5">4. How to return a  204?</a></li>
+<li><a href="#orgheadline8">5. Stop settings expectations inside requests.</a>
+<ul>
+<li><a href="#orgheadline6">5.1. before</a></li>
+<li><a href="#orgheadline7">5.2. after</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline9">6. Stop matching against your "API format"</a></li>
+</ul>
+</div>
+</div>
+
+<h2 id="how-can-i-check-the-serialized-version-of-a-model">How can I check the serialized version of a model?<a id="orgheadline2"></a></h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.get('api/employee's, function(schema, request) {
+  employee = schema.employee.find(1);
+  this.serializerOrRegistry.serialize(employee, request);
+
+  return foo;
+});
+</code></pre></div></div>
+
+<h3 id="what-is-this-useful-for">What is this useful for?<a id="orgheadline1"></a></h3>
+
+<p>As I was getting started with mirage, this was super helpful for
+debugging, but also, at this point I’m not sure how to include
+meta-data in the response, and one of our endpoints returns pagination
+in the meta key. What I did was generate the payload and then add meta
+manually.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.get('api/employees', function(schema, request) {
+  let employees = schema.employee.all();
+  let response =  this.serializerOrRegistry.serialize(employees, request);
+
+  response.meta = {
+    total: employees.length,
+    totalPages: 1
+  };
+
+
+  return new Mirage.Response(200, {}, response);
+});
+</code></pre></div></div>
+
+<h2 id="how-do-i-make-assertions-in-a-request-and-build-a-new-model-with-the-serializer">How do I make assertions in a request and build a new model with the serializer?<a id="orgheadline3"></a></h2>
+
+<p>As I was moving away from a mix of Factory Guy and Pretender, we had a
+bunch of request where we were matching that it was “done” and then
+returning a new model.</p>
+
+<p><a href="https://github.com/samselikoff/ember-cli-mirage/issues/556">https://github.com/samselikoff/ember-cli-mirage/issues/556</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// import the following from mirage
+
+import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
+
+server.post('/api/employees', function(schema, request) {
+  assert.ok(true, 'did post');
+
+  let handler = new BaseShorthandRouteHandler(schema, this.serializerOrRegistry);
+
+  return schema.employee.create(handler._getAttrsForRequest(request, 'employee'));
+})
+</code></pre></div></div>
+
+<h2 id="polymorphic-models">Polymorphic models<a id="orgheadline4"></a></h2>
+
+<p>Let’s say you have the models “car” and “motorcycle” which inherit
+from “vehicle” and you want to return all available “vehicles” through
+the end-point `/api/vehicles`. The following can help you.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.get('/api/vehicles', function(schema, request) {
+  // fetch all the cars, it returns a mirage collection
+  let collection = schema.car.all();
+
+  // push all the motorcycles into the mirage collection
+  collection.push(...schema.motorcycle.all());
+
+  // Make sure there is a serializer for vehicle `ember g mirage-serializer vehicle`
+  // since we are using JSONAPI, it will use the model.type to create the
+  // final response.
+  //
+  // This will probably work only with JSONAPI :P
+
+  collection.modelName = 'vehicle';
+
+  return collection;
+});
+</code></pre></div></div>
+
+<h2 id="how-to-return-a--204">How to return a  204?<a id="orgheadline5"></a></h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.delete('/api/employees/:id', function() {
+  return new Mirage.Response(204);
+});
+</code></pre></div></div>
+
+<h2 id="stop-settings-expectations-inside-requests">Stop settings expectations inside requests.<a id="orgheadline8"></a></h2>
+
+<p>Sam recommends to let mirage shortcut do their job and then match
+against mirage’s DB. Let’s see an example.</p>
+
+<h3 id="before">before<a id="orgheadline6"></a></h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>andThen(function(){
+  server.patch('/api/employee/1', function(schema, request) {
+    var data = JSON.parse(request.requestBody).data;
+    assert.equal(data.attributes.name, 'Sam', 'name is Sam');
+
+    return new Mirage.Response(204);
+  });
+});
+click('thing that fires post');
+</code></pre></div></div>
+
+<h3 id="after">after<a id="orgheadline7"></a></h3>
+
+<p>The snippet above is removed letting mirage takes care of the patch
+via shortcuts.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>andThen(function(){
+  assert.equal(
+    server.schema.employee.find(1).name,
+    'tom',
+    'Name is Tom'
+  );
+});
+click('thing that fires put');
+andThen(function(){
+  assert.equal(
+    server.schema.employee.find(1).name,
+    'Sam',
+    'Name was updated to Sam'
+  );
+});
+</code></pre></div></div>
+
+<p>Now we check against mirage’s db that it was updated.</p>
+
+<p>There are scenarios where we might still need to intercept the request
+and do something inside of it, but for most of the cases we can let
+mirage do its magic.</p>
+
+<h2 id="stop-matching-against-your-api-format">Stop matching against your “API format”<a id="orgheadline9"></a></h2>
+
+<p>Let’s say we still want to have assertions inside requests. It is
+common to see tests that depend on the API format, this can be really
+problematic if we decide to change the format of our API. suppose we
+are using AMS and have something like the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.post('/api/employees', function(schema, request){
+  var employee = JSON.parse(request.requestBody).employee;
+
+  assert.equal(employee.name, 'Sam Selikoff', 'foo woot buu');
+  assert.equal(employee.phone_number, '+14159353143', 'number is persisted');
+
+  // ...
+});
+</code></pre></div></div>
+
+<p>And then decide to move to JSON API.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server.post('/api/employees', function(schema, request){
+  var employee = JSON.parse(request.requestBody).data;
+
+  assert.equal(employee.attributes.name, 'Sam Selikoff', 'foo woot buu');
+  assert.equal(employee.attributes['phone-number'], '+14159353143', 'number is persisted');
+
+  // ...
+});
+</code></pre></div></div>
+
+<p>But then realized everyone have been wrong and SOAP was actually what
+we needed. If you have only 1 tests then this is not a problem but if
+you have a lot of tests updating this is not a fun task.</p>
+
+<p>Since mirage works with serializers, we can use that instead and then
+stop worrying about the format of the payload. The following can be
+used to achieve the same as the previous test, but this we don’t care
+if we are are using JSON API, AMS or SOAP.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import BaseShorthandRouteHandler from 'ember-cli-mirage/route-handlers/shorthands/base';
+
+server.post('/api/employees', function(schema, request){
+  let handler = new BaseShorthandRouteHandler(schema, this.serializerOrRegistry);
+  let employee = handler._getAttrsForRequest(request, 'employee');
+
+  // employee has been normalized to mirage's DB format.
+
+  assert.equal(employee.name, 'Sam Selikoff', 'foo woot buu');
+  assert.equal(employee.phoneNumber, '+14159353143', 'number is persisted');
+
+  // ...
+});
+</code></pre></div></div>
+
+<h2 id="wrapping-up">Wrapping Up</h2>
+
+<p>I hope you find this useful, and if you have your own mirage tricks,
+let me know, I’ll love to have them in my org-mode file
+<a href="https://gist.github.com/abuiles/4a672ccc8b5371c09ea7">here</a>.</p>
+
+<p>If you have problems with mirage, don’t try to call Sam to that
+number, I made that up. Hopefully we’ll find soon who owns
+\#ember-cli-mirage on the Ember slack and make it public so we can all
+talk about our ups and downs.</p>
+
+<p>Finally, if you enjoy talking about APIs, IPAs, Ember and want to work
+with me, at Envoy we are always hiring, check out <a href="https://envoy.com/jobs/">our jobs
+page</a>.</p>
+
+  </div>
+  <div class="w-100">
+    <script async type="text/javascript" src="https://cdn.remotehq.net/remotehq.js?placement=blog.abuiles.com" id="_remotehq_js"></script>
+  </div>
+
+  
+    <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://blog.abuiles.com/blog/2016/02/24/mirage-tils/';
+      this.page.identifier = 'https://blog.abuiles.com/blog/2016/02/24/mirage-tils/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://abuiles.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+</article>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Adolfo Builes</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I write about technology, being a human and books.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+ -->
+
+  </body>
+
+</html>

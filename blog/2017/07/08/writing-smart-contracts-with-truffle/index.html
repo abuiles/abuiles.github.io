@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Writing Smart Contracts With Truffle</title>
+  <meta name="description" content="In my article Smart contracts for the impatient I documented how to deploy a contract using Mist to the testnet Rinkeby.">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+
+  
+  <link rel="canonical" href="https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/">
+  <link rel="alternate" type="application/rss+xml" title="Adolfo Builes" href="/feed.xml">
+
+  
+    <script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32360357-1', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+
+  
+  <style>
+    .highlight {
+      background: rgba(255, 230, 0, 0.5);
+      padding-right: 0.375rem;
+      margin-right: -0.375rem;
+    }
+
+    .book blockquote {
+      margin-top: 0;
+      margin-left: 0;
+      padding-left: 2rem;
+      border-width: .30rem;
+      border-color: #357edd;
+      border-left-style: solid;
+      border-left-width: 1px;
+    }
+
+    .book blockquote p {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+
+    html, body {
+      font-size: 18px;
+    }
+  </style>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+            <a class="page-link" href="/articles/">Articles</a>
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="wrapper" aria-label="Content">
+      <div class="mw7 center">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Writing Smart Contracts With Truffle</h1>
+    <p class="post-meta">
+      <time datetime="2017-07-09T01:10:06-05:00" itemprop="datePublished">
+        
+        Jul 8, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content lh-copy" itemprop="articleBody">
+    <p>In my article <a href="/blog/2017/06/13/smart-contracts-for-the-impatient/">Smart contracts for the
+impatient</a> I
+documented how to deploy a contract using Mist to the testnet Rinkeby.</p>
+
+<p>While it is a good example for demonstration purposes, we’ll probably
+go crazy if we try to deploy a Ðapp or contract doing everything
+manually.</p>
+
+<p>What if we could develop for Ethereum, just as if we were building yet
+another JavaScript application. What if we could:</p>
+
+<ul>
+  <li>Automatically test our contracts or Ðapps before deploying to a real network?</li>
+  <li>Deploy contracts with a simple command?</li>
+  <li>Write contracts in a modular way?</li>
+  <li>Interact with our contracts through a CLI?</li>
+  <li>Have automatic linting?</li>
+</ul>
+
+<h2 id="truffle">Truffle</h2>
+
+<p><a href="http://truffleframework.com/docs/">Truffle</a> is a development
+framework for Ethereum, it not only offers all the things listed above
+but even more!</p>
+
+<p>From their README, they describe themselves as:</p>
+
+<blockquote>
+  <p>YOUR ETHEREUM SWISS ARMY KNIFE</p>
+</blockquote>
+
+<p>For people familiar with JavaScript and Ember.js, we could say Truffle
+is the <a href="https://ember-cli.com/">ember-cli</a> for Ethereum.</p>
+
+<p>The goal of this article is to teach people how to:</p>
+
+<ul>
+  <li>Install Truffle.</li>
+  <li>Use the Ethereum RPC client for testing and development.</li>
+  <li>Familiarize with the basic concepts in Truffle.</li>
+  <li>Write the “Hello World” contract including tests.</li>
+  <li>Deploy the contract to Rinkeby.</li>
+</ul>
+
+<p>Basic familiarity with JavaScript and Node.js is required, and we
+assume people is using macOS and Node.js higher or equal to 7.6.</p>
+
+<h2 id="installing-truffle">Installing Truffle</h2>
+
+<p>We can install Truffle using <code class="highlighter-rouge">npm</code>, from <a href="http://truffleframework.com/docs/getting_started/installation">their guide</a>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g truffle
+</code></pre></div></div>
+
+<p>After running the command above, we should we able to do the following and see some kind of output:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ truffle
+Truffle v3.2.5 - a development framework for Ethereum
+
+Usage: truffle &lt;command&gt; [options]
+
+Commands:
+  init      Initialize new Ethereum project with example contracts and
+            tests
+  compile   Compile contract source files
+  migrate   Run migrations to deploy contracts
+  deploy    (alias for migrate)
+  build     Execute build pipeline (if configu
+</code></pre></div></div>
+
+<h2 id="testrpc">Testrpc</h2>
+
+<p>In theory we could use Rinkeby for development, but relying on a real
+blockchain for development is not very efficient. We don’t want to use
+our test Ether or wait for transactions to complete. Also, since we
+don’t have control of such network, it would be very hard for us to
+write test in a deterministic way.</p>
+
+<p>The Ethereum JavaScript community has an Ethereum RPC client for
+testing and development, which allow us to mock our interactions with
+a real network.</p>
+
+<p>The name of the project is <a href="https://github.com/ethereumjs/testrpc">testrpc</a>:</p>
+
+<blockquote>
+  <p>testrpc is a Node.js based Ethereum client for testing and development. It uses ethereumjs to simulate full client behavior and make developing Ethereum applications much faster. It also includes all popular RPC functions and features (like events) and can be run deterministically to make development a breeze.</p>
+</blockquote>
+
+<p>Since it’s published as an npm package, we can install it with the following command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g ethereumjs-testrpc
+</code></pre></div></div>
+
+<p>Once <code class="highlighter-rouge">testrpc</code> is installed, we can start the client by running <code class="highlighter-rouge">testrpc</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ testrpc
+EthereumJS TestRPC v3.0.5
+
+Available Accounts
+==================
+(0) 0x05dd2f0e2c917d2f83770403359cab4b1645ab9c
+(1) 0xaefcaeeda04808db06abf62a29cfccc2892c48e3
+(2) 0xbd3d2750e62063ace2f6bc7157e4d8a81c36093b
+(3) 0x91c86d236cc301756effae9db74ce8cb3a3c6a1e
+(4) 0x1fed08900dd0420235dc9bb812483299f74200e2
+(5) 0xe42e9f89b2d96ab6dd4711da4ebee4d0f792fb1b
+(6) 0x4166f9a27a7303f3c820d85c0f1641315cfa0474
+(7) 0x51691ae53211fa46c4b1b99d42255e02905f400f
+(8) 0x8dbfdced435891e24e0fa4c54dde78ea843f94e2
+(9) 0xcbd1865983eabac38e3816cdc257bb4fcc65f9d0
+
+Private Keys
+==================
+(0) 8f2dbfaab1307655f2e5751e9f4ff997b5ce312b4b50b14cbd26cb71f89b5b0e
+(1) 2c8c794d7f82ccccdad471aa9d82f59c13396ec266c5cbc227bfe5a7df04f94f
+(2) 55d116cef11e807098f5dac5120b843b1535235241a044f7a0a50cefbd2e3b8e
+(3) 63ef474c8f686774d38f420af459ad32978757dc40c9c28fbdfc46aa161f5362
+(4) 5719fa65b2f360b778dff07ef7daad555cfee0b80988c8a5480a9241c63a5898
+(5) 0b73f66a37fb65dd6410c55ae0293899bf72ccc98b18766b5bc107bfac40f0d7
+(6) 46d745be848383573207615b213abde5c70ec078d2bf087de9de4e1b577368ee
+(7) d3b4a15fb0f13a77c34edd5e630bae7c4faf49eba81573a274fa2abe14db3759
+(8) fdfd64d0167d716bc743bdd1ddb45bb82a6d01fa6db02cebbb8d568dd57b91d3
+(9) 1ae6c6c0cbf4d380adef1a718bf2a2cd62a89212f60cf672a77aaeeb543c1a80
+
+HD Wallet
+==================
+Mnemonic:      audit can stock squeeze equip aerobic abuse access fringe grocery stone novel
+Base HD Path:  m/44'/60'/0'/0/{account_index}
+
+Listening on localhost:8545
+</code></pre></div></div>
+
+<p>As a quick test, we can start <code class="highlighter-rouge">Mist</code> using this client instead of geth and then we should see all the wallets listed above with some Ether.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Applications/Mist.app/Contents/MacOS/Mist --rpc http://localhost:8545
+</code></pre></div></div>
+
+<p>Keep <code class="highlighter-rouge">testrpc</code> running and now let’s start using Truffle.</p>
+
+<h2 id="starting-a-project">Starting a project</h2>
+
+<p>To create a new project do the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir hello-world
+$ cd hello-world
+$ truffle init
+</code></pre></div></div>
+
+<p>After creating the project, we’ll see a basic skeleton app, we can test that everything is working by running the default test:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ truffle test
+Using network 'development'.
+
+Compiling ./contracts/ConvertLib.sol...
+Compiling ./contracts/MetaCoin.sol...
+Compiling ./test/TestMetacoin.sol...
+Compiling truffle/Assert.sol...
+Compiling truffle/DeployedAddresses.sol...
+
+
+  TestMetacoin
+    ✓ testInitialBalanceUsingDeployedContract (63ms)
+    ✓ testInitialBalanceWithNewMetaCoin (60ms)
+
+  Contract: MetaCoin
+    ✓ should put 10000 MetaCoin in the first account (63ms)
+    ✓ should call a function that depends on a linked library (79ms)
+    ✓ should send coin correctly (173ms)
+
+
+  5 passing (840ms)
+</code></pre></div></div>
+
+<p>The command <code class="highlighter-rouge">truffle init</code> uses the following repo as default blueprint <a href="https://github.com/trufflesuite/truffle-init-default">https://github.com/trufflesuite/truffle-init-default</a>, it includes an example contract and tests.</p>
+
+<p>Since we are going to be writing our own contract and tests, we are going to remove some of the defaults:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm contracts/ConvertLib.sol contracts/MetaCoin.sol
+rm test/TestMetacoin.sol test/metacoin.js
+rm migrations/2_deploy_contracts.js
+</code></pre></div></div>
+
+<h2 id="creating-contracts-with-truffle-and-testing">Creating contracts with Truffle and testing</h2>
+
+<p>To <a href="http://truffleframework.com/docs/advanced/commands#create-contract">create a new contract</a>, run the command <code class="highlighter-rouge">truffle create</code>. It
+requires the type of item we want to create and the name.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>truffle create contract HelloWorld
+</code></pre></div></div>
+
+<p>The name must be <code class="highlighter-rouge">CamelCased</code>. After running the command, the file will be under <code class="highlighter-rouge">contracts/HelloWorld.sol</code> with the following content:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.4</span><span class="p">.</span><span class="mi">4</span><span class="p">;</span>
+
+<span class="nx">contract</span> <span class="nx">HelloWorld</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">HelloWorld</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// constructor</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Next, add the code for <a href="/blog/2017/06/13/smart-contracts-for-the-impatient/">the hello world contract</a>.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.4</span><span class="p">.</span><span class="mi">4</span><span class="p">;</span>
+
+<span class="nx">contract</span> <span class="nx">HelloWorld</span> <span class="p">{</span>
+  <span class="c1">//Begin: state variables</span>
+  <span class="nx">address</span> <span class="kr">private</span> <span class="nx">creator</span><span class="p">;</span>
+  <span class="nx">address</span> <span class="kr">private</span> <span class="nx">lastCaller</span><span class="p">;</span>
+  <span class="nx">string</span> <span class="kr">private</span> <span class="nx">message</span><span class="p">;</span>
+  <span class="nx">uint</span> <span class="kr">private</span> <span class="nx">totalGas</span><span class="p">;</span>
+  <span class="c1">//End: state variables</span>
+
+  <span class="c1">//Begin: constructor</span>
+  <span class="kd">function</span> <span class="nx">HelloWorld</span><span class="p">()</span> <span class="p">{</span>
+    <span class="cm">/*
+      We can use the special variable `tx` which gives us information
+      about the current transaction.
+
+      `tx.origin` returns the sender of the transaction.
+      `tx.gasprice` returns how much we pay for the transaction
+    */</span>
+    <span class="nx">creator</span> <span class="o">=</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">origin</span><span class="p">;</span>
+    <span class="nx">totalGas</span> <span class="o">=</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">gasprice</span><span class="p">;</span>
+    <span class="nx">message</span> <span class="o">=</span> <span class="s1">'hello world'</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//End: constructor</span>
+
+  <span class="c1">//Begin: getters</span>
+  <span class="kd">function</span> <span class="nx">getMessage</span><span class="p">()</span> <span class="nx">constant</span> <span class="nx">returns</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">message</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">getLastCaller</span><span class="p">()</span> <span class="nx">constant</span> <span class="nx">returns</span><span class="p">(</span><span class="nx">address</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">lastCaller</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">getCreator</span><span class="p">()</span> <span class="nx">constant</span> <span class="nx">returns</span><span class="p">(</span><span class="nx">address</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">creator</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">getTotalGas</span><span class="p">()</span> <span class="nx">constant</span> <span class="nx">returns</span><span class="p">(</span><span class="nx">uint</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">totalGas</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//End: getters</span>
+
+  <span class="c1">//Being: setters</span>
+  <span class="kd">function</span> <span class="nx">setMessage</span><span class="p">(</span><span class="nx">string</span> <span class="nx">newMessage</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">message</span> <span class="o">=</span> <span class="nx">newMessage</span><span class="p">;</span>
+    <span class="nx">lastCaller</span> <span class="o">=</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">origin</span><span class="p">;</span>
+    <span class="nx">totalGas</span> <span class="o">+=</span> <span class="nx">tx</span><span class="p">.</span><span class="nx">gasprice</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//End: setters</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="migration">Migration</h2>
+
+<p>Once we have the code for the contract, we need to find a way to
+deploy it into the blockchain. Truffle has a primitive called
+migration, which can be used to compose and deploy contracts.</p>
+
+<p>Create a migration called <code class="highlighter-rouge">deploy_hello_world</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ truffle create migration deploy_hello_world
+$ git st
+On branch master
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+	migrations/1499575148_deploy_hello_world.js
+</code></pre></div></div>
+
+<p>Above we can see that a new file got created  (if you get a different
+result, it means the following PR has not been merged yet
+<a href="https://github.com/trufflesuite/truffle-core/pull/13">https://github.com/trufflesuite/truffle-core/pull/13</a>, rename it so it look similar to the one above).</p>
+
+<p>Next, update the code for the contract to deploy our <code class="highlighter-rouge">HelloWorld</code> example, to do so we’ll require the contract and then use the <a href="http://truffleframework.com/docs/getting_started/migrations#deployer">deployer</a>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// We use artifacts.require to tell Truffle which artifacts we'll be</span>
+<span class="c1">// interacting with.</span>
+
+<span class="c1">// In the example below, we are requiring the contract HelloWorld</span>
+<span class="c1">// which returns an abstraction that we can use for the deployment.</span>
+<span class="kd">const</span> <span class="nx">HelloWorld</span> <span class="o">=</span> <span class="nx">artifacts</span><span class="p">.</span><span class="nx">require</span><span class="p">(</span><span class="s1">'HelloWorld'</span><span class="p">)</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">deployer</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">deployer</span><span class="p">.</span><span class="nx">deploy</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Read more about artifacts here http://truffleframework.com/docs/getting_started/migrations#artifacts-require-</span></code></pre></figure>
+
+<p>We should be able to deploy the contract to the test blockchain
+running <code class="highlighter-rouge">truffle migrate --reset</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>truffle migrate <span class="nt">--reset</span>
+Compiling ./contracts/HelloWorld.sol...
+Compiling ./contracts/Migrations.sol...
+Writing artifacts to ./build/contracts
+
+Using network <span class="s1">'development'</span><span class="nb">.</span>
+
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  Migrations: 0x665311133c3f2ca24c633da656ded48619fb3239
+Saving successful migration to network...
+Saving artifacts...
+Running migration: 1499575148_deploy_hello_world.js
+  Deploying HelloWorld...
+  HelloWorld: 0xba06f7905d9c4584be914365ae1ce44688e50504
+Saving successful migration to network...
+Saving artifacts...</code></pre></figure>
+
+<p>If we look at the log from <code class="highlighter-rouge">testrpc</code> we’ll see a register of the
+transactions:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">eth_sendTransaction
+  Transaction: 0x11316dc23e638f8d9aaae06fd0751a209f94ed2dd1c42307cf25c6c01198f0df
+  Contract created: 0xba06f7905d9c4584be914365ae1ce44688e50504
+  Gas usage: 0x05a8a4
+  Block Number: 0x07
+  Block Time: Sat Jul 08 2017 22:21:52 GMT-0700 <span class="o">(</span>PDT<span class="o">)</span>
+
+eth_sendTransaction
+
+  Transaction: 0x3b0c127d8a8ffe1465091a4208204b97016991f4396d19e40edcbd8323988a7a
+  Gas usage: 0x696e
+  Block Number: 0x08
+  Block Time: Sat Jul 08 2017 22:21:53 GMT-0700 <span class="o">(</span>PDT<span class="o">)</span></code></pre></figure>
+
+<p>We have successfully deployed a contract using Truffle to <code class="highlighter-rouge">testrpc</code>
+but we haven’t written any test yet. That’s what we’ll do next.</p>
+
+<h2 id="testing">Testing</h2>
+
+<p>Truffle has built-in support for testing. We’ll write some test for
+the methods defined in our contract.</p>
+
+<p>To create the test we need to run the command <code class="highlighter-rouge">truffle create test HelloWorld</code> and then put the following content in <code class="highlighter-rouge">test/hello_world.js</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const HelloWorld = artifacts.require('HelloWorld')
+
+contract('HelloWorld', function(accounts) {
+  it('sets the first account as the contract creator', async function() {
+    // This give a truffle abstraction which allow us to interact with our contracts.
+    const contract = await HelloWorld.deployed()
+
+    // Once we have the "contract" we can make calls or transations and then assert.
+    // The following is making a call to get the creator.
+    const creator = await contract.getCreator()
+
+    assert.equal(creator, accounts[0], 'main account is the creator')
+  })
+  it('has hello world as initial message ', async function() {
+    const contract = await HelloWorld.deployed()
+    const message = await contract.getMessage()
+
+    assert.equal(message, 'hello world', 'message is hello world')
+  })
+  it('changes the message via setMessage', async function() {
+    const contract = await HelloWorld.deployed()
+
+    // Execute a transaction and change the state of the contract.
+    await contract.setMessage('hola mundo')
+
+    // Get the new state.
+    const message = await contract.getMessage()
+
+    assert.equal(message, 'hola mundo', 'message is hola mundo')
+  })
+})
+</code></pre></div></div>
+
+<p>Once we have the test file setup, we can run our tests with the command
+<code class="highlighter-rouge">truffle test</code>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>truffle <span class="nb">test
+</span>Compiling ./contracts/HelloWorld.sol...
+Compiling ./contracts/Migrations.sol...
+
+
+  Contract: HelloWorld
+    ✓ sets the first account as the contract creator <span class="o">(</span>47ms<span class="o">)</span>
+    ✓ has hello world as initial message  <span class="o">(</span>44ms<span class="o">)</span>
+    ✓ changes the message via setMessage <span class="o">(</span>80ms<span class="o">)</span>
+
+
+  3 passing <span class="o">(</span>197ms<span class="o">)</span></code></pre></figure>
+
+<h2 id="wrapping-up">Wrapping up</h2>
+
+<p>In this article, we covered how to create, test and deploy a contract
+using Truffle and testrpc. In <a href="/blog/2017/07/09/deploying-truffle-contracts-to-rinkeby">Deploying Truffle contracts to
+Rinkeby</a>,
+we’ll see how to add networks and deploy to Rinkeby. <a href="http://twitter.com/abuiles">Follow me on
+twitter (@abuiles)</a> or subscribe to my
+feed to get updates on my post.</p>
+
+<p>You can find the code and steps for this article in GitHub <a href="https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle">https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle</a>.</p>
+
+<p>Finally, we talked superficially about Truffle’s contracts, migrations
+and tests. To learn more about it check their
+<a href="http://truffleframework.com/docs/getting_started/installation">website</a>.</p>
+
+<div data-remotehqcompany="Unlock"></div>
+
+
+  </div>
+  <div class="w-100">
+    <script async type="text/javascript" src="https://cdn.remotehq.net/remotehq.js?placement=blog.abuiles.com" id="_remotehq_js"></script>
+  </div>
+
+  
+    <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/';
+      this.page.identifier = 'https://blog.abuiles.com/blog/2017/07/08/writing-smart-contracts-with-truffle/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://abuiles.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+</article>
+
+      </div>
+    </main>
+
+    <!-- <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Adolfo Builes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Adolfo Builes</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>I write about technology, being a human and books.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+ -->
+
+  </body>
+
+</html>
