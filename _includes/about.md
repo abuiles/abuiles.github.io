@@ -17,7 +17,7 @@ Throughout my career, I have dedicated time and effort to pursuing personal proj
 This is a brief overview of my professional journey over the past 17 years:
 
 - Present: Product Lead at [Recharge](https://rechargepayments.com).
-- 2020-2021: Co-founder [Rebundle](https://rebundleapp.com) (Acquired).
+- 2020-2021: Co-founder [Rebundle](https://rebundleapp.com).
 - 2019 - 2020: Senior Software Engineer at [Stellar](https://www.stellar.org/).
 - 2015 - 2019: Product Engineer, Engineering Manager, and Senior Software Engineer at [Envoy](https://envoy.com/).
 - 2012 - 2015: Startup Founder, Freelancer, Open-Source Developer, Technical Writer and Author.
