@@ -1,8 +1,8 @@
-Hello, I am Adolfo Builes, a seasoned Product Engineer with a passion for creating innovative products and building high-performing teams.
+Hi, I am Adolfo.
 
 ## Projects and Books
 
-Throughout my career, I have dedicated time and effort to pursuing personal projects, including writing in my blog, publishing technical books, and contributing to open-source software.
+These are some of my projects:
 
 - [Building your own Venmo with Stellar](https://blog.abuiles.com/building-your-own-venmo-with-stellar/)
 - [Kintrospect](https://github.com/abuiles/kintrospect)
@@ -14,7 +14,7 @@ Throughout my career, I have dedicated time and effort to pursuing personal proj
 
 ## History
 
-This is a brief overview of my professional journey over the past 17 years:
+Here's a summary of my career:
 
 - Present: Product Lead at [Recharge](https://rechargepayments.com).
 - 2020-2021: Co-founder [Rebundle](https://rebundleapp.com).
