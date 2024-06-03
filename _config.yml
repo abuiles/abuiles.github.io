@@ -8,9 +8,10 @@ url: https://blog.abuiles.com
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
+plugins:
   - jekyll-feed
   - octopress-social
+  # - directory_tag
 exclude:
   - Gemfile
   - Gemfile.lock

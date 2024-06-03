@@ -14,8 +14,6 @@ These are some of my projects:
 
 ## History
 
-Here's a summary of my career:
-
 - Present: Product Lead at [Recharge](https://rechargepayments.com).
 - 2020-2021: Co-founder [Rebundle](https://rebundleapp.com).
 - 2019 - 2020: Senior Software Engineer at [Stellar](https://www.stellar.org/).
