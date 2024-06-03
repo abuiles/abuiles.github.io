@@ -122,8 +122,3 @@ I suggest going to the official Ember.js guides and check the section for Routin
 
 * [Routing guide](http://emberjs.com/guides/routing/)
 * [Templates guide](http://emberjs.com/guides/templates/the-application-template)
-
-#### Want to learn more about  Ember.js with Ruby on Rails? Subscribe
-
-
-<form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form>

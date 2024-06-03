@@ -27,7 +27,3 @@ fun.
 
 If you are interested in migrating an app from Rails to ember-cli the
 following are the commits since I started the migration [https://github.com/abuiles/facturas/compare/b47781f...master](https://github.com/abuiles/facturas/compare/b47781f...master).
-
-**I'm still [writing about working with Ember.js and Ruby on Rails now with ember-cli](http://blog.abuiles.com/ember-rails/), subscribe to my list and I will let you know every time I publish an article.**
-
-<form action="http://emberenos.us7.list-manage.com/subscribe/post?u=103dd05cb2005f7b5485df96d&amp;id=25604cee1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><label for="mce-EMAIL">Subscribe.</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> <div style="position: absolute; left: -5000px;"><input type="text" name="b_103dd05cb2005f7b5485df96d_25604cee1d" value=""></div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form>
