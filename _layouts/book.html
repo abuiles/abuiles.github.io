@@ -3,17 +3,15 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="site-body layout-book">
 
     {% include header.html %}
 
-    <main class="wrapper" aria-label="Content">
-      <div class="mw7 center">
+    <main class="site-main" aria-label="Content">
+      <div class="site-frame">
         {{ content }}
       </div>
     </main>
-
-    {% include footer.html %}
 
   </body>
 

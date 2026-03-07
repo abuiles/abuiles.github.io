@@ -122,7 +122,9 @@ A point that really caught my attention in this chapter was how by being wrong w
 
 As a coincidence, right after writing this I open my twitter account to see the following tweet by Naval:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Success is the enemy of learning. It can deprive you of the time and the incentive to start over. Beginner’s mind also needs beginner’s time.</p>&mdash; Naval (@naval) <a href="https://twitter.com/naval/status/957105232902696961?ref_src=twsrc%5Etfw">January 27, 2018</a></blockquote>
+{% quote cite="Naval, January 27, 2018" url="https://twitter.com/naval/status/957105232902696961" %}
+Success is the enemy of learning. It can deprive you of the time and the incentive to start over. Beginner's mind also needs beginner's time.
+{% endquote %}
 
 Steven mentions Charlan Nemeth who through research came out to the conclusion that good ideas are more likely to emerge in environments that contain a certain amount of noise and error.
 
@@ -210,5 +212,3 @@ If you like this article please leave a comment or share it on twitter - I'd lov
 - Bold in quotes was added by me for emphasis.
 - I wrote the first draft of this article using [Kintrospect](https://kintrospect.com) - my tool for building digital commonplace books using your Kindle Highlights and other sources - that's how you can click on the links to Kindle and get the app to open automatically for you.
 - [1][TED: Where good Ideas come from by Steven Johnson](https://www.ted.com/talks/steven_johnson_where_good_ideas_come_from)
-
-{% tweet_button %}

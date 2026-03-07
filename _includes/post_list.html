@@ -1,0 +1,30 @@
+{% assign post_items = include.posts | default: site.posts %}
+<ul class="post-list{% if include.variant %} post-list--{{ include.variant }}{% endif %}">
+  {% if include.limit %}
+    {% for post in post_items limit: include.limit %}
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      <li class="post-list-item">
+        <a class="post-list-link" href="{{ post.url | relative_url }}">
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <span class="post-link">{{ post.title | escape }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  {% else %}
+    {% for post in post_items %}
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      <li class="post-list-item">
+        <a class="post-list-link" href="{{ post.url | relative_url }}">
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <span class="post-link">{{ post.title | escape }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  {% endif %}
+</ul>
+
+{% if include.more_url %}
+  <p class="post-list-more">
+    <a href="{{ include.more_url | relative_url }}">{{ include.more_label | default: "Browse all articles" }}</a>
+  </p>
+{% endif %}

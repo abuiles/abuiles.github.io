@@ -41,8 +41,8 @@ defaults:
       layout: book
 
 header_pages:
+  - about.md
   - articles.md
-  - reading-feed.md
 
 twitter:
   username: abuiles                         # Add your Twitter handle

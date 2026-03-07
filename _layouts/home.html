@@ -1,31 +1,13 @@
 ---
 layout: default
 ---
-<div class="mt3">
-  {% capture about %}{% include about.md %}{% endcapture %}
-  {{ about | markdownify }}
-
-  <h2>Recent posts</h2>
+<section class="page-shell home-feed">
+  <header class="page-header home-feed-header">
+    <p class="section-kicker">Journal</p>
+    <h1 class="page-title">Recent posts</h1>
+    <p class="home-lede">{{ site.description }}</p>
+  </header>
   {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts limit:6 %}
-    <li>
-      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-      <h2>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </h2>
-    </li>
-    {% endfor %}
-    <li>
-      <h2>
-        <a class="post-link" href="/articles">More...</a>
-      </h2>
-    </li>
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
-</div>
+  {% include post_list.html posts=site.posts limit=6 variant="home" more_url="/articles/" more_label="Browse all articles" %}
+  <p class="rss-subscribe">Follow via <a href="{{ "/feed.xml" | relative_url }}">RSS</a></p>
+</section>

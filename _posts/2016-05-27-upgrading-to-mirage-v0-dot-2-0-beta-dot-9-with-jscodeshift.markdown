@@ -25,11 +25,56 @@ which is pluralizing all the schema models. If we have something like
 `schema.user.all()` or `server.schema.user.all()` then after running
 the script we'll have `schema.users.all()`.
 
-<script src="https://gist.github.com/abuiles/f15539c683e2121a3027b220073569b0.js"></script>
+```js
+/**
+ *  npm install inflected
+ *  find . -type f | xargs perl -pi -e 's/all\(\)\.length/all\(\)\.models\.length/g'
+ *  find . -type f | xargs perl -pi -e 's/all\(\)\.forEach/all\(\)\.models\.forEach/g'
+ *
+ * $ jscodeshift -t mirage-migrator.js tests/acceptance
+ */
+
+var Inflected = require('inflected');
+
+function directCallToSchema(path) {
+  return (path.value.type === 'CallExpression' &&
+          path.value.callee.object &&
+          path.value.callee.object.type === 'MemberExpression' &&
+          path.value.callee.object.object.name === 'schema')
+};
+
+function serverSchema(path) {
+  return (path.value.type === 'CallExpression' &&
+          path.value.callee.object &&
+          path.value.callee.object.type === 'MemberExpression' &&
+          path.value.callee.object.object.object &&
+          path.value.callee.object.object.object.name === 'server'
+  );
+}
+
+module.exports = function(fileInfo, api) {
+  var j = api.jscodeshift;
+  var root = j(fileInfo.source);
+  root
+    .find(j.CallExpression)
+    .forEach(path => {
+      if (directCallToSchema(path)) {
+        path.value.callee.object.property.name =
+          Inflected.pluralize(path.value.callee.object.property.name);
+      }
+
+      if (serverSchema(path)) {
+        path.value.callee.object.property.name =
+          Inflected.pluralize(path.value.callee.object.property.name);
+      }
+    });
+  return root.toSource();
+}
+```
 
 To run the script we need to install the following npm packages:
 
-```
+```bash
 npm install -g jscodeshift
 npm install inflected
 ```
@@ -38,7 +83,7 @@ For the second breaking deprecation which was calling `.models` on
 `Collections`, I decided not to use
 codeshift since it would be faster for me to just use perl:
 
-```
+```bash
 find . -type f | xargs perl -pi -e 's/all\(\)\.length/all\(\)\.models\.length/g'
 find . -type f | xargs perl -pi -e 's/all\(\)\.forEach/all\(\)\.models\.forEach/g'
 ```

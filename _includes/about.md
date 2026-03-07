@@ -9,8 +9,8 @@ These are some of my projects:
 - [Listening Crowd](https://github.com/abuiles/listening-crowd)
 - [Ember 101](https://leanpub.com/ember-cli-101)
 - [JSON API By Example](https://leanpub.com/json-api-by-example)
-- [GitHub](http://github.com/abuiles)
-- [Blogging](articles)
+- [GitHub](https://github.com/abuiles)
+- [Blogging](/articles/)
 
 ## History
 
