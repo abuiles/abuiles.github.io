@@ -17,10 +17,6 @@ and deploy it to the testnet Rinkeby. To do so we need to perform the following 
 3. Configure Truffle to use Rinkeby.
 4. Deploy code.
 
-<div class="mt2">
-    <div id="_remotehq_js"></div>
-</div>
-
 ## Running Rinkeby
 
 First, start `geth` with Rinkeby and make sure that the correct APIs
@@ -121,7 +117,7 @@ If we look at the artifacts after the deployment, we'll see the abi for each of 
 
 In this article, we picked up on the code from [writing smart
 contracts with
-Truffle](blog/2017/07/08/writing-smart-contracts-with-truffle/) and
+Truffle](/blog/2017/07/08/writing-smart-contracts-with-truffle/) and
 manage to deploy our contract to the testnet Rinkeby.
 
 In a future article, I'll cover how to interact with your contracts
@@ -130,5 +126,3 @@ using Truffle REPL mode. Follow me on twitter
 updates.
 
 You can find the code and steps for this article in GitHub https://github.com/abuiles/Writing-Smart-Contracts-With-Truffle.
-
-{% include ethereum_list.html %}

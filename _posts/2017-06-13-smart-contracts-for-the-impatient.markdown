@@ -235,5 +235,3 @@ twitter](https://twitter.com/abuiles).
 I'll be writing more about Ethereum, working with contracts and how to
 use [Truffle](http://truffleframework.com/) to stay sane while doing
 so.
-
-{% include ethereum_list.html %}
