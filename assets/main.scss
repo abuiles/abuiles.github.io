@@ -153,8 +153,8 @@ pre > code {
   font-size: 0.9rem;
 }
 
-.highlight,
-.highlighter-rouge .highlight {
+div.highlight,
+.highlighter-rouge > .highlight {
   margin: 1.35rem 0;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -163,8 +163,8 @@ pre > code {
   box-shadow: none;
 }
 
-.highlight pre,
-pre.highlight {
+.highlighter-rouge pre.highlight,
+div.highlight > pre.highlight {
   margin: 0;
   border: 0;
   border-radius: 0;
