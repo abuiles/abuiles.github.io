@@ -8,5 +8,22 @@ layout: default
   </header>
   {{ content }}
   {% include post_list.html posts=site.posts limit=6 variant="home" more_url="/articles/" more_label="Browse all articles" %}
+
+  {% assign ai_at_work_entries = site.ai_at_work | where_exp: "item", "item.draft != true" %}
+  {% if ai_at_work_entries != empty %}
+    <section class="home-ai-at-work">
+      {% include ai_at_work_list.html
+        entries=site.ai_at_work
+        variant="home"
+        kicker="Curated stream"
+        title="AI at Work"
+        description="Tweets, posts, and field notes on how people and companies are actually adopting AI at work."
+        limit=3
+        more_url="/ai-at-work/"
+        more_label="Browse all AI at Work entries"
+      %}
+    </section>
+  {% endif %}
+
   <p class="rss-subscribe">Follow via <a href="{{ "/feed.xml" | relative_url }}">RSS</a></p>
 </section>

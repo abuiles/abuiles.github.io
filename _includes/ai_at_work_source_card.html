@@ -1,0 +1,75 @@
+{% assign entry = include.entry %}
+{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+{% assign card_variant = include.variant | default: "list" %}
+
+<section class="ai-at-work-source-card ai-at-work-source-card--{{ card_variant }}">
+  {% unless card_variant == "list" %}
+    <div class="ai-at-work-source-card-header">
+      {% include ai_at_work_type_badge.html type=entry.type %}
+    </div>
+  {% endunless %}
+
+  <div class="ai-at-work-source-card-body">
+    {% if entry.image and card_variant != "list" %}
+      <div class="ai-at-work-source-image-wrap">
+        <img class="ai-at-work-source-image" src="{{ entry.image | escape }}" alt="" loading="lazy">
+      </div>
+    {% endif %}
+
+    <div class="ai-at-work-source-copy">
+      {% unless card_variant == "list" %}
+        <h2 class="ai-at-work-source-title">{{ entry.title | escape }}</h2>
+      {% endunless %}
+
+      <dl class="ai-at-work-source-meta">
+        {% unless entry.type == "tweet" and entry.sourceName == "X" %}
+          {% if entry.sourceName %}
+            <div class="ai-at-work-source-meta-row">
+              <dt>Source</dt>
+              <dd>{{ entry.sourceName | escape }}</dd>
+            </div>
+          {% endif %}
+        {% endunless %}
+
+        {% if entry.author %}
+          <div class="ai-at-work-source-meta-row">
+            <dt>Author</dt>
+            <dd>
+              {% if entry.authorUrl %}
+                <a href="{{ entry.authorUrl | escape }}">{{ entry.author | escape }}</a>
+              {% else %}
+                {{ entry.author | escape }}
+              {% endif %}
+            </dd>
+          </div>
+        {% endif %}
+
+        {% if entry.externalPublishedAt %}
+          <div class="ai-at-work-source-meta-row">
+            <dt>Published</dt>
+            <dd>{{ entry.externalPublishedAt | date: date_format }}</dd>
+          </div>
+        {% endif %}
+
+        {% if entry.tags and entry.tags != empty %}
+          <div class="ai-at-work-source-meta-row">
+            <dt>Tags</dt>
+            <dd class="ai-at-work-tag-list">
+              {% for tag in entry.tags %}
+                <span class="ai-at-work-tag">{{ tag }}</span>
+              {% endfor %}
+            </dd>
+          </div>
+        {% endif %}
+      </dl>
+
+      {% if entry.summary and card_variant != "list" %}
+        <p class="ai-at-work-source-summary">{{ entry.summary | escape }}</p>
+      {% endif %}
+
+      <p class="ai-at-work-source-actions">
+        <a class="ai-at-work-source-cta" href="{{ entry.sourceUrl | escape }}">Open original</a>
+      </p>
+    </div>
+  </div>
+</section>

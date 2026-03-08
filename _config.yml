@@ -23,6 +23,8 @@ google_analytics: UA-32360357-1
 #   - directory_tag
 
 collections:
+  ai_at_work:
+    output: false
   reading_feed:
     output: true
     permalink: /reading-feed/:name

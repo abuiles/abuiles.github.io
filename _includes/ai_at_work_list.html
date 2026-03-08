@@ -1,0 +1,91 @@
+{% assign source_entries = include.entries | default: site.ai_at_work %}
+{% assign visible_entries = source_entries | where_exp: "item", "item.draft != true" %}
+{% assign sorted_entries = visible_entries | sort: "publishedAt" | reverse %}
+{% assign sorted_entries = sorted_entries | sort: "externalPublishedAt" | reverse %}
+{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+
+<div class="ai-at-work-stream{% if include.variant %} ai-at-work-stream--{{ include.variant }}{% endif %}">
+  {% if include.title %}
+    <header class="section-header ai-at-work-section-header">
+      {% if include.kicker %}
+        <p class="section-kicker">{{ include.kicker }}</p>
+      {% endif %}
+      <h2 class="section-title">{{ include.title }}</h2>
+      {% if include.description %}
+        <p class="page-lede ai-at-work-stream-lede">{{ include.description }}</p>
+      {% endif %}
+    </header>
+  {% endif %}
+
+  <ol class="ai-at-work-list">
+    {% if include.limit %}
+      {% for entry in sorted_entries limit: include.limit %}
+        <li class="ai-at-work-list-item">
+          <article class="ai-at-work-list-card">
+            <div class="ai-at-work-list-topline">
+              {% include ai_at_work_type_badge.html type=entry.type %}
+              <p class="ai-at-work-list-dates">
+                {% if entry.externalPublishedAt %}
+                  <span>{{ entry.externalPublishedAt | date: date_format }}</span>
+                {% else %}
+                  <span>{{ entry.publishedAt | date: date_format }}</span>
+                {% endif %}
+              </p>
+            </div>
+
+            <div class="ai-at-work-list-layout">
+              <div class="ai-at-work-list-main">
+                <h3 class="ai-at-work-list-title">{{ entry.title | escape }}</h3>
+
+                <div class="reading-content ai-at-work-list-commentary">
+                  {{ entry.commentary | markdownify }}
+                </div>
+              </div>
+
+              <div class="ai-at-work-list-source">
+                {% include ai_at_work_source_card.html entry=entry variant="list" %}
+              </div>
+            </div>
+          </article>
+        </li>
+      {% endfor %}
+    {% else %}
+      {% for entry in sorted_entries %}
+        <li class="ai-at-work-list-item">
+          <article class="ai-at-work-list-card">
+            <div class="ai-at-work-list-topline">
+              {% include ai_at_work_type_badge.html type=entry.type %}
+              <p class="ai-at-work-list-dates">
+                {% if entry.externalPublishedAt %}
+                  <span>{{ entry.externalPublishedAt | date: date_format }}</span>
+                {% else %}
+                  <span>{{ entry.publishedAt | date: date_format }}</span>
+                {% endif %}
+              </p>
+            </div>
+
+            <div class="ai-at-work-list-layout">
+              <div class="ai-at-work-list-main">
+                <h3 class="ai-at-work-list-title">{{ entry.title | escape }}</h3>
+
+                <div class="reading-content ai-at-work-list-commentary">
+                  {{ entry.commentary | markdownify }}
+                </div>
+              </div>
+
+              <div class="ai-at-work-list-source">
+                {% include ai_at_work_source_card.html entry=entry variant="list" %}
+              </div>
+            </div>
+          </article>
+        </li>
+      {% endfor %}
+    {% endif %}
+  </ol>
+
+  {% if include.more_url %}
+    <p class="post-list-more ai-at-work-more-link">
+      <a href="{{ include.more_url | relative_url }}">{{ include.more_label | default: "Browse all AI at Work entries" }}</a>
+    </p>
+  {% endif %}
+</div>

@@ -3,10 +3,20 @@ layout: default
 ---
 <section class="page-shell archive-feed">
   <header class="page-header home-feed-header archive-feed-header">
-    <h1 class="page-title">{{ page.title | escape }}</h1>
-    {% if page.description %}
-      <p class="home-lede page-lede">{{ page.description | escape }}</p>
-    {% endif %}
+    <div class="archive-header-row">
+      <div class="archive-header-copy">
+        <h1 class="page-title">{{ page.title | escape }}</h1>
+        {% if page.description %}
+          <p class="home-lede page-lede">{{ page.description | escape }}</p>
+        {% endif %}
+      </div>
+
+      {% if page.header_action_url and page.header_action_label %}
+        <div class="archive-header-action">
+          <a class="archive-header-button" href="{{ page.header_action_url | escape }}">{{ page.header_action_label | escape }}</a>
+        </div>
+      {% endif %}
+    </div>
   </header>
 
   {{ content }}

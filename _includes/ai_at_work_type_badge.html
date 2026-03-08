@@ -1,0 +1,18 @@
+{% assign source_type = include.type | default: "other" %}
+{% case source_type %}
+  {% when "tweet" %}
+    {% assign source_label = "Tweet" %}
+  {% when "blog-post" %}
+    {% assign source_label = "Blog post" %}
+  {% when "podcast" %}
+    {% assign source_label = "Podcast" %}
+  {% when "interview" %}
+    {% assign source_label = "Interview" %}
+  {% when "talk" %}
+    {% assign source_label = "Talk" %}
+  {% when "paper" %}
+    {% assign source_label = "Paper" %}
+  {% else %}
+    {% assign source_label = source_type | replace: "-", " " | capitalize %}
+{% endcase %}
+<span class="ai-at-work-type-badge">{{ source_label }}</span>

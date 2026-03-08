@@ -1,0 +1,101 @@
+name: AI at Work submission
+description: Suggest a tweet, post, interview, talk, podcast, or similar external item for the AI at Work section.
+title: "[AI at Work] "
+labels:
+  - ai-at-work
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to suggest something for `/ai-at-work`.
+
+        This is for real-world AI adoption examples: workflow changes, org/process changes, coding agents, tooling usage, leadership patterns, or metrics.
+
+        Approval and publishing are still manual. A maintainer can review the issue and then hand it off to Codex to turn it into an entry.
+
+  - type: input
+    id: source-url
+    attributes:
+      label: Source URL
+      description: Link to the original tweet/X post, article, interview, podcast, talk, paper, or similar source.
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source-type
+    attributes:
+      label: Source type
+      description: Pick the closest match.
+      options:
+        - tweet
+        - blog-post
+        - podcast
+        - interview
+        - talk
+        - paper
+        - other
+    validations:
+      required: true
+
+  - type: input
+    id: source-name
+    attributes:
+      label: Source name
+      description: Publication, company, event, or platform.
+      placeholder: Stripe Developer Blog
+    validations:
+      required: false
+
+  - type: input
+    id: author
+    attributes:
+      label: Author or speaker
+      description: Author, speaker, host, or account name if known.
+      placeholder: Alistair Gray
+    validations:
+      required: false
+
+  - type: textarea
+    id: why-it-matters
+    attributes:
+      label: Why this is relevant
+      description: Optional. Explain what pattern or signal this captures. This is context for review, not a publish-ready note.
+      placeholder: |
+        Example:
+        - concrete metric about AI adoption
+        - workflow or process change
+        - useful example of coding agents in practice
+    validations:
+      required: false
+
+  - type: textarea
+    id: tldr
+    attributes:
+      label: Suggested TL;DR
+      description: Optional neutral summary. Do not write in the maintainer's voice.
+      placeholder: Short neutral summary of the source.
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggested-tags
+    attributes:
+      label: Suggested tags
+      description: Optional. One per line or comma-separated.
+      placeholder: |
+        ai-adoption
+        agents
+        engineering
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: This is about real-world AI adoption at work rather than general AI news.
+          required: true
+        - label: I understand this issue is a suggestion for review, not an automatic publication request.
+          required: true
