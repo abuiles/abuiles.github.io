@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<section class="page-shell archive-feed">
+  <header class="page-header home-feed-header archive-feed-header">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+    {% if page.description %}
+      <p class="home-lede page-lede">{{ page.description | escape }}</p>
+    {% endif %}
+  </header>
+
+  {{ content }}
+</section>
