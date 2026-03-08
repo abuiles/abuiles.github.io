@@ -1,4 +1,4 @@
-Hi, I am Adolfo.
+Hi, I am Adolfo Builes. I'm a product minded engineer passionate about building things people want. As a Product Lead at Recharge, I lead strategic product development and execution in subscription payments. Before that, I co-founded Rebundle (acquired by Recharge) and worked as a Senior Software Engineer at Stellar, contributing to decentralized finance infrastructure. I enjoy writing and sharing my knowledge, especially about deep work habits and system design.
 
 ## Projects and Books
 
