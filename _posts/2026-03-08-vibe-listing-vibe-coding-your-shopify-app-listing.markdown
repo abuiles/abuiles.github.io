@@ -34,7 +34,7 @@ In other words, I wanted to vibe code my Shopify app listing, but with guardrail
 Here's a quick video showing my workflow:
 
 <figure class="post-demo">
-  <video controls playsinline preload="metadata" poster="/assets/demo-vibe-poster.jpg">
+  <video controls playsinline preload="auto">
     <source src="/assets/demo-vibe.mp4" type="video/mp4">
     Your browser does not support embedded video. You can watch it here:
     <a href="/assets/demo-vibe.mp4">demo-vibe.mp4</a>
