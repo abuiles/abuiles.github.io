@@ -68,7 +68,13 @@
       {% endif %}
 
       <p class="ai-at-work-source-actions">
-        <a class="ai-at-work-source-cta" href="{{ entry.sourceUrl | escape }}">Open original</a>
+        {% if include.entry_url %}
+          <a class="ai-at-work-entry-link ai-at-work-entry-link--primary" href="{{ include.entry_url }}">{{ include.entry_link_label | default: "Read digest" }}</a>
+        {% endif %}
+
+        {% if entry.sourceUrl %}
+          <a class="ai-at-work-source-cta ai-at-work-source-cta--secondary" href="{{ entry.sourceUrl | escape }}">Open original</a>
+        {% endif %}
       </p>
     </div>
   </div>

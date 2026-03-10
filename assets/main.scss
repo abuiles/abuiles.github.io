@@ -999,6 +999,14 @@ mark.highlight {
 .ai-at-work-list-card {
   padding: 1.15rem 0 1.25rem;
   border-top: 1px solid var(--line);
+  scroll-margin-top: 1.5rem;
+  outline: none;
+  transition: background-color 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.ai-at-work-list-card:target {
+  background: rgba(27, 90, 85, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(27, 90, 85, 0.18);
 }
 
 .ai-at-work-list-item:last-child .ai-at-work-list-card {
@@ -1213,15 +1221,34 @@ mark.highlight {
 }
 
 .ai-at-work-source-cta {
+  color: var(--ink);
+  background: rgba(24, 21, 18, 0.06);
+}
+
+.ai-at-work-source-cta:visited {
+  color: var(--ink);
+}
+
+.ai-at-work-entry-link {
   color: #fff;
   background: var(--accent);
 }
 
-.ai-at-work-source-cta:visited {
+.ai-at-work-entry-link:visited {
   color: #fff;
 }
 
-.ai-at-work-entry-link {
+.ai-at-work-entry-link--primary {
+  order: -1;
+}
+
+.ai-at-work-entry-link--primary:hover,
+.ai-at-work-entry-link--primary:visited:hover {
+  color: #fff;
+  filter: brightness(0.94);
+}
+
+.ai-at-work-source-cta--secondary {
   color: var(--ink);
   background: rgba(24, 21, 18, 0.06);
 }

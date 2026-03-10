@@ -20,8 +20,10 @@
   <ol class="ai-at-work-list">
     {% if include.limit %}
       {% for entry in sorted_entries limit: include.limit %}
+        {% assign entry_slug = entry.slug | default: entry.basename %}
+        {% assign entry_digest_url = "/ai-at-work/" | relative_url | append: "#" | append: entry_slug %}
         <li class="ai-at-work-list-item">
-          <article class="ai-at-work-list-card">
+          <article class="ai-at-work-list-card" id="{{ entry_slug }}" tabindex="-1">
             <div class="ai-at-work-list-topline">
               {% include ai_at_work_type_badge.html type=entry.type %}
               <p class="ai-at-work-list-dates">
@@ -35,7 +37,9 @@
 
             <div class="ai-at-work-list-layout">
               <div class="ai-at-work-list-main">
-                <h3 class="ai-at-work-list-title">{{ entry.title | escape }}</h3>
+                <h3 class="ai-at-work-list-title">
+                  <a href="{{ entry_digest_url }}">{{ entry.title | escape }}</a>
+                </h3>
 
                 <div class="reading-content ai-at-work-list-commentary">
                   {{ entry.commentary | markdownify }}
@@ -43,7 +47,7 @@
               </div>
 
               <div class="ai-at-work-list-source">
-                {% include ai_at_work_source_card.html entry=entry variant="list" %}
+                {% include ai_at_work_source_card.html entry=entry variant="list" entry_url=entry_digest_url entry_link_label=include.entry_link_label %}
               </div>
             </div>
           </article>
@@ -51,8 +55,10 @@
       {% endfor %}
     {% else %}
       {% for entry in sorted_entries %}
+        {% assign entry_slug = entry.slug | default: entry.basename %}
+        {% assign entry_digest_url = "/ai-at-work/" | relative_url | append: "#" | append: entry_slug %}
         <li class="ai-at-work-list-item">
-          <article class="ai-at-work-list-card">
+          <article class="ai-at-work-list-card" id="{{ entry_slug }}" tabindex="-1">
             <div class="ai-at-work-list-topline">
               {% include ai_at_work_type_badge.html type=entry.type %}
               <p class="ai-at-work-list-dates">
@@ -66,7 +72,9 @@
 
             <div class="ai-at-work-list-layout">
               <div class="ai-at-work-list-main">
-                <h3 class="ai-at-work-list-title">{{ entry.title | escape }}</h3>
+                <h3 class="ai-at-work-list-title">
+                  <a href="{{ entry_digest_url }}">{{ entry.title | escape }}</a>
+                </h3>
 
                 <div class="reading-content ai-at-work-list-commentary">
                   {{ entry.commentary | markdownify }}
@@ -74,7 +82,7 @@
               </div>
 
               <div class="ai-at-work-list-source">
-                {% include ai_at_work_source_card.html entry=entry variant="list" %}
+                {% include ai_at_work_source_card.html entry=entry variant="list" entry_url=entry_digest_url entry_link_label=include.entry_link_label %}
               </div>
             </div>
           </article>
