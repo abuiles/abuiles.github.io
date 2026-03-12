@@ -14,6 +14,7 @@
         buildInputs = with pkgs; [
           ruby_3_2
           jekyll
+          cloudflared
           git
           coreutils
         ];
