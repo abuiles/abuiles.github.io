@@ -1,6 +1,9 @@
 nix-setup:
   nix --extra-experimental-features 'nix-command flakes' develop --command bash -lc 'NIX_RUBY_BIN=$(for p in $(printf "%s" "$PATH" | tr ":" " "); do [ -x "$p/ruby" ] && echo "$p"; done | rg "ruby-3\\.2" | head -n 1); export BUNDLE_PATH="$PWD/vendor/bundle" GEM_HOME="$PWD/.gem" GEM_PATH="$PWD/.gem"; export PATH="$NIX_RUBY_BIN:$GEM_HOME/bin:$PATH"; "$NIX_RUBY_BIN/ruby" -S bundle _2.5.9_ check || "$NIX_RUBY_BIN/ruby" -S bundle _2.5.9_ install'
 
+shell:
+  nix --extra-experimental-features 'nix-command flakes' develop
+
 new-post title:
   @python3 -c 'exec("""from datetime import datetime\nfrom pathlib import Path\nimport re\nimport sys\n\ntitle = sys.argv[1].strip()\nif not title:\n    raise SystemExit(\"Title is required\")\n\nslug = re.sub(r\"[^a-z0-9]+\", \"-\", title.lower()).strip(\"-\")\nif not slug:\n    raise SystemExit(\"Could not derive a slug from the title\")\n\nnow = datetime.now().astimezone()\ntarget = Path(\"_posts\") / f\"{now:%Y-%m-%d}-{slug}.markdown\"\nif target.exists():\n    raise SystemExit(f\"{target} already exists\")\n\nescaped_title = title.replace(\"\\\\\", \"\\\\\\\\\").replace(\"\\\"\", \"\\\\\\\"\")\ntarget.write_text(\n    \"---\\n\"\n    \"layout: post\\n\"\n    f\"title: \\\"{escaped_title}\\\"\\n\"\n    f\"date: {now:%Y-%m-%d %H:%M:%S %z}\\n\"\n    \"---\\n\\n\",\n    encoding=\"utf-8\",\n)\nprint(target)\n""")' "{{title}}"
 
