@@ -111,6 +111,16 @@ figure > img {
   background: #0f1112;
 }
 
+.tweet-embed {
+  margin: 1.75rem 0;
+}
+
+.tweet-embed .twitter-tweet,
+.tweet-embed iframe {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 figcaption {
   color: var(--muted);
   font-family: var(--font-ui);

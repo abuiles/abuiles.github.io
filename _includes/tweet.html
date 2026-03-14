@@ -1,0 +1,13 @@
+<div class="tweet-embed">
+  <blockquote class="twitter-tweet" data-dnt="true"{% if include.conversation %} data-conversation="{{ include.conversation }}"{% endif %}{% if include.theme %} data-theme="{{ include.theme }}"{% endif %}>
+    <p lang="{{ include.lang | default: 'en' }}" dir="{{ include.dir | default: 'ltr' }}">
+      {{ include.text }}
+      {% if include.media_url %}
+        <br>
+        <a href="{{ include.media_url }}">{{ include.media_label | default: include.media_url }}</a>
+      {% endif %}
+    </p>
+    &mdash; {{ include.author_name }} (@{{ include.author_handle }})
+    <a href="{{ include.url }}?ref_src=twsrc%5Etfw">{{ include.published_at }}</a>
+  </blockquote>
+</div>
