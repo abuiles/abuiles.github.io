@@ -10,13 +10,12 @@ authorUrl: "https://x.com/cramforce"
 externalPublishedAt: 2026-03-17
 summary: "Malte Ubl argues that many frustrations with modern coding tools are really workflow problems, and that teams need to be ruthless about deleting bad work instead of preserving sunk-cost output."
 commentary: >-
-  Useful AI-at-work lesson: when software gets cheaper to generate, teams need stronger editing instincts, not weaker ones. The bottleneck shifts from producing code to curating, discarding, and reshaping it fast enough that low-quality output does not accumulate into system drag.
+  As software gets cheaper to generate, teams need stronger editing and deletion habits. The bottleneck shifts from producing code to curating what deserves to remain.
 tags:
   - agents
-  - code-quality
   - engineering
-  - software-development
-  - workflow
+  - ai-coding
+  - workflows
 quote: "the answer isn't to wait for the tools to get better, because the problem isn't the tool, it is how we work"
 image:
 draft: false

@@ -10,13 +10,12 @@ authorUrl: "https://x.com/Alfred_Lin"
 externalPublishedAt: 2026-03-18
 summary: "Alfred Lin argues that when AI makes execution cheaper and more abundant, the scarce advantage shifts toward taste, judgment, and the ability to define what good looks like."
 commentary: >-
-  Strong AI-at-work takeaway: as production gets commoditized, discernment becomes the differentiator. Teams that can specify quality, make better tradeoffs, and recognize signal amid abundant machine-generated output will outperform teams that simply generate more.
+  If execution becomes abundant, discernment becomes more valuable. Teams still need people who can define quality, make tradeoffs, and recognize what should ship.
 tags:
   - ai-adoption
+  - leadership
+  - product
   - judgment
-  - leverage
-  - taste
-  - work
 quote: "When everyone has access to abundant execution, taste becomes the moat."
 image:
 draft: false

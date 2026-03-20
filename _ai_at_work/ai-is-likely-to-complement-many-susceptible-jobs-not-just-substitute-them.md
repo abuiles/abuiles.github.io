@@ -10,13 +10,12 @@ authorUrl: "https://x.com/Afinetheorem"
 externalPublishedAt: 2026-03-15
 summary: "Kevin A. Bryan argues that many jobs labeled as AI-susceptible may actually grow in labor share because AI often complements human work instead of simply replacing it."
 commentary: >-
-  Useful AI-at-work correction: exposure is not the same as displacement. In many workflows, AI increases the value of people who can direct, verify, and compound the tool effectively, so demand can rise even in occupations that look highly automatable on paper.
+  This is a useful reminder that exposure is not the same as displacement. In many roles, AI can increase the value of workers who direct, verify, and compound the tool effectively.
 tags:
   - ai-adoption
-  - augmentation
-  - economics
   - labor
   - productivity
+  - economics
 quote: "AI is a complement too!"
 image:
 draft: false

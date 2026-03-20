@@ -10,10 +10,9 @@ authorUrl: "https://x.com/andrewchen"
 externalPublishedAt: 2026-03-15
 summary: "Andrew Chen says products like Cowork and OpenClaw are compelling because they collapse multi-tab, spreadsheet-heavy workflows into a single AI-driven flow."
 commentary: >-
-  This is a sharp AI-at-work framing: the value is not just automation, but interface compression. When AI replaces the glue work across tabs, tools, and trackers, it removes coordination overhead and makes the workflow feel native instead of stitched together.
+  The value here is interface compression, not just automation. When AI replaces glue work across tabs, tools, and trackers, the workflow feels more native and requires less coordination overhead.
 tags:
   - ai-adoption
-  - automation
   - productivity
   - tooling
   - workflows

@@ -2,20 +2,20 @@
 title: "The AI Vampire reframes AI as a leverage engine"
 slug: the-ai-vampire-reframes-ai-as-a-leverage-engine
 publishedAt: 2026-03-18 08:10:00 -0500
-type: article
+type: blog-post
 sourceName: Medium
 sourceUrl: "https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163"
 author: Steve Yegge
 authorUrl: "https://steve-yegge.medium.com"
-externalPublishedAt: 2026-03-18
-summary: "Steve Yegge argues that AI behaves less like a simple productivity tool and more like a force that feeds on every available corpus, then returns extreme leverage to individuals who learn to direct it effectively."
+externalPublishedAt: 2026-02-11
+summary: >-
+  In "The AI Vampire," Steve Yegge argues that AI creates a large increase in individual leverage while also concentrating pressure around value capture, acceleration, and fatigue.
 commentary: >-
-  Useful AI-at-work framing: the real disruption is not just faster output, but a step-change in individual leverage. As AI absorbs more of the surrounding knowledge and craft encoded in existing systems, organizations have to rethink how much one person can ship, what expertise still looks like, and where human judgment remains differentiating.
+  Yegge frames AI less as a simple productivity tool and more as a force multiplier with side effects. The post is especially useful for thinking about leverage, exhaustion, and who captures the value of faster output.
 tags:
   - ai-adoption
-  - leverage
   - productivity
-  - software-development
+  - leverage
   - work
 quote: "AI is not a tool. It's a vampire."
 image:
