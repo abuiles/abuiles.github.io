@@ -1,5 +1,5 @@
 ---
-title: "Open agentic commerce"
+title: "Open Agentic Commerce"
 slug: open-agentic-commerce
 publishedAt: 2026-03-20 13:05:00 -0500
 type: tweet
@@ -7,16 +7,17 @@ sourceName: X
 sourceUrl: "https://x.com/samrags_/status/2035027030975422566"
 author: Sam Ragsdale
 authorUrl: "https://x.com/samrags_"
-externalPublishedAt:
-summary: "Sam Ragsdale argues that agentic commerce should evolve as an open protocol layer rather than a closed checkout feature inside major AI assistants."
+externalPublishedAt: 2026-03-20
+summary: "Sam Ragsdale argues that agentic commerce will matter most as an open protocol layer for agent payments and service discovery, not just as assistant-native checkout inside closed platforms."
 commentary: >-
-  The post frames agentic commerce as shared infrastructure rather than a feature inside any single assistant. If open rails win, distribution and conversion may shift toward protocol-level competition.
+  Ragsdale argues that agentic commerce only becomes transformative when agents can buy from the open internet without pre-approved merchant relationships. The core claim is that open payment and discovery rails could do for agent-driven work what open web protocols did for the early internet.
 tags:
   - agents
-  - commerce
+  - workflows
   - strategy
   - tooling
-quote: "Agentic commerce is here. ACP & UCP promise checkout in ChatGPT & Gemini. But checkout in ChatGPT is an incremental improvement. It will not reshape society as the internet did in the early 2000s. Open Agentic Commerce will."
+  - commerce
+quote: "An agent that can only buy from pre-approved merchants is an employee with a corporate card restricted to three vendors. An agent with open protocols is an entrepreneur with a bank account."
 image:
 draft: false
 ---
