@@ -8,7 +8,7 @@ sourceUrl: "https://x.com/robbiepetersen_/status/2036118525451047170"
 author: "Robbie Petersen"
 authorUrl: "https://x.com/robbiepetersen_"
 externalPublishedAt: 2026-03-23 16:31:00 +0000
-summary: "Robbie Petersen argues that the agentic economy will be large, but most agent use will stay inside organizational software and human-approved consumer workflows rather than becoming a world of fully autonomous agents making independent purchases."
+summary: "Robbie Petersen argues that the agentic economy will be large, but the loudest agentic commerce narratives overstate how much activity will happen through fully autonomous machine purchasing instead of software contracts and human-approved workflows."
 commentary: >-
   A useful counterpoint to the loudest agentic commerce narratives. The core
   claim is that most economic activity from agents will likely be bundled into
@@ -20,7 +20,7 @@ tags:
   - commerce
   - strategy
   - payments
-quote: "The agentic economy will be enormous; most of it will be billed monthly."
+quote: "Whenever an emerging narrative enters the public discourse, the prevailing thesis gets reduced to its most memetic form."
 image:
 draft: false
 ---
